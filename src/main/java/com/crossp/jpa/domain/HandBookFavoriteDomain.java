@@ -23,7 +23,7 @@ public class HandBookFavoriteDomain {
 	private Long id;
 	private long uploadDate;
 	private String alias;
-	private String commnet;
+	private String comment;
 	
 	@OneToOne
 	private HandBookDomain handBook;
@@ -54,14 +54,14 @@ public class HandBookFavoriteDomain {
 
 	public void setAlias(String alias) {
 		this.alias = alias;
+	}	
+
+	public String getComment() {
+		return comment;
 	}
 
-	public String getCommnet() {
-		return commnet;
-	}
-
-	public void setCommnet(String commnet) {
-		this.commnet = commnet;
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 	public HandBookDomain getHandBook() {

@@ -16,6 +16,7 @@ public class HandBookDomain {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	private String brand;
 	private String type;
 	private String subType;
 	private String tags;
@@ -29,6 +30,7 @@ public class HandBookDomain {
 	private int downloadCount;
 	private int viewCount;
 	private int favorCount;
+	private String lan;
 	
 	public Long getId() {
 		return id;
@@ -120,5 +122,17 @@ public class HandBookDomain {
 	}
 	public void setFavorCount(int favorCount) {
 		this.favorCount = favorCount;
-	}		
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getLan() {
+		return lan;
+	}
+	public void setLan(String lan) {
+		this.lan = lan;
+	}	
 }

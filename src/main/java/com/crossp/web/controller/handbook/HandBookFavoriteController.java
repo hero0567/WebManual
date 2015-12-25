@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.crossp.jpa.domain.HandBookDomain;
@@ -39,7 +40,7 @@ public class HandBookFavoriteController {
 		return hbfRepository.findByUserId(uid);
 	}
 
-	@RequestMapping("/{uid}/{hbid}")
+	@RequestMapping(value = "/{uid}/{hbid}", method = RequestMethod.POST)
 	public ResponseEntity<String> add(@PathVariable("uid") Long uid, @PathVariable("hbid") Long hbid,
 			@RequestBody FavoritePlayLoad favorteLoad) throws Exception {
 
@@ -49,9 +50,15 @@ public class HandBookFavoriteController {
 		hbookfav.setUser(user);
 		hbookfav.setHandBook(hbook);
 		hbookfav.setAlias(favorteLoad.getAlias());
-		hbookfav.setCommnet(favorteLoad.getCommnet());
+		hbookfav.setComment(favorteLoad.getComment());
 		
 		hbfRepository.save(hbookfav);
+		return new ResponseEntity<String>("", HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/{fid}", method = RequestMethod.DELETE)
+	public ResponseEntity<String> delete(@PathVariable("fid") Long fid) throws Exception {
+		hbfRepository.delete(fid);
 		return new ResponseEntity<String>("", HttpStatus.OK);
 	}
 
