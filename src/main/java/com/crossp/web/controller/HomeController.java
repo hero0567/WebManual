@@ -16,6 +16,7 @@
 
 package com.crossp.web.controller;
 
+import org.apache.commons.mail.EmailException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +25,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.crossp.configure.EmailConfigure;
 import com.crossp.jpa.domain.Authority;
 import com.crossp.jpa.domain.User;
 import com.crossp.jpa.service.AuthorityRepository;
 import com.crossp.jpa.service.UserRepository;
+import com.crossp.utils.EmailUtil;
 
 @Controller
 public class HomeController {
@@ -38,6 +41,8 @@ public class HomeController {
 	private UserRepository userRepository;
 	@Autowired
 	private AuthorityRepository authorityRepository;
+	@Autowired
+	private EmailConfigure emailConfigure;
 	
 	@RequestMapping("/")
 	public String home() throws Exception {
@@ -68,9 +73,10 @@ public class HomeController {
 	 * http://localhost:8080/register?username=11112121&password=1212121
 	 * @param user
 	 * @return
+	 * @throws EmailException 
 	 */
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String registerUser(User user) {
+	public String registerUser(User user) throws EmailException {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		user.setPassword(encoder.encode(user.getPassword()));
 		Authority auth = new Authority();
@@ -80,6 +86,9 @@ public class HomeController {
 		logger.info("Username :{}, Password:{}",user.getUsername(),user.getPassword());
 		userRepository.save(user);
 		authorityRepository.save(auth);
+		
+		EmailUtil.getInstance().sendEmail(user.getUsername(), emailConfigure);
+		
 		return "login";
 	}
 		

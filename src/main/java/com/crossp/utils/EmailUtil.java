@@ -2,9 +2,25 @@ package com.crossp.utils;
 
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.crossp.configure.EmailConfigure;
 
 public class EmailUtil {
-
+	
+	private final static EmailUtil emailUtil = new EmailUtil();
+	
+	private static Logger logger = LoggerFactory.getLogger(EmailUtil.class);
+	
+	
+	private EmailUtil(){		
+	}
+	
+	public static EmailUtil getInstance(){
+		return emailUtil;
+	}
+	
     public static void main(String[] args) throws EmailException {
         // sendBy163();
         sendByLocalSendMail();
@@ -47,14 +63,18 @@ public class EmailUtil {
         System.out.println("The SimpleEmail send sucessful!!!");
     }
     
-    public static void sendEmail(String to) throws EmailException{
-    	SimpleEmail email = emailFactory();
-    	email.addTo(to, "bulktree");
-    	email.send();
-    	System.out.println("The SimpleEmail send sucessful!!!");
+    public void sendEmail(String to, EmailConfigure emailConfigure) throws EmailException{    	
+    	if (emailConfigure.isEnable()){
+//    		SimpleEmail email = emailFactory(emailConfigure);
+//        	email.addTo(to, "bulktree");
+//        	email.send();
+        	logger.info("Send verify email to user(%s).", to);
+    	}else{
+    		logger.info("Skip email verify step, because of the setting.");
+    	}
     }
     
-    private static SimpleEmail emailFactory() throws EmailException{
+    private SimpleEmail emailFactory(EmailConfigure emailConfigure) throws EmailException{
     	SimpleEmail email = new SimpleEmail();
     	email.setFrom("hero0567@163.com", "bulktree");
         email.setAuthentication("hero0567", "xl7890480");

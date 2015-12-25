@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.crossp.configure.EmailConfigure;
 import com.crossp.jpa.domain.HandBookDomain;
 import com.crossp.jpa.domain.HandBookFavoriteDomain;
 import com.crossp.jpa.domain.User;
@@ -20,7 +21,7 @@ import com.crossp.web.playload.FavoritePlayLoad;
 @RestController
 @RequestMapping(value = "/favor")
 public class HandBookFavoriteController {
-
+	
 	@Autowired
 	private HandBookFavoriteRepository hbfRepository;
 	
@@ -29,7 +30,7 @@ public class HandBookFavoriteController {
 
 	@Autowired
 	private UserRepository userRepository;
-
+		
 	@RequestMapping("")
 	public Iterable<HandBookFavoriteDomain> all() throws Exception {
 		return hbfRepository.findAll();
