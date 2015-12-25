@@ -26,8 +26,9 @@ public class HandBookDomain {
 	private int status;
 	private String url;
 	private String owner;
-	private int download;
-	private int view;
+	private int downloadCount;
+	private int viewCount;
+	private int favorCount;
 	
 	public Long getId() {
 		return id;
@@ -101,18 +102,23 @@ public class HandBookDomain {
 	}
 	public void setOwner(String owner) {
 		this.owner = owner;
-	}	
-	public int getDownload() {
-		return download;
 	}
-	public void setDownload(int download) {
-		this.download = download;
+	public int getDownloadCount() {
+		return downloadCount;
 	}
-	public int getView() {
-		return view;
+	public void setDownloadCount(int downloadCount) {
+		this.downloadCount = downloadCount;
 	}
-	public void setView(int view) {
-		this.view = view;
+	public int getViewCount() {
+		return viewCount;
 	}
-	
+	public void setViewCount(int viewCount) {
+		this.viewCount = viewCount;
+	}
+	public int getFavorCount() {
+		return favorCount;
+	}
+	public void setFavorCount(int favorCount) {
+		this.favorCount = favorCount;
+	}		
 }
