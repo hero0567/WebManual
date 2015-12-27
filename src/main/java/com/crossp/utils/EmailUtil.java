@@ -23,10 +23,23 @@ public class EmailUtil {
 	
     public static void main(String[] args) throws EmailException {
         // sendBy163();
-        sendByLocalSendMail();
+        // sendByLocalSendMail();
         // sendByLocalSendMailWithPassword();
+    	sendBy92Shuomingshu();
     }
 
+    public static void sendBy92Shuomingshu() throws EmailException {
+        SimpleEmail email = new SimpleEmail();
+        email.setHostName("smtp.mxhichina.com");
+        email.addTo("496949660@qq.com", "496949660");
+        email.setFrom("levyxia@92shuomingshu.com", "levyxia1");
+        email.setAuthentication("levyxia@92shuomingshu.com", "!QAZ2wsx");
+        email.setSubject("Hello, This is My First Email Application");
+        email.setMsg("I am bulktree This is JavaMail Application");
+        email.send();
+        System.out.println("The SimpleEmail send sucessful!!!");
+    }
+    
     public static void sendBy163() throws EmailException {
         SimpleEmail email = new SimpleEmail();
         email.setHostName("smtp.163.com");
