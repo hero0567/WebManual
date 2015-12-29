@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.cpcorss</groupId>
+	<groupId>org.wmanual</groupId>
 	<artifactId>WebManual</artifactId>
 	<version>0.1.0</version>
 	<packaging>war</packaging>
@@ -15,7 +15,7 @@
 	</parent>
 
 	<properties>
-		<start-class>com.crossp.Application</start-class>
+		<start-class>com.wmanual.Application</start-class>
 		<spring-security-oauth2.version>2.0.3.RELEASE</spring-security-oauth2.version>
 	</properties>
 
