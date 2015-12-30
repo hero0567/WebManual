@@ -9,7 +9,7 @@
   	<%@include file="header.jsp"%>
     <div class="content">
     	<spring:message code="app.hello"/>
-       This is home page. <sec:authentication property="name"/>   
+       This is home page1111122. <sec:authentication property="name"/>   
     </div>
   </div>
 </body>

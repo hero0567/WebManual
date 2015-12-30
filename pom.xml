@@ -46,7 +46,7 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- jsp replaced by angularjs totoally 
+		<!-- jsp replaced by angularjs totoally -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
@@ -60,13 +60,14 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
 		</dependency>
-		-->
 		
+		<!-- thymeleaf
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		 
+		  -->
+		  
 		<!-- oauth2 donot used
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>

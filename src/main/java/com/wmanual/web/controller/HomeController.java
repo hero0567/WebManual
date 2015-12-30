@@ -49,14 +49,14 @@ public class HomeController {
 		return "home";
 	}
 		
-	@RequestMapping("/hello")
+	@RequestMapping("/index")
 	public String hello() throws Exception {
-		return "hello";
+		return "webmanual/index";
 	}
 	
 	@RequestMapping(value="/login")
 	public String login() {
-		return "login";
+		return "signup";
 	}
 	
 	@RequestMapping(value="/register")
