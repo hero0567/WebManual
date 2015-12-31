@@ -19,8 +19,11 @@ package com.wmanual.web.controller.handbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.jpa.domain.HandBookDomain;
@@ -40,16 +43,22 @@ public class HandBookController {
 		return hbRepository.findAll();
 	}
 
-	
-
 	@RequestMapping("/{type}")
-	public Iterable<HandBookDomain> allByType(@PathVariable("type") String type) {
+	public Iterable<HandBookDomain> allByType(@PathVariable("type") String type, @RequestParam(value = "size", required = false, defaultValue = "0") int size) {
+		if (size > 0){
+			Pageable page = new PageRequest(0, size);
+			return hbRepository.findByTypeSize(type, page);
+		}
 		return hbRepository.findByType(type);
 	}
-	
+		
 	@RequestMapping("/{type}/{subType}")
 	public Iterable<HandBookDomain> allByTyepSubType(@PathVariable("type") String type,
-			@PathVariable("subType") String subType) throws Exception {
+			@PathVariable("subType") String subType, @RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+		if (size > 0){
+			Pageable page = new PageRequest(0, size);
+			return hbRepository.findByTypeAndSubTypeSize(type, subType, page);
+		}
 		return hbRepository.findByTypeAndSubType(type, subType);
 	}
 	

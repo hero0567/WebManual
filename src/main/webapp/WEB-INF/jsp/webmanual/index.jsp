@@ -32,7 +32,9 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+
+
+<body ng-app="" ng-controller="IndexController">	
 	<nav class="navbar navbar-default navbar-fixed-top">	  	
       <div class="container">
         <div class="navbar-header">
@@ -79,7 +81,8 @@
 			<br>
 
 			<ul class="row nav navbar-nav">
-				<li class="active"><a href="#">电视</a></li>
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#about">电视</a></li>
 				<li><a href="#about">冰箱</a></li>
 				<li><a href="#about">空调</a></li>
 				<li><a href="#contact">洗衣机</a></li>
@@ -96,6 +99,7 @@
     </nav>
     <br><br><br>
 	<div class="container">
+		
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="panel panel-default">
@@ -109,19 +113,11 @@
 				  		</div>
 				  	</div>
 				  	<div class="row">
-				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-repeat="tv in tvs">
 				          <div class="thumbnail">
 								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
-							</div>
-				        </div> 
-				        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				          <div class="thumbnail">
-								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+								<h4>{{tv.name}}</h4>
+								<p>{{tv.des}}</p>
 								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
 							</div>
 				        </div> 
@@ -130,7 +126,7 @@
 				</div>
 			</div>
 	    </div>
-
+	    
 	    <div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="panel panel-default">
@@ -144,19 +140,11 @@
 				  		</div>
 				  	</div>
 				  	<div class="row">
-				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-repeat="refrigerator in refrigerators">
 				          <div class="thumbnail">
 								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
-							</div>
-				        </div> 
-				        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				          <div class="thumbnail">
-								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+								<h4>{{refrigerator.name}}</h4>
+								<p>{{refrigerator.des}}</p>
 								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
 							</div>
 				        </div> 
@@ -165,7 +153,7 @@
 				</div>
 			</div>
 	    </div>
-
+	    
 	    <div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="panel panel-default">
@@ -177,21 +165,13 @@
 				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				  			<a class="f-r">更多 </a>
 				  		</div>
-				  	</div> 
+				  	</div>
 				  	<div class="row">
-				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-repeat="ac in airConditions">
 				          <div class="thumbnail">
 								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
-							</div>
-				        </div> 
-				        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				          <div class="thumbnail">
-								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+								<h4>{{ac.name}}</h4>
+								<p>{{ac.des}}</p>
 								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
 							</div>
 				        </div> 
@@ -200,33 +180,79 @@
 				</div>
 			</div>
 	    </div>
-
+	    
 	    <div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="panel panel-default">
 				  <div class="panel-body">
 				  	<div class="row">
 				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-				  			<h4>洗衣机</h4>
+				  			<h4>热水器</h4>
 				  		</div>
 				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				  			<a class="f-r">更多 </a>
 				  		</div>
 				  	</div>
 				  	<div class="row">
-				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-repeat="waterMachine in waterMahines">
 				          <div class="thumbnail">
 								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+								<h4>{{waterMachine.name}}</h4>
+								<p>{{waterMachine.des}}</p>
 								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
 							</div>
 				        </div> 
-				        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				  	</div>
+				  </div>
+				</div>
+			</div>
+	    </div>
+	    
+	    <div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				  	<div class="row">
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				  			<h4>净水器</h4>
+				  		</div>
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				  			<a class="f-r">更多 </a>
+				  		</div>
+				  	</div>
+				  	<div class="row">
+				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-repeat="waterCleaner in warterCleaners">
 				          <div class="thumbnail">
 								<img src="" alt="">
-								<h4>说明书2</h4>
-								<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+								<h4>{{waterCleaner.name}}</h4>
+								<p>{{waterCleaner.des}}</p>
+								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
+							</div>
+				        </div> 
+				  	</div>
+				  </div>
+				</div>
+			</div>
+	    </div>
+	    
+	    <div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				  	<div class="row">
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				  			<h4>空气净化器</h4>
+				  		</div>
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				  			<a class="f-r">更多 </a>
+				  		</div>
+				  	</div>
+				  	<div class="row">
+				  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" ng-repeat="airCleaner in airCleaners">
+				          <div class="thumbnail">
+								<img src="" alt="">
+								<h4>{{airCleaner.name}}</h4>
+								<p>{{airCleaner.des}}</p>
 								<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
 							</div>
 				        </div> 
@@ -248,4 +274,6 @@
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
+<script src="js/lib/angular/angular.js"></script>
+<script src="js/controllers/IndexController.js"></script>
 </html>

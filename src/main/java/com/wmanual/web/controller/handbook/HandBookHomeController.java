@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.wmanual.web.controller;
+package com.wmanual.web.controller.handbook;
 
 import org.apache.commons.mail.EmailException;
 import org.slf4j.Logger;
@@ -29,13 +29,18 @@ import com.wmanual.configure.EmailConfigure;
 import com.wmanual.jpa.domain.Authority;
 import com.wmanual.jpa.domain.User;
 import com.wmanual.jpa.service.AuthorityRepository;
+import com.wmanual.jpa.service.HandBookRepository;
 import com.wmanual.jpa.service.UserRepository;
 import com.wmanual.utils.EmailUtil;
 
 @Controller
-public class HomeController {
+public class HandBookHomeController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass()); 
+	
+	
+	@Autowired
+	private HandBookRepository hbRepository;	
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -46,70 +51,11 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String home() throws Exception {
-		return "home";
+		return "webmanual/index";
 	}
 		
 	@RequestMapping("/index")
-	public String hello() throws Exception {
+	public String index() throws Exception {
 		return "webmanual/index";
 	}
-	
-	@RequestMapping(value="/login")
-	public String login() {
-		return "signup";
-	}
-	
-	@RequestMapping(value="/register")
-	public String register() {
-		return "register";
-	}
-	
-	@RequestMapping(value="/upload")
-	public String upload() {
-		return "upload";
-	}
-	
-	/**
-	 * http://localhost:8080/register?username=11112121&password=1212121
-	 * @param user
-	 * @return
-	 * @throws EmailException 
-	 */
-	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String registerUser(User user) throws EmailException {
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		user.setPassword(encoder.encode(user.getPassword()));
-		Authority auth = new Authority();
-		auth.setUsername(user.getUsername());
-		auth.setAuthority("ROLE_USER");
-		user.setEnabled(true);
-		logger.info("Username :{}, Password:{}",user.getUsername(),user.getPassword());
-		userRepository.save(user);
-		authorityRepository.save(auth);
-		
-		EmailUtil.getInstance().sendEmail(user.getUsername(), emailConfigure);
-		
-		return "login";
-	}
-		
-	@RequestMapping(value="/logout")
-	public String logout() {
-		return "logout";
-	}
-	
-	@RequestMapping(value="/about")
-	public String about() {
-		return "about";
-	}
-	
-	@RequestMapping(value="/forbidden")
-	public String forbidden() {
-		return "403";
-	}
-	
-//	
-//	@ExceptionHandler(Exception.class)  
-//    public String runtimeExceptionHandler(Exception runtimeException) {  
-//       return "exception";
-//    }  
 }
