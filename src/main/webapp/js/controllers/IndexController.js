@@ -14,6 +14,8 @@ var IndexController = function($scope, $http) {
     $scope.warterCleaners = {};
     $scope.airCleaners = {};
     
+    $scope.searchKey = "全部";
+    
     $scope.fetchTV = function() {
    	 $http.get('/hb/大家电/电视?size=2').success(function(tvs){
             $scope.tvs = tvs;
@@ -56,6 +58,14 @@ var IndexController = function($scope, $http) {
                $scope.airCleaners = airCleaners;
            });
    	}   
+    
+    $scope.search = function() {
+      	alert($scope.searchKey);
+   	} 
+    
+    $scope.changeSearchKey = function(key) {
+    	 $scope.searchKey = key;
+   	}  
     
     $scope.fetchTV(); 
     $scope.fetchRefrigerator();
