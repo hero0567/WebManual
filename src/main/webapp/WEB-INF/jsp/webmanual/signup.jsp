@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>æ³¨å</title>
+  <title>注册</title>
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="./css/signup.css">
   <meta name="csrf-param" content="authenticity_token" />
@@ -29,31 +29,31 @@
               <input name="account[terms_accepted]" type="hidden" value="1">
 
               <div class="email-section">
-                <input class="account_email form-input" placeholder="é®ç®±å°å" name="account[email]" type="email" required="required" id="signup-email">
-                <div class="suggestion x-small">æ¨ç¡®å® <span class="suggestion-link"></span>?</div>
+                <input class="account_email form-input" placeholder="邮箱地址" name="account[email]" type="email" required="required" id="signup-email">
+                <div class="suggestion x-small">您确定 <span class="suggestion-link"></span>?</div>
                 <img class="sad-face" src="img/error.png">
                 <img class="positive-tick" src="img/correct.png">
               </div>
 
               <div class="password-section">
-                <input class="account_password form-input" placeholder="å¯ç " name="account[password]" type="password" required="required" id="signup-password">
+                <input class="account_password form-input" placeholder="密码" name="account[password]" type="password" required="required" id="signup-password">
                 <img class="sad-face" src="img/error.png">
                 <img class="positive-tick" src="img/correct.png">
               </div>
 
-              <button class="btn medium-large btn-block btn-cta primary" type="submit">æ³¨å</button>
-              <p class="tandcs grey-accent">åæ<a href="" target="_blank">ä½¿ç¨æ¡æ¬¾</a> </p>
+              <button class="btn medium-large btn-block btn-cta primary" type="submit">注册</button>
+              <p class="tandcs grey-accent">同意<a href="" target="_blank">使用条款</a> </p>
             </form>
 
             <div class="divider-container">
               <div class="divider"></div>
-              <div class="divider-text">æèä½¿ç¨ç¬¬ä¸æ¹ç»å½</div>
+              <div class="divider-text">或者使用第三方登录</div>
             </div>
             <a href="">
               <div class="github-button social-button x-small"><i class="fa fa-github"></i>QQ</div>
             </a>
             <a href="">
-              <div class="google-button social-button x-small"><i class="fa fa-google"></i>å¾®å</div>
+              <div class="google-button social-button x-small"><i class="fa fa-google"></i>微博</div>
             </a>
           </div>
         </section>
