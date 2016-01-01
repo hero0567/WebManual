@@ -13,8 +13,8 @@
     <title>首页</title>
 
     <link href="css/custom.css" rel="stylesheet">
-
     <link href="css/common.css" rel="stylesheet">
+    <link href="css/pages/index.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
     <![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">	  	
+	<nav class="navbar navbar-default navbar-fixed-top navbar-custom">	  	
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,15 +43,15 @@
             <span class="icon-bar"></span>
           </button>
           <br>
-          <a class="navbar-brand" href="#">92说明书</a>
+          <a class="navbar-brand brand-name" href="#">92说明书</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false"  >
         	<br>
 			<div class="row">
-			  <div class="col-lg-2 col-md-2 col-sm-1 col-xs-1">
+			  <div class="col-lg-2 col-md-0 col-sm-0 col-xs-1">
 			  </div>
-			  <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10">
+			  <div class="col-lg-6 col-md-6 col-sm-8 col-xs-10">
 			    <div class="input-group">
 			      <div class="input-group-btn">
 			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">全部 <span class="caret"></span></button>
@@ -72,20 +72,25 @@
 			    </div><!-- /input-group -->
 			  </div><!-- /.col-lg-6 -->
 			  
-			  <div class="col-lg-4 col-md-2 col-sm-1 col-xs-1">
+			  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-10">
+			  	<ul class="nav navbar-nav navbar-right navbar-login">
+					<li><a href="">注册</a></li> 
+					<li><a href="">登录</a></li>
+				</ul>
 			  </div>
 			</div><!-- /.row -->
 
 			<br>
 
-			<ul class="row nav navbar-nav">
-				<li class="active"><a href="#">电视</a></li>
-				<li><a href="#about">冰箱</a></li>
-				<li><a href="#about">空调</a></li>
-				<li><a href="#contact">洗衣机</a></li>
-				<li><a href="#about">热水器</a></li>
-				<li><a href="#contact">净水器</a></li>
-				<li><a href="#contact">空气净化器</a></li>
+			<ul class="row nav navbar-nav navbar-custom">
+				<li class="active"><a href="#">首页<br><small>9882</small></a></li>
+				<li ><a href="#">电视<br><small>1122</small></a></li>
+				<li><a href="#about">冰箱<br><small>1122</small></a></a></li>
+				<li><a href="#about">空调<br><small>2122</small></a></a></li>
+				<li><a href="#contact">洗衣机<br><small>1322</small></a></a></li>
+				<li><a href="#about">热水器<br><small>1222</small></a></a></li>
+				<li><a href="#contact">净水器<br><small>2122</small></a></a></li>
+				<li><a href="#contact">空气净化器<br><small>122</small></a></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="">我的搜藏 &nbsp;<span class="badge">42</span></a></li> 
