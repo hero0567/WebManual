@@ -7034,12 +7034,12 @@ p {
 }
 
 ::-moz-selection {
-	background: #f60;
+	background: #00aeef;
 	color: #fff
 }
 
 ::selection {
-	background: #f60;
+	background: #00aeef;
 	color: #fff
 }
 
@@ -7069,7 +7069,7 @@ a {
 }
 
 a:hover,a[href]:active,a[href]:hover {
-	color: #f60
+	color: #00aeef
 }
 
 a.white {
@@ -7101,7 +7101,7 @@ a.c-white {
 }
 
 a.c-white:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-white-aset a {
@@ -7109,7 +7109,7 @@ a.c-white:hover {
 }
 
 .c-white-aset a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-gray {
@@ -7121,7 +7121,7 @@ a.c-white:hover {
 }
 
 .c {
-	color: #f60
+	color: #00aeef
 }
 
 a.c-gray {
@@ -7129,7 +7129,7 @@ a.c-gray {
 }
 
 .c-gray-aset a,a.c-gray:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-green {
@@ -7277,7 +7277,7 @@ ul.colum-2>li {
 }
 
 .hoverc:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .block.block-v>a.flr .jzbtn {
@@ -7515,7 +7515,7 @@ footer a:hover {
 
 .jzstyle.modal .modal-header {
 	text-align: center;
-	background-color: #f60;
+	background-color: #00aeef;
 	font-weight: 700;
 	padding-top: 8px;
 	padding-bottom: 8px;
@@ -7530,7 +7530,7 @@ footer a:hover {
 }
 
 .jzstyle.btn-primary {
-	background-color: #f60;
+	background-color: #00aeef;
 	border-color: rgba(0,0,0,.05);
 	border-radius: 3px;
 	opacity: .8
@@ -7623,7 +7623,7 @@ header .navbox .mainnav>li>a {
 }
 
 header .navbox .mainnav>li.on a {
-	color: #f60
+	color: #00aeef
 }
 
 header .navbox .mainnav>li.withsub:hover {
@@ -7656,7 +7656,7 @@ header .navbox .mainnav .subblock a {
 }
 
 header .navbox .mainnav .subblock a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 header .navbox .mainnav .subblock.sub-activity,header .navbox .mainnav .subblock.sub-prod {
@@ -7691,7 +7691,7 @@ header .navbox .mainnav .subblock .list-subactivity li>a {
 
 header .navbox .mainnav .subblock .list-subactivity li>a:hover {
 	background-color: #f8f8f8;
-	box-shadow: 0 -3px 0 0 #f60 inset
+	box-shadow: 0 -3px 0 0 #00aeef inset
 }
 
 header .navbox .mainnav .subblock .list-subactivity li>a:hover p.c-gray {
@@ -7728,7 +7728,7 @@ header .navbox .mainnav .subblock .list-subprod li>a {
 
 header .navbox .mainnav .subblock .list-subprod li>a:hover {
 	background-color: #f8f8f8;
-	box-shadow: 0 -3px 0 0 #f60 inset;
+	box-shadow: 0 -3px 0 0 #00aeef inset;
 	color: #2F2F2F
 }
 
@@ -7811,7 +7811,7 @@ header .usernav .usersearch input {
 
 header .usernav .usersearch input.on,header .usernav .usersearch input:focus {
 	background-color: #fafafa;
-	border-color: #f60
+	border-color: #00aeef
 }
 
 header .usernav .usersearch button {
@@ -7841,7 +7841,7 @@ header .usernav .useradd .jzbtn {
 }
 
 header .usernav .useradd .jzbtn:hover {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff
 }
 
@@ -7850,7 +7850,7 @@ header .usernav .usermsg .subblock {
 }
 
 header .usernav .usermsg:hover>a,header .usernav .usermsg:hover>span {
-	color: #f60
+	color: #00aeef
 }
 
 header .usernav .usermenu {
@@ -7940,7 +7940,7 @@ header .usernav .userlogin a {
 
 .subnavbox .subnav>li>a.on,.subnavbox .subnav>li>a:hover {
 	background-color: #f6f6f6;
-	color: #f60
+	color: #00aeef
 }
 
 .subnavbox .subnav>li>a i,.subnavbox .subnav>li>a span {
@@ -8037,8 +8037,8 @@ header .usernav .userlogin a {
 }
 
 .jzbtn:hover {
-	border-color: #f60;
-	color: #f60
+	border-color: #00aeef;
+	color: #00aeef
 }
 
 .jzbtn:active {
@@ -8047,14 +8047,14 @@ header .usernav .userlogin a {
 }
 
 .jzbtn.c {
-	border-color: #f60;
-	background-color: #f60;
+	border-color: #00aeef;
+	background-color: #00aeef;
 	color: #fff!important
 }
 
 .jzbtn.c-lined {
-	border-color: #f60;
-	color: #f60
+	border-color: #00aeef;
+	color: #00aeef
 }
 
 .jzbtn.bg-green {
@@ -8096,7 +8096,7 @@ header .usernav .userlogin a {
 .jzbtn.bg-c {
 	color: #fff!important;
 	border-color: rgba(0,0,0,.1);
-	background-color: #f60
+	background-color: #00aeef
 }
 
 .jzbtn.row {
@@ -8110,8 +8110,8 @@ a .jzbtn {
 }
 
 a .jzbtn:hover {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .tag {
@@ -8123,7 +8123,7 @@ a .jzbtn:hover {
 	margin-bottom: 3px;
 	font-size: .8em;
 	font-weight: 400;
-	color: #f60;
+	color: #00aeef;
 	border-radius: 2px;
 	line-height: 23px;
 	transition: all .2s;
@@ -8181,8 +8181,8 @@ a .jzbtn:hover {
 }
 
 .tag.c {
-	color: #f60;
-	border-color: #f60;
+	color: #00aeef;
+	border-color: #00aeef;
 	background-color: transparent
 }
 
@@ -8225,7 +8225,7 @@ a .jzbtn:hover {
 .tag.bg-c {
 	color: #fff;
 	border-color: rgba(0,0,0,.05);
-	background-color: #f60
+	background-color: #00aeef
 }
 
 a>.tag:not(.nohover) {
@@ -8237,7 +8237,7 @@ a>.tag:not(.nohover) {
 	margin-bottom: 3px;
 	font-size: .8em;
 	font-weight: 400;
-	color: #f60;
+	color: #00aeef;
 	border-radius: 2px;
 	line-height: 23px;
 	transition: all .2s;
@@ -8295,8 +8295,8 @@ a>.tag:not(.nohover).gray {
 }
 
 a>.tag:not(.nohover).c {
-	color: #f60;
-	border-color: #f60;
+	color: #00aeef;
+	border-color: #00aeef;
 	background-color: transparent
 }
 
@@ -8339,12 +8339,12 @@ a>.tag:not(.nohover).bg-white {
 a>.tag:not(.nohover).bg-c {
 	color: #fff;
 	border-color: rgba(0,0,0,.05);
-	background-color: #f60
+	background-color: #00aeef
 }
 
 a>.tag:not(.nohover):hover {
-	color: #f60!important;
-	border-color: #f60!important;
+	color: #00aeef!important;
+	border-color: #00aeef!important;
 	cursor: pointer;
 	user-select: none;
 	-webkit-user-select: none
@@ -8355,7 +8355,7 @@ a>.tag:not(.nohover):hover {
 }
 
 .c-tted a:hover,a.ctted:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-step1ed,.c-step1ed a {
@@ -8363,7 +8363,7 @@ a>.tag:not(.nohover):hover {
 }
 
 .c-step1ed a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-step2ed,.c-step2ed a {
@@ -8371,7 +8371,7 @@ a>.tag:not(.nohover):hover {
 }
 
 .c-step2ed a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-step3ed,.c-step3ed a {
@@ -8379,7 +8379,7 @@ a>.tag:not(.nohover):hover {
 }
 
 .c-step3ed a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .c-step4ed,.c-step4ed a {
@@ -8387,7 +8387,7 @@ a>.tag:not(.nohover):hover {
 }
 
 .c-step4ed a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .tagee {
@@ -8435,7 +8435,7 @@ a>.tag:not(.nohover):hover {
 }
 
 .tabon {
-	box-shadow: 0 -2px 0 0 #f60 inset
+	box-shadow: 0 -2px 0 0 #00aeef inset
 }
 
 div~.titlebar {
@@ -8481,7 +8481,7 @@ div~.titlebar {
 }
 
 .titlebar .rightset>a:hover,.titlebar .rightset>span:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .titlebar .tabset {
@@ -8525,7 +8525,7 @@ div~.titlebar {
 }
 
 .titlebar .tabset>a.on,.titlebar .tabset>span.on {
-	box-shadow: 0 -2px 0 0 #f60 inset
+	box-shadow: 0 -2px 0 0 #00aeef inset
 }
 
 .titlebar .tabset.card-style {
@@ -8540,10 +8540,10 @@ div~.titlebar {
 
 .titlebar .tabset.card-style>a.on,.titlebar .tabset.card-style>span.on {
 	background-color: #fff;
-	box-shadow: 0 2px 0 0 #f60 inset;
+	box-shadow: 0 2px 0 0 #00aeef inset;
 	border-left: 1px solid #e8e8e8;
 	border-right: 1px solid #e8e8e8;
-	color: #f60;
+	color: #00aeef;
 	cursor: default
 }
 
@@ -8593,8 +8593,8 @@ div~.titlebar {
 }
 
 .titlebar .tabset.bg-gold .tab .flr a:hover {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .titlebar .fa-list {
@@ -8619,11 +8619,11 @@ div~.titlebar {
 }
 
 .titlebar>a.right-btn:hover,.titlebar>span.right-btn:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .titlebar>a.on,.titlebar>span.on {
-	box-shadow: 0 -2px 0 0 #f60 inset
+	box-shadow: 0 -2px 0 0 #00aeef inset
 }
 
 .titlebar>a .fa,.titlebar>span .fa {
@@ -8645,9 +8645,9 @@ div~.titlebar {
 }
 
 .titlebar.for2btn>a.on {
-	box-shadow: 0 2px 0 0 #f60 inset;
+	box-shadow: 0 2px 0 0 #00aeef inset;
 	background-color: #fefefe;
-	color: #f60
+	color: #00aeef
 }
 
 .titlebar.for2btn>a:first-child {
@@ -8672,9 +8672,9 @@ div~.titlebar {
 }
 
 .titlebar.for4btn>a.on {
-	box-shadow: 0 2px 0 0 #f60 inset;
+	box-shadow: 0 2px 0 0 #00aeef inset;
 	background-color: #fefefe;
-	color: #f60
+	color: #00aeef
 }
 
 .titlebar.for4btn>a:first-child {
@@ -8699,7 +8699,7 @@ div~.titlebar {
 }
 
 .white-title {
-	border-left: 4px solid #f60;
+	border-left: 4px solid #00aeef;
 	margin-top: 20px;
 	padding: 5px 20px
 }
@@ -9109,7 +9109,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-icnset li:hover .title,.list-main-icnset li:hover .title a,.list-main-incset li:hover .title,.list-main-incset li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-icnset li:last-child,.list-main-incset li:last-child {
@@ -9207,7 +9207,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-icnset .title a:hover,.list-main-incset .title a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-icnset .date,.list-main-icnset .date a,.list-main-icnset .des,.list-main-icnset .des a,.list-main-incset .date,.list-main-incset .date a,.list-main-incset .des,.list-main-incset .des a {
@@ -9215,7 +9215,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-icnset .date a:hover,.list-main-icnset .des a:hover,.list-main-incset .date a:hover,.list-main-incset .des a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-icnset .tag,.list-main-incset .tag {
@@ -9271,7 +9271,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-eventset li:hover .title,.list-main-eventset li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-eventset li:last-child {
@@ -9383,7 +9383,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-eventset .title a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-eventset.thead li {
@@ -9431,7 +9431,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-investset li:hover .title,.list-main-investset li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-investset li:last-child {
@@ -9525,7 +9525,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-investset .title a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-investset .action,.list-main-investset .action a,.list-main-investset .loca,.list-main-investset .loca a,.list-main-investset .round,.list-main-investset .round a,.list-main-investset .tags,.list-main-investset .tags a {
@@ -9533,7 +9533,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-investset .action a:hover,.list-main-investset .loca a:hover,.list-main-investset .round a:hover,.list-main-investset .tags a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-investset .date,.list-main-investset .date a,.list-main-investset .des,.list-main-investset .des a,.list-main-investset .fina,.list-main-investset .fina a {
@@ -9541,7 +9541,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-investset .date a:hover,.list-main-investset .des a:hover,.list-main-investset .fina a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-investset .tag {
@@ -9588,7 +9588,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-personset li:hover .title,.list-main-personset li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-personset li:nth-child(even) {
@@ -9682,7 +9682,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-main-prodset li:hover .title,.list-main-prodset li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-main-prodset li:nth-child(even) {
@@ -9816,7 +9816,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-timeline li:hover .lihoverc,.list-timeline li:hover .lihoverc a,.list-timeline li:hover .title,.list-timeline li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-timeline li:hover .date:after {
@@ -10289,7 +10289,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-round tr:hover .base a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-round tr:nth-last-child(1) .base .round {
@@ -10362,7 +10362,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-round .investor a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .list-round .date {
@@ -10491,7 +10491,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-prodcase li:hover .title {
-	color: #f60
+	color: #00aeef
 }
 
 .list-prodcase li>a,.list-prodcase li>div {
@@ -10620,7 +10620,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-display-lite li:hover .title,.list-display-lite li:hover .title a {
-	color: #f60
+	color: #00aeef
 }
 
 .list-display-lite .pic {
@@ -10736,7 +10736,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-block-infopic li:hover .title {
-	color: #f60
+	color: #00aeef
 }
 
 .list-block-infopic .pic {
@@ -10868,7 +10868,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	content: '●';
 	position: absolute;
 	display: inline-block;
-	color: #f60;
+	color: #00aeef;
 	font-family: verdana;
 	transform: translateY(-5px);
 	-webkit-transform: translateY(-5px);
@@ -10929,7 +10929,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-timeline-flow li:hover .event-type {
-	background-color: #f60
+	background-color: #00aeef
 }
 
 .list-timeline-flow li .event-type {
@@ -11360,7 +11360,7 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .list-row-prods li a:hover {
 	background-color: #fafafa;
-	color: #f60
+	color: #00aeef
 }
 
 .block-merge {
@@ -11449,7 +11449,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-merge .name:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .block-merge .des {
@@ -11551,7 +11551,7 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .block-filter .keyset>span {
 	display: inline-block;
-	background-color: #f60;
+	background-color: #00aeef;
 	padding: 1px 0 1px 10px;
 	height: 25px;
 	line-height: 23px;
@@ -11596,8 +11596,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-filter .keyset>span.clearall a:hover {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .block-filter .filter {
@@ -11629,7 +11629,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-filter .filter>li:hover>span {
-	color: #f60;
+	color: #00aeef;
 	background-color: #fff
 }
 
@@ -11662,16 +11662,16 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-filter .filter .filter-sub a:hover {
-	color: #f60;
+	color: #00aeef;
 	background-color: #F6F6F6
 }
 
 .block-filter .filter .filter-sub a.on {
-	color: #f60
+	color: #00aeef
 }
 
 .block-filter .filter .filter-sub a:active {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff
 }
 
@@ -11838,7 +11838,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-footer-iconlink>a:hover {
-	border-color: #f60
+	border-color: #00aeef
 }
 
 .block-footer-iconlink .iconblock {
@@ -11984,8 +11984,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .ui-card-style-sub>a.on,.ui-card-style-sub>span.on {
-	color: #f60;
-	box-shadow: 0 -1px 0 0 #f60 inset
+	color: #00aeef;
+	box-shadow: 0 -1px 0 0 #00aeef inset
 }
 
 .ui-card-style-sub>a>span,.ui-card-style-sub>span>span {
@@ -12004,7 +12004,7 @@ ul[class|=list-main]:not(.thead) .tag {
 .barui .per {
 	float: left;
 	height: 20px;
-	background-color: #f60;
+	background-color: #00aeef;
 	font-size: .8em;
 	color: #fff;
 	text-indent: 5px;
@@ -12047,12 +12047,12 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .ui-pagechange a:hover {
 	background-color: #f8f8f8;
-	border-color: #f60
+	border-color: #00aeef
 }
 
 .ui-pagechange .on {
-	color: #f60;
-	border-color: #f60;
+	color: #00aeef;
+	border-color: #00aeef;
 	cursor: default
 }
 
@@ -12135,7 +12135,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .ui-fileupload:hover .file-tip .hovered {
-	color: #f60
+	color: #00aeef
 }
 
 .ui-fileupload .file-btn {
@@ -12632,7 +12632,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .ui-fakebtnlable label input[type=checkbox]:checked~span {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff
 }
 
@@ -12701,7 +12701,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .ui-scopestep li:hover a {
-	color: #f60
+	color: #00aeef
 }
 
 .ui-scopestep li:first-child {
@@ -12775,12 +12775,12 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .ui-onoff-btn:hover {
-	color: #f60!important;
+	color: #00aeef!important;
 	border-color: rgba(0,0,0,.2)!important
 }
 
 .ui-onoff-btn.on {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff!important;
 	box-shadow: none
 }
@@ -12817,7 +12817,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .bread li a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .bread li:not(:last-child):after {
@@ -12849,7 +12849,7 @@ ul[class|=list-main]:not(.thead) .tag {
 .uiblock-mobile-ex.on .mobile-ex-btn {
 	opacity: 1;
 	background-color: rgba(0,0,0,.07);
-	color: #f60
+	color: #00aeef
 }
 
 .uiblock-mobile-ex.on .mobile-ex-btn .fa-chevron-down {
@@ -12893,7 +12893,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	opacity: 0;
 	padding-bottom: 60px;
 	transition: all .3s;
-	border-top: 4px solid #f60;
+	border-top: 4px solid #00aeef;
 	background-color: rgba(50,50,50,.93);
 	color: #fff;
 	font-size: .9em
@@ -12904,7 +12904,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .uiblock-mobile-ex .mobile-ex-padbox a:hover {
-	color: #f60;
+	color: #00aeef;
 	background-color: rgba(0,0,0,.1)
 }
 
@@ -13123,7 +13123,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-right: 10px;
 	border-radius: 3px;
 	cursor: pointer;
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff
 }
 
@@ -13186,7 +13186,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .header nav a:hover {
-	color: #f60;
+	color: #00aeef;
 	text-decoration: none
 }
 
@@ -13201,14 +13201,14 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .header .right a {
-	border: 1px solid #f60;
-	color: #f60;
+	border: 1px solid #00aeef;
+	color: #00aeef;
 	padding: 6px 20px;
 	border-radius: 8px
 }
 
 .page-activity .header .right a:hover {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff
 }
 
@@ -13313,7 +13313,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .nearly-activity a {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff;
 	padding: 6px 40px;
 	display: inline-block;
@@ -13323,7 +13323,7 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .page-activity .nearly-activity span {
 	display: block;
-	color: #f60;
+	color: #00aeef;
 	margin-bottom: 10px
 }
 
@@ -13333,7 +13333,7 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .page-activity .nearly-activity .time {
 	position: absolute;
-	background-color: #F60;
+	background-color: #00aeef;
 	padding: 4px 6px;
 	color: #fff;
 	top: 10px;
@@ -13356,7 +13356,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .date-activity a {
-	background-color: #f60;
+	background-color: #00aeef;
 	padding: 10px 30px;
 	display: inline-block;
 	border-radius: 20px;
@@ -13549,7 +13549,7 @@ ul[class|=list-main]:not(.thead) .tag {
 .page-activity .a-apply {
 	padding: 6px 20px;
 	display: inline-block;
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff;
 	border-radius: 3px
 }
@@ -13587,7 +13587,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-right: 10px;
 	margin-bottom: 20px;
 	float: left;
-	background-color: #f60
+	background-color: #00aeef
 }
 
 .page-activity .bg-parent span img {
@@ -13595,7 +13595,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .bg-parent p {
-	color: #f60;
+	color: #00aeef;
 	font-weight: 600;
 	font-size: 18px
 }
@@ -13638,7 +13638,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .introduce a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .page-activity .introduce .aside-left {
@@ -13667,7 +13667,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .activity-introduce h2 {
-	color: #f60;
+	color: #00aeef;
 	margin-bottom: 20px
 }
 
@@ -13775,7 +13775,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	height: 40px;
 	margin-right: 40px;
 	margin-bottom: -10px;
-	color: #f60
+	color: #00aeef
 }
 
 .page-activity .other-activity {
@@ -13789,9 +13789,9 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .page-activity .other-activity a {
 	padding: 6px 10px;
-	border: 1px solid #f60;
+	border: 1px solid #00aeef;
 	border-radius: 3px;
-	color: #f60
+	color: #00aeef
 }
 
 .page-activity .footer li {
@@ -13811,7 +13811,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .page-activity .aside-right .num {
-	border: 1px solid #f60;
+	border: 1px solid #00aeef;
 	padding: 4px 14px;
 	border-radius: 3px
 }
@@ -13936,7 +13936,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infohead .loca a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .infohead .loca~.links,.infohead .scope {
@@ -13964,11 +13964,11 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infohead .actions a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .infohead .actions a.on {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff
 }
 
@@ -14045,7 +14045,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infohead-group .picinfo a:hover .tag {
-	color: #f60
+	color: #00aeef
 }
 
 .infohead-group .picinfo a .jzbtn:hover {
@@ -14173,7 +14173,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infoheadrow .rowhead .picinfo .row:nth-child(3) a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .infoheadrow .rowhead .picinfo .row.height2 {
@@ -14187,7 +14187,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infoheadrow .rowhead .picinfo .c-gray a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .infoheadrow .rowhead .actionbar .on {
@@ -14249,7 +14249,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infohead-person .jzbtn:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .infohead-person .jzbtn.bg-green {
@@ -14290,7 +14290,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .infohead-person p a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .infohead-person .usericon {
@@ -14391,7 +14391,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-commit a {
-	color: #f60
+	color: #00aeef
 }
 
 .block-commit>.commit {
@@ -14411,7 +14411,7 @@ ul[class|=list-main]:not(.thead) .tag {
 
 .block-commit>.commit .subbtn {
 	float: right;
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff;
 	width: 80px;
 	border: none;
@@ -14515,7 +14515,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-commit .replybtn:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .block-doner .picset {
@@ -14557,7 +14557,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .block-inc-fina>table .name:hover,.block-inc-fina>table .round {
-	color: #f60
+	color: #00aeef
 }
 
 .block-inc-fina>table .fina {
@@ -14621,7 +14621,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .slider-inc .picset>div.on {
-	border-color: #f60
+	border-color: #00aeef
 }
 
 .slider-inc .picset>div:only-child {
@@ -14785,12 +14785,12 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox .tip a {
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox .tiptop {
 	text-align: center;
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox .tipcenter {
@@ -14815,7 +14815,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox .snslogin a:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox-thin {
@@ -14878,7 +14878,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-thin .tip a {
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox-thin .tiptop {
@@ -14907,7 +14907,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-thin .tiptop>a.on,.loginbox-thin .tiptop>a:only-child,.loginbox-thin .tiptop>span.on,.loginbox-thin .tiptop>span:only-child {
-	border-bottom-color: #f60;
+	border-bottom-color: #00aeef;
 	color: #4d4d4d
 }
 
@@ -14952,8 +14952,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-thin .snslogin a:hover {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .loginbox-thin .ui-info {
@@ -15035,7 +15035,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-complete .tip a {
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox-complete .tiptop {
@@ -15064,7 +15064,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-complete .tiptop>span.on {
-	border-bottom-color: #f60;
+	border-bottom-color: #00aeef;
 	color: #4d4d4d
 }
 
@@ -15100,8 +15100,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-complete .snslogin a:hover {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .loginbox-mail {
@@ -15116,7 +15116,7 @@ ul[class|=list-main]:not(.thead) .tag {
 .loginbox-mail .envelope {
 	font-size: 2.5em;
 	margin-bottom: 10px;
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox-mail .row {
@@ -15144,7 +15144,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-mail .tip a {
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox-sns {
@@ -15209,7 +15209,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-sns .tip a {
-	color: #f60
+	color: #00aeef
 }
 
 .loginbox-sns .tiptop {
@@ -15238,7 +15238,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-sns .tiptop>span.on {
-	border-bottom-color: #f60;
+	border-bottom-color: #00aeef;
 	color: #4d4d4d
 }
 
@@ -15274,8 +15274,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .loginbox-sns .snslogin a:hover {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .jzloading {
@@ -15311,7 +15311,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #f60;
+	background-color: #00aeef;
 	transform: translateX(100%);
 	z-index: 9;
 	animation: ani-topline 1s ease-in-out 3;
@@ -15486,8 +15486,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-link-lite.TOP a:hover .tag,.list-link-lite.top a:hover .tag,.list-link-lite.top10 a:hover .tag {
-	color: #f60;
-	border-color: #f60
+	color: #00aeef;
+	border-color: #00aeef
 }
 
 .list-link-lite.normal>li>a {
@@ -15664,8 +15664,8 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-lite li>a.on,.list-lite li>a:hover {
-	box-shadow: 3px 0 0 0 #f60 inset;
-	color: #f60
+	box-shadow: 3px 0 0 0 #00aeef inset;
+	color: #00aeef
 }
 
 .list-lite li .bg-back {
@@ -15714,7 +15714,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .search-title-bar b {
-	color: #f60
+	color: #00aeef
 }
 
 .search-footer-bar a {
@@ -16022,7 +16022,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .about-us-tab .tab.on,.about-us-tab .tab:hover {
-	color: #f60
+	color: #00aeef
 }
 
 .cont.about .our-about p {
@@ -16082,7 +16082,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .cont.joinus span {
-	color: #f60
+	color: #00aeef
 }
 
 .cont.joinus p:last-child {
@@ -16124,7 +16124,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .cont.contact .name,.cont.contact span {
-	color: #f60
+	color: #00aeef
 }
 
 .cont.contact li {
@@ -16230,7 +16230,7 @@ ul[class|=list-main]:not(.thead) .tag {
 .sign-up input[type=submit] {
 	width: 100px;
 	padding: 4px;
-	background-color: #f60;
+	background-color: #00aeef;
 	border-radius: 3px;
 	border: 0;
 	color: #fff
@@ -16331,7 +16331,7 @@ ul[class|=list-main]:not(.thead) .tag {
 .standalone-faq .qnasearch input {
 	border: none;
 	width: 95%;
-	color: #f60;
+	color: #00aeef;
 	font-family: "Lantinghei SC",Arial,'Hiragino Sans GB','Segoe UI','Microsoft Yahei','WenQuanYi Micro Hei',Simsun,sans-serif;
 	text-indent: 28px;
 	background: url(img/icon-search-a.png) 10px 5px/15px no-repeat
@@ -16356,7 +16356,7 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .standalone-faq .qnabox span[hl] {
-	background-color: #f60;
+	background-color: #00aeef;
 	color: #fff;
 	border-radius: 2px
 }
@@ -16819,7 +16819,7 @@ ul[class|=list-main]:not(.thead) .tag {
 
 	.block-filter .filter>li:hover>span {
 		border-bottom-color: transparent;
-		color: #f60;
+		color: #00aeef;
 		background-color: #fff
 	}
 
@@ -17322,7 +17322,7 @@ boby {
 
 .ui-mobile-usersearch input.on,.ui-mobile-usersearch input:focus {
 	background-color: #fafafa;
-	border-color: #f60
+	border-color: #00aeef
 }
 
 .ui-mobile-usersearch button {
