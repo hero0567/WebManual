@@ -56,19 +56,19 @@
 			  <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10">
 			    <div class="input-group">
 			      <div class="input-group-btn">
-			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{searchKey}} <span class="caret"></span></button>
+			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{type}} <span class="caret"></span></button>
 			        <ul class="dropdown-menu">
-			          <li><a ng-click="changeSearchKey('全部')">全部</a></li>
-			          <li><a ng-click="changeSearchKey('电视')">电视</a></li>
-			          <li><a ng-click="changeSearchKey('冰箱')">冰箱</a></li>
-			          <li><a ng-click="changeSearchKey('空调')">空调</a></li>
-			          <li><a ng-click="changeSearchKey('洗衣机')">洗衣机</a></li>
-			          <li><a ng-click="changeSearchKey('热水器')">热水器</a></li>
-			          <li><a ng-click="changeSearchKey('净水器')">净水器</a></li>
-			          <li><a ng-click="changeSearchKey('空气净化器')">空气净化器</a></li>
+			          <li><a ng-click="changeSearchType('全部')">全部</a></li>
+			          <li><a ng-click="changeSearchType('电视')">电视</a></li>
+			          <li><a ng-click="changeSearchType('冰箱')">冰箱</a></li>
+			          <li><a ng-click="changeSearchType('空调')">空调</a></li>
+			          <li><a ng-click="changeSearchType('洗衣机')">洗衣机</a></li>
+			          <li><a ng-click="changeSearchType('热水器')">热水器</a></li>
+			          <li><a ng-click="changeSearchType('净水器')">净水器</a></li>
+			          <li><a ng-click="changeSearchType('空气净化器')">空气净化器</a></li>
 			        </ul>
 			      </div><!-- /btn-group -->
-			      <input type="text" class="form-control" aria-label="...">
+			      <input type="text" class="form-control" ng-model="key" aria-label="...">
 			      <span class="input-group-btn">
 			        <button class="btn btn-default" type="button" ng-click="search()">搜索</button>
 			      </span>
@@ -273,8 +273,8 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/IndexController.js"></script>
 
 </body>
-<script src="js/lib/angular/angular.js"></script>
-<script src="js/controllers/IndexController.js"></script>
 </html>

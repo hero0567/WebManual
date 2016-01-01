@@ -16,49 +16,36 @@
 
 package com.wmanual.web.controller.handbook;
 
-import org.apache.commons.mail.EmailException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.wmanual.configure.EmailConfigure;
-import com.wmanual.jpa.domain.Authority;
-import com.wmanual.jpa.domain.User;
-import com.wmanual.jpa.service.AuthorityRepository;
-import com.wmanual.jpa.service.HandBookRepository;
-import com.wmanual.jpa.service.UserRepository;
-import com.wmanual.utils.EmailUtil;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HandBookHomeController {
 
-	private Logger logger = LoggerFactory.getLogger(getClass()); 
-	
-	
-	@Autowired
-	private HandBookRepository hbRepository;	
-	
-	@Autowired
-	private UserRepository userRepository;
-	@Autowired
-	private AuthorityRepository authorityRepository;
-	@Autowired
-	private EmailConfigure emailConfigure;
-	
 	@RequestMapping("/")
 	public String home() throws Exception {
 		return "webmanual/index";
 	}
-		
+
 	@RequestMapping("/index")
 	public String index() throws Exception {
 		return "webmanual/index";
 	}
-	
+
+	@RequestMapping("/search")
+	public String search(Model model, @RequestParam(value = "type", required = false) String type,
+			@RequestParam(value = "key", required = false) String key) throws Exception {
+		model.addAttribute("type", type);
+		model.addAttribute("key", key);
+		return "webmanual/searchResult";
+	}
+
 	@RequestMapping("/signin")
 	public String signin() throws Exception {
 		return "webmanual/signin";

@@ -4,7 +4,7 @@
  * IndexController
  * @constructor
  */
-var IndexController = function($scope, $http) {
+var IndexController = function($scope, $http, $location) {
 	
     $scope.tvs = {};
     $scope.refrigerators = {};
@@ -14,57 +14,59 @@ var IndexController = function($scope, $http) {
     $scope.warterCleaners = {};
     $scope.airCleaners = {};
     
-    $scope.searchKey = "全部";
+    $scope.size = 2;    
+    $scope.type = "全部";
+    $scope.key = "";
     
     $scope.fetchTV = function() {
-   	 $http.get('/hb/大家电/电视?size=2').success(function(tvs){
+   	 $http.get('/hb/大家电/电视?size=' + $scope.size).success(function(tvs){
             $scope.tvs = tvs;
         });
 	}   
     
     $scope.fetchRefrigerator = function() {
-     	 $http.get('/hb/大家电/冰箱?size=2').success(function(refrigerators){
+     	 $http.get('/hb/大家电/冰箱?size=' + $scope.size).success(function(refrigerators){
               $scope.refrigerators = refrigerators;
           });
   	}   
    
     
     $scope.fetchAirCondition = function() {
-      	 $http.get('/hb/大家电/空调?size=2').success(function(airConditions){
+      	 $http.get('/hb/大家电/空调?size=' + $scope.size).success(function(airConditions){
                $scope.airConditions = airConditions;
            });
    	}   
     
     $scope.fetchWaterMahine = function() {
-      	 $http.get('/hb/大家电/洗衣机?size=2').success(function(waterMahines){
+      	 $http.get('/hb/大家电/洗衣机?size=' + $scope.size).success(function(waterMahines){
                $scope.waterMahines = waterMahines;
            });
    	}   
     
     $scope.fetchWaterHeader = function() {
-      	 $http.get('/hb/大家电/热水器').success(function(waterHeaders){
+      	 $http.get('/hb/大家电/热水器?size=' + $scope.size).success(function(waterHeaders){
                $scope.waterHeaders = waterHeaders;
            });
    	}   
     
     $scope.fetchWarterCleaner = function() {
-      	 $http.get('/hb/大家电/净水器?size=2').success(function(warterCleaners){
+      	 $http.get('/hb/大家电/净水器?size=' + $scope.size).success(function(warterCleaners){
                $scope.warterCleaners = warterCleaners;
            });
    	}   
     
     $scope.fetchAirCleaner = function() {
-      	 $http.get('/hb/大家电/空气净化器?size=2').success(function(airCleaners){
+      	 $http.get('/hb/大家电/空气净化器?size=' + $scope.size).success(function(airCleaners){
                $scope.airCleaners = airCleaners;
            });
    	}   
     
     $scope.search = function() {
-      	alert($scope.searchKey);
+      	window.location = "/search?type=" + $scope.type + "&key=" + $scope.key;
    	} 
     
-    $scope.changeSearchKey = function(key) {
-    	 $scope.searchKey = key;
+    $scope.changeSearchType = function(type) {
+    	 $scope.type = type;
    	}  
     
     $scope.fetchTV(); 

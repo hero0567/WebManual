@@ -32,7 +32,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-app="" ng-controller="SearchController">	
 	<nav class="navbar navbar-default navbar-fixed-top">	  	
       <div class="container">
         <div class="navbar-header">
@@ -67,7 +67,7 @@
 			      </div><!-- /btn-group -->
 			      <input type="text" class="form-control" aria-label="...">
 			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button">搜索</button>
+			        <button class="btn btn-default" type="button" ng-click="showMsg()">搜索</button>
 			      </span>
 			    </div><!-- /input-group -->
 			  </div><!-- /.col-lg-6 -->
@@ -96,37 +96,19 @@
     </nav>
     
 	<div class="container">
-		<h4>搜索结果：</h4>
-		<div class="row">
+		<h4>搜索结果：${type} -> ${key}</h4>
+		<input id="type" ng-show="false"  type="text" value="${type}"/>
+		<input id="key" ng-show="false"  type="text" value="${key}"/>
+		<div class="row" ng-repeat="result in results">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="thumbnail">
 					<img src="" alt="">
-					<h4>结果1</h4>
-					<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+					<h4>{{result.name}}</h4>
+					<p>{{result.des}}</p>
 					<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
 				</div>
 			</div>
-	    </div>
-	    <div class="row">
-	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	          <div class="thumbnail">
-					<img src="" alt="">
-					<h4>结果2</h4>
-					<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
-				</div>
-	        </div>
-	    </div>
-	    <div class="row">
-	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	          <div class="thumbnail">
-					<img src="" alt="">
-					<h4>结果3</h4>
-					<p>简介Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-					<p><a class="btn btn-default" href="#" role="button">详细信息 »</a></p>
-				</div>
-	        </div>
-		</div>
+	    </div>	   
 		<div class="row">
 			<nav class="">
 			  <ul class="pagination">
@@ -159,6 +141,11 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/SearchController.js"></script>
+	<script src="js/lib/jquery/jquery.min.js"></script>
+	
+	
 
 </body>
 </html>

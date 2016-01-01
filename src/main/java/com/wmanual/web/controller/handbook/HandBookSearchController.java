@@ -19,6 +19,9 @@ package com.wmanual.web.controller.handbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,11 +37,23 @@ public class HandBookSearchController {
 
 	@Autowired
 	private HandBookRepository hbRepository;
-
-	@RequestMapping("")
-	public Iterable<HandBookDomain> search(
-			@RequestParam(value = "keyword", required = false, defaultValue = "") String keyword) throws Exception {
-		
+	
+	@RequestMapping("/{keyword}")
+	public Iterable<HandBookDomain> search(@PathVariable("keyword") String keyword) throws Exception {
+		logger.info("Search by keyword " + keyword);
 		return hbRepository.findByNameLike(keyword);
+	}
+
+	@RequestMapping("/{type}/{keyword}")
+	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
+			@PathVariable("keyword") String keyword) {
+		return hbRepository.findByTypeAndNameLike(type, keyword);
+	}
+
+
+	@RequestMapping("/{type}/{subType}/{keyword}")
+	public Iterable<HandBookDomain> allByTyepSubTypeKeyword(@PathVariable("type") String type,
+			@PathVariable("subType") String subType, @PathVariable("keyword") String keyword) throws Exception {
+		return hbRepository.findByTypeAndSubTypeAndNameLike(type, subType, keyword);
 	}
 }

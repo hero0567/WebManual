@@ -60,23 +60,5 @@ public class HandBookController {
 			return hbRepository.findByTypeAndSubTypeSize(type, subType, page);
 		}
 		return hbRepository.findByTypeAndSubType(type, subType);
-	}
-	
-	@RequestMapping("/search/{keyword}")
-	public Iterable<HandBookDomain> search(@PathVariable("keyword") String keyword) throws Exception {
-		return hbRepository.findByNameLike(keyword);
-	}
-
-	@RequestMapping("/search/{type}/{keyword}")
-	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
-			@PathVariable("keyword") String keyword) {
-		return hbRepository.findByTypeAndNameLike(type, keyword);
-	}
-
-
-	@RequestMapping("/search/{type}/{subType}/{keyword}")
-	public Iterable<HandBookDomain> allByTyepSubTypeKeyword(@PathVariable("type") String type,
-			@PathVariable("subType") String subType, @PathVariable("keyword") String keyword) throws Exception {
-		return hbRepository.findByTypeAndSubTypeAndNameLike(type, subType, keyword);
-	}
+	}	
 }
