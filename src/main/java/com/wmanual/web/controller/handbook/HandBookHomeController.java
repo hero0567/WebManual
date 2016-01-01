@@ -30,7 +30,7 @@ public class HandBookHomeController {
 
 	@RequestMapping("/")
 	public String home() throws Exception {
-		return "webmanual/index";
+		return "webmanual/home";
 	}
 
 	@RequestMapping("/index")

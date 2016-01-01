@@ -28,10 +28,7 @@ var SearchController = function($scope, $http, $location) {
                 $scope.results = results;
             });
     	}
-    	
-     	 
   	}  
     
     $scope.fetchSearchResult();
-    
 };

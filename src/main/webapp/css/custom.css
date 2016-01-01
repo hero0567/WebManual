@@ -2,6 +2,7 @@ body {
 	padding-top: 50px;
 	
 }
+
 .text-center{
 	text-align: center !important; 
 }
@@ -249,6 +250,14 @@ label {
 #search_button{
 	width:100px; background-color: #fd5443; float: center; height: 42px; font-size: 15px; color: #fff; border: 0px; display: inline-block; margin-top:-5px;
 }
+.sponsor {
+	text-align: center
+}
+
+.sponsor a:hover {
+	text-decoration: none
+}
+
 @media (max-width:767px) {
 	.section-preview .image img {
 		width: 100%
@@ -259,17 +268,6 @@ label {
 	#search_button{
 		width: 350px !important;
 	}
-}
-
-.sponsor {
-	text-align: center
-}
-
-.sponsor a:hover {
-	text-decoration: none
-}
-
-@media (max-width:767px) {
 	.splash {
 		padding-top: 4em
 	}

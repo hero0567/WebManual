@@ -24,8 +24,11 @@ public class HandBookDomain {
 	private String version;
 	private int size;
 	private long uploadDate;
+	private long productDate;
+	private String productSize;
 	private int status;
 	private String url;
+	private String imgUrl;
 	private String owner;
 	private int downloadCount;
 	private int viewCount;
@@ -37,6 +40,12 @@ public class HandBookDomain {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public String getProductSize() {
+		return productSize;
+	}
+	public void setProductSize(String productSize) {
+		this.productSize = productSize;
 	}
 	public String getName() {
 		return name;
@@ -77,6 +86,18 @@ public class HandBookDomain {
 	}
 	public int getSize() {
 		return size;
+	}
+	public long getProductDate() {
+		return productDate;
+	}
+	public void setProductDate(long productDate) {
+		this.productDate = productDate;
+	}
+	public String getImgUrl() {
+		return imgUrl;
+	}
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 	public void setSize(int size) {
 		this.size = size;
