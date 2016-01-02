@@ -114,16 +114,7 @@
       <div class="boxed"> 
        <div class="cont"> 
         <ul class="subnav nav-comp"> 
-         <li><a href=""><span>空气净化器</span><i>25727</i></a></li> 
-         <li><a href=""><span>电视</span><i>18839</i></a></li> 
-         <li><a href=""><span>冰箱</span><i>18839</i></a></li> 
-         <li><a href=""><span>空调</span><i>14933</i></a></li> 
-         <li><a href=""><span>洗衣机</span><i>2270</i></a></li> 
-         <li><a href=""><span>热水器</span><i>1682</i></a></li> 
-         <li><a href=""><span>净水器</span><i>7078</i></a></li> 
-         <!--<li><a href="https://www.itjuzi.com/news"><span>新闻</span><i>32318</i></a></li> 
-         <li><a href="https://www.itjuzi.com/comment"><span>评论</span><i>3867</i></a></li> 
-         <li><a target="_blank" href="http://today.itjuzi.com/"><span>TODAY</span></a></li> -->
+        	<li ng-repeat="m in menu"><a href=""><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
         </ul> 
        </div> 
       </div> 
@@ -142,9 +133,9 @@
  
 
 
-    <div class="sec"> 
+    <div class="sec" ng-repeat="book in handbook"> 
      	<div class="titlebar tall"> 
-	      <span class="on">空气净化器</span> 
+	      <span class="on">{{book.name}}</span> 
 	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
 	    </div>
 	      <div> 
@@ -154,375 +145,29 @@
 	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 	        </ul> 
 	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
+	          <li ng-repeat="sub in book.subType"> 
+		            <i class="cell pic"> 
+		              <a href=""> 
+		                <span class="incicon"><img ng-src="{{sub.imgUrl}}" /></span> 
+		              </a> 
+		            </i> 
+		            <i class="cell maincell"> 
+		              <p class="title"><a href="">{{sub.name}}</a></p> 
+		              <p class="des">{{sub.productSize}}</p> 
+		              <p> 
+		                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
+		              </p> 
+		            </i> 
+		            <i class="cell date">{{sub.brand}} </i> 
+		            <i class="cell round"> 
+		              <a href=""><span class="tag gray">{{sub.version}}</span></a> 
+		            </i> 
+		            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
+		       </li>   
 	        </ul> 
 	       </div> 
 	      </div> 
-	    </div> 
-
-	    <div class="sec"> 
-     	<div class="titlebar tall"> 
-	      <span class="on">电视</span> 
-	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
 	    </div>
-	      <div> 
-	       <!-- block 搜索列表区 --> 
-	       <div> 
-	        <ul class="list-main-icnset thead"> 
-	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
-	        </ul> 
-	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
-	        </ul> 
-	       </div> 
-	      </div> 
-	    </div> 
-	    <div class="sec"> 
-     	<div class="titlebar tall"> 
-	      <span class="on">冰箱</span> 
-	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
-	    </div>
-	      <div> 
-	       <!-- block 搜索列表区 --> 
-	       <div> 
-	        <ul class="list-main-icnset thead"> 
-	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
-	        </ul> 
-	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
-	        </ul> 
-	       </div> 
-	      </div> 
-	    </div> 
-
-	    <div class="sec"> 
-     	<div class="titlebar tall"> 
-	      <span class="on">空调</span> 
-	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
-	    </div>
-	      <div> 
-	       <!-- block 搜索列表区 --> 
-	       <div> 
-	        <ul class="list-main-icnset thead"> 
-	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
-	        </ul> 
-	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
-	        </ul> 
-	       </div> 
-	      </div> 
-	    </div> 
-	    <div class="sec"> 
-     	<div class="titlebar tall"> 
-	      <span class="on">洗衣机</span> 
-	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
-	    </div>
-	      <div> 
-	       <!-- block 搜索列表区 --> 
-	       <div> 
-	        <ul class="list-main-icnset thead"> 
-	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
-	        </ul> 
-	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
-	        </ul> 
-	       </div> 
-	      </div> 
-	    </div> 
-	    <div class="sec"> 
-     	<div class="titlebar tall"> 
-	      <span class="on">热水器</span> 
-	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
-	    </div>
-	      <div> 
-	       <!-- block 搜索列表区 --> 
-	       <div> 
-	        <ul class="list-main-icnset thead"> 
-	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
-	        </ul> 
-	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
-	        </ul> 
-	       </div> 
-	      </div> 
-	    </div> 
-	    <div class="sec"> 
-     	<div class="titlebar tall"> 
-	      <span class="on">净水器</span> 
-	      <i class="rightset"> <a target="_blank" href="https://www.itjuzi.com/investevents">查看全部</a> </i> 
-	    </div>
-	      <div> 
-	       <!-- block 搜索列表区 --> 
-	       <div> 
-	        <ul class="list-main-icnset thead"> 
-	         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
-	        </ul> 
-	        <ul class="list-main-icnset"> 
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li>
-	          <li> 
-	            <i class="cell pic"> 
-	              <a href=""> 
-	                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-	              </a> 
-	            </i> 
-	            <i class="cell maincell"> 
-	              <p class="title"><a href="">长虹液晶电视</a></p> 
-	              <p class="des">55寸</p> 
-	              <p> 
-	                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-	              </p> 
-	            </i> 
-	            <i class="cell "> 长虹 </i> 
-	            <i class="cell round"> 
-	              <a href=""><span class="tag gray">CH21233</span></a> 
-	            </i> 
-	            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-	          </li> 
-	        </ul> 
-	       </div> 
-	      </div> 
-	    </div> 
-
     </div> 
 
    <div class="ui-maintoolbar-box"> 

@@ -28,7 +28,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body ng-app="" ng-controller="FridgeController">
 	<div class="none">
 		<img src="./img/favicon.png" />
 	</div>
@@ -115,16 +115,7 @@
 					<div class="boxed">
 						<div class="cont">
 							<ul class="subnav nav-comp">
-								<li><a href=""><span>空气净化器</span><i>25727</i></a></li>
-								<li><a href=""><span>电视</span><i>18839</i></a></li>
-								<li><a href="" class="on"><span>冰箱</span><i>18839</i></a></li>
-								<li><a href=""><span>空调</span><i>14933</i></a></li>
-								<li><a href=""><span>洗衣机</span><i>2270</i></a></li>
-								<li><a href=""><span>热水器</span><i>1682</i></a></li>
-								<li><a href=""><span>净水器</span><i>7078</i></a></li>
-								<!--<li><a href="https://www.itjuzi.com/news"><span>新闻</span><i>32318</i></a></li> 
-         <li><a href="https://www.itjuzi.com/comment"><span>评论</span><i>3867</i></a></li> 
-         <li><a target="_blank" href="http://today.itjuzi.com/"><span>TODAY</span></a></li> -->
+								<li ng-repeat="m in menu"><a href=""><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -154,40 +145,25 @@
 								class="cell action"> 关注 </i></li>
 						</ul>
 						<ul class="list-main-icnset">
-							<li><i class="cell pic"> <a href=""> <span
-										class="incicon"><img
-											src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span>
-								</a>
-							</i> <i class="cell maincell">
-									<p class="title">
-										<a href="">长虹液晶电视</a>
-									</p>
-									<p class="des">55寸</p>
-									<p>
-										<span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市
-										</span>
-									</p>
-							</i> <i class="cell date"> 长虹 </i> <i class="cell round"> <a
-									href=""><span class="tag gray">CH21233</span></a>
-							</i> <i class="cell action"> <a href="" class="fa fa-star-o"></a>
-							</i></li>
-							<li><i class="cell pic"> <a href=""> <span
-										class="incicon"><img
-											src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span>
-								</a>
-							</i> <i class="cell maincell">
-									<p class="title">
-										<a href="">长虹液晶电视</a>
-									</p>
-									<p class="des">55寸</p>
-									<p>
-										<span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市
-										</span>
-									</p>
-							</i> <i class="cell date"> 长虹 </i> <i class="cell round"> <a
-									href=""><span class="tag gray">CH21233</span></a>
-							</i> <i class="cell action"> <a href="" class="fa fa-star-o"></a>
-							</i></li>
+							<li ng-repeat="tv in tvs"> 
+					            <i class="cell pic"> 
+					              <a href=""> 
+					                <span class="incicon"><img ng-src="{{tv.imgUrl}}" /></span> 
+					              </a> 
+					            </i> 
+					            <i class="cell maincell"> 
+					              <p class="title"><a href="">{{tv.name}}</a></p> 
+					              <p class="des">{{tv.productSize}}</p> 
+					              <p> 
+					                <span class="tags t-small c-gray-aset"> <a href="">{{ tv.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
+					              </p> 
+					            </i> 
+					            <i class="cell date">{{tv.brand}} </i> 
+					            <i class="cell round"> 
+					              <a href=""><span class="tag gray">{{tv.version}}</span></a> 
+					            </i> 
+					            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
+					         </li>							
 						</ul>
 					</div>
 					<!-- block 分页区 -->
@@ -300,7 +276,7 @@
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="./js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/controllers/FridgeController.js"></script>
 
 </body>
 </html>

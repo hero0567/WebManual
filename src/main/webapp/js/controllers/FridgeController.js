@@ -6,6 +6,7 @@
  */
 var FridgeController = function($scope, $http, $location) {
 	
+	$scope.menu = {};
     $scope.tvs = {};
     $scope.refrigerators = {};
     $scope.airConditions = {};
@@ -18,6 +19,12 @@ var FridgeController = function($scope, $http, $location) {
     $scope.type = "全部";
     $scope.key = "";
     
+    $scope.fetchMenu = function() {
+      	 $http.get('/menu').success(function(menu){
+               $scope.menu = menu;
+         });
+   	}  
+    
     $scope.fetchTV = function() {
    	 $http.get('/hb/大家电/电视?size=' + $scope.size).success(function(tvs){
             $scope.tvs = tvs;
@@ -29,7 +36,6 @@ var FridgeController = function($scope, $http, $location) {
               $scope.refrigerators = refrigerators;
           });
   	}   
-   
     
     $scope.fetchAirCondition = function() {
       	 $http.get('/hb/大家电/空调?size=' + $scope.size).success(function(airConditions){
@@ -69,6 +75,7 @@ var FridgeController = function($scope, $http, $location) {
     	 $scope.type = type;
    	}  
     
+    $scope.fetchMenu();
     $scope.fetchTV(); 
     $scope.fetchRefrigerator();
     $scope.fetchAirCondition();  
