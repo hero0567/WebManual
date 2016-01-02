@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!-- saved from url=(0030)https://www.itjuzi.com/company -->
+ 
 <html class=" juzi js flexbox no-touch opacity csstransforms3d svg" lang="">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -11,12 +11,8 @@
   <link rel="apple-touch-icon-precomposed" href="./img/favicon.png" /> 
   <meta name="Keywords" content=" " /> 
   <meta name="Description" content=" " /> 
-  <!-- Uploadify --> 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
-  <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/pages/home.css" />
-
   <link rel="stylesheet" type="text/css" href="./css/pages/fontawesome.css" /> 
   <script src="./js/modernizr.js"></script> 
   <script src="js/lib/angular/angular.js"></script>
@@ -44,7 +40,7 @@
 
        <div class="usernav"> 
         <div class="usersearch"> 
-         <form action="https://www.itjuzi.com/search"> 
+         <form action="https://../search"> 
           <input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
           <button class="jzbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
          </form> 
@@ -73,9 +69,6 @@
          <li><a href=""><span>洗衣机</span><i>2270</i></a></li> 
          <li><a href=""><span>热水器</span><i>1682</i></a></li> 
          <li><a href=""><span>净水器</span><i>7078</i></a></li> 
-         <!--<li><a href="https://www.itjuzi.com/news"><span>新闻</span><i>32318</i></a></li> 
-         <li><a href="https://www.itjuzi.com/comment"><span>评论</span><i>3867</i></a></li> 
-         <li><a target="_blank" href="http://today.itjuzi.com/"><span>TODAY</span></a></li> -->
         </ul> 
        </div> 
       </div> 
@@ -85,8 +78,8 @@
    <div class="boxed main"> 
      <div class="sec nobg mobile-block"> 
      <div class="ui-mobile-usersearch"> 
-      <form action="https://www.itjuzi.com/search"> 
-       <input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="创业公司、投资机构等…" /> 
+      <form action="https://../search"> 
+       <input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
        <button class="jzbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
       </form> 
      </div> 
