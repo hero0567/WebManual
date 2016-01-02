@@ -28,12 +28,12 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HandBookHomeController {
 
-	@RequestMapping("/")
+	@RequestMapping("/fridge")
 	public String home() throws Exception {
-		return "webmanual/home";
+		return "webmanual/fridge";
 	}
 
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public String index() throws Exception {
 		return "webmanual/index";
 	}

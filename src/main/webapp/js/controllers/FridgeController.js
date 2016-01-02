@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * IndexController
+ * FridgeController
  * @constructor
  */
-var HomeController = function($scope, $http, $location) {
+var FridgeController = function($scope, $http, $location) {
 	
     $scope.tvs = {};
     $scope.refrigerators = {};

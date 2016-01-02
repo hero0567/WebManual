@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="./css/pages/fontawesome.css" /> 
   <script src="./js/modernizr.js"></script> 
   <script src="js/lib/angular/angular.js"></script>
-  <script src="js/controllers/HomeController.js"></script>
+  <script src="js/controllers/FridgeController.js"></script>
  </head> 
  <body> 
   <div class="none">
@@ -25,7 +25,7 @@
   <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]--> 
-  <div class="thewrap" ng-app="" ng-controller="HomeController"> 
+  <div class="thewrap" ng-app="" ng-controller="FridgeController"> 
    <header> 
     <div> 
      <div class="navbox"> 

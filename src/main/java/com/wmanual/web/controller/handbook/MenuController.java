@@ -14,23 +14,24 @@
  * limitations under the License.
  */
 
-package com.wmanual.beans;
+package com.wmanual.web.controller.handbook;
 
-public class Greeting {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-	private final long id;
-	private final String content;
+import com.wmanual.beans.MenuBean;
+import com.wmanual.jpa.service.HandBookRepository;
 
-	public Greeting(long id, String content) {
-		this.id = id;
-		this.content = content;
-	}
+@RestController
+@RequestMapping(value = "/menu")
+public class MenuController {
 
-	public long getId() {
-		return id;
-	}
+	@Autowired
+	private HandBookRepository menuRepository;
 
-	public String getContent() {
-		return content;
-	}
+	@RequestMapping("")
+	public Iterable<MenuBean> allMenu() throws Exception {
+		return menuRepository.findMenu();
+	}	
 }
