@@ -74,7 +74,10 @@
 					<div class="boxed">
 						<div class="cont">
 							<ul class="subnav nav-comp">
+								<!-- change from link to ajax event
 								<li ng-repeat="m in menu"><a ng-class="{on: m.subType == params.subtype}" href="/fridge?subtype={{m.subType}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
+								 -->
+								<li ng-repeat="m in menu"><a ng-class="{on: m.subType == params.subtype}" ng-click="changeSubType(m.subType)" href=""><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 							</ul>
 						</div>
 					</div>

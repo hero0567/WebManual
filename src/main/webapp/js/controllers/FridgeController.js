@@ -33,10 +33,17 @@ var FridgeController = function($scope, $http, $location) {
    	}  
     
     
-    $scope.fetchSubType = function() {
-     	 $http.get('/hb/大家电/'+$scope.params.subtype+'?size=' + $scope.size).success(function(subTypes){
+    $scope.fetchSubType = function(subtype) {
+     	 $http.get('/hb/大家电/'+subtype+'?size=' + $scope.size).success(function(subTypes){
               $scope.subTypes = subTypes;
           });
+  	} 
+    
+    $scope.changeSubType = function(type) {
+    	$http.get('/hb/大家电/'+type+'?size=' + $scope.size).success(function(subTypes){
+            $scope.subTypes = subTypes;
+            $scope.params.subtype = type;
+        });
   	} 
     
     $scope.search = function() {
@@ -49,5 +56,5 @@ var FridgeController = function($scope, $http, $location) {
     
     $scope.parseParams();
     $scope.fetchMenu();
-    $scope.fetchSubType(); 
+    $scope.fetchSubType($scope.params.subtype); 
 };
