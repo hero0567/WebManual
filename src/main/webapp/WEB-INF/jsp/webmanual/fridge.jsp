@@ -40,12 +40,12 @@
 			<div>
 				<div class="navbox">
 					<div class="boxed">
-						<a class="logo fll" href="">
+						<a class="logo fll" href="/">
 							<h1 class="seeo">92说明书</h1>
 						</a>
 
 						<ul class="mainnav">
-							<li class="tab on"><a href="">首页</a></li>
+							<li class="tab on"><a href="/">首页</a></li>
 						</ul>
 
 						<div class="usernav">
@@ -104,22 +104,22 @@
 								class="cell action"> 关注 </i></li>
 						</ul>
 						<ul class="list-main-icnset">
-							<li ng-repeat="tv in tvs"> 
+							<li ng-repeat="sub in subTypes"> 
 					            <i class="cell pic"> 
 					              <a href=""> 
-					                <span class="incicon"><img ng-src="{{tv.imgUrl}}" /></span> 
+					                <span class="incicon"><img ng-src="{{sub.imgUrl}}" /></span> 
 					              </a> 
 					            </i> 
 					            <i class="cell maincell"> 
-					              <p class="title"><a href="">{{tv.name}}</a></p> 
-					              <p class="des">{{tv.productSize}}</p> 
+					              <p class="title"><a href="">{{sub.name}}</a></p> 
+					              <p class="des">{{sub.productSize}}</p> 
 					              <p> 
-					                <span class="tags t-small c-gray-aset"> <a href="">{{ tv.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
+					                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
 					              </p> 
 					            </i> 
-					            <i class="cell date">{{tv.brand}} </i> 
+					            <i class="cell date">{{sub.brand}} </i> 
 					            <i class="cell round"> 
-					              <a href=""><span class="tag gray">{{tv.version}}</span></a> 
+					              <a href=""><span class="tag gray">{{sub.version}}</span></a> 
 					            </i> 
 					            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
 					         </li>							
