@@ -30,7 +30,7 @@
 </head>
 <body ng-app="" ng-controller="FridgeController">
 	<div class="none">
-		<img src="./img/favicon.png" />
+		<img src="./img/favicon.png"/>
 	</div>
 	<!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -46,52 +46,11 @@
 
 						<ul class="mainnav">
 							<li class="tab on"><a href="">首页</a></li>
-							<!--
-        <li class="tab hoversub withsub"> 
-            <a href="https://www.itjuzi.com/activity">说明书库</a> 
-            <div class="subblock sub-activity"> 
-                <div class="boxed"> 
-                    <ul class="list-subactivity"> 
-                    <li> 
-                        <a href="https://www.itjuzi.com/activity/96" target="_blank"> <p class="title">2016年桔 &middot; 裂变创新大会</p> <p> <span class="">报名中</span> <span class="t-small c-gray">2016年1月10日</span> </p> </a> </li> 
-                    <li> 
-                        <a href="https://www.itjuzi.com/activity/95" target="_blank"> <p class="title">猎桔&middot;懒熊 体育创业专场项目路演</p> <p> <span class="">报名中</span> <span class="t-small c-gray">2016年1月7日</span> </p> </a> </li> 
-                    <li> 
-                        <a href="https://www.itjuzi.com/activity/94" target="_blank"> <p class="title">投资人教你如何在60秒把项目讲清楚</p> <p> <span class="">报名中</span> <span class="t-small c-gray">2016年1月19日</span> </p> </a> </li> 
-                    
-                    <li class="more"> 
-                        <a href="https://www.itjuzi.com/activity" target="_blank"> <span class="more">查看全部活动 <i class="fa fa-angle-right"></i></span> </a> </li> 
-                    </ul> 
-                </div> 
-            </div> 
-        </li> 
-        <li class="tab hoversub withsub"> <a href="javascript:void(0)">维护保养</a> 
-         <div class="subblock sub-prod"> 
-          <div class="boxed"> 
-           <ul class="list-subprod"> 
-            <li> <a href="https://www.itjuzi.com/special/chollima" target="_blank"><span class="jzicon qlm-index"></span>千里马俱乐部</a> </li> 
-            <li> <a href="https://www.itjuzi.com/report" target="_blank"><span class="jzicon baogao-index"></span>桔子报告</a> </li> 
-            <li> <a href="http://blog.itjuzi.com/" target="_blank"><span class="jzicon blog-index"></span>IT桔子博客</a> </li> 
-           </ul> 
-          </div> 
-         </div> </li> 
-        <li class="tab hoversub withsub"> <a href="javascript:void(0)">售后服务</a> 
-         <div class="subblock"> 
-          <div class="boxed"> 
-           <ul class="list-subprod"> 
-            <li> <a href="https://www.itjuzi.com/special/dataservice" target="_blank"><span class="jzicon dataservice-index"></span>数据服务</a> </li> 
-            <li> <a href="https://www.itjuzi.com/special/lieju" target="_blank"><span class="jzicon lieju-index"></span>猎桔融资</a> </li> 
-            <li> <a href="http://www.juzilab.com/" target="_blank"><span class="jzicon juzilab-index"></span>桔子空间</a> </li> 
-            <li> <a href="http://tobshe.com/" target="_blank"><span class="jzicon tuopushe-index"></span>拓扑社</a> </li> 
-           </ul> 
-          </div> 
-         </div> </li> 
-        -->
 						</ul>
 
 						<div class="usernav">
 							<div class="usersearch">
-								<form action="https://www.itjuzi.com/search">
+								<form action="#">
 									<input type="text" name="key" spellcheck="false"
 										autocomplete="off" placeholder="请输入搜索关键字" />
 									<button class="jzbtn bg-c" type="submit">
@@ -115,7 +74,7 @@
 					<div class="boxed">
 						<div class="cont">
 							<ul class="subnav nav-comp">
-								<li ng-repeat="m in menu"><a href=""><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
+								<li ng-repeat="m in menu"><a ng-class="{on: m.subType == params.subtype}" href="/fridge?subtype={{m.subType}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -125,7 +84,7 @@
 		<div class="boxed main">
 			<div class="sec nobg mobile-block">
 				<div class="ui-mobile-usersearch">
-					<form action="https://www.itjuzi.com/search">
+					<form action="#">
 						<input type="text" name="key" spellcheck="false"
 							autocomplete="off" placeholder="请输入搜索关键字" />
 						<button class="jzbtn bg-c" type="submit">

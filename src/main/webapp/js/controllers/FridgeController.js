@@ -14,10 +14,23 @@ var FridgeController = function($scope, $http, $location) {
     $scope.waterHeaders = {};
     $scope.warterCleaners = {};
     $scope.airCleaners = {};
+    $scope.params = {};
     
     $scope.size = 10;    
     $scope.type = "全部";
     $scope.key = "";
+        
+    $scope.parseParams = function(){
+    	var paramString = window.location.search;
+    	var params = paramString.substr(1).split('&');  
+
+    	params.forEach(function(param){
+    		var kv = param.split('=');  
+    		if (kv.length = 2){
+    			$scope.params[kv[0]] = decodeURI(kv[1]);
+    		}
+    	});
+    }    
     
     $scope.fetchMenu = function() {
       	 $http.get('/menu').success(function(menu){
@@ -75,6 +88,7 @@ var FridgeController = function($scope, $http, $location) {
     	 $scope.type = type;
    	}  
     
+    $scope.parseParams();
     $scope.fetchMenu();
     $scope.fetchTV(); 
     $scope.fetchRefrigerator();
