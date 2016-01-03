@@ -9,8 +9,10 @@ var FridgeController = function($scope, $http, $location) {
 	$scope.menu = {};
 	$scope.subTypes = {};
     $scope.params = {};
+    // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
+    $scope.page = {pn:0, ppn:0, size:10, ps:5, fp : false, pre : false, next: true, ep : true, total:21 };
+    $scope.ps = [1,2,3,4,5];
     
-    $scope.size = 10;    
     $scope.type = "全部";
     $scope.key = "";
         
@@ -34,16 +36,19 @@ var FridgeController = function($scope, $http, $location) {
     
     
     $scope.fetchSubType = function(subtype) {
-     	 $http.get('/hb/大家电/'+subtype+'?size=' + $scope.size).success(function(subTypes){
-              $scope.subTypes = subTypes;
-          });
+         $http.get('/hb/大家电/'+subtype, {params: {pn:$scope.page.pn, size:$scope.page.size}}).success(function(subTypes) {  
+        	 $scope.subTypes = subTypes;
+         });  
+  	} 
+    
+    $scope.goPage = function(pn) {
+    	$scope.page.pn = pn - 1;
+    	$scope.fetchSubType($scope.params.subtype);
   	} 
     
     $scope.changeSubType = function(type) {
-    	$http.get('/hb/大家电/'+type+'?size=' + $scope.size).success(function(subTypes){
-            $scope.subTypes = subTypes;
-            $scope.params.subtype = type;
-        });
+    	$scope.fetchSubType(type);
+        $scope.params.subtype = type;
   	} 
     
     $scope.search = function() {

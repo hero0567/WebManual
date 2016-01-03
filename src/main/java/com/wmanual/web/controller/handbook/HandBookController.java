@@ -44,21 +44,25 @@ public class HandBookController {
 	}
 
 	@RequestMapping("/{type}")
-	public Iterable<HandBookDomain> allByType(@PathVariable("type") String type, @RequestParam(value = "size", required = false, defaultValue = "0") int size) {
-		if (size > 0){
-			Pageable page = new PageRequest(0, size);
+	public Iterable<HandBookDomain> allByType(@PathVariable("type") String type,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
+		if (size > 0) {
+			Pageable page = new PageRequest(pn, size);
 			return hbRepository.findByTypeSize(type, page);
 		}
 		return hbRepository.findByType(type);
 	}
-		
+
 	@RequestMapping("/{type}/{subType}")
 	public Iterable<HandBookDomain> allByTyepSubType(@PathVariable("type") String type,
-			@PathVariable("subType") String subType, @RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
-		if (size > 0){
-			Pageable page = new PageRequest(0, size);
+			@PathVariable("subType") String subType,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+		if (size > 0) {
+			Pageable page = new PageRequest(pn, size);
 			return hbRepository.findByTypeAndSubTypeSize(type, subType, page);
 		}
 		return hbRepository.findByTypeAndSubType(type, subType);
-	}	
+	}
 }

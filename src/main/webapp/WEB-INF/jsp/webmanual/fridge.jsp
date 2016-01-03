@@ -114,7 +114,7 @@
 					              </a> 
 					            </i> 
 					            <i class="cell maincell"> 
-					              <p class="title"><a href="">{{sub.name}}</a></p> 
+					              <p class="title"><a href="">{{sub.name}}{{sub.id}}</a></p> 
 					              <p class="des">{{sub.productSize}}</p> 
 					              <p> 
 					                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
@@ -131,14 +131,14 @@
 					<!-- block 分页区 -->
 					<div>
 						<div class="ui-pagechange for-sec-bottom">
-							<a href="" class="on">1</a> <a href="https://www?page=2"
-								data-ci-pagination-page="2">2</a> <a href="https://www?page=3"
-								data-ci-pagination-page="3">3</a> <a
-								href="https://www.itjuzi.com/company?page=2"
-								data-ci-pagination-page="2">下一页 →</a> <a
-								href="https://www.itjuzi.com/company?page=2203"
-								data-ci-pagination-page="2203">尾页 &raquo;</a>
+							<a href="#">首页</a> 
+							<a href="#">上一页</a> 
+							<a href="#" ng-class="{on:  pageindex == page.pn + 1}" ng-repeat="pageindex in ps" 
+								ng-click="goPage(pageindex)" ng-show="page.total > (pageindex - 1) * page.size">{{pageindex}}</a> 
+							<a href="#">下一页 →</a> 
+							<a href="#">尾页 </a>
 						</div>
+						
 					</div>
 				</div>
 			</div>
