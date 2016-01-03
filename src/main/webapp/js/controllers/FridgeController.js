@@ -57,8 +57,25 @@ var FridgeController = function($scope, $http, $location) {
     	$scope.fetchSubType($scope.params.subtype);
   	} 
     
+    $scope.goPrePage = function(pn) {
+    	$scope.page.ppn--;
+    	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
+    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.changePageNavi();
+  	} 
+    $scope.goFirstPage = function(pn) {
+    	$scope.resetPageNavi()
+    	$scope.fetchSubType($scope.params.subtype);
+  	}
+    
     $scope.goNextPage = function(pn) {
     	$scope.page.ppn++;
+    	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
+    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.changePageNavi();
+  	} 
+    $scope.goLastPage = function(pn) {
+    	$scope.page.ppn = parseInt($scope.page.total / ($scope.page.size * $scope.page.ps));
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
     	$scope.fetchSubType($scope.params.subtype);
     	$scope.changePageNavi();
