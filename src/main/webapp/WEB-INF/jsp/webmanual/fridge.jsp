@@ -131,12 +131,12 @@
 					<!-- block 分页区 -->
 					<div>
 						<div class="ui-pagechange for-sec-bottom">
-							<a href="#">首页</a> 
-							<a href="#">上一页</a> 
-							<a href="#" ng-class="{on:  pageindex == page.pn + 1}" ng-repeat="pageindex in ps" 
-								ng-click="goPage(pageindex)" ng-show="page.total > (pageindex - 1) * page.size">{{pageindex}}</a> 
-							<a href="#">下一页 →</a> 
-							<a href="#">尾页 </a>
+							<a href="#" ng-hide="page.pre">首页</a> 
+							<a href="#" ng-hide="page.pre">上一页</a> 
+							<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
+								ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size">{{pageindex + page.ppn * page.ps}}</a> 
+							<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页 →</a> 
+							<a href="#" ng-show="page.next">尾页 </a>
 						</div>
 						
 					</div>
