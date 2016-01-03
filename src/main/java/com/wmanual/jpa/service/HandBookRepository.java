@@ -35,5 +35,5 @@ public interface HandBookRepository extends PagingAndSortingRepository<HandBookD
 	
 	@Query(value = "select new com.wmanual.beans.MenuBean(count(hb), subType) from HandBookDomain hb group by hb.subType")
 	public List<MenuBean> findMenu();
-
+	
 }

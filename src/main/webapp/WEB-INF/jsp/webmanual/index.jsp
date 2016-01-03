@@ -114,7 +114,7 @@
       <div class="boxed"> 
        <div class="cont"> 
         <ul class="subnav nav-comp"> 
-        	<li ng-repeat="m in menu"><a href="/fridge?subtype={{m.subType}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
+        	<li ng-repeat="m in menu"><a href="/fridge?subtype={{m.subType}}&count={{m.count}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
         </ul> 
        </div> 
       </div> 

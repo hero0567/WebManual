@@ -65,4 +65,9 @@ public class HandBookController {
 		}
 		return hbRepository.findByTypeAndSubType(type, subType);
 	}
+	
+	@RequestMapping("/{type}/{subType}/count")
+	public long count() throws Exception {
+		return hbRepository.count();
+	}
 }

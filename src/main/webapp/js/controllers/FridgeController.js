@@ -16,7 +16,8 @@ var FridgeController = function($scope, $http, $location) {
 		    		ps:5, 
 		    		pre : false, 
 		    		next: false, 
-		    		total:171 };
+		    		subtype : "",
+		    		total:0 };
     $scope.ps = [1,2,3,4,5];
     
     $scope.type = "全部";
@@ -32,6 +33,8 @@ var FridgeController = function($scope, $http, $location) {
     			$scope.params[kv[0]] = decodeURI(kv[1]);
     		}
     	});
+    	$scope.page.subtype = $scope.params.subtype;
+    	$scope.page.total = $scope.params.count;
     }    
     
     $scope.fetchMenu = function() {
@@ -43,7 +46,6 @@ var FridgeController = function($scope, $http, $location) {
     $scope.changePageNavi = function() {
     	$scope.page.pre = $scope.page.ppn == 0;
     	$scope.page.next = ($scope.page.total / ($scope.page.size * $scope.page.ps) > $scope.page.ppn + 1);
-    	console.log($scope.page.total / ($scope.page.size * $scope.page.ps));
     }
     
     $scope.resetPageNavi = function() {
@@ -54,30 +56,30 @@ var FridgeController = function($scope, $http, $location) {
     
     $scope.goPage = function(pn) {
     	$scope.page.pn = pn - 1;
-    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.fetchSubType($scope.page.subtype);
   	} 
     
     $scope.goPrePage = function(pn) {
     	$scope.page.ppn--;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.fetchSubType($scope.page.subtype);
     	$scope.changePageNavi();
   	} 
     $scope.goFirstPage = function(pn) {
     	$scope.resetPageNavi()
-    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.fetchSubType($scope.page.subtype);
   	}
     
     $scope.goNextPage = function(pn) {
     	$scope.page.ppn++;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.fetchSubType($scope.page.subtype);
     	$scope.changePageNavi();
   	} 
     $scope.goLastPage = function(pn) {
     	$scope.page.ppn = parseInt($scope.page.total / ($scope.page.size * $scope.page.ps));
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.fetchSubType($scope.params.subtype);
+    	$scope.fetchSubType($scope.page.subtype);
     	$scope.changePageNavi();
   	} 
     
@@ -87,10 +89,11 @@ var FridgeController = function($scope, $http, $location) {
         });  
  	} 
     
-    $scope.changeSubType = function(type) {
+    $scope.changeSubType = function(type, count) {
+    	$scope.page.subtype = type;
+        $scope.page.total = count;        
     	$scope.resetPageNavi();
     	$scope.fetchSubType(type);
-        $scope.params.subtype = type;
         
   	} 
     
@@ -98,12 +101,8 @@ var FridgeController = function($scope, $http, $location) {
       	window.location = "/search?type=" + $scope.type + "&key=" + $scope.key;
    	} 
     
-    $scope.changeSearchType = function(type) {
-    	 $scope.type = type;
-   	}  
-    
-    $scope.changePageNavi();
     $scope.parseParams();
+    $scope.changePageNavi();
     $scope.fetchMenu();
-    $scope.fetchSubType($scope.params.subtype); 
+    $scope.fetchSubType($scope.page.subtype); 
 };

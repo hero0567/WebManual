@@ -77,7 +77,7 @@
 								<!-- change from link to ajax event
 								<li ng-repeat="m in menu"><a ng-class="{on: m.subType == params.subtype}" href="/fridge?subtype={{m.subType}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 								 -->
-								<li ng-repeat="m in menu"><a ng-class="{on: m.subType == params.subtype}" ng-click="changeSubType(m.subType)" href=""><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
+								<li ng-repeat="m in menu"><a ng-class="{on: m.subType == page.subtype}" ng-click="changeSubType(m.subType, m.count)" href=""><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -134,7 +134,7 @@
 							<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
 							<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
 							<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
-								ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size">{{pageindex + page.ppn * page.ps}}</a> 
+								ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
 							<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页 →</a> 
 							<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
 						</div>
