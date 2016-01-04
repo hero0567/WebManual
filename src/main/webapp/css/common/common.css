@@ -1,3 +1,12 @@
+.f-r{
+	float:right;
+}
+.f-l{
+	float: left;
+}
+.text-right{
+	text-align: left;
+}
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%
@@ -17241,7 +17250,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	}
 
 	.loginbox-thin {
-		max-width: 500px
+		max-width: 550px
 	}
 
 	ul[class|=list-main]:not(.thead) {

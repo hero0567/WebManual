@@ -2,28 +2,25 @@
 <!DOCTYPE html>
 <html id="signup-page" class="page-signup page-signup--standard">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>说明书详细 ｜ 92说明书</title>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="./img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
 
-<title>冰箱说明书</title>
+	<meta name="Keywords" content=" " />
+	<meta name="Description" content=" " />
+	
+	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 
-<link href="css/pages/index.css" rel="stylesheet">
-
-<link href="css/pages/fontawesome.css" rel="stylesheet">
-
-
-
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="js/ie-emulation-modes-warning.js"></script>
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+	<script src="js/others/modernizr.js"></script>
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -221,8 +218,8 @@
 		</footer>
 	</div>
 	<script>
-    window.site_url = 'https://92shuomingshu.com/';
-  </script>
+	    window.site_url = 'https://92shuomingshu.com/';
+	</script>
 
 
 
