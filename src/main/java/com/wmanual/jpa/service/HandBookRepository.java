@@ -2,6 +2,7 @@ package com.wmanual.jpa.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -16,6 +17,9 @@ public interface HandBookRepository extends PagingAndSortingRepository<HandBookD
 	
 	@Query("from HandBookDomain where name like %?1%")
 	public List<HandBookDomain> findByNameLike(String name);
+	
+	@Query("from HandBookDomain")
+	public Page<HandBookDomain> findByNameLikeSize(Pageable pageable);
 	
 	public List<HandBookDomain> findByType(String type);
 	

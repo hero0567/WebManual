@@ -19,6 +19,7 @@ package com.wmanual.web.controller.handbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,7 +42,9 @@ public class HandBookSearchController {
 	@RequestMapping("/{keyword}")
 	public Iterable<HandBookDomain> search(@PathVariable("keyword") String keyword) throws Exception {
 		logger.info("Search by keyword " + keyword);
-		return hbRepository.findByNameLike(keyword);
+		Pageable page = new PageRequest(0, 10);
+		Page<HandBookDomain> hb = hbRepository.findByNameLikeSize(page);
+		return hb.getContent();
 	}
 
 	@RequestMapping("/{type}/{keyword}")

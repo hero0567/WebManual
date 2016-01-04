@@ -21,21 +21,16 @@ var IndexController = function($scope, $http, $location) {
   	}  
     
     $scope.fetchSubTypes = function() {
-    	console.log($scope.menu);
     	angular.forEach($scope.menu, function (m) {
     		$http.get('/hb/大家电/'+m.subType+'?size=' + $scope.size).success(function(airCleaners){
-                $scope.handbook.push({name:m.subType, subType: airCleaners});                
+                $scope.handbook.push({name:m.subType, count:m.count, subType: airCleaners});                
     		});
     	});    	
   	} 
     
     $scope.search = function() {
-      	window.location = "/search?type=" + $scope.type + "&key=" + $scope.key;
+      	window.location = "/search?key=" + $scope.key;
    	} 
-    
-    $scope.changeSearchType = function(type) {
-    	 $scope.type = type;
-   	}  
     
     $scope.fetchMenu();
 };
