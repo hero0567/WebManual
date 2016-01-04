@@ -118,7 +118,7 @@
 		                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
 		              </p> 
 		            </i> 
-		            <i class="cell date">{{sub.brand}} </i> 
+		            <i class="cell">{{sub.brand}} </i> 
 		            <i class="cell round"> 
 		              <a href=""><span class="tag gray">{{sub.version}}</span></a> 
 		            </i> 
