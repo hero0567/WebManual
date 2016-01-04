@@ -129,18 +129,18 @@
 			                    <a href="">2015-12-12</a>
 			                  </li>
 			                  <li>
-			                    <i class="fa fa-phone"></i>电话： 
-			                    <a href="tel:02885303320">024-83786700</a>
+			                    <i class="fa fa-phone"></i>官方客服电话： 
+			                    <a href="tel:02885303320">400-028-83786700</a>
 			                  </li>
 			                
 			                  <li>
-			                    <i class="fa fa-envelope"></i>邮箱： 
+			                    <i class="fa fa-envelope"></i>官方邮箱： 
 			                    <a href="mailto:jack@92shuomingshu.com">tliu@generalrobots.cn</a>
 			                  </li>
 			                
 			                  <li>
-			                    <i class="fa fa-map-marker"></i>地址： 
-			                    <span>辽宁省沈阳市浑南新区远航西路3号 IT国际大厦11层</span>
+			                    <i class="fa fa-map-marker"></i>官方网站： 
+			                    <span>www.changhong.com</span>
 			                  </li>
 			                </ul>
 			                <div class="pl-mt20">
