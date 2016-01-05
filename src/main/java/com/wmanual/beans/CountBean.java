@@ -1,19 +1,19 @@
 package com.wmanual.beans;
 
-public class SearchBean {
+public class CountBean {
 	private long count;
 	private String subType;
 	
-	public SearchBean() {
+	public CountBean() {
 		super();
 	}
 	
-	public SearchBean(long count) {
+	public CountBean(long count) {
 		super();
 		this.count = count;
 	}
 
-	public SearchBean(long count, String subType) {
+	public CountBean(long count, String subType) {
 		super();
 		this.count = count;
 		this.subType = subType;

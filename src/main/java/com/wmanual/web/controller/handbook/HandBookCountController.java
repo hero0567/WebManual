@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.beans.SearchBean;
+import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.domain.HandBookDomain;
 import com.wmanual.jpa.service.HandBookRepository;
 
@@ -51,7 +51,7 @@ public class HandBookCountController {
 	}
 
 	@RequestMapping("/s")
-	public List<SearchBean> searchByGroup(@RequestParam(value = "key", required = false) String key,
+	public List<CountBean> searchByGroup(@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
 		if (group){
 			return hbRepository.countByNameLikeGroup(key);
@@ -60,13 +60,13 @@ public class HandBookCountController {
 	}
 
 	@RequestMapping("/s/{type}")
-	public List<SearchBean> searchByKeyword(@PathVariable("type") String type,
+	public List<CountBean> searchByKeyword(@PathVariable("type") String type,
 			@RequestParam(value = "key", required = false) String key) {
 		return hbRepository.countByTypeAndNameLike(type, key);
 	}
 
 	@RequestMapping("/s/{type}/{subType}")
-	public List<SearchBean> allByTyepSubTypeKeyword(@PathVariable("type") String type,
+	public List<CountBean> allByTyepSubTypeKeyword(@PathVariable("type") String type,
 			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key)
 					throws Exception {
 		return hbRepository.countByTypeAndSubTypeAndNameLike(type, subType, key);

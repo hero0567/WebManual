@@ -25,7 +25,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body> 
+<body ng-app="" ng-controller="FavoritesController"> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
@@ -74,13 +74,7 @@
 					<div class="boxed"> 
 						 <div class="cont"> 
 							  <ul class="subnav nav-comp"> 
-							   <li><a href=""><span>空气净化器</span><i>25727</i></a></li> 
-							   <li><a href=""><span>电视</span><i>18839</i></a></li> 
-							   <li><a href=""><span>冰箱</span><i>18839</i></a></li> 
-							   <li><a href=""><span>空调</span><i>14933</i></a></li> 
-							   <li><a href=""><span>洗衣机</span><i>2270</i></a></li> 
-							   <li><a href=""><span>热水器</span><i>1682</i></a></li> 
-							   <li><a href=""><span>净水器</span><i>7078</i></a></li> 
+							   	<li ng-repeat="m in menu"><a href="/fridge?subtype={{m.subType}}&count={{m.count}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 							  </ul> 
 						 </div> 
 					</div> 
@@ -92,9 +86,7 @@
 	     	<div class="sidebar left">
 				<div class="sec">
 					<ul class="list-lite">
-						<li><a class="on" href="">电视 <span>7</span></a></li>
-						<li><a href="">洗衣机 <span>8</span></a></li>
-						<li><a href="">空调 <span>10</span></a></li>
+						<li ng-repeat="m in favorList" ng-click="changeSubType(m.subType, m.count)"><a ng-class="{on: m.subType == currentSubType}" href="">{{m.subType}} <span>{{m.count}}</span></a></li>
 					</ul>
 				</div>	
 			</div>
@@ -245,5 +237,7 @@
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script> 
+	<script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/FavoritesController.js"></script>
 </body>
 </html>

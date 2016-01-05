@@ -56,4 +56,9 @@ public class HandBookHomeController {
 	public String signup() throws Exception {
 		return "webmanual/signup";
 	}
+	
+	@RequestMapping("/favorites")
+	public String favorites() throws Exception {
+		return "webmanual/favorites";
+	}
 }
