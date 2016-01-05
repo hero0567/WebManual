@@ -70,6 +70,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<script src="js/lib/others/modernizr.js"></script>
 </body>
 </html>
 

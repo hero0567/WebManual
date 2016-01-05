@@ -15,9 +15,7 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	
-	<script src="js/others/modernizr.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" /> s
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -237,7 +235,8 @@
 				</div> 
 			</div> 
 		</footer> 
-	</div> 
+	</div>
+    <script src="js/lib/others/modernizr.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script> 

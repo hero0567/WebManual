@@ -201,6 +201,7 @@
 	<script>
 		window.site_url = 'https://92shuomingshu.com/';
 	</script> 
+	<script src="js/lib/others/modernizr.js"></script>
 	<script src="js/lib/angular/angular.js"></script>
 	<script src="js/controllers/ResultController.js"></script>
 </body>
