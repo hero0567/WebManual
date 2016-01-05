@@ -88,7 +88,7 @@ var FridgeController = function($scope, $http, $location) {
        	 $scope.subTypes = subTypes;
         });  
  	} 
-    
+            
     $scope.changeSubType = function(type, count) {
     	$scope.page.subtype = type;
         $scope.page.total = count;        

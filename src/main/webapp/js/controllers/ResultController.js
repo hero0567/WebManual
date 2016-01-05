@@ -95,16 +95,22 @@ var ResultController = function($scope, $http, $location) {
     	$scope.changePageNavi();
   	} 
     
-    $scope.searchSubType = function(key) {
-        $http.get('/s', {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
-       	 	$scope.results = results;
-        });  
+    $scope.searchSubType = function(key, type) {    	
+    	if (angular.isDefined(type)){
+    		$http.get('/s/大家电/'+type, {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
+           	 	$scope.results = results;
+            });  
+    	}else{
+    		$http.get('/s', {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
+           	 	$scope.results = results;
+            });  
+    	}
  	} 
     
     $scope.changeSubType = function(type, count) {
         $scope.page.total = count;        
     	$scope.resetPageNavi();
-    	$scope.searchSubType(type);
+    	$scope.searchSubType($scope.key, type);
         
   	} 
     

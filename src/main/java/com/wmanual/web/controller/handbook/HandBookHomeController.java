@@ -47,14 +47,6 @@ public class HandBookHomeController {
 		return "webmanual/result";
 	}
 
-	@RequestMapping("/search")
-	public String search(Model model, @RequestParam(value = "type", required = false) String type,
-			@RequestParam(value = "key", required = false) String key) throws Exception {
-		model.addAttribute("type", type);
-		model.addAttribute("key", key);
-		return "webmanual/searchResult";
-	}
-
 	@RequestMapping("/signin")
 	public String signin() throws Exception {
 		return "webmanual/signin";
