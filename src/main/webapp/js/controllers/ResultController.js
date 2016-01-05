@@ -23,6 +23,7 @@ var ResultController = function($scope, $http, $location) {
     
     $scope.key = "";
     $scope.count = 0;
+    $scope.currentSubType = "全部";
         
     $scope.parseParams = function(){
     	var paramString = window.location.search;
@@ -51,6 +52,7 @@ var ResultController = function($scope, $http, $location) {
         	});
      		$scope.count = count;
      		$scope.page.total = count;
+     		$scope.topList.unshift({"count":count, subType: "全部"});
      		$scope.changePageNavi();
         });
   	} 
@@ -108,7 +110,8 @@ var ResultController = function($scope, $http, $location) {
  	} 
     
     $scope.changeSubType = function(type, count) {
-        $scope.page.total = count;        
+        $scope.page.total = count;    
+        $scope.currentSubType = type;
     	$scope.resetPageNavi();
     	$scope.searchSubType($scope.key, type);
         

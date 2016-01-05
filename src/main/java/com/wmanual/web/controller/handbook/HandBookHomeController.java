@@ -51,4 +51,9 @@ public class HandBookHomeController {
 	public String signin() throws Exception {
 		return "webmanual/signin";
 	}
+	
+	@RequestMapping("/signup")
+	public String signup() throws Exception {
+		return "webmanual/signup";
+	}
 }

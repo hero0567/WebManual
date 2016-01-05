@@ -76,7 +76,7 @@
 	     	<div class="sidebar left">
 				<div class="sec">
 					<ul class="list-lite">
-						<li ng-repeat="m in topList" ng-click="changeSubType(m.subType, m.count)"><a href="">{{m.subType}} <span>{{m.count}}</span></a></li>
+						<li ng-repeat="m in topList" ng-click="changeSubType(m.subType, m.count)"><a ng-class="{on: m.subType == currentSubType}" href="">{{m.subType}} <span>{{m.count}}</span></a></li>
 					</ul>
 				</div>	
 			</div>
