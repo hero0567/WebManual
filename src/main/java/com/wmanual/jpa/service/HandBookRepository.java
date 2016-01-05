@@ -52,10 +52,10 @@ public interface HandBookRepository extends PagingAndSortingRepository<HandBookD
 	public List<HandBookDomain> findByTypeAndSubTypePage(String type, String subType, Pageable pageable);
 	
 	// Count	
-	@Query("select new com.wmanual.beans.SearchBean(count(hb)) from HandBookDomain hb where name like %?1%")
+	@Query("select new com.wmanual.beans.SearchBean(count(hb)) from HandBookDomain hb where name like %?1%" )
 	public List<SearchBean> countByNameLike(String key);
 	
-	@Query("select new com.wmanual.beans.SearchBean(count(hb), subType) from HandBookDomain hb where name like %?1% group by hb.subType")
+	@Query("select new com.wmanual.beans.SearchBean(count(hb), subType) from HandBookDomain hb where name like %?1% group by hb.subType  order by count(hb) desc")
 	public List<SearchBean> countByNameLikeGroup(String key);
 		
 	@Query("select new com.wmanual.beans.SearchBean(count(hb)) from HandBookDomain hb where type = ?1 and name like %?2%")

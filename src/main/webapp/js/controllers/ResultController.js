@@ -1,13 +1,14 @@
 'use strict';
 
 /**
- * SearchController
+ * ResultController
  * @constructor
  */
-var SearchController = function($scope, $http, $location) {
+var ResultController = function($scope, $http, $location) {
 	
 	$scope.menu = {};
 	$scope.results = {};
+	$scope.topList = {};
     $scope.params = {};
     // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
     $scope.page = {	pn:0, 
@@ -21,6 +22,7 @@ var SearchController = function($scope, $http, $location) {
     $scope.ps = [1,2,3,4,5];
     
     $scope.key = "";
+    $scope.count = 0;
         
     $scope.parseParams = function(){
     	var paramString = window.location.search;
@@ -39,6 +41,18 @@ var SearchController = function($scope, $http, $location) {
                $scope.menu = menu;
          });
    	}  
+    
+    $scope.fetchTopList = function(key) {
+    	$http.get('/c/s', {params: {"key": key, "group":true}}).success(function(topList){
+     		$scope.topList = topList;
+     		var count = 0;
+     		angular.forEach(topList, function (m) {
+     			count += m.count; 
+        	});
+     		$scope.count = count;
+     		$scope.page.total = count;
+        });
+  	} 
     
     $scope.changePageNavi = function() {
     	$scope.page.pre = $scope.page.ppn == 0;
@@ -80,8 +94,8 @@ var SearchController = function($scope, $http, $location) {
     	$scope.changePageNavi();
   	} 
     
-    $scope.searchSubType = function(subtype) {
-        $http.get('/s', {params: {key:$scope.key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
+    $scope.searchSubType = function(key) {
+        $http.get('/s', {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
        	 	$scope.results = results;
         });  
  	} 
@@ -100,5 +114,6 @@ var SearchController = function($scope, $http, $location) {
     $scope.parseParams();
     $scope.changePageNavi();
     $scope.fetchMenu();
-    $scope.searchSubType($scope.key); 
+    $scope.fetchTopList($scope.params.key);
+    $scope.searchSubType($scope.params.key); 
 };

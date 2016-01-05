@@ -22,7 +22,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body> 
+<body ng-app="" ng-controller="ResultController"> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
@@ -63,14 +63,8 @@
 				<div class="subnavbox"> 
 					<div class="boxed"> 
 						 <div class="cont"> 
-							  <ul class="subnav nav-comp"> 
-							   <li><a href=""><span>空气净化器</span><i>25727</i></a></li> 
-							   <li><a href=""><span>电视</span><i>18839</i></a></li> 
-							   <li><a href=""><span>冰箱</span><i>18839</i></a></li> 
-							   <li><a href=""><span>空调</span><i>14933</i></a></li> 
-							   <li><a href=""><span>洗衣机</span><i>2270</i></a></li> 
-							   <li><a href=""><span>热水器</span><i>1682</i></a></li> 
-							   <li><a href=""><span>净水器</span><i>7078</i></a></li> 
+							  <ul class="subnav nav-comp">
+							   	<li ng-repeat="m in menu"><a href="/fridge?subtype={{m.subType}}&count={{m.count}}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
 							  </ul> 
 						 </div> 
 					</div> 
@@ -82,9 +76,7 @@
 	     	<div class="sidebar left">
 				<div class="sec">
 					<ul class="list-lite">
-						<li><a class="on" href="">电视 <span>7</span></a></li>
-						<li><a href="">洗衣机 <span>8</span></a></li>
-						<li><a href="">空调 <span>10</span></a></li>
+						<li ng-repeat="m in topList"><a href="">{{m.subType}} <span>{{m.count}}</span></a></li>
 					</ul>
 				</div>	
 			</div>
@@ -94,63 +86,46 @@
 		       <div class="sec">
 		       	<div class="search-title-bar">
 					<span class="flr">
-						你正在搜索 “ <b>说明书</b> ”，共找到 25 条结果
+						你正在搜索 “ <b>{{params.key}}</b> ”，共找到 {{count}} 条结果
 					</span>
 				</div> 
 		        <ul class="list-main-icnset thead"> 
 		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell fina"> 品牌 </i> <i class="cell fina"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 		        </ul> 
-		        <ul class="list-main-icnset"> 
-		          <li> 
-		            <i class="cell pic"> 
-		              <a href=""> 
-		                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-		              </a> 
-		            </i> 
-		            <i class="cell maincell"> 
-		              <p class="title"><a href="">长虹液晶电视</a></p> 
-		              <p class="des">55寸</p> 
-		              <p> 
-		                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-		              </p> 
-		            </i> 
-		            <i class="cell fina"> 长虹 </i> 
-		            <i class="cell fina"> 
-		              <a href=""><span class="tag gray">CH21233</span></a> 
-		            </i> 
-		            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-		          </li>
-		          <li> 
-		            <i class="cell pic"> 
-		              <a href=""> 
-		                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-		              </a> 
-		            </i> 
-		            <i class="cell maincell"> 
-		              <p class="title"><a href="">长虹液晶电视</a></p> 
-		              <p class="des">55寸</p> 
-		              <p> 
-		                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-		              </p> 
-		            </i> 
-		            <i class="cell fina"> 长虹 </i> 
-		            <i class="cell fina"> 
-		              <a href=""><span class="tag gray">CH21233</span></a> 
-		            </i> 
-		            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-		          </li> 
-		        </ul> 
-		       </div> 
-		       <!-- block 分页区 --> 
-		       <div> 
-		        <div class="ui-pagechange for-sec-bottom">
-		         <a href="" class="on">1</a>
-		         <a href="https://www?page=2" data-ci-pagination-page="2">2</a>
-		         <a href="https://www?page=3" data-ci-pagination-page="3">3</a>
-		         <a href="https://www.itjuzi.com/company?page=2" data-ci-pagination-page="2">下一页 →</a>
-		         <a href="https://www.itjuzi.com/company?page=2203" data-ci-pagination-page="2203">尾页 &raquo;</a> 
-		        </div> 
-		       </div> 
+		        <ul class="list-main-icnset">
+					<li ng-repeat="sub in results"> 
+			            <i class="cell pic"> 
+			              <a href=""> 
+			                <span class="incicon"><img ng-src="{{sub.imgUrl}}" /></span> 
+			              </a> 
+			            </i> 
+			            <i class="cell maincell"> 
+			              <p class="title"><a href="">{{sub.name}}{{sub.id}}</a></p> 
+			              <p class="des">{{sub.productSize}}</p> 
+			              <p> 
+			                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
+			              </p> 
+			            </i> 
+			            <i class="cell">{{sub.brand}} </i> 
+			            <i class="cell round"> 
+			              <a href=""><span class="tag gray">{{sub.version}}</span></a> 
+			            </i> 
+			            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
+			         </li>							
+				</ul>
+		       </div>        
+		       <!-- block 分页区 -->
+			   <div>
+					<div class="ui-pagechange for-sec-bottom">
+						<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
+						<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
+						<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
+							ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
+						<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
+						<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
+					</div>
+					
+			   </div> 
 			</div>
 	    </div> 
 		<div class="ui-maintoolbar-box"> 
@@ -226,5 +201,7 @@
 	<script>
 		window.site_url = 'https://92shuomingshu.com/';
 	</script> 
+	<script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/ResultController.js"></script>
 </body>
 </html>
