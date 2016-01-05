@@ -16,9 +16,12 @@
 
 package com.wmanual.web.controller.handbook;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,48 +29,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wmanual.beans.SearchBean;
 import com.wmanual.jpa.domain.HandBookDomain;
 import com.wmanual.jpa.service.HandBookRepository;
 
 @RestController
-@RequestMapping(value = "/hb")
-public class HandBookController {
+@RequestMapping(value = "/c")
+public class HandBookCountController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
 	private HandBookRepository hbRepository;
 
-	@RequestMapping("")
-	public Iterable<HandBookDomain> all() throws Exception {
-		return hbRepository.findAll();
-	}
-
 	@RequestMapping("/{type}")
-	public Iterable<HandBookDomain> allByType(@PathVariable("type") String type,
-			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
-		if (size > 0) {
-			Pageable page = new PageRequest(pn, size);
-			return hbRepository.findByTypePage(type, page);
-		}
-		return hbRepository.findByType(type);
+	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
+			@RequestParam(value = "key", required = false) String key) {
+		logger.info("Search by keyword " + key);
+		Pageable page = new PageRequest(0, 10);
+		return hbRepository.findSize(page).getContent();
 	}
 
-	@RequestMapping("/{type}/{subType}")
-	public Iterable<HandBookDomain> allByTyepSubType(@PathVariable("type") String type,
-			@PathVariable("subType") String subType,
-			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
-		if (size > 0) {
-			Pageable page = new PageRequest(pn, size);
-			return hbRepository.findByTypeAndSubTypePage(type, subType, page);
+	@RequestMapping("/s")
+	public List<SearchBean> searchByGroup(@RequestParam(value = "key", required = false) String key,
+			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
+		if (group){
+			return hbRepository.countByNameLikeGroup(key);
 		}
-		return hbRepository.findByTypeAndSubType(type, subType);
+		return hbRepository.countByNameLike(key);
 	}
-	
-	@RequestMapping("/{type}/{subType}/count")
-	public long count() throws Exception {
-		return hbRepository.count();
+
+	@RequestMapping("/s/{type}")
+	public List<SearchBean> searchByKeyword(@PathVariable("type") String type,
+			@RequestParam(value = "key", required = false) String key) {
+		return hbRepository.countByTypeAndNameLike(type, key);
 	}
+
+	@RequestMapping("/s/{type}/{subType}")
+	public List<SearchBean> allByTyepSubTypeKeyword(@PathVariable("type") String type,
+			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key)
+					throws Exception {
+		return hbRepository.countByTypeAndSubTypeAndNameLike(type, subType, key);
+	}
+
 }

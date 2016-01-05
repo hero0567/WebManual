@@ -38,25 +38,39 @@ public class HandBookSearchController {
 
 	@Autowired
 	private HandBookRepository hbRepository;
-	
-	@RequestMapping("/{keyword}")
-	public Iterable<HandBookDomain> search(@PathVariable("keyword") String keyword) throws Exception {
-		logger.info("Search by keyword " + keyword);
-		Pageable page = new PageRequest(0, 10);
-		Page<HandBookDomain> hb = hbRepository.findByNameLikeSize(page);
-		return hb.getContent();
+
+	@RequestMapping("")
+	public Iterable<HandBookDomain> search(@RequestParam(value = "key", required = false) String key,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+		if (size > 0) {
+			Pageable page = new PageRequest(pn, size);
+			return hbRepository.findByNameLikePage(key, page);
+		}
+		return hbRepository.findByNameLike(key);
 	}
 
-	@RequestMapping("/{type}/{keyword}")
+	@RequestMapping("/{type}")
 	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
-			@PathVariable("keyword") String keyword) {
-		return hbRepository.findByTypeAndNameLike(type, keyword);
+			@RequestParam(value = "key", required = false) String key,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
+		if (size > 0) {
+			Pageable page = new PageRequest(pn, size);
+			return hbRepository.findByTypeAndNameLikePage(type, key, page);
+		}
+		return hbRepository.findByTypeAndNameLike(type, key);
 	}
 
-
-	@RequestMapping("/{type}/{subType}/{keyword}")
+	@RequestMapping("/{type}/{subType}")
 	public Iterable<HandBookDomain> allByTyepSubTypeKeyword(@PathVariable("type") String type,
-			@PathVariable("subType") String subType, @PathVariable("keyword") String keyword) throws Exception {
-		return hbRepository.findByTypeAndSubTypeAndNameLike(type, subType, keyword);
+			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+		if (size > 0) {
+			Pageable page = new PageRequest(pn, size);
+			return hbRepository.findByTypeAndSubTypeAndNameLikePage(type, subType, key, page);
+		}
+		return hbRepository.findByTypeAndSubTypeAndNameLike(type, subType, key);
 	}
 }

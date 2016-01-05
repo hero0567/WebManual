@@ -41,6 +41,11 @@ public class HandBookHomeController {
 	public String fridge() throws Exception {
 		return "webmanual/fridge";
 	}
+	
+	@RequestMapping("/result")
+	public String result() throws Exception {
+		return "webmanual/result";
+	}
 
 	@RequestMapping("/search")
 	public String search(Model model, @RequestParam(value = "type", required = false) String type,
