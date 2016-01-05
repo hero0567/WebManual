@@ -35,6 +35,7 @@ var ResultController = function($scope, $http, $location) {
     			$scope.params[kv[0]] = decodeURI(kv[1]);
     		}
     	});
+    	$scope.key = $scope.params.key;
     }    
     
     $scope.fetchMenu = function() {
@@ -113,8 +114,11 @@ var ResultController = function($scope, $http, $location) {
         $scope.page.total = count;    
         $scope.currentSubType = type;
     	$scope.resetPageNavi();
-    	$scope.searchSubType($scope.key, type);
-        
+    	if (type == "全部"){
+    		$scope.searchSubType($scope.key);
+    	}else{
+    		$scope.searchSubType($scope.key, type);
+    	}
   	} 
     
     $scope.search = function() {

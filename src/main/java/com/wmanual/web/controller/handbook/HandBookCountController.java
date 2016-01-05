@@ -80,8 +80,7 @@ public class HandBookCountController {
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,
 			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
 		if (group){
-			
-			return hbfRepository.countByUID(id);
+			return hbfRepository.countByUIDGroup(id);
 		}
 		return hbfRepository.countByUID(id);
 	}

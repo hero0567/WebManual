@@ -38,7 +38,7 @@
 						  <a class="logo fll" href=""> <h1 class="seeo">92说明书</h1> </a> 
 						  <ul class="mainnav"> 
 						   <li class="tab on"> 
-						       <a href="">首页</a> 
+						       <a href="/">首页</a> 
 						   </li>  
 						  </ul> 
 						  <div class="usernav"> 
@@ -94,63 +94,45 @@
 		       <div class="sec">
 		       	<div class="search-title-bar">
 					<span class="flr">
-						你收藏的“ <b>说明书</b> ”，共有 25 本
+						你收藏的“ <b>说明书</b> ”，共有 {{count}} 本
 					</span>
 				</div> 
 		        <ul class="list-main-icnset thead"> 
 		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell fina"> 品牌 </i> <i class="cell fina"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 		        </ul> 
 		        <ul class="list-main-icnset"> 
-		          <li> 
+		          <li ng-repeat="sub in results"> 
 		            <i class="cell pic"> 
 		              <a href=""> 
-		                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
+		                <span class="incicon"><img ng-src="{{sub.handBook.imgUrl}}" /></span> 
 		              </a> 
 		            </i> 
 		            <i class="cell maincell"> 
-		              <p class="title"><a href="">长虹液晶电视</a></p> 
-		              <p class="des">55寸</p> 
+		              <p class="title"><a href="">{{sub.handBook.name}}{{sub.handBook.id}}</a></p> 
+		              <p class="des">{{sub.handBook.productSize}}</p> 
 		              <p> 
-		                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
+		                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.handBook.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
 		              </p> 
 		            </i> 
-		            <i class="cell fina"> 长虹 </i> 
-		            <i class="cell fina"> 
-		              <a href=""><span class="tag gray">CH21233</span></a> 
+		            <i class="cell">{{sub.handBook.brand}} </i> 
+		            <i class="cell round"> 
+		              <a href=""><span class="tag gray">{{sub.handBook.version}}</span></a> 
 		            </i> 
 		            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-		          </li>
-		          <li> 
-		            <i class="cell pic"> 
-		              <a href=""> 
-		                <span class="incicon"><img src="./img/9cf6f45ab25bc22b0ed571b5dc1c8ff9.jpg" /></span> 
-		              </a> 
-		            </i> 
-		            <i class="cell maincell"> 
-		              <p class="title"><a href="">长虹液晶电视</a></p> 
-		              <p class="des">55寸</p> 
-		              <p> 
-		                <span class="tags t-small c-gray-aset"> <a href="">2015-12-3</a>上市</span>   
-		              </p> 
-		            </i> 
-		            <i class="cell fina"> 长虹 </i> 
-		            <i class="cell fina"> 
-		              <a href=""><span class="tag gray">CH21233</span></a> 
-		            </i> 
-		            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
-		          </li> 
+		          </li>			          
 		        </ul> 
 		       </div> 
-		       <!-- block 分页区 --> 
-		       <div> 
-		        <div class="ui-pagechange for-sec-bottom">
-		         <a href="" class="on">1</a>
-		         <a href="https://www?page=2" data-ci-pagination-page="2">2</a>
-		         <a href="https://www?page=3" data-ci-pagination-page="3">3</a>
-		         <a href="https://www.itjuzi.com/company?page=2" data-ci-pagination-page="2">下一页 →</a>
-		         <a href="https://www.itjuzi.com/company?page=2203" data-ci-pagination-page="2203">尾页 &raquo;</a> 
-		        </div> 
-		       </div> 
+		       <!-- block 分页区 -->
+			   <div>
+					<div class="ui-pagechange for-sec-bottom">
+						<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
+						<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
+						<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
+							ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
+						<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
+						<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
+					</div>
+			   </div> 
 			</div>
 	    </div> 
 		

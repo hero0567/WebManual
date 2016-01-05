@@ -2,6 +2,7 @@ package com.wmanual.jpa.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
@@ -15,17 +16,19 @@ public interface HandBookFavoriteRepository extends CrudRepository<HandBookFavor
 	
 	public List<HandBookFavoriteDomain> findByUserId(Long id);	
 	
+	@Query("from HandBookFavoriteDomain hbf where hbf.user.id = ?")
+	public List<HandBookFavoriteDomain> findByUserIdPage(Long id, Pageable pageable);
+	
+	public List<HandBookFavoriteDomain> findByUserIdAndHandBookSubType(Long id, String subType);
+	
+	@Query("from HandBookFavoriteDomain hbf where hbf.user.id = ? and hbf.handBook.subType = ?")
+	public List<HandBookFavoriteDomain> findByUserIdAndHandBookSubTypePage(Long id, String subType, Pageable pageable);
+	
 	// Count	
 	@Query("select new com.wmanual.beans.CountBean(count(hbf)) from HandBookFavoriteDomain hbf where hbf.user.id = ?1" )
 	public List<CountBean> countByUID(long id);
 	
-//	@Query("select new com.wmanual.beans.CountBean(count(hb), subType) from HandBookFavoriteDomain hb where name like %?1% group by hb.subType  order by count(hb) desc")
-//	public List<CountBean> countByNameLikeGroup(String key);
-//		
-//	@Query("select new com.wmanual.beans.CountBean(count(hb)) from HandBookFavoriteDomain hb where type = ?1 and name like %?2%")
-//	public List<CountBean> countByTypeAndNameLike(String type, String name);
-//		
-//	@Query("select new com.wmanual.beans.CountBean(count(hb)) from HandBookFavoriteDomain hb where type = ?1 and subType = ?2  and name like %?3%")
-//	public List<CountBean> countByTypeAndSubTypeAndNameLike(String type, String subType, String name);
+	@Query("select new com.wmanual.beans.CountBean(count(hbf), hbf.handBook.subType) from HandBookFavoriteDomain hbf where hbf.user.id = ?1 group by hbf.handBook.subType  order by count(hbf) desc")
+	public List<CountBean> countByUIDGroup(long id);
 
 }
