@@ -1,3 +1,9 @@
+.captcha{
+	float:right;width:100px; height:30px; margin-top:-30px; position:relative
+}
+.personalEmail{
+	width:100%;
+}
 div.alert{
 	padding:0px !important;
 	margin:0px !important;

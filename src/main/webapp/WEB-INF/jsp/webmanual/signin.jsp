@@ -23,7 +23,7 @@
 	  <![endif]-->
 
 </head>
-<body  ng-app="" ng-controller="SigninController">
+<body ng-app="" ng-controller="SigninController">
 	<div class="none">
 		<img src="./img/favicon.png">
 	</div>
@@ -35,7 +35,7 @@
 		<div class="loginbox-thin">
 			<div>
 				<div class="row tip tiptop">
-					<a class="tab on">登录</a> <a href="" class="tab" id="regist">注册新用户</a>
+					<a class="tab on" href="/signin">登录</a> <a href="/signup" class="tab" id="regist">注册新用户</a>
 				</div>
 
 				<div class="contset">
@@ -74,7 +74,7 @@
 				                	<input type="text" name="securityCode" id="input-securityCode"
 				                        ng-model="user.captcha" ng-minlength="5" ng-maxlength="5"
 				                        placeholder="请输入右侧验证码" />
-				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" style="float:right;width:100px; height:30px; margin-top:-30px; position:relative" /> 
+				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" /> 
 				                    <div ng-show="myForm.securityCode.$dirty && !myForm.securityCode.$valid"
 				                        class="span12 alert alert-error text-left">请输入正确长度的验证码！</div>
 				                </div>
@@ -82,7 +82,7 @@
 			
 			                <div class="row tip tipbottom">
 								<label><input ng-model="user.rememberMe" type="checkbox" value="false"> 记住我</label> 
-								<a href="https://www.itjuzi.com/user/forgot_password" class="flr">忘记密码</a>
+								<a href=" " class="flr">忘记密码</a>
 							</div>
 			
 							<div class="row">
