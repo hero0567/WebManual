@@ -9,11 +9,10 @@
 	<link rel="icon" href="/images/favicon.ico" />
 	<link rel="shortcut icon" href="./img/favicon.png">
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="./css/signup.css">
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link href="css/pages/index.css" rel="stylesheet">
-	<link href="css/fontawesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
