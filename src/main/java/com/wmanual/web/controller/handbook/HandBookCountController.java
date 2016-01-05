@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.domain.HandBookDomain;
+import com.wmanual.jpa.service.HandBookFavoriteRepository;
 import com.wmanual.jpa.service.HandBookRepository;
 
 @RestController
@@ -41,6 +42,9 @@ public class HandBookCountController {
 
 	@Autowired
 	private HandBookRepository hbRepository;
+	
+	@Autowired
+	private HandBookFavoriteRepository hbfRepository;
 
 	@RequestMapping("/{type}")
 	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
@@ -70,6 +74,16 @@ public class HandBookCountController {
 			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key)
 					throws Exception {
 		return hbRepository.countByTypeAndSubTypeAndNameLike(type, subType, key);
+	}
+	
+	@RequestMapping("/f")
+	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,
+			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
+		if (group){
+			
+			return hbfRepository.countByUID(id);
+		}
+		return hbfRepository.countByUID(id);
 	}
 
 }
