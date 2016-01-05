@@ -107,13 +107,11 @@ var FavoritesController = function($scope, $http, $location) {
     	}else{
     		$scope.searchSubType($scope.id, type);
     	}
-    	
-        
   	} 
     
     $scope.search = function() {
-      	window.location = "/search?key=" + $scope.key;
-   	} 
+      	window.location = "/result?key=" + $scope.key;
+   	}
     
     $scope.fetchMenu();
     $scope.fetchFavorList($scope.id);        
