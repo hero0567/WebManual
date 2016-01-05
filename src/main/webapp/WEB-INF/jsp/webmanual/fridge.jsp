@@ -47,13 +47,10 @@
 
 						<div class="usernav">
 							<div class="usersearch">
-								<form action="#">
-									<input type="text" name="key" spellcheck="false"
-										autocomplete="off" placeholder="请输入搜索关键字" />
-									<button class="jzbtn bg-c" type="submit">
-										<i class="fa fa-search"></i>
-									</button>
-								</form>
+								<form ng-submit="search()"> 
+							      	<input type="text" ng-model="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
+							      	<button class="jzbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
+							    </form> 
 							</div>
 							<div class="useradd">
 								<a target="_blank" href=""><span class="jzbtn c-lined">

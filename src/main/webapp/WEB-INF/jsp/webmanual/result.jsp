@@ -37,7 +37,7 @@
 						  <a class="logo fll" href=""> <h1 class="seeo">92说明书</h1> </a> 
 						  <ul class="mainnav"> 
 							   <li class="tab on"> 
-							       <a href="">首页</a> 
+							       <a href="/">首页</a> 
 							   </li>  
 						  </ul> 
 						  <div class="usernav"> 

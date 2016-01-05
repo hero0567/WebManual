@@ -29,7 +29,7 @@ var IndexController = function($scope, $http, $location) {
   	} 
     
     $scope.search = function() {
-      	window.location = "/search?key=" + $scope.key;
+      	window.location = "/result?key=" + $scope.key;
    	} 
     
     $scope.fetchMenu();

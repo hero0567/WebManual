@@ -51,6 +51,7 @@ var ResultController = function($scope, $http, $location) {
         	});
      		$scope.count = count;
      		$scope.page.total = count;
+     		$scope.changePageNavi();
         });
   	} 
     
@@ -112,8 +113,7 @@ var ResultController = function($scope, $http, $location) {
    	} 
     
     $scope.parseParams();
-    $scope.changePageNavi();
     $scope.fetchMenu();
-    $scope.fetchTopList($scope.params.key);
+    $scope.fetchTopList($scope.params.key);        
     $scope.searchSubType($scope.params.key); 
 };

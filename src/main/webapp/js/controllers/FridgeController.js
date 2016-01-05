@@ -98,7 +98,7 @@ var FridgeController = function($scope, $http, $location) {
   	} 
     
     $scope.search = function() {
-      	window.location = "/search?type=" + $scope.type + "&key=" + $scope.key;
+      	window.location = "/result?key=" + $scope.key;
    	} 
     
     $scope.parseParams();
