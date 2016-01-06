@@ -43,29 +43,19 @@
 
 				<div class="contset">
 					<div class="cont on">
-						<form name="myForm" ng-submit="signup()">
+						<form id="myForm" name="myForm" ng-submit="signup()">
 							<div class="row">
 								<div class="control-group text-center">
-									<input name="personalEmail" type="email" ng-model="user.email"
+									<input name="personalEmail" type="email" ng-model="user.username" ng-blur="checkEmailExist()"
 										placeholder="请输入注册邮箱地址 " class="pull-left personalEmail" required> <span
 										class="add-on margin-left-40"><i class="icon-envelope"></i></span>
 									<div ng-show="myForm.personalEmail.$dirty && !myForm.personalEmail.$valid"
 										class="span12 alert alert-error text-left">必填字段，请输入正确的邮件格式！</div>
+									<div ng-show=""
+										class="span12 alert alert-error text-left">用户名已经存在，请输入另外一个用户名！</div>
 
 								</div>
 							</div>
-							<div class="row">
-								<div class="control-group text-center">
-									<input name="userName" type="text" ng-model="user.userName"
-										placeholder="请输入用户名 " class="pull-left" ng-minlength="2"
-										ng-maxlength="6"><span class="add-on margin-left-40"><i
-										class="icon-user"></i></span>
-									<div
-										ng-show="myForm.userName.$dirty && !myForm.userName.$valid"
-										class="span12 alert alert-error text-left">必填字段，输入长度请保持在2-16位！</div>
-								</div>
-							</div>
-
 							<div class="row">
 								<div class="control-group text-center clearfix">
 									<input name="userPassword" type="password"
@@ -81,7 +71,7 @@
 							<div class="row">
 								<div class="control-group text-center clearfix">
 									<input name="confirmUserPassword" type="password"
-										ng-model="confirmUserPassword" placeholder="请再次输入密码"
+										ng-model="user.confirmUserPassword" placeholder="请再次输入密码"
 										class="pull-left"><span class="add-on margin-left-40"><i
 										class="icon-lock"></i></span>
 									<div
@@ -93,7 +83,7 @@
 							<div class="row">
 				                <div class="control-group text-center clearfix">
 				                	<input type="text" name="securityCode" id="input-securityCode"
-				                        ng-model="user.captcha" ng-minlength="5" ng-maxlength="5"
+				                        ng-model="user.captcha" ng-minlength="4" ng-maxlength="4"
 				                        placeholder="请输入右侧验证码" />
 				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" /> 
 				                    <div ng-show="myForm.securityCode.$dirty && !myForm.securityCode.$valid"
@@ -104,7 +94,7 @@
 							<div class="control-group">
 								<p class="t-small c-gray usn">
 									<label><input type="checkbox" checked=""> 我已阅读
-									</label><a target="_blank" href="https://www.itjuzi.com/aboutus/policy">"92说明书用户使用协议"</a>
+									</label><a target="_blank" href="#">"92说明书用户使用协议"</a>
 								</p>
 							</div>
 							<br>

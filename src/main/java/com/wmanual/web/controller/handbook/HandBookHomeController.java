@@ -16,17 +16,33 @@
 
 package com.wmanual.web.controller.handbook;
 
+import org.apache.commons.mail.EmailException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.wmanual.configure.EmailConfigure;
+import com.wmanual.jpa.domain.Authority;
+import com.wmanual.jpa.domain.User;
+import com.wmanual.jpa.service.AuthorityRepository;
+import com.wmanual.jpa.service.UserRepository;
 
 @Controller
 public class HandBookHomeController {
+	
+	private Logger logger = LoggerFactory.getLogger(getClass()); 
+	
+	@Autowired
+	private UserRepository userRepository;
+	@Autowired
+	private AuthorityRepository authorityRepository;
+	@Autowired
+	private EmailConfigure emailConfigure;
+	
 	@RequestMapping("/")
 	public String index() throws Exception {
 		return "webmanual/index";
@@ -60,5 +76,27 @@ public class HandBookHomeController {
 	@RequestMapping("/favorites")
 	public String favorites() throws Exception {
 		return "webmanual/favorites";
+	}
+	
+	/**
+	 * http://localhost:8080/register?username=11112121&password=1212121
+	 * @param user
+	 * @return
+	 * @throws EmailException 
+	 */
+	@RequestMapping(value="/register", method=RequestMethod.POST)
+	public String registerUser(User user) throws EmailException {
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		user.setPassword(encoder.encode(user.getPassword()));
+		Authority auth = new Authority();
+		auth.setUsername(user.getUsername());
+		auth.setAuthority("ROLE_USER");
+		user.setEnabled(true);
+		logger.info("Username :{}, Password:{}",user.getUsername(),user.getPassword());
+		userRepository.save(user);
+		authorityRepository.save(auth);
+		
+		//EmailUtil.getInstance().sendEmail(user.getUsername(), emailConfigure);
+		return "login";
 	}
 }
