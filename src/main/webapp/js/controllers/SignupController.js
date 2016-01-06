@@ -7,8 +7,8 @@
 var SignupController = function($scope, $http, $location) {
 	
 	$scope.imageUrl = "/sec/img";
-	$scope.user = {username : "1111@163.com", password : "111111",  confirmUserPassword : "111111", captcha : "1111"};
-	$scope.error = {userexisted : false, captcha : false};
+	$scope.user = {username : "1111@163.com", password : "111111",  confirmUserPassword : "111111"};
+	$scope.error = {userexisted : false, captcha : false, register : true};
 	
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
@@ -25,6 +25,7 @@ var SignupController = function($scope, $http, $location) {
         	window.location = "/signin";
         }).error(function() {
         	$scope.user.captcha = "";
+        	$scope.error.register = "";
         });
 	};
 	

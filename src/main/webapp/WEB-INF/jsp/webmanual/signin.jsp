@@ -48,35 +48,33 @@
 			                </div>
 			                
 			                <div class="row">
-			                	<div class="control-group text-center">
-				                    <input name="userName" type="text" ng-model="user.username"
-				                        ng-minlength="2" ng-maxlength="16" placeholder="请输入用户名 "
-				                        class="pull-left"><span class="add-on margin-left-40"><i
-				                        class="icon-user"></i></span>
-				                    <div ng-show="myForm.userName.$dirty && !myForm.userName.$valid"
-				                        class="span12 alert alert-error text-left">必填字段，输入长度请保持在2-16位！</div>
-				                </div>
-			                </div>
+								<div class="control-group text-center">
+									<input type="email" ng-model="user.username"
+										placeholder="请输入注册邮箱地址 " class="pull-left personalEmail" required> <span
+										class="add-on margin-left-40"><i class="icon-envelope"></i></span>
+								</div>
+							</div>
 			                
 			                <div class="row">
 				                <div class="control-group text-center clearfix">
-				                    <input name="userPassword" type="password" ng-model="user.password"
-				                        ng-minlength="5" ng-maxlength="16" placeholder="请输入密码"
+				                    <input name="userPassword" type="password" ng-model="user.password" required
+				                        ng-minlength="6" ng-maxlength="16" placeholder="请输入密码"
 				                        class="pull-left" id="login-pass"><span
 				                        class="add-on margin-left-40"><i class="icon-lock"></i></span>
 				                    <div ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
-				                        class="span12 alert alert-error text-left">必填字段，请输入长度在5-16位的密码！</div>
+				                        class="span12 alert alert-error text-left">必填字段，请输入长度在6-16位的密码！</div>
 				                </div>
 							</div>
 							
 							<div class="row">
 				                <div class="control-group text-center clearfix">
-				                	<input type="text" name="securityCode" id="input-securityCode"
-				                        ng-model="user.captcha" ng-minlength="5" ng-maxlength="5"
-				                        placeholder="请输入右侧验证码" />
-				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" /> 
-				                    <div ng-show="myForm.securityCode.$dirty && !myForm.securityCode.$valid"
-				                        class="span12 alert alert-error text-left">请输入正确长度的验证码！</div>
+				                	<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
+				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required/>
+				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" />
+				                    <div ng-show="error.captcha"
+										class="span12 alert alert-error text-left">验证码错误，请重新输入！</div>
+									<div ng-show="error.loginfailed"
+										class="span12 alert alert-error text-left">登录失败，请重新登录！</div>
 				                </div>
 			                </div>
 			
@@ -86,7 +84,7 @@
 							</div>
 			
 							<div class="row">
-								<button type="submit" class="jzbtn c" ng-click="signin()" ng-disabled="myForm.$invalid">登 录</button>
+								<button type="submit" class="jzbtn c" ng-disabled="myForm.$invalid  || error.captcha">登 录</button>
 							</div>
 			                 
 		                </form> 

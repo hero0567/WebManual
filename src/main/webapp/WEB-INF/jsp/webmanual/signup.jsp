@@ -46,20 +46,22 @@
 						<form name="myForm" ng-submit="signup()">
 							<div class="row">
 								<div class="control-group text-center">
-									<input name="personalEmail" type="email" ng-model="user.username" ng-blur="checkEmailExist()"
+									<input name="personalEmail" type="email" ng-model="user.username" ng-blur="checkEmailExist()" required
 										placeholder="请输入注册邮箱地址 " class="pull-left personalEmail" required> <span
 										class="add-on margin-left-40"><i class="icon-envelope"></i></span>
 									<div ng-show="myForm.personalEmail.$dirty && !myForm.personalEmail.$valid"
 										class="span12 alert alert-error text-left">必填字段，请输入正确的邮件格式！</div>
 									<div ng-show="error.userexisted"
 										class="span12 alert alert-error text-left">用户名已经存在，请输入另外一个用户名！</div>
+									<div ng-show="!error.register"
+										class="span12 alert alert-error text-left">注册失败，请重新注册！</div>
 
 								</div>
 							</div>
 							<div class="row">
 								<div class="control-group text-center clearfix">
 									<input name="userPassword" type="password"
-										ng-model="user.password" ng-minlength="6" ng-maxlength="16"
+										ng-model="user.password" ng-minlength="6" ng-maxlength="16" required 
 										placeholder="请输入密码" class="pull-left"><span
 										class="add-on margin-left-40"><i class="icon-lock"></i></span>
 									<div
@@ -70,7 +72,7 @@
 
 							<div class="row">
 								<div class="control-group text-center clearfix">
-									<input name="confirmUserPassword" type="password"
+									<input name="confirmUserPassword" type="password" required 
 										ng-model="user.confirmUserPassword" ng-minlength="6" ng-maxlength="16" placeholder="请再次输入密码"
 										class="pull-left"><span class="add-on margin-left-40"><i
 										class="icon-lock"></i></span>
@@ -83,7 +85,7 @@
 							<div class="row">
 				                <div class="control-group text-center clearfix">
 				                	<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
-				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4"/>
+				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required />
 				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" />
 				                    <div ng-show="error.captcha"
 										class="span12 alert alert-error text-left">验证码错误，请重新输入！</div>

@@ -25,8 +25,8 @@
 							    </div> 
 							    <!-- 未登录 --> 
 					    <div class="userlogin"> 
-					     	<a class="jzbtn" href="">登录</a>
-					     	<a class="jzbtn" href="">注册</a> 
+					     	<a class="jzbtn" href="/signin">登录</a>
+					     	<a class="jzbtn" href="/signup">注册</a> 
 					    </div> 
 				   </div> 
 			  </div> 
