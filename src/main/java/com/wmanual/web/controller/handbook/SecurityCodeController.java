@@ -7,8 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.wmanual.utils.SecurityCodeUtil;
 
@@ -16,6 +19,8 @@ import com.wmanual.utils.SecurityCodeUtil;
 @RequestMapping(value = "/sec/img")
 public class SecurityCodeController {
 	
+	
+	//TODO : use UUID token instead of session
 	
 	@RequestMapping("")
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
@@ -32,6 +37,19 @@ public class SecurityCodeController {
         //生成图片  
         int w = 200, h = 80;  
         SecurityCodeUtil.outputImage(w, h, response.getOutputStream(), verifyCode);  
+    }  
+	
+	@RequestMapping("/check")
+	public ResponseEntity<String> check(HttpServletRequest request, @RequestParam(value = "code") String code) throws ServletException, IOException {  
+
+		HttpSession session = request.getSession(true); 
+		String rand = (String) session.getAttribute("rand");
+		
+		if (rand.equalsIgnoreCase(code)){
+			return new ResponseEntity<String>("", HttpStatus.OK);
+		}else{
+			return new ResponseEntity<String>("", HttpStatus.BAD_REQUEST);
+		}
     }  
 
 }

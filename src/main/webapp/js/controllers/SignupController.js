@@ -8,13 +8,13 @@ var SignupController = function($scope, $http, $location) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111",  confirmUserPassword : "111111", captcha : "1111"};
+	$scope.error = {userexisted : false, captcha : false};
 	
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
 		
 	$scope.signup = function() {
-		console.log($scope.user);
 	    $http({
 	        method  : 'POST',
 	        url     : '/register',
@@ -30,11 +30,22 @@ var SignupController = function($scope, $http, $location) {
 	
 	$scope.checkEmailExist = function(){
 		if($scope.myForm.$valid){
-			$http.get('/u/' + $scope.user.username).success(function(){
-	            console.log("created");
+			$http.get('/u?uname=' + $scope.user.username).success(function(){
+	            $scope.error.userexisted = false;
 	        }).error(function() {
-	        	console.log("failure");
+	        	$scope.error.userexisted = true;
+	        });
+		}
+	}
+	
+	$scope.checkSecCode = function(){
+		if($scope.myForm.$valid){
+			$http.get('/sec/img/check?code=' + $scope.user.captcha).success(function(){
+	            $scope.error.captcha = false;
+	        }).error(function() {
+	        	$scope.error.captcha = true;
 	        });
 		}
 	}
 };
+

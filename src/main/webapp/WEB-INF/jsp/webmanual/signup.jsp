@@ -43,7 +43,7 @@
 
 				<div class="contset">
 					<div class="cont on">
-						<form id="myForm" name="myForm" ng-submit="signup()">
+						<form name="myForm" ng-submit="signup()">
 							<div class="row">
 								<div class="control-group text-center">
 									<input name="personalEmail" type="email" ng-model="user.username" ng-blur="checkEmailExist()"
@@ -51,7 +51,7 @@
 										class="add-on margin-left-40"><i class="icon-envelope"></i></span>
 									<div ng-show="myForm.personalEmail.$dirty && !myForm.personalEmail.$valid"
 										class="span12 alert alert-error text-left">必填字段，请输入正确的邮件格式！</div>
-									<div ng-show=""
+									<div ng-show="error.userexisted"
 										class="span12 alert alert-error text-left">用户名已经存在，请输入另外一个用户名！</div>
 
 								</div>
@@ -71,23 +71,22 @@
 							<div class="row">
 								<div class="control-group text-center clearfix">
 									<input name="confirmUserPassword" type="password"
-										ng-model="user.confirmUserPassword" placeholder="请再次输入密码"
+										ng-model="user.confirmUserPassword" ng-minlength="6" ng-maxlength="16" placeholder="请再次输入密码"
 										class="pull-left"><span class="add-on margin-left-40"><i
 										class="icon-lock"></i></span>
 									<div
-										ng-show="myForm.confirmUserPassword.$dirty && confirmUserPassword != user.password"
+										ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.password"
 										class="span12 alert alert-error text-left">密码确认不对，请再次输入！</div>
 								</div>
 							</div>
 							
 							<div class="row">
 				                <div class="control-group text-center clearfix">
-				                	<input type="text" name="securityCode" id="input-securityCode"
-				                        ng-model="user.captcha" ng-minlength="4" ng-maxlength="4"
-				                        placeholder="请输入右侧验证码" />
-				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" /> 
-				                    <div ng-show="myForm.securityCode.$dirty && !myForm.securityCode.$valid"
-				                        class="span12 alert alert-error text-left">请输入正确长度的验证码！</div>
+				                	<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
+				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4"/>
+				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" />
+				                    <div ng-show="error.captcha"
+										class="span12 alert alert-error text-left">验证码错误，请重新输入！</div>
 				                </div>
 			                </div>
 
@@ -99,7 +98,7 @@
 							</div>
 							<br>
 							<div class="row">
-								<button class="jzbtn c" type="submit" ng-disabled="myForm.$invalid">注册</button>
+								<button class="jzbtn c" type="submit" ng-disabled="myForm.$invalid || error.captcha || error.userexisted || user.confirmUserPassword != user.password">注册</button>
 							</div>
 						</form>
 					</div>
