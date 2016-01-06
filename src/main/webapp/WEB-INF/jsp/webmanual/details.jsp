@@ -16,21 +16,34 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	
+	<script>
+	  window.site_url = 'https://92shuomingshu.com/';
+	</script>  
+	 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/IndexController.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body> 
+<body class=""> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]--> 
-	<div class="thewrap"> 
+	<div class="contentwrap"> 
 		<header> 
 			<div> 
 				<div class="navbox"> 
@@ -45,18 +58,18 @@
 							   <div class="usersearch"> 
 								    <form action=""> 
 								     	<input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
-								     	<button class="jzbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
+								     	<button class="wmanualbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
 								    </form> 
 							   </div> 
 							   <div class="useradd"> 
-							    	<a target="_blank" href=""><span class="jzbtn c-lined">
+							    	<a target="_blank" href=""><span class="wmanualbtn c-lined">
 							     	<i class="fa fa-plus"></i> 添加搜藏</span>
 							   </a> 
 							   </div> 
 							   <!-- 未登录 --> 
 							   <div class="userlogin"> 
-							    	<a class="jzbtn" href="">登录</a>
-							    	<a class="jzbtn" href="">注册</a> 
+							    	<a class="wmanualbtn" href="">登录</a>
+							    	<a class="wmanualbtn" href="">注册</a> 
 							   </div> 
 						  </div> 
 					 </div> 
@@ -142,8 +155,8 @@
 			                  </li>
 			                </ul>
 			                <div class="pl-mt20">
-			                  <a class="jzbtn" href="">在线阅读</a>
-			                  <a class="jzbtn" href="">下载PDF</a> 
+			                  <a class="wmanualbtn" href="">在线阅读</a>
+			                  <a class="wmanualbtn" href="">下载PDF</a> 
 			                </div>
 			    </div>
 			  </div>
@@ -173,16 +186,16 @@
 		
 		<footer> 
 			<div class="footer-info boxed"> 
-				<div class="colum"> 
+				<div class="column-custom"> 
 					<ul> 
 						<li><b>关于</b></li> 
 						<li><a target="_blank" href="">关于我们</a></li> 
 						<li><a target="_blank" href="">如何上传说明书</a></li> 
-						<li><a target="_blank" href="https://www.itjuzi.com/partners">合作伙伴</a></li> 
-						<li><a target="_blank" href="https://www.itjuzi.com/faq">FAQ</a></li> 
+						<li><a target="_blank" href="https://www.92shuomingshu.com/partners">合作伙伴</a></li> 
+						<li><a target="_blank" href="https://www.92shuomingshu.com/faq">FAQ</a></li> 
 					</ul> 
 		   		</div> 
-				<div class="colum"> 
+				<div class="column-custom"> 
 					<ul> 
 						<li><b>发现</b></li> 
 						<li><a target="_blank" href="">数据服务</a></li> 
@@ -192,7 +205,7 @@
 					</ul> 
 				</div> 
 		
-				<div class="colum" > 
+				<div class="column-custom" > 
 					<img src="./img/qrcode-juzi.png" style="height:130px; float:left; margin-right:10px; margin-top:5px"/> 
 					<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" style="float:right;"> 
 						<ul> 
@@ -200,7 +213,7 @@
 							<li>方便他人，快乐你我</li> 
 							<li class="block-footer-getinfo"> 
 								<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@92shuomingshu.com" /> 
-							  	<button type="submit" class="jzbtn bg-c">订阅</button> 
+							  	<button type="submit" class="wmanualbtn bg-c">订阅</button> 
 							</li> 
 							<li class="block-footer-iconlink"> 
 							  	<a href="" target="_blank">
@@ -212,7 +225,7 @@
 							  	<a href="http://shang.qq.com/wpa/qunwpa?idkey=92942d"> 
 							    	<i class="fa fa-qq"></i> 
 							  	</a> 
-							  	<a href="mailto:hello@itjuzi.com" target="_blank">
+							  	<a href="mailto:hello@92shuomingshu.com" target="_blank">
 							  		<i class="fa fa-envelope-o"></i>
 							  	</a> 
 							</li> 
@@ -220,10 +233,10 @@
 					</form> 
 				</div> 
 		  </div> 
-			<div class="footer-sign"> 
+			<div class="copyright-92"> 
 				<div class="boxed">
 				  92说明书 - 个人说明书信息服务 
-				  <span class="flr copy"> &copy; 2016-2019 itjuzi.com 蜀ICP备14026526号-2</span> 
+				  <span class="flr copy"> &copy; 2016-2019 92shuomingshu.com 蜀ICP备14026526号-2</span> 
 				</div> 
 			</div> 
 		</footer> 

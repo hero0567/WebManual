@@ -15,22 +15,26 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" /> s
+	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	
+	<script src="js/lib/others/modernizr.js"></script>
+	<script>
+	  window.site_url = 'https://92shuomingshu.com/';
+	</script> 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body> 
+<body class=""> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]--> 
-	<div class="thewrap"> 
+	<div class="contentwrap"> 
 		<header> 
 			<div> 
 				<div class="navbox"> 
@@ -45,22 +49,22 @@
 							   <div class="usersearch"> 
 								    <form action=""> 
 								     	<input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
-								     	<button class="jzbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
+								     	<button class="wmanualbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
 								    </form> 
 							   </div> 
 							   <div class="useradd"> 
-							    	<a target="_blank" href=""><span class="jzbtn c-lined">
+							    	<a target="_blank" href=""><span class="wmanualbtn c-lined">
 							     	<i class="fa fa-plus"></i> 添加搜藏</span>
 							   </a> 
 							   </div> 
 							   <!-- 未登录 --> 
 							   <div class="usermenu hoversub">
 						          <a href="https://www.92shuomingshu.com/user/205401" title="进入个人中心">栖牛_f166a7d988</a>
-						          <a><img src="https://www.itjuzi.com/images/dfe1636977926623d86a9003ce61226d.png"></a>
+						          <a><img src="https://www.92shuomingshu.com/images/dfe1636977926623d86a9003ce61226d.png"></a>
 						          <div class="subblock">
 						            <ul class="list-dropdown-menu">
 						                <li><a href="https://www.92shuomingshu.com/user/205401">我的收藏</a></li>
-						                <!-- <li><a href="https://www.itjuzi.com/user/edit">个人中心</a></li> -->
+						                <!-- <li><a href="https://www.92shuomingshu.com/user/edit">个人中心</a></li> -->
 						                <li><a href="https://www.92shuomingshu.com/user/logout">退出</a></li>
 						            </ul>
 						          </div>
@@ -107,7 +111,7 @@
 								<p>IT桔子致力于通过信息和数据的生产、聚合、挖掘、加工、处理，帮助目标用户和客户节约时间和金钱、提高效率，以辅助其各类商业行为，包括风险投资、收购、竞争情报、细分行业信息、国外公司产品信息数据服务等。产品服务包括但不限于：IT桔子网站和APP、线下活动、数据和信息服务等。
 								</p>
 	
-								<p>无论在哪个平台，我们都会坚定的实施保护我们用户隐私的措施。您在同意IT桔子网络服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于IT桔子网络服务使用协议不可分割的一部分。请注意IT桔子会不时地会检查其隐私措施，因此有关的措施会随之变化。我们恳请您定期光顾本页以确保对我们隐私政策最新版本始终保持了解。在阅读完本政策之後，如果您对IT桔子的隐私措施有进一步的问题，请与 hello@itjuzi.com 联系。
+								<p>无论在哪个平台，我们都会坚定的实施保护我们用户隐私的措施。您在同意IT桔子网络服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于IT桔子网络服务使用协议不可分割的一部分。请注意IT桔子会不时地会检查其隐私措施，因此有关的措施会随之变化。我们恳请您定期光顾本页以确保对我们隐私政策最新版本始终保持了解。在阅读完本政策之後，如果您对IT桔子的隐私措施有进一步的问题，请与 hello@92shuomingshu.com 联系。
 								</p>
 	
 								<h3>1. 适用范围</h3>
@@ -166,7 +170,7 @@
 								</p>
 	
 								<h3>9. 与网站联系</h3>
-								<p>如果你有与隐私保护，政策实施或网站操作有关的问题，请将意见或建议发送至我们的邮箱:hello@itjuzi.com
+								<p>如果你有与隐私保护，政策实施或网站操作有关的问题，请将意见或建议发送至我们的邮箱:hello@92shuomingshu.com
 								</p>
 	
 								<p>最后，您是唯一对您的账号和密码信息负有保密责任的人。任何情况下，请小心妥善保管。</p>
@@ -181,16 +185,16 @@
 		</div>
 		<footer> 
 			<div class="footer-info boxed"> 
-				<div class="colum"> 
+				<div class="column-custom"> 
 					<ul> 
 						<li><b>关于</b></li> 
 						<li><a target="_blank" href="">关于我们</a></li> 
 						<li><a target="_blank" href="">如何上传说明书</a></li> 
-						<li><a target="_blank" href="https://www.itjuzi.com/partners">合作伙伴</a></li> 
-						<li><a target="_blank" href="https://www.itjuzi.com/faq">FAQ</a></li> 
+						<li><a target="_blank" href="https://www.92shuomingshu.com/partners">合作伙伴</a></li> 
+						<li><a target="_blank" href="https://www.92shuomingshu.com/faq">FAQ</a></li> 
 					</ul> 
 		   		</div> 
-				<div class="colum"> 
+				<div class="column-custom"> 
 					<ul> 
 						<li><b>发现</b></li> 
 						<li><a target="_blank" href="">数据服务</a></li> 
@@ -200,7 +204,7 @@
 					</ul> 
 				</div> 
 		
-				<div class="colum" > 
+				<div class="column-custom" > 
 					<img src="./img/qrcode-juzi.png" style="height:130px; float:left; margin-right:10px; margin-top:5px"/> 
 					<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" style="float:right;"> 
 						<ul> 
@@ -208,7 +212,7 @@
 							<li>方便他人，快乐你我</li> 
 							<li class="block-footer-getinfo"> 
 								<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@92shuomingshu.com" /> 
-							  	<button type="submit" class="jzbtn bg-c">订阅</button> 
+							  	<button type="submit" class="wmanualbtn bg-c">订阅</button> 
 							</li> 
 							<li class="block-footer-iconlink"> 
 							  	<a href="" target="_blank">
@@ -220,7 +224,7 @@
 							  	<a href="http://shang.qq.com/wpa/qunwpa?idkey=92942d"> 
 							    	<i class="fa fa-qq"></i> 
 							  	</a> 
-							  	<a href="mailto:hello@itjuzi.com" target="_blank">
+							  	<a href="mailto:hello@92shuomingshu.com" target="_blank">
 							  		<i class="fa fa-envelope-o"></i>
 							  	</a> 
 							</li> 
@@ -228,17 +232,13 @@
 					</form> 
 				</div> 
 		  </div> 
-			<div class="footer-sign"> 
+			<div class="copyright-92"> 
 				<div class="boxed">
 				  92说明书 - 个人说明书信息服务 
-				  <span class="flr copy"> &copy; 2016-2019 itjuzi.com 蜀ICP备14026526号-2</span> 
+				  <span class="flr copy"> &copy; 2016-2019 92shuomingshu.com 蜀ICP备14026526号-2</span> 
 				</div> 
 			</div> 
 		</footer> 
 	</div>
-    <script src="js/lib/others/modernizr.js"></script>
-	<script>
-	  window.site_url = 'https://92shuomingshu.com/';
-	</script> 
 </body>
 </html>

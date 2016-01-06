@@ -16,20 +16,26 @@
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	
+	<script>
+		window.site_url = 'https://92shuomingshu.com/';
+	</script> 
+	<script src="js/lib/others/modernizr.js"></script>
+	<script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/ResultController.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="" ng-controller="ResultController"> 
+<body ng-app="" ng-controller="ResultController" class=""> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
    <![endif]--> 
-	<div class="thewrap"> 
+	<div class="contentwrap"> 
 		 <%@ include file="../common/header.jsp" %>
 		 <div class="boxed"> 
 	     	<div class="sidebar left">
@@ -48,10 +54,10 @@
 						你正在搜索 “ <b>{{params.key}}</b> ”，共找到 {{count}} 条结果
 					</span>
 				</div> 
-		        <ul class="list-main-icnset thead"> 
+		        <ul class="list-multi-result thead"> 
 		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell fina"> 品牌 </i> <i class="cell fina"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 		        </ul> 
-		        <ul class="list-main-icnset">
+		        <ul class="list-multi-result">
 					<li ng-repeat="sub in results"> 
 			            <i class="cell pic"> 
 			              <a href=""> 
@@ -109,12 +115,5 @@
 		</div>
 		<%@ include file="../common/footer.jsp" %> 
 	</div> 
-	
-	<script>
-		window.site_url = 'https://92shuomingshu.com/';
-	</script> 
-	<script src="js/lib/others/modernizr.js"></script>
-	<script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/ResultController.js"></script>
 </body>
 </html>

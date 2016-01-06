@@ -44,6 +44,11 @@ public class HandBookHomeController {
 	private EmailConfigure emailConfigure;
 	
 	@RequestMapping("/")
+	public String home() throws Exception {
+		return "webmanual/index";
+	}
+	
+	@RequestMapping("/index")
 	public String index() throws Exception {
 		return "webmanual/index";
 	}

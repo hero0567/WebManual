@@ -18,12 +18,21 @@
 	<meta name="Description" content="">
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	  <![endif]-->
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/lib/others/modernizr.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/SigninController.js"></script>	  
 
 </head>
-<body ng-app="" ng-controller="SigninController">
+<body ng-app="" ng-controller="SigninController" class="">
 	<div class="none">
 		<img src="./img/favicon.png">
 	</div>
@@ -38,8 +47,8 @@
 					<a class="tab on" href="/signin">登录</a> <a href="/signup" class="tab" id="regist">注册新用户</a>
 				</div>
 
-				<div class="contset">
-					<div class="cont on">
+				<div class="content">
+					<div class="on">
 						<form name="myForm" ng-submit="signin()">
 			                <div>
 			                    <div class="span12 alert alert-error" ng-show="error">
@@ -84,7 +93,7 @@
 							</div>
 			
 							<div class="row">
-								<button type="submit" class="jzbtn c" ng-disabled="myForm.$invalid  || error.captcha">登 录</button>
+								<button type="submit" class="wmanualbtn" ng-disabled="myForm.$invalid  || error.captcha">登 录</button>
 							</div>
 			                 
 		                </form> 
@@ -93,8 +102,8 @@
 								<span>或使用社交账号登录</span>
 							</p>
 							<p>
-								<a href="https://www.itjuzi.com/oauth/sns/login/weibo"><i class="fa fa-weibo"></i></a> 
-								<a href="https://www.itjuzi.com/oauth/sns/login/qq"><i class="fa fa-qq"></i></a>
+								<a href="https://www.92shuomingshu.com/oauth/sns/login/weibo"><i class="fa fa-weibo"></i></a> 
+								<a href="https://www.92shuomingshu.com/oauth/sns/login/qq"><i class="fa fa-qq"></i></a>
 							</p>
 						</div>
 					</div>
@@ -102,16 +111,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<script src="js/lib/others/modernizr.js"></script>
-	<!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/lib/jquery/jquery.min.js"></script>
-    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/SigninController.js"></script>
 </body>
 </html>
 

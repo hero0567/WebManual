@@ -16,21 +16,34 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	
+	<script>
+	  window.site_url = 'https://92shuomingshu.com/';
+	</script>  
+	 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/IndexController.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="" ng-controller="FridgeController">
+<body ng-app="" ng-controller="FridgeController" class="">
 	<div class="none">
 		<img src="./img/favicon.png"/>
 	</div>
 	<!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-	<div class="thewrap">
+	<div class="contentwrap">
 		<%@ include file="../common/header.jsp" %>
 		<div class="boxed main">
 			<div class="sec nobg mobile-block">
@@ -38,7 +51,7 @@
 					<form action="#">
 						<input type="text" name="key" spellcheck="false"
 							autocomplete="off" placeholder="请输入搜索关键字" />
-						<button class="jzbtn bg-c" type="submit">
+						<button class="wmanualbtn bg-c" type="submit">
 							<i class="fa fa-search"></i>
 						</button>
 					</form>
@@ -48,13 +61,13 @@
 				<div>
 					<!-- block 搜索列表区 -->
 					<div>
-						<ul class="list-main-icnset thead">
+						<ul class="list-multi-result thead">
 							<li><i class="cell pic"> </i> <i class="cell maincell">
 									<span class="t-small">说明书名称</span>
 							</i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i
 								class="cell action"> 关注 </i></li>
 						</ul>
-						<ul class="list-main-icnset">
+						<ul class="list-multi-result">
 							<li ng-repeat="sub in subTypes"> 
 					            <i class="cell pic"> 
 					              <a href=""> 

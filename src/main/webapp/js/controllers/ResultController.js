@@ -125,8 +125,15 @@ var ResultController = function($scope, $http, $location) {
       	window.location = "/result?key=" + $scope.key;
    	}
     
+    //Hide angularjs tag flicker
+	$scope.hideFlicker = function(){
+		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 
+	}
+	
+	//$scope.hideFlicker();
     $scope.parseParams();
     $scope.fetchMenu();
     $scope.fetchTopList($scope.params.key);        
     $scope.searchSubType($scope.params.key); 
+    
 };

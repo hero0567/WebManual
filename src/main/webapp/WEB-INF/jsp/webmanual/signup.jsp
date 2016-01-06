@@ -15,10 +15,19 @@
 <meta name="Keywords" content=" " />
 <meta name="Description" content=" " />
 
-<link rel="stylesheet" type="text/css"
-	href="css/common/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/common/common.css" />
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+
+<script src="js/lib/others/modernizr.js"></script>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/lib/jquery/jquery.min.js"></script>
+<script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+<script src="js/lib/angular/angular.js"></script>
+<script src="js/controllers/SignupController.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -26,7 +35,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="" ng-controller="SignupController">
+<body ng-app="" ng-controller="SignupController" class="">
 	<div class="none">
 		<img src="./img/favicon.png">
 	</div>
@@ -40,7 +49,6 @@
 				<div class="row tip tiptop">
 					<a class="tab" href="/signin">登录</a> <a href="/signup" class="tab on" id="regist">注册新用户</a>
 				</div>
-
 				<div class="contset">
 					<div class="cont on">
 						<form name="myForm" ng-submit="signup()">
@@ -100,7 +108,8 @@
 							</div>
 							<br>
 							<div class="row">
-								<button class="jzbtn c" type="submit" ng-disabled="myForm.$invalid || error.captcha || error.userexisted || user.confirmUserPassword != user.password">注册</button>
+								<button class="wmanualbtn" type="submit" ng-disabled="myForm.$invalid || error.captcha || error.userexisted || user.confirmUserPassword != user.password">注册</button>
+
 							</div>
 						</form>
 					</div>
@@ -109,14 +118,6 @@
 		</div>
 	</div>
 
-	<script src="js/lib/others/modernizr.js"></script>
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="js/lib/jquery/jquery.min.js"></script>
-	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
-
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/SignupController.js"></script>
+	
 </body>
 </html>
