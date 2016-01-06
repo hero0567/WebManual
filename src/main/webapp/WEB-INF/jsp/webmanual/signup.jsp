@@ -50,8 +50,8 @@
 					<a class="tab" href="/signin">登录</a> <a href="/signup" class="tab on" id="regist">注册新用户</a>
 				</div>
 
-				<div class="contset">
-					<div class="cont on">
+				<div class="content">
+					<div class="on">
 						<form id="myForm" name="myForm" ng-submit="signup()">
 							<div class="row">
 								<div class="control-group text-center">
@@ -108,7 +108,7 @@
 							</div>
 							<br>
 							<div class="row">
-								<button class="jzbtn c" type="submit" ng-disabled="myForm.$invalid">注册</button>
+								<button class="wmanualbtn c" type="submit" ng-disabled="myForm.$invalid">注册</button>
 							</div>
 						</form>
 					</div>

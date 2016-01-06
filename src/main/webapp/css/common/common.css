@@ -7278,22 +7278,22 @@ a.c-gray {
 	filter: blur(10px)
 }
 
-ul.colum-3 {
+ul.column-custom-3 {
 	overflow: auto;
 	zoom: 1
 }
 
-ul.colum-3>li {
+ul.column-custom-3>li {
 	float: left;
 	width: 33.3%
 }
 
-ul.colum-2 {
+ul.column-custom-2 {
 	overflow: auto;
 	zoom: 1
 }
 
-ul.colum-2>li {
+ul.column-custom-2>li {
 	float: left;
 	width: 50%
 }
@@ -7306,12 +7306,12 @@ ul.colum-2>li {
 	color: #00aeef
 }
 
-.block.block-v>a.flr .jzbtn {
+.block.block-v>a.flr .wmanualbtn {
 	height: 25px;
 	line-height: 23px
 }
 
-.thewrap {
+.contentwrap {
 	transition: all .2s;
 	-webkit-transition: all .2s;
 	-moz-transition: all .2s;
@@ -7320,13 +7320,13 @@ ul.colum-2>li {
 	position: relative
 }
 
-.thewrap footer {
+.contentwrap footer {
 	position: absolute;
 	width: 100%;
 	bottom: 0
 }
 
-.thewrap.no-footer {
+.contentwrap.no-footer {
 	padding-bottom: 0
 }
 
@@ -7856,7 +7856,7 @@ header .usernav .usersearch .fa {
 	-ms-transform: translateY(-1px)
 }
 
-header .usernav .useradd .jzbtn {
+header .usernav .useradd .wmanualbtn {
 	transform: translateY(-2px);
 	-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
@@ -7866,7 +7866,7 @@ header .usernav .useradd .jzbtn {
 	-moz-transition: all .2s
 }
 
-header .usernav .useradd .jzbtn:hover {
+header .usernav .useradd .wmanualbtn:hover {
 	background-color: #00aeef;
 	color: #fff
 }
@@ -7921,7 +7921,7 @@ header .usernav .userlogin {
 	color: #ddd
 }
 
-header .usernav .userlogin .jzbtn {
+header .usernav .userlogin .wmanualbtn {
 	transform: translateY(-2px);
 	-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
@@ -8037,7 +8037,7 @@ header .usernav .userlogin a {
 	margin-right: 0
 }
 
-.jzbtn {
+.wmanualbtn {
 	display: inline-block;
 	vertical-align: middle;
 	background-color: #fff;
@@ -8057,85 +8057,85 @@ header .usernav .userlogin a {
 	text-align: center
 }
 
-.jzbtn.small {
+.wmanualbtn.small {
 	height: 25px;
 	line-height: 23px
 }
 
-.jzbtn:hover {
+.wmanualbtn:hover {
 	border-color: #00aeef;
 	color: #00aeef
 }
 
-.jzbtn:active {
+.wmanualbtn:active {
 	-webkit-filter: grayscale(0.2);
 	filter: gray
 }
 
-.jzbtn.c {
+.wmanualbtn.c {
 	border-color: #00aeef;
 	background-color: #00aeef;
 	color: #fff!important
 }
 
-.jzbtn.c-lined {
+.wmanualbtn.c-lined {
 	border-color: #00aeef;
 	color: #00aeef
 }
 
-.jzbtn.bg-green {
+.wmanualbtn.bg-green {
 	color: #fff!important;
 	border-color: #7cc020;
 	background-color: #7cc020
 }
 
-.jzbtn.bg-red {
+.wmanualbtn.bg-red {
 	color: #fff!important;
 	border-color: #d71c0b;
 	background-color: #d71c0b
 }
 
-.jzbtn.bg-yellow {
+.wmanualbtn.bg-yellow {
 	color: #fff!important;
 	border-color: #f2a622;
 	background-color: #f2a622
 }
 
-.jzbtn.bg-blue {
+.wmanualbtn.bg-blue {
 	color: #fff!important;
 	border-color: #3cb0df;
 	background-color: #3cb0df
 }
 
-.jzbtn.bg-gold {
+.wmanualbtn.bg-gold {
 	color: #fff!important;
 	border-color: #d9b77f;
 	background-color: #d9b77f
 }
 
-.jzbtn.bg-white {
+.wmanualbtn.bg-white {
 	color: #fff!important;
 	border-color: #fff;
 	background-color: #fff
 }
 
-.jzbtn.bg-c {
+.wmanualbtn.bg-c {
 	color: #fff!important;
 	border-color: rgba(0,0,0,.1);
 	background-color: #00aeef
 }
 
-.jzbtn.row {
+.wmanualbtn.row {
 	display: block;
 	text-align: center
 }
 
-a .jzbtn {
+a .wmanualbtn {
 	color: #888;
 	border-color: #999
 }
 
-a .jzbtn:hover {
+a .wmanualbtn:hover {
 	color: #00aeef;
 	border-color: #00aeef
 }
@@ -8738,31 +8738,31 @@ div~.titlebar {
 	zoom: 1
 }
 
-.footer-info .colum {
+.footer-info .column-custom {
 	float: left;
 	padding-right: 7%
 }
 
-.footer-info .colum b {
+.footer-info .column-custom b {
 	display: block;
 	padding-bottom: 5px;
 	color: #eee
 }
 
-.footer-info .colum:last-child {
+.footer-info .column-custom:last-child {
 	float: right;
 	padding-right: 0
 }
 
-.footer-info .colum:last-child li {
+.footer-info .column-custom:last-child li {
 	margin-bottom: 5px
 }
 
-.footer-info .colum input {
+.footer-info .column-custom input {
 	width: 250px
 }
 
-.footer-info .colum input~.jzbtn {
+.footer-info .column-custom input~.wmanualbtn {
 	height: 24px;
 	line-height: 23px;
 	transform: translateY(-1px);
@@ -8771,7 +8771,7 @@ div~.titlebar {
 	-ms-transform: translateY(-1px)
 }
 
-.footer-sign {
+.copyright-92 {
 	background-color: #3C3C3C;
 	border-top: 1px solid rgba(0,0,0,.05);
 	color: #aaa;
@@ -8779,7 +8779,7 @@ div~.titlebar {
 	padding: 14px 0
 }
 
-.footer-sign span.flr:first-letter {
+.copyright-92 span.flr:first-letter {
 	font-family: verdana;
 	transform: translateY(-1px);
 	-webkit-transform: translateY(-1px);
@@ -9098,26 +9098,26 @@ ul[class|=list-main]:not(.thead) .tag {
 	line-height: 18px!important
 }
 
-.list-main-icnset,.list-main-incset {
+.list-multi-result,.list-main-incset {
 	max-width: 100%;
 	overflow: hidden;
 	width: 100%
 }
 
-.list-main-icnset.widthfree .cell.maincell,.list-main-incset.widthfree .cell.maincell {
+.list-multi-result.widthfree .cell.maincell,.list-main-incset.widthfree .cell.maincell {
 	width: auto
 }
 
-.list-main-icnset.widthfree .cell.maincell .des,.list-main-incset.widthfree .cell.maincell .des {
+.list-multi-result.widthfree .cell.maincell .des,.list-main-incset.widthfree .cell.maincell .des {
 	width: 520px;
 	max-width: 80%
 }
 
-.list-main-icnset.widthfree .cell.action,.list-main-incset.widthfree .cell.action {
+.list-multi-result.widthfree .cell.action,.list-main-incset.widthfree .cell.action {
 	padding-right: 20px
 }
 
-.list-main-icnset li,.list-main-incset li {
+.list-multi-result li,.list-main-incset li {
 	display: table;
 	width: 100%;
 	border-bottom: 1px solid rgba(0,0,0,.06);
@@ -9127,87 +9127,87 @@ ul[class|=list-main]:not(.thead) .tag {
 	-moz-transition: all .2s
 }
 
-.list-main-icnset li:hover,.list-main-incset li:hover {
+.list-multi-result li:hover,.list-main-incset li:hover {
 	background-color: #fafafa
 }
 
-.list-main-icnset li:hover .title,.list-main-icnset li:hover .title a,.list-main-incset li:hover .title,.list-main-incset li:hover .title a {
+.list-multi-result li:hover .title,.list-multi-result li:hover .title a,.list-main-incset li:hover .title,.list-main-incset li:hover .title a {
 	color: #00aeef
 }
 
-.list-main-icnset li:last-child,.list-main-incset li:last-child {
+.list-multi-result li:last-child,.list-main-incset li:last-child {
 	border-bottom: none
 }
 
-.list-main-icnset .cell,.list-main-incset .cell {
+.list-multi-result .cell,.list-main-incset .cell {
 	display: table-cell;
 	font-style: normal;
 	padding: 15px;
 	vertical-align: middle
 }
 
-.list-main-icnset .cell.pic,.list-main-incset .cell.pic {
+.list-multi-result .cell.pic,.list-main-incset .cell.pic {
 	width: 65px;
 	padding-left: 0;
 	padding-right: 0
 }
 
-.list-main-icnset .cell.maincell,.list-main-incset .cell.maincell {
+.list-multi-result .cell.maincell,.list-main-incset .cell.maincell {
 	width: 300px
 }
 
-.list-main-icnset .cell.maincell .des,.list-main-incset .cell.maincell .des {
+.list-multi-result .cell.maincell .des,.list-main-incset .cell.maincell .des {
 	width: 250px
 }
 
-.list-main-icnset .cell.maincell .tags,.list-main-incset .cell.maincell .tags {
+.list-multi-result .cell.maincell .tags,.list-main-incset .cell.maincell .tags {
 	display: inline-block;
 	margin-right: 10px
 }
 
-.list-main-icnset .cell.maincell .loca,.list-main-incset .cell.maincell .loca {
+.list-multi-result .cell.maincell .loca,.list-main-incset .cell.maincell .loca {
 	font-size: .8em;
 	color: #aaa
 }
 
-.list-main-icnset .cell.maincell .loca i,.list-main-incset .cell.maincell .loca i {
+.list-multi-result .cell.maincell .loca i,.list-main-incset .cell.maincell .loca i {
 	color: #666
 }
 
-.list-main-icnset .cell.maincell .fa-caret-right,.list-main-incset .cell.maincell .fa-caret-right {
+.list-multi-result .cell.maincell .fa-caret-right,.list-main-incset .cell.maincell .fa-caret-right {
 	color: #aaa
 }
 
-.list-main-icnset .cell.date,.list-main-icnset .cell.fina,.list-main-icnset .cell.normalsmall,.list-main-icnset .cell.round,.list-main-incset .cell.date,.list-main-incset .cell.fina,.list-main-incset .cell.normalsmall,.list-main-incset .cell.round {
+.list-multi-result .cell.date,.list-multi-result .cell.fina,.list-multi-result .cell.normalsmall,.list-multi-result .cell.round,.list-main-incset .cell.date,.list-main-incset .cell.fina,.list-main-incset .cell.normalsmall,.list-main-incset .cell.round {
 	width: 100px;
 	text-align: center;
 	overflow: hidden
 }
 
-.list-main-icnset .cell.round,.list-main-incset .cell.round {
+.list-multi-result .cell.round,.list-main-incset .cell.round {
 	width: 130px
 }
 
-.list-main-icnset .cell.action,.list-main-incset .cell.action {
+.list-multi-result .cell.action,.list-main-incset .cell.action {
 	padding-left: 0;
 	padding-right: 0;
 	min-width: 85px;
 	text-align: center
 }
 
-.list-main-icnset .cell.action .fa,.list-main-incset .cell.action .fa {
+.list-multi-result .cell.action .fa,.list-main-incset .cell.action .fa {
 	font-size: 1.6em
 }
 
-.list-main-icnset .cell.action .fa.fa-star,.list-main-icnset .cell.action .fa:hover,.list-main-incset .cell.action .fa.fa-star,.list-main-incset .cell.action .fa:hover {
+.list-multi-result .cell.action .fa.fa-star,.list-multi-result .cell.action .fa:hover,.list-main-incset .cell.action .fa.fa-star,.list-main-incset .cell.action .fa:hover {
 	color: #f2a622
 }
 
-.list-main-icnset .cell .investorset,.list-main-incset .cell .investorset {
+.list-multi-result .cell .investorset,.list-main-incset .cell .investorset {
 	display: inline-block
 }
 
-.list-main-icnset .des,.list-main-incset .des {
+.list-multi-result .des,.list-main-incset .des {
 	font-size: .8em;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -9216,51 +9216,51 @@ ul[class|=list-main]:not(.thead) .tag {
 	line-height: 20px
 }
 
-.list-main-icnset .tag,.list-main-incset .tag {
+.list-multi-result .tag,.list-main-incset .tag {
 	height: 20px;
 	line-height: 18px
 }
 
-.list-main-icnset .action,.list-main-icnset .date,.list-main-icnset .fina,.list-main-icnset .loca,.list-main-icnset .normalsmall,.list-main-icnset .round,.list-main-incset .action,.list-main-incset .date,.list-main-incset .fina,.list-main-incset .loca,.list-main-incset .normalsmall,.list-main-incset .round {
+.list-multi-result .action,.list-multi-result .date,.list-multi-result .fina,.list-multi-result .loca,.list-multi-result .normalsmall,.list-multi-result .round,.list-main-incset .action,.list-main-incset .date,.list-main-incset .fina,.list-main-incset .loca,.list-main-incset .normalsmall,.list-main-incset .round {
 	font-size: .8em
 }
 
-.list-main-icnset .title,.list-main-icnset .title a,.list-main-incset .title,.list-main-incset .title a {
+.list-multi-result .title,.list-multi-result .title a,.list-main-incset .title,.list-main-incset .title a {
 	color: #555
 }
 
-.list-main-icnset .title a:hover,.list-main-incset .title a:hover {
+.list-multi-result .title a:hover,.list-main-incset .title a:hover {
 	color: #00aeef
 }
 
-.list-main-icnset .date,.list-main-icnset .date a,.list-main-icnset .des,.list-main-icnset .des a,.list-main-incset .date,.list-main-incset .date a,.list-main-incset .des,.list-main-incset .des a {
+.list-multi-result .date,.list-multi-result .date a,.list-multi-result .des,.list-multi-result .des a,.list-main-incset .date,.list-main-incset .date a,.list-main-incset .des,.list-main-incset .des a {
 	color: #aaa
 }
 
-.list-main-icnset .date a:hover,.list-main-icnset .des a:hover,.list-main-incset .date a:hover,.list-main-incset .des a:hover {
+.list-multi-result .date a:hover,.list-multi-result .des a:hover,.list-main-incset .date a:hover,.list-main-incset .des a:hover {
 	color: #00aeef
 }
 
-.list-main-icnset .tag,.list-main-incset .tag {
+.list-multi-result .tag,.list-main-incset .tag {
 	overflow: hidden
 }
 
-.list-main-icnset.thead li,.list-main-incset.thead li {
+.list-multi-result.thead li,.list-main-incset.thead li {
 	padding-top: 0;
 	padding-bottom: 0;
 	border-bottom: 1px solid rgba(0,0,0,.06)
 }
 
-.list-main-icnset.thead li:hover,.list-main-incset.thead li:hover {
+.list-multi-result.thead li:hover,.list-main-incset.thead li:hover {
 	background-color: transparent;
 	cursor: default
 }
 
-.list-main-icnset.thead .cell,.list-main-incset.thead .cell {
+.list-multi-result.thead .cell,.list-main-incset.thead .cell {
 	color: #888!important
 }
 
-.list-main-icnset.thead .action,.list-main-icnset.thead .date,.list-main-icnset.thead .fina,.list-main-icnset.thead .loca,.list-main-icnset.thead .normalsmall,.list-main-icnset.thead .round,.list-main-incset.thead .action,.list-main-incset.thead .date,.list-main-incset.thead .fina,.list-main-incset.thead .loca,.list-main-incset.thead .normalsmall,.list-main-incset.thead .round {
+.list-multi-result.thead .action,.list-multi-result.thead .date,.list-multi-result.thead .fina,.list-multi-result.thead .loca,.list-multi-result.thead .normalsmall,.list-multi-result.thead .round,.list-main-incset.thead .action,.list-main-incset.thead .date,.list-main-incset.thead .fina,.list-main-incset.thead .loca,.list-main-incset.thead .normalsmall,.list-main-incset.thead .round {
 	font-size: .8em
 }
 
@@ -10147,7 +10147,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	zoom: 1
 }
 
-.list-album.colum-3 li {
+.list-album.column-custom-3 li {
 	width: 30%
 }
 
@@ -11209,7 +11209,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-top: 10px
 }
 
-.list-activitylist .jzbtn {
+.list-activitylist .wmanualbtn {
 	height: 25px;
 	line-height: 23px
 }
@@ -14071,7 +14071,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	color: #00aeef
 }
 
-.infohead-group .picinfo a .jzbtn:hover {
+.infohead-group .picinfo a .wmanualbtn:hover {
 	border-color: transparent!important
 }
 
@@ -14265,17 +14265,17 @@ ul[class|=list-main]:not(.thead) .tag {
 	color: #fff
 }
 
-.infohead-person .jzbtn {
+.infohead-person .wmanualbtn {
 	color: #666;
 	text-shadow: none;
 	border-color: rgba(0,0,0,.05)
 }
 
-.infohead-person .jzbtn:hover {
+.infohead-person .wmanualbtn:hover {
 	color: #00aeef
 }
 
-.infohead-person .jzbtn.bg-green {
+.infohead-person .wmanualbtn.bg-green {
 	color: #fff
 }
 
@@ -14856,7 +14856,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-right: 0
 }
 
-.loginbox-thin .row>.jzbtn {
+.loginbox-thin .row>.wmanualbtn {
 	width: 100%;
 	text-align: center
 }
@@ -15033,7 +15033,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-right: 0
 }
 
-.loginbox-complete .row>.jzbtn {
+.loginbox-complete .row>.wmanualbtn {
 	width: 100%;
 	text-align: center
 }
@@ -15148,7 +15148,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-right: 0
 }
 
-.loginbox-mail .row>.jzbtn {
+.loginbox-mail .row>.wmanualbtn {
 	width: 100%;
 	text-align: center
 }
@@ -15207,7 +15207,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-right: 0
 }
 
-.loginbox-sns .row>.jzbtn {
+.loginbox-sns .row>.wmanualbtn {
 	width: 100%;
 	text-align: center
 }
@@ -15641,7 +15641,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin-left: 15px
 }
 
-.emptyui-useraddcomp .jzbtn {
+.emptyui-useraddcomp .wmanualbtn {
 	width: 110px
 }
 
@@ -16633,7 +16633,7 @@ ul[class|=list-main]:not(.thead) .tag {
 		margin-left: 0!important
 	}
 
-	.thewrap {
+	.contentwrap {
 		padding-bottom: 245px
 	}
 
@@ -16642,22 +16642,22 @@ ul[class|=list-main]:not(.thead) .tag {
 		padding-bottom: 25px
 	}
 
-	.footer-info .colum {
+	.footer-info .column-custom {
 		width: 33%;
 		padding-left: 5%;
 		padding-right: 0
 	}
 
-	.footer-info .colum:last-child {
+	.footer-info .column-custom:last-child {
 		display: none
 	}
 
-	.footer-sign {
+	.copyright-92 {
 		padding: 7px 0;
 		text-align: center
 	}
 
-	.footer-sign .copy {
+	.copyright-92 .copy {
 		display: block;
 		float: none;
 		width: 100%;
@@ -16907,15 +16907,15 @@ ul[class|=list-main]:not(.thead) .tag {
 		text-align: left!important
 	}
 
-	.list-main-icnset li {
+	.list-multi-result li {
 		padding-left: 5%
 	}
 
-	.list-main-icnset .cell.action,.list-main-icnset .cell.date,.list-main-icnset .cell.round {
+	.list-multi-result .cell.action,.list-multi-result .cell.date,.list-multi-result .cell.round {
 		display: none!important
 	}
 
-	.list-main-icnset .widthfree .des {
+	.list-multi-result .widthfree .des {
 		max-width: 250px!important
 	}
 
@@ -17206,7 +17206,7 @@ ul[class|=list-main]:not(.thead) .tag {
 		display: none
 	}
 
-	header .usernav .userlogin .jzbtn {
+	header .usernav .userlogin .wmanualbtn {
 		padding-left: 5px;
 		padding-right: 5px
 	}
@@ -17245,7 +17245,7 @@ ul[class|=list-main]:not(.thead) .tag {
 		padding: 0 10px!important
 	}
 
-	.ui-formui .jzbtn,.ui-formui input,.ui-formui textarea {
+	.ui-formui .wmanualbtn,.ui-formui input,.ui-formui textarea {
 		max-width: 250px!important;
 		max-width: 60vw!important
 	}

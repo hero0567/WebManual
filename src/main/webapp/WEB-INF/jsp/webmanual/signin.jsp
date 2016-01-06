@@ -47,8 +47,8 @@
 					<a class="tab on" href="/signin">登录</a> <a href="/signup" class="tab" id="regist">注册新用户</a>
 				</div>
 
-				<div class="contset">
-					<div class="cont on">
+				<div class="content">
+					<div class="on">
 						<form name="myForm" ng-submit="signin()">
 			                <div>
 			                    <div class="span12 alert alert-error" ng-show="error">
@@ -95,7 +95,7 @@
 							</div>
 			
 							<div class="row">
-								<button type="submit" class="jzbtn c" ng-click="signin()" ng-disabled="myForm.$invalid">登 录</button>
+								<button type="submit" class="wmanualbtn c" ng-click="signin()" ng-disabled="myForm.$invalid">登 录</button>
 							</div>
 			                 
 		                </form> 
@@ -104,8 +104,8 @@
 								<span>或使用社交账号登录</span>
 							</p>
 							<p>
-								<a href="https://www.itjuzi.com/oauth/sns/login/weibo"><i class="fa fa-weibo"></i></a> 
-								<a href="https://www.itjuzi.com/oauth/sns/login/qq"><i class="fa fa-qq"></i></a>
+								<a href="https://www.92shuomingshu.com/oauth/sns/login/weibo"><i class="fa fa-weibo"></i></a> 
+								<a href="https://www.92shuomingshu.com/oauth/sns/login/qq"><i class="fa fa-qq"></i></a>
 							</p>
 						</div>
 					</div>

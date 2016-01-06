@@ -55,8 +55,8 @@
 		<div class="boxed main"> 
 			<div class="sec nobg mobile-block"> 
 				 <div class="ui-mobile-usersearch"> 
-				  <form action="https://www.itjuzi.com/search"> 
-				   	<input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="创业公司、投资机构等…" /> 
+				  <form action="https://www.92shuomingshu.com/search"> 
+				   	<input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入查询关键字" /> 
 				   	<button class="jzbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
 				  </form> 
 				 </div> 
@@ -70,10 +70,10 @@
 			    <div> 
 			     <!-- block 搜索列表区 --> 
 				     <div> 
-					      <ul class="list-main-icnset thead"> 
+					      <ul class="list-multi-result thead"> 
 					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 					      </ul> 
-					      <ul class="list-main-icnset"> 
+					      <ul class="list-multi-result"> 
 					        <li ng-repeat="sub in book.subType"> 
 					           <i class="cell pic"> 
 					             <a href=""> 

@@ -43,7 +43,7 @@
 	<!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-	<div class="thewrap">
+	<div class="contentwrap">
 		<%@ include file="../common/header.jsp" %>
 		<div class="boxed main">
 			<div class="sec nobg mobile-block">
@@ -51,7 +51,7 @@
 					<form action="#">
 						<input type="text" name="key" spellcheck="false"
 							autocomplete="off" placeholder="请输入搜索关键字" />
-						<button class="jzbtn bg-c" type="submit">
+						<button class="wmanualbtn bg-c" type="submit">
 							<i class="fa fa-search"></i>
 						</button>
 					</form>
@@ -61,13 +61,13 @@
 				<div>
 					<!-- block 搜索列表区 -->
 					<div>
-						<ul class="list-main-icnset thead">
+						<ul class="list-multi-result thead">
 							<li><i class="cell pic"> </i> <i class="cell maincell">
 									<span class="t-small">说明书名称</span>
 							</i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i
 								class="cell action"> 关注 </i></li>
 						</ul>
-						<ul class="list-main-icnset">
+						<ul class="list-multi-result">
 							<li ng-repeat="sub in subTypes"> 
 					            <i class="cell pic"> 
 					              <a href=""> 

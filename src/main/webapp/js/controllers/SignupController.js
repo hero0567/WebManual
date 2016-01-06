@@ -43,5 +43,5 @@ var SignupController = function($scope, $http, $location) {
 		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 
 	}
 	
-	$scope.hideFlicker();
+	//$scope.hideFlicker();
 };

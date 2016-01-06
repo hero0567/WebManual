@@ -35,7 +35,7 @@
 	<!--[if lt IE 10]>
        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
    <![endif]--> 
-	<div class="thewrap"> 
+	<div class="contentwrap"> 
 		 <%@ include file="../common/header.jsp" %>
 		 <div class="boxed"> 
 	     	<div class="sidebar left">
@@ -54,10 +54,10 @@
 						你正在搜索 “ <b>{{params.key}}</b> ”，共找到 {{count}} 条结果
 					</span>
 				</div> 
-		        <ul class="list-main-icnset thead"> 
+		        <ul class="list-multi-result thead"> 
 		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell fina"> 品牌 </i> <i class="cell fina"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 		        </ul> 
-		        <ul class="list-main-icnset">
+		        <ul class="list-multi-result">
 					<li ng-repeat="sub in results"> 
 			            <i class="cell pic"> 
 			              <a href=""> 
