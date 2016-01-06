@@ -121,6 +121,10 @@ var ResultController = function($scope, $http, $location) {
     	}
   	} 
     
+    $scope.changeMenu = function(type, count) {
+    	window.location = "/fridge?subtype="+type +"&count="+count;
+  	} 
+    
     $scope.search = function() {
       	window.location = "/result?key=" + $scope.key;
    	}

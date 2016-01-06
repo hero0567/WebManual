@@ -30,13 +30,11 @@ var SignupController = function($scope, $http, $location) {
 	};
 	
 	$scope.checkEmailExist = function(){
-		if($scope.myForm.$valid){
-			$http.get('/u?uname=' + $scope.user.username).success(function(){
-	            $scope.error.userexisted = false;
-	        }).error(function() {
-	        	$scope.error.userexisted = true;
-	        });
-		}
+		$http.get('/u?uname=' + $scope.user.username).success(function(){
+            $scope.error.userexisted = false;
+        }).error(function() {
+        	$scope.error.userexisted = true;
+        });
 	}
 	
 	$scope.checkSecCode = function(){
