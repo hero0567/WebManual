@@ -15,15 +15,19 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" /> s
+	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	
+	<script src="js/lib/others/modernizr.js"></script>
+	<script>
+	  window.site_url = 'https://92shuomingshu.com/';
+	</script> 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body> 
+<body class=""> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
@@ -236,9 +240,5 @@
 			</div> 
 		</footer> 
 	</div>
-    <script src="js/lib/others/modernizr.js"></script>
-	<script>
-	  window.site_url = 'https://92shuomingshu.com/';
-	</script> 
 </body>
 </html>

@@ -18,12 +18,21 @@
 	<meta name="Description" content="">
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	  <![endif]-->
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/lib/others/modernizr.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+	<script src="js/controllers/SigninController.js"></script>	  
 
 </head>
-<body ng-app="" ng-controller="SigninController">
+<body ng-app="" ng-controller="SigninController" class="">
 	<div class="none">
 		<img src="./img/favicon.png">
 	</div>
@@ -104,16 +113,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<script src="js/lib/others/modernizr.js"></script>
-	<!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/lib/jquery/jquery.min.js"></script>
-    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/SigninController.js"></script>
 </body>
 </html>
 

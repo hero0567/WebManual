@@ -101,6 +101,12 @@ var FridgeController = function($scope, $http, $location) {
       	window.location = "/result?key=" + $scope.key;
    	} 
     
+    //Hide angularjs tag flicker
+	$scope.hideFlicker = function(){
+		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 
+	}
+	
+	//$scope.hideFlicker();
     $scope.parseParams();
     $scope.changePageNavi();
     $scope.fetchMenu();
