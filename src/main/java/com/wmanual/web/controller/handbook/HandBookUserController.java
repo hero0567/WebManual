@@ -29,9 +29,9 @@ public class HandBookUserController {
 
 		User user = userRepository.findByUsername(uname);	
 		if (user != null ){
-			return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<User>(user, HttpStatus.OK);			
 		}else{
-			return new ResponseEntity<User>(user, HttpStatus.OK);
+			return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
 		}
 	}
 	

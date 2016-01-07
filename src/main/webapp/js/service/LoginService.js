@@ -2,18 +2,18 @@
 
 app.factory('loginService', ['$http', function($http) {
 
-	$scope.user = {};
+	var user = {};
 	
-	function setUser(user){
-		$scope.user = user;
+	function setUser(u){
+		user = u;
 	}
 	
-	function getUser(user){
-		return $scope.user;
+	function getUser(){
+		return user;
 	}
 	
 	return {
-		setUser: setUser
+		setUser: setUser,
 		getUser: getUser
 	}
 }]);

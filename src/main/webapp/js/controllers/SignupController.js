@@ -32,9 +32,9 @@ app.controller("SignupController", function($scope, $http, $location) {
 	
 	$scope.checkEmailExist = function(){
 		$http.get('/u?uname=' + $scope.user.username).success(function(){
-            $scope.error.userexisted = false;
+            $scope.error.userexisted = true;
         }).error(function() {
-        	$scope.error.userexisted = true;
+        	$scope.error.userexisted = false;
         });
 	}
 	

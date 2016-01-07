@@ -14,6 +14,8 @@ app.controller("IndexController", function($scope, $http, $location, loginServic
     $scope.type = "全部";
     $scope.key = "";
     
+    console.log(loginService.getUser());
+    
     $scope.fetchMenu = function() {
      	 $http.get('/menu').success(function(menu){
               $scope.menu = menu;

@@ -22,7 +22,10 @@ app.controller("SigninController", function($scope, $http, $location, loginServi
 	        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
 	    })
         .success(function(data) {
-        	window.location = "/";
+        	$http.get('/u?uname=' + $scope.user.username).success(function(user){
+        		loginService.setUser(user);
+        		console.log(loginService.getUser());
+            })        	
         }).error(function() {
         	$scope.user.captcha = "";
         	$scope.error.loginfailed = true;
