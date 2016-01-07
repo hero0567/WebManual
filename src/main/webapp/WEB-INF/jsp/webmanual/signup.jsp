@@ -27,6 +27,7 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
 <script src="js/lib/angular/angular.js"></script>
+<script src="js/app.js"></script>
 <script src="js/controllers/SignupController.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -35,7 +36,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="" ng-controller="SignupController" class="">
+<body ng-app="app" ng-controller="SignupController" class="">
 	<div class="none">
 		<img src="./img/favicon.png">
 	</div>

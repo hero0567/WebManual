@@ -4,7 +4,7 @@
  * ResultController
  * @constructor
  */
-var ResultController = function($scope, $http, $location) {
+app.controller("ResultController", function($scope, $http, $location) {
 	
 	$scope.menu = {};
 	$scope.results = {};
@@ -140,4 +140,4 @@ var ResultController = function($scope, $http, $location) {
     $scope.fetchTopList($scope.params.key);        
     $scope.searchSubType($scope.params.key); 
     
-};
+});

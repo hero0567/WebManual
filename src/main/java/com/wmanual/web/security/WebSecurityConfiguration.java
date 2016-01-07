@@ -68,8 +68,8 @@ public class WebSecurityConfiguration extends WebMvcConfigurerAdapter {
 		@Override
 		protected void configure(HttpSecurity http) throws Exception {
 			http.authorizeRequests()
-//					.antMatchers("/api/**").hasRole("REST")	
-//					.antMatchers("/user/**").hasRole("USER")
+//					.antMatchers("/hb/**").hasRole("REST")	
+//					.antMatchers("/hb/**").hasRole("USER")
 //					.antMatchers("/setting/**").hasRole("USER")
 //					.antMatchers("/admin/**").hasRole("ADMIN")
 					.and()

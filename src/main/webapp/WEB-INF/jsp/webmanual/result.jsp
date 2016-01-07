@@ -21,6 +21,7 @@
 	</script> 
 	<script src="js/lib/others/modernizr.js"></script>
 	<script src="js/lib/angular/angular.js"></script>
+	<script src="js/app.js"></script>
 	<script src="js/controllers/ResultController.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,7 +29,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="" ng-controller="ResultController" class=""> 
+<body ng-app="app" ng-controller="ResultController" class=""> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 

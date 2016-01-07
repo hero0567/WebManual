@@ -4,7 +4,8 @@
  * IndexController
  * @constructor
  */
-var IndexController = function($scope, $http, $location) {
+
+app.controller("IndexController", function($scope, $http, $location, loginService) {
 	
 	$scope.menu = {};
     $scope.handbook = [];
@@ -43,4 +44,4 @@ var IndexController = function($scope, $http, $location) {
 	
 	//$scope.hideFlicker();
     $scope.fetchMenu();
-};
+});

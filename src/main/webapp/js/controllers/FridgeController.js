@@ -4,7 +4,7 @@
  * FridgeController
  * @constructor
  */
-var FridgeController = function($scope, $http, $location) {
+app.controller("FridgeController", function($scope, $http, $location) {
 	
 	$scope.menu = {};
 	$scope.subTypes = {};
@@ -111,4 +111,4 @@ var FridgeController = function($scope, $http, $location) {
     $scope.changePageNavi();
     $scope.fetchMenu();
     $scope.fetchSubType($scope.page.subtype); 
-};
+});

@@ -4,7 +4,7 @@
  * SigninController
  * @constructor
  */
-var SigninController = function($scope, $http, $location) {
+app.controller("SigninController", function($scope, $http, $location) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
@@ -36,6 +36,7 @@ var SigninController = function($scope, $http, $location) {
 	            $scope.error.captcha = false;
 	        }).error(function() {
 	        	$scope.error.captcha = true;
+	        	$scope.changeCaptcha();
 	        });
 		}
 	}
@@ -46,4 +47,4 @@ var SigninController = function($scope, $http, $location) {
 	}
 	
 	//$scope.hideFlicker();
-};
+});

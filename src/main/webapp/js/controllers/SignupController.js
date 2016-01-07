@@ -4,7 +4,7 @@
  * SignupController
  * @constructor
  */
-var SignupController = function($scope, $http, $location) {
+app.controller("SignupController", function($scope, $http, $location) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111",  confirmUserPassword : "111111"};
@@ -26,6 +26,7 @@ var SignupController = function($scope, $http, $location) {
         }).error(function() {
         	$scope.user.captcha = "";
         	$scope.error.register = "";
+        	$scope.changeCaptcha();
         });
 	};
 	
@@ -52,4 +53,4 @@ var SignupController = function($scope, $http, $location) {
 	}
 	
 	//$scope.hideFlicker();
-};
+});

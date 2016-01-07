@@ -4,7 +4,7 @@
  * ResultController
  * @constructor
  */
-var FavoritesController = function($scope, $http, $location) {
+app.controller("FavoritesController", function($scope, $http, $location) {
 	
 	$scope.menu = {};
 	$scope.results = {};
@@ -126,4 +126,4 @@ var FavoritesController = function($scope, $http, $location) {
     $scope.fetchMenu();
     $scope.fetchFavorList($scope.id);        
     $scope.searchSubType($scope.id); 
-};
+});

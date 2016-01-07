@@ -4,7 +4,7 @@
  * DetailsController
  * @constructor
  */
-var DetailsController = function($scope, $http, $location) {
+app.controller("DetailsController", function($scope, $http, $location) {
 	
 	$scope.menu = {};
 	$scope.handbook = {};
@@ -54,4 +54,4 @@ var DetailsController = function($scope, $http, $location) {
     $scope.fetchMenu();
     $scope.parseParams();
     $scope.fetchHandbook($scope.id);
-};
+});
