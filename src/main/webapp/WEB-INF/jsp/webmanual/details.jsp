@@ -110,7 +110,7 @@
 			                </ul>
 			                <div class="pl-mt20">
 			                  <a class="wmanualbtn" href="">在线阅读</a>
-			                  <a class="wmanualbtn" href="">下载PDF</a> 
+			                  <a class="wmanualbtn" href="{{handbook.url}}">下载PDF</a> 
 			                </div>
 			    </div>
 			  </div>

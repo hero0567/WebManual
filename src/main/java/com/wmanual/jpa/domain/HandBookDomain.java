@@ -1,9 +1,12 @@
 package com.wmanual.jpa.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -34,7 +37,10 @@ public class HandBookDomain {
 	private int viewCount;
 	private int favorCount;
 	private String lan;
-	
+//	
+//	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY, optional = false)
+//	private HandBookServiceDomain handBooService;
+//	
 	public Long getId() {
 		return id;
 	}
