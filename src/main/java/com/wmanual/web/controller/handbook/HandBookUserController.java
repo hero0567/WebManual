@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
+
 import com.wmanual.jpa.domain.User;
 import com.wmanual.jpa.service.UserRepository;
 
@@ -24,14 +25,19 @@ public class HandBookUserController {
 	private UserRepository userRepository;
 	
 	@RequestMapping
-	public ResponseEntity<String> add(@RequestParam(value = "uname") String uname) throws Exception {
+	public ResponseEntity<User> check(@RequestParam(value = "uname") String uname) throws Exception {
 
 		User user = userRepository.findByUsername(uname);	
 		if (user != null ){
-			return new ResponseEntity<String>("", HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<User>(user, HttpStatus.NOT_FOUND);
 		}else{
-			return new ResponseEntity<String>("", HttpStatus.OK);
+			return new ResponseEntity<User>(user, HttpStatus.OK);
 		}
-		
+	}
+	
+	@RequestMapping("/{id}")
+	public User add(@PathVariable("id") long id) throws Exception {
+		User user = userRepository.findOne(id);
+		return user;
 	}
 }

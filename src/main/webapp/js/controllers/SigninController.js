@@ -4,7 +4,7 @@
  * SigninController
  * @constructor
  */
-app.controller("SigninController", function($scope, $http, $location) {
+app.controller("SigninController", function($scope, $http, $location, loginService) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
