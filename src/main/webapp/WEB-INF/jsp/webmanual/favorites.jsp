@@ -73,7 +73,7 @@
 		              </a> 
 		            </i> 
 		            <i class="cell maincell"> 
-		              <p class="title"><a href="">{{sub.handBook.name}}{{sub.handBook.id}}</a></p> 
+		              <p class="title"><a ng-href="/details?id={{sub.handBook.id}}">{{sub.handBook.name}}</a></p> 
 		              <p class="des">{{sub.handBook.productSize}}</p> 
 		              <p> 
 		                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.handBook.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   

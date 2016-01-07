@@ -65,7 +65,7 @@
 			              </a> 
 			            </i> 
 			            <i class="cell maincell"> 
-			              <p class="title"><a href="">{{sub.name}}{{sub.id}}</a></p> 
+			              <p class="title"><a ng-href="/details?id={{sub.id}}">{{sub.name}}</a></p> 
 			              <p class="des">{{sub.productSize}}</p> 
 			              <p> 
 			                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   

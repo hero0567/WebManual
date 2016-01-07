@@ -3,7 +3,7 @@
 			<div> 
 				 <div class="navbox"> 
 					  <div class="boxed"> 
-						   <a class="logo fll" href=""> <h1 class="seeo">92说明书</h1> </a> 
+						   <a class="logo fll" href="/"> <h1 class="seeo">92说明书</h1> </a> 
 						
 						   <ul class="mainnav"> 
 						    <li class="tab on"> 
