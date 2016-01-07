@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<header> 
+<header  ng-app="app" ng-controller="HeaderController"> 
 			<div> 
 				 <div class="navbox"> 
 					  <div class="boxed"> 
@@ -7,7 +7,7 @@
 						
 						   <ul class="mainnav"> 
 						    <li class="tab on"> 
-						        <a href="/">首页</a> 
+						        <a href="/">首页 </a> 
 						    </li>
 						   </ul> 
 						
@@ -24,11 +24,14 @@
 								     </a> 
 							    </div> 
 							    <!-- 未登录 --> 
-					    <div class="userlogin"> 
-					     	<a class="wmanualbtn" href="/signin">登录</a>
-					     	<a class="wmanualbtn" href="/signup">注册</a> 
-					    </div> 
-				   </div> 
+							    <div class="userlogin" ng-show="!login"> 
+							     	<a class="wmanualbtn" href="/signin">登录</a>
+							     	<a class="wmanualbtn" href="/signup">注册</a> 
+							    </div> 
+							    <div class="userlogin" ng-show="login"> 
+							     	<a class="wmanualbtn" href="/signin">已登录{{user.username}}</a>
+							    </div> 
+						   </div> 
 			  </div> 
 		 </div> 
 		 <div class="subnavbox"> 
@@ -42,3 +45,4 @@
 		 </div> 
 	</div> 
 </header> 
+<script src="js/controllers/HeaderController.js"></script>

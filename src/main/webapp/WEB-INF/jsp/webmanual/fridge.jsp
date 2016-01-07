@@ -27,11 +27,11 @@
     <script src="js/lib/bootstrap/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/lib/angular/angular.js"></script>
-    <script src="js/app.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>    
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<script src="js/lib/angular/angular.js"></script>
+	<script src="js/app.js"></script>	
+	<script src="js/controllers/FridgeController.js"></script>
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -142,8 +142,5 @@
 
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/FridgeController.js"></script>
-
 </body>
 </html>

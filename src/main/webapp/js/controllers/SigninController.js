@@ -4,12 +4,12 @@
  * SigninController
  * @constructor
  */
-app.controller("SigninController", function($scope, $http, $location, loginService) {
+app.controller("SigninController", function($scope, $http, $location, $window) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
 	$scope.error = {captcha : false, loginfailed : false};
-	
+		
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
@@ -23,8 +23,8 @@ app.controller("SigninController", function($scope, $http, $location, loginServi
 	    })
         .success(function(data) {
         	$http.get('/u?uname=' + $scope.user.username).success(function(user){
-        		loginService.setUser(user);
-        		console.log(loginService.getUser());
+        		$window.sessionStorage.user = JSON.stringify(user);
+        		window.location = "/";
             })        	
         }).error(function() {
         	$scope.user.captcha = "";

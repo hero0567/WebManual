@@ -4,11 +4,13 @@
  * SignupController
  * @constructor
  */
-app.controller("SignupController", function($scope, $http, $location) {
+app.controller("SignupController", function($scope, $http, $location, $window) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111",  confirmUserPassword : "111111"};
 	$scope.error = {userexisted : false, captcha : false, register : true};
+	
+	console.log($window.sessionStorage["userInfo"]);
 	
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 

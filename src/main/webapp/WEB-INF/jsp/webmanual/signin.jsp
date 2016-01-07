@@ -31,7 +31,6 @@
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/controllers/SigninController.js"></script>	  
-	<script src="js/service/LoginService.js"></script>	
 
 </head>
 <body ng-app="app" ng-controller="SigninController" class="">
