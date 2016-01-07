@@ -83,6 +83,11 @@ public class HandBookHomeController {
 		return "webmanual/favorites";
 	}
 	
+	@RequestMapping("/details")
+	public String details() throws Exception {
+		return "webmanual/details";
+	}
+	
 	/**
 	 * http://localhost:8080/register?username=11112121&password=1212121
 	 * @param user

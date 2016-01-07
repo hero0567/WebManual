@@ -37,6 +37,11 @@ public class HandBookController {
 
 	@Autowired
 	private HandBookRepository hbRepository;
+	
+	@RequestMapping("/{type}/{subType}/{id}")
+	public HandBookDomain findByID(@PathVariable("id") long id) throws Exception {
+		return hbRepository.findOne(id);
+	}	
 
 	@RequestMapping("")
 	public Iterable<HandBookDomain> all() throws Exception {
@@ -64,10 +69,5 @@ public class HandBookController {
 			return hbRepository.findByTypeAndSubTypePage(type, subType, page);
 		}
 		return hbRepository.findByTypeAndSubType(type, subType);
-	}
-	
-	@RequestMapping("/{type}/{subType}/count")
-	public long count() throws Exception {
-		return hbRepository.count();
 	}
 }

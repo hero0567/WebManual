@@ -29,14 +29,14 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/controllers/DetailsController.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class=""> 
+<body ng-app="" ng-controller="DetailsController" class=""> 
 	<div class="none">
 	  <img src="./img/favicon.png" />
 	</div> 
@@ -44,54 +44,7 @@
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]--> 
 	<div class="contentwrap"> 
-		<header> 
-			<div> 
-				<div class="navbox"> 
-					 <div class="boxed"> 
-						  <a class="logo fll" href=""> <h1 class="seeo">92说明书</h1> </a> 
-						  <ul class="mainnav"> 
-						   <li class="tab on"> 
-						       <a href="">首页</a> 
-						   </li>  
-						  </ul> 
-						  <div class="usernav"> 
-							   <div class="usersearch"> 
-								    <form action=""> 
-								     	<input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
-								     	<button class="wmanualbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
-								    </form> 
-							   </div> 
-							   <div class="useradd"> 
-							    	<a target="_blank" href=""><span class="wmanualbtn c-lined">
-							     	<i class="fa fa-plus"></i> 添加搜藏</span>
-							   </a> 
-							   </div> 
-							   <!-- 未登录 --> 
-							   <div class="userlogin"> 
-							    	<a class="wmanualbtn" href="">登录</a>
-							    	<a class="wmanualbtn" href="">注册</a> 
-							   </div> 
-						  </div> 
-					 </div> 
-				</div> 
-				<div class="subnavbox"> 
-					<div class="boxed"> 
-						 <div class="cont"> 
-							  <ul class="subnav nav-comp"> 
-							   <li><a href=""><span>空气净化器</span><i>25727</i></a></li> 
-							   <li><a href=""><span>电视</span><i>18839</i></a></li> 
-							   <li><a href=""><span>冰箱</span><i>18839</i></a></li> 
-							   <li><a href=""><span>空调</span><i>14933</i></a></li> 
-							   <li><a href=""><span>洗衣机</span><i>2270</i></a></li> 
-							   <li><a href=""><span>热水器</span><i>1682</i></a></li> 
-							   <li><a href=""><span>净水器</span><i>7078</i></a></li> 
-							  </ul> 
-						 </div> 
-					</div> 
-				</div> 
-			</div> 
-		</header> 
-		
+		<%@ include file="../common/header.jsp" %>		
 		<div class="boxed"> 
 			<div class="sidebar right">
 				<div class="sec">
@@ -124,7 +77,7 @@
 			<div class="main">
 			  <div class="sec height-292">
 			    <div class="titlebar">
-			      <span><i class="fa fa-th"></i>长虹液晶电视使用说明书</span>
+			      <span><i class="fa fa-th"></i>{{handbook.name}}</span>
 			      <div class="rightset">
 			          <a class="t-small" href=""><i class="fa fa-plus"></i>收藏</a>
 			        </div>
@@ -133,11 +86,11 @@
 			                <ul class="list-block aboutus">
 			                  <li>
 			                    <i class="fa fa-dot-circle-o"></i>厂商： 
-			                    <a href="">海尔</a>
+			                    <a href="">{{handbook.brand}}</a>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-newspaper-o"></i>上架时间： 
-			                    <a href="">2015-12-12</a>
+			                    <a href="">{{ handbook.productDate | date:'yyyy-MM-dd' }}</a>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-phone"></i>官方客服电话： 
