@@ -16,5 +16,16 @@ app.controller("HeaderController", function($scope, $http) {
     	 }
  	}	
 	
+	$scope.addfavorite = function() {
+		if (document.all)
+		{
+			window.external.addFavorite('http://www.92shuomingshu.com','XXX');
+		}
+		else if (window.sidebar)
+		{
+			window.sidebar.addPanel('XXX', 'http://www.92shuomingshu.com', "");
+		}
+	}
+	
 	$scope.init();
 });
