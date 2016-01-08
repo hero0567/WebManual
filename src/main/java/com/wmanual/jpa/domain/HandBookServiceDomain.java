@@ -21,7 +21,6 @@ public class HandBookServiceDomain {
 	private String site;
 	private String address;
 	
-	
 	public Long getId() {
 		return id;
 	}

@@ -9,6 +9,7 @@ app.controller("DetailsController", function($scope, $http, $location) {
 	$scope.menu = {};
 	$scope.handbook = {};
 	$scope.params = {};
+	$scope.services = {};
 	$scope.id = "";
     
 	
@@ -34,8 +35,15 @@ app.controller("DetailsController", function($scope, $http, $location) {
     $scope.fetchHandbook = function(id) {
     	 $http.get('/hb/x/x/' + id).success(function(handbook){
              $scope.handbook = handbook;
+             $scope.fetchHandbookService(handbook.brand);
        });
  	}  
+    
+    $scope.fetchHandbookService = function(brand) {
+   	 $http.get('/hbs/' + brand).success(function(services){
+            $scope.services = services;
+      });
+	}
     
     $scope.changeMenu = function(type, count) {
     	window.location = "/fridge?subtype="+type +"&count="+count;

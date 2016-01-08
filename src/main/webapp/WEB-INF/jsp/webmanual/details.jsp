@@ -95,17 +95,17 @@
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-phone"></i>官方客服电话： 
-			                    <a href="tel:02885303320">400-028-83786700</a>
+			                    <a href="tel:02885303320" ng-repeat="s in services ">{{s.tel}} </a>
 			                  </li>
 			                
 			                  <li>
 			                    <i class="fa fa-envelope"></i>官方邮箱： 
-			                    <a href="mailto:jack@92shuomingshu.com">tliu@generalrobots.cn</a>
+			                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services ">{{s.email}} </a>
 			                  </li>
 			                
 			                  <li>
 			                    <i class="fa fa-map-marker"></i>官方网站： 
-			                    <span>www.changhong.com</span>
+			                    <span ng-repeat="s in services" >{{s.site}} </span>
 			                  </li>
 			                </ul>
 			                <div class="pl-mt20">
