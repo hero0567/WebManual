@@ -24,11 +24,11 @@
 								     </a> 
 							    </div> 
 							    <!-- 未登录 --> 
-							    <div class="userlogin" ng-show="!login.status"> 
+							    <div class="userlogin" ng-show="!user.id"> 
 							     	<a class="wmanualbtn" href="/signin">登录</a>
 							     	<a class="wmanualbtn" href="/signup">注册</a> 
 							    </div> 
-							    <div class="userlogin" ng-show="login.status"> 
+							    <div class="userlogin" ng-show="user.id"> 
 							     	<!-- <a class="wmanualbtn" href="/signin">已登录{{user.username}}</a> -->
 							     	
 							     	<div class="usermenu hoversub">
@@ -36,7 +36,7 @@
                                       	<a><img src="https://www.itjuzi.com/images/dfe1636977926623d86a9003ce61226d.png"></a>
                                         <div class="subblock">
                                             <ul class="list-dropdown-menu">
-                                                <li><a href="">我的收藏</a></li>
+                                                <li><a href="/favorites">我的收藏</a></li>
                                                 <li><a href="" ng-click="logout()">退出</a></li>
                                             </ul>
                                         </div>

@@ -32,6 +32,7 @@
 	<script src="js/lib/angular/angular.js"></script>
 	<script src="js/app.js"></script>	
 	<script src="js/controllers/FridgeController.js"></script>
+	<script src="js/service/UserService.js"></script>	
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>

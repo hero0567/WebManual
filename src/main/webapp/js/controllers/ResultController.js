@@ -4,7 +4,7 @@
  * ResultController
  * @constructor
  */
-app.controller("ResultController", function($scope, $http, $location) {
+app.controller("ResultController", function($scope, $http, $location, userService) {
 	
 	$scope.menu = {};
 	$scope.results = {};
@@ -24,6 +24,9 @@ app.controller("ResultController", function($scope, $http, $location) {
     $scope.key = "";
     $scope.count = 0;
     $scope.currentSubType = "全部";
+    
+    userService.initUser();
+	$scope.user = userService.getUser();
         
     $scope.parseParams = function(){
     	var paramString = window.location.search;

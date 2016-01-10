@@ -28,9 +28,11 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/others/modernizr.js"></script>
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/app.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/controllers/FavoritesController.js"></script>
+	<script src="js/service/UserService.js"></script>	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -127,9 +129,6 @@
 	</div> 
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
-	</script> 
-	<script src="js/lib/others/modernizr.js"></script>
-	<script src="js/lib/angular/angular.js"></script>
-	<script src="js/controllers/FavoritesController.js"></script>
+	</script>	
 </body>
 </html>

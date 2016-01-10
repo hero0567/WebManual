@@ -4,7 +4,7 @@
  * ResultController
  * @constructor
  */
-app.controller("FavoritesController", function($scope, $http, $location) {
+app.controller("FavoritesController", function($scope, $http, $location, userService) {
 	
 	$scope.menu = {};
 	$scope.results = {};
@@ -19,13 +19,14 @@ app.controller("FavoritesController", function($scope, $http, $location) {
 		    		next: false, 
 		    		subtype : "",
 		    		total:0 };
-    $scope.ps = [1,2,3,4,5];
-    
-    $scope.id = 1;
+    $scope.ps = [1,2,3,4,5];    
     $scope.key = "";
     $scope.count = 0;
     $scope.currentSubType = "全部";
-         
+    
+    userService.initUser();
+	$scope.user = userService.getUser();
+	    
     $scope.fetchMenu = function() {
       	 $http.get('/menu').success(function(menu){
                $scope.menu = menu;
@@ -59,30 +60,30 @@ app.controller("FavoritesController", function($scope, $http, $location) {
     
     $scope.goPage = function(pn) {
     	$scope.page.pn = pn - 1;
-    	$scope.searchSubType($scope.id);
+    	$scope.searchSubType($scope.user.id);
   	} 
     
     $scope.goPrePage = function(pn) {
     	$scope.page.ppn--;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.searchSubType($scope.id);
+    	$scope.searchSubType($scope.user.id);
     	$scope.changePageNavi();
   	} 
     $scope.goFirstPage = function(pn) {
     	$scope.resetPageNavi()
-    	$scope.searchSubType($scope.id);
+    	$scope.searchSubType($scope.user.id);
   	}
     
     $scope.goNextPage = function(pn) {
     	$scope.page.ppn++;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.searchSubType($scope.id);
+    	$scope.searchSubType($scope.user.id);
     	$scope.changePageNavi();
   	} 
     $scope.goLastPage = function(pn) {
     	$scope.page.ppn = parseInt($scope.page.total / ($scope.page.size * $scope.page.ps));
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.searchSubType($scope.id);
+    	$scope.searchSubType($scope.user.id);
     	$scope.changePageNavi();
   	} 
     
@@ -103,9 +104,9 @@ app.controller("FavoritesController", function($scope, $http, $location) {
         $scope.currentSubType = type;
     	$scope.resetPageNavi();
     	if (type == "全部"){
-    		$scope.searchSubType($scope.id);
+    		$scope.searchSubType($scope.user.id);
     	}else{
-    		$scope.searchSubType($scope.id, type);
+    		$scope.searchSubType($scope.user.id, type);
     	}
   	} 
     
@@ -123,7 +124,8 @@ app.controller("FavoritesController", function($scope, $http, $location) {
 	}
 	
 	//$scope.hideFlicker();
+	
     $scope.fetchMenu();
-    $scope.fetchFavorList($scope.id);        
-    $scope.searchSubType($scope.id); 
+    $scope.fetchFavorList($scope.user.id);        
+    $scope.searchSubType($scope.user.id); 
 });

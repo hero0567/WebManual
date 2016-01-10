@@ -4,7 +4,7 @@
  * FridgeController
  * @constructor
  */
-app.controller("FridgeController", function($scope, $http, $location) {
+app.controller("FridgeController", function($scope, $http, $location, userService) {
 	
 	$scope.menu = {};
 	$scope.subTypes = {};
@@ -22,6 +22,9 @@ app.controller("FridgeController", function($scope, $http, $location) {
     
     $scope.type = "全部";
     $scope.key = "";
+    
+    userService.initUser();
+	$scope.user = userService.getUser();
         
     $scope.parseParams = function(){
     	var paramString = window.location.search;

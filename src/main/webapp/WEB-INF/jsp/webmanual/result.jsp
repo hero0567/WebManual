@@ -23,6 +23,7 @@
 	<script src="js/lib/angular/angular.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/controllers/ResultController.js"></script>
+	<script src="js/service/UserService.js"></script>	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>

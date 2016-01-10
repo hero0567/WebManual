@@ -4,7 +4,7 @@
  * DetailsController
  * @constructor
  */
-app.controller("DetailsController", function($scope, $http, $location) {
+app.controller("DetailsController", function($scope, $http, $location, userService) {
 	
 	$scope.menu = {};
 	$scope.handbook = {};
@@ -12,6 +12,8 @@ app.controller("DetailsController", function($scope, $http, $location) {
 	$scope.services = {};
 	$scope.id = "";
     
+	userService.initUser();
+	$scope.user = userService.getUser();
 	
 	$scope.parseParams = function(){
     	var paramString = window.location.search;

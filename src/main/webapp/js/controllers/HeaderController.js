@@ -5,18 +5,7 @@
  * @constructor
  */
 
-app.controller("HeaderController", function($scope, $http) {
-			
-	$scope.init = function() {
-		if (angular.isUndefined($scope.login)){
-			$scope.login = {status : false};
-		}
-		if (angular.isDefined(sessionStorage.user)){
-			$scope.user = JSON.parse(sessionStorage.user);	
-			$scope.login.status = true;
-		}
-		console.log($scope.user);
- 	}	
+app.controller("HeaderController", function($scope, $http) {			
 	
 	$scope.addBookMark = function() {
 		if (document.all){
@@ -32,5 +21,8 @@ app.controller("HeaderController", function($scope, $http) {
 		window.location = "/logout";
 	}
 	
-	$scope.init();
+	function addFavorite(uid, hbid){		
+		$http.post('/favor/'+uid+'/' + hbid, {}).success(function() {    		
+        });
+	}
 });

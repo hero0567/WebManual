@@ -5,7 +5,7 @@
  * @constructor
  */
 
-app.controller("IndexController", function($scope, $http, $location, favoriteService) {
+app.controller("IndexController", function($scope, $http, $location, userService) {
 	
 	$scope.menu = {};
     $scope.handbook = [];
@@ -15,6 +15,8 @@ app.controller("IndexController", function($scope, $http, $location, favoriteSer
     $scope.key = "";
     $scope.login = {status : false};
     
+    userService.initUser();
+	$scope.user = userService.getUser();
     
     $scope.fetchMenu = function() {
      	 $http.get('/menu').success(function(menu){
@@ -39,9 +41,9 @@ app.controller("IndexController", function($scope, $http, $location, favoriteSer
       	window.location = "/result?key=" + $scope.key;
    	} 
     
-    $scope.addFavorite = function() {
+    $scope.addFavorite = function(hbid) {
     	if ($scope.login.status){
-//        	favoriteService.addFavorite();
+        	userService.addFavorite($scope.user.id, hbid);
     	}else{
     		window.location = "/signin";
     	}
