@@ -73,7 +73,7 @@
 			     <!-- block 搜索列表区 --> 
 				     <div> 
 					      <ul class="list-multi-result thead"> 
-					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
+					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 					      </ul> 
 					      <ul class="list-multi-result"> 
 					        <li ng-repeat="sub in book.subType"> 
@@ -89,7 +89,7 @@
 					               <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
 					             </p> 
 					           </i> 
-					           <i class="cell">{{sub.brand}} </i> 
+					           <i class="cell brand">{{sub.brand}} </i> 
 					           <i class="cell round"> 
 					             <a href=""><span class="tag gray">{{sub.version}}</span></a> 
 					           </i> 
