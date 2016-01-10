@@ -19,7 +19,7 @@
 								     </form> 
 							    </div> 
 							    <div class="useradd"> 
-								     <a target="_blank" href=""><span class="wmanualbtn c-lined">
+								     <a href="http://www.92shuomingshu.com" title="92shuomingshu" rel="sidebar"><span class="wmanualbtn c-lined">
 								      	<i class="fa fa-plus"></i> 添加搜藏</span>
 								     </a> 
 							    </div> 

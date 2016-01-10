@@ -16,14 +16,12 @@ app.controller("HeaderController", function($scope, $http) {
     	 }
  	}	
 	
-	$scope.addfavorite = function() {
-		if (document.all)
-		{
-			window.external.addFavorite('http://www.92shuomingshu.com','XXX');
+	$scope.addBookMark = function() {
+		if (document.all){
+			window.external.addFavorite('http://www.92shuomingshu.com','92shuomingshu');
 		}
-		else if (window.sidebar)
-		{
-			window.sidebar.addPanel('XXX', 'http://www.92shuomingshu.com', "");
+		else if (angular.isFunction(window.sidebar.addPanel)){
+			window.sidebar.addPanel('92shuomingshu', 'http://www.92shuomingshu.com', "");
 		}
 	}
 	

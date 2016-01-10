@@ -5,7 +5,7 @@
  * @constructor
  */
 
-app.controller("IndexController", function($scope, $http, $location, loginService) {
+app.controller("IndexController", function($scope, $http, $location, favoriteService) {
 	
 	$scope.menu = {};
     $scope.handbook = [];
@@ -35,6 +35,11 @@ app.controller("IndexController", function($scope, $http, $location, loginServic
     
     $scope.search = function() {
       	window.location = "/result?key=" + $scope.key;
+   	} 
+    
+    $scope.addFavorite = function() {
+    	console.log($scope.login);
+//    	favoriteService.addFavorite();
    	} 
     
     //Hide angularjs tag flicker
