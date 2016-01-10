@@ -37,18 +37,16 @@ app.controller("IndexController", function($scope, $http, $location, userService
     	window.location = "/fridge?subtype="+type +"&count="+count;
   	} 
     
-    $scope.search = function() {
-      	window.location = "/result?key=" + $scope.key;
-   	} 
-    
-    $scope.addFavorite = function(hbid) {
-    	if ($scope.login.status){
-        	userService.addFavorite($scope.user.id, hbid);
+    $scope.addFavorite = function(uid, hbid){	
+		console.log("addFavorite");
+		if (uid){
+			$http.post('/favor/'+uid+'/' + hbid, {}).success(function() {    	
+				
+	        });
     	}else{
     		window.location = "/signin";
     	}
-
-   	} 
+	}
     
     //Hide angularjs tag flicker
 	$scope.hideFlicker = function(){

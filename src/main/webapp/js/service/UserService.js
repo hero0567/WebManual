@@ -2,7 +2,6 @@
 
 app.factory('userService', ['$http', function($http) {
 
-	var login = {status : false};
 	var user = {};
 	
 	function initUser(){
@@ -14,7 +13,6 @@ app.factory('userService', ['$http', function($http) {
 			var u = JSON.parse(sessionStorage.user);	
 			user.id = u.id;
 			user.username = u.username;
-			login.status = true;
 		}
  	}	
 	

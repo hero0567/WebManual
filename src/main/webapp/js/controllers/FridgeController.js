@@ -99,11 +99,7 @@ app.controller("FridgeController", function($scope, $http, $location, userServic
     	$scope.fetchSubType(type);
         
   	} 
-    
-    $scope.search = function() {
-      	window.location = "/result?key=" + $scope.key;
-   	} 
-    
+        
     //Hide angularjs tag flicker
 	$scope.hideFlicker = function(){
 		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 

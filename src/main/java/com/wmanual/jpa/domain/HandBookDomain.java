@@ -1,17 +1,14 @@
 package com.wmanual.jpa.domain;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 
 @Entity
 @Table(name="handbook")
+//@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class HandBookDomain {
 		
 		
@@ -37,7 +34,7 @@ public class HandBookDomain {
 	private int viewCount;
 	private int favorCount;
 	private String lan;
-	
+		
 	public Long getId() {
 		return id;
 	}
@@ -158,5 +155,5 @@ public class HandBookDomain {
 	}
 	public void setLan(String lan) {
 		this.lan = lan;
-	}	
+	}
 }

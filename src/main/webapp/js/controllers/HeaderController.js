@@ -16,13 +16,12 @@ app.controller("HeaderController", function($scope, $http) {
 		}
 	}
 	
+	$scope.search = function() {
+      	window.location = "/result?key=" + $scope.key;
+   	} 
+	
 	$scope.logout = function() {
 		delete sessionStorage.user;
 		window.location = "/logout";
-	}
-	
-	function addFavorite(uid, hbid){		
-		$http.post('/favor/'+uid+'/' + hbid, {}).success(function() {    		
-        });
-	}
+	}	
 });

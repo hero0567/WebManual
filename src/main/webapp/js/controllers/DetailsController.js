@@ -50,11 +50,7 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
     $scope.changeMenu = function(type, count) {
     	window.location = "/fridge?subtype="+type +"&count="+count;
   	} 
-    
-    $scope.search = function() {
-      	window.location = "/result?key=" + $scope.key;
-   	} 
-    
+        
     //Hide angularjs tag flicker
 	$scope.hideFlicker = function(){
 		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 

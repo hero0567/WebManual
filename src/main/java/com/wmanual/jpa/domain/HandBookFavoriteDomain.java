@@ -7,27 +7,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-
 @Entity
-@Table(name="handbook_favor")
+@Table(name = "handbook_favor", uniqueConstraints = { @UniqueConstraint(columnNames = { "handBook_id", "user_id" }) })
 public class HandBookFavoriteDomain {
-		
-		
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private long uploadDate;
 	private String alias;
 	private String comment;
-	
-	@OneToOne
+
+	@ManyToOne
 	private HandBookDomain handBook;
-	
+
 	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY, optional = false)
 	private User user;
@@ -54,7 +52,7 @@ public class HandBookFavoriteDomain {
 
 	public void setAlias(String alias) {
 		this.alias = alias;
-	}	
+	}
 
 	public String getComment() {
 		return comment;
@@ -78,5 +76,5 @@ public class HandBookFavoriteDomain {
 
 	public void setUser(User user) {
 		this.user = user;
-	}	
+	}
 }
