@@ -73,7 +73,7 @@
 			     <!-- block 搜索列表区 --> 
 				     <div> 
 					      <ul class="list-multi-result thead"> 
-					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell round"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
+					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
 					      </ul> 
 					      <ul class="list-multi-result"> 
 					        <li ng-repeat="sub in book.subType"> 
@@ -90,7 +90,7 @@
 					             </p> 
 					           </i> 
 					           <i class="cell brand">{{sub.brand}} </i> 
-					           <i class="cell round"> 
+					           <i class="cell version"> 
 					             <a href=""><span class="tag gray">{{sub.version}}</span></a> 
 					           </i> 
 					           <i class="cell action"> <a href="" class="fa fa-star-o" ng-click="addFavorite(user.id, sub.id)"></a> </i> 

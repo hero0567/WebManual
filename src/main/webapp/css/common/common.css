@@ -1,12 +1,28 @@
-@media (max-width:860px) {
-	 .list-multi-result .cell,.list-main-incset .cell {
-	display: table-cell;
-	font-style: normal;
-	padding: 5px;
-	vertical-align: middle; 
+ 
+@media (max-width:850px) {
+	
+	.list-multi-result .cell,.list-main-incset .cell {
+		display: table-cell;
+		font-style: normal;
+		padding: 5px;
+		vertical-align: middle; 
+	}
+		 
 }
-	 
+@media (max-width:768px) {
+	.list-multi-result .pic, .list-multi-result .brand{
+		display:none !important;
+	}
 }
+@media (max-width:550px){
+	.list-multi-result .version{
+		display:none !important;
+	}
+	.list-multi-result .cell .maincell{
+		width:100px !important;
+		min-width:100px !important; 
+	}
+} 
 
 .d-n{
 	display:none !important;
@@ -9174,16 +9190,17 @@ ul[class|=list-main]:not(.thead) .tag {
 	color: #aaa
 }
 
-.list-multi-result .cell.date,.list-multi-result .cell.fina,.list-multi-result .cell.normalsmall,.list-multi-result .cell.round,.list-main-incset .cell.date,.list-main-incset .cell.fina,.list-main-incset .cell.normalsmall,.list-main-incset .cell.round {
+.list-multi-result .cell.date,.list-multi-result .cell.fina,.list-multi-result .cell.normalsmall,.list-multi-result .cell.version,.list-main-incset .cell.date,.list-main-incset .cell.fina,.list-main-incset .cell.normalsmall,.list-main-incset .cell.round {
 	width: 100px;
 	text-align: center;
 	overflow: hidden
 }
 .list-multi-result .cell.brand{
 	min-width:200px;
+	font-size:12px;
 }
 
-.list-multi-result .cell.round,.list-main-incset .cell.round {
+.list-multi-result .cell.round,.list-main-incset .cell.version {
 	min-width: 130px
 }
 
