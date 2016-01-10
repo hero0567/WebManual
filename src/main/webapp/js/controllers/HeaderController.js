@@ -6,7 +6,7 @@
  */
 
 app.controller("HeaderController", function($scope, $http) {			
-	
+		
 	$scope.addBookMark = function() {
 		if (document.all){
 			window.external.addFavorite('http://www.92shuomingshu.com','92shuomingshu');

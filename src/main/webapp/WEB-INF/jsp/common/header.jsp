@@ -14,7 +14,7 @@
 						   <div class="usernav"> 
 							    <div class="usersearch"> 
 								     <form ng-submit="search()"> 
-								      	<input type="text" ng-model="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
+								      	<input type="text" ng-model="$parent.key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
 								      	<button class="wmanualbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
 								     </form> 
 							    </div> 
@@ -32,7 +32,7 @@
 							     	<!-- <a class="wmanualbtn" href="/signin">已登录{{user.username}}</a> -->
 							     	
 							     	<div class="usermenu hoversub">
-                                        <a href="" title="进入个人中心">栖牛_f166a7d988</a>
+                                        <a href="" title="进入个人中心">{{user.username}}</a>
                                       	<a><img src="https://www.itjuzi.com/images/dfe1636977926623d86a9003ce61226d.png"></a>
                                         <div class="subblock">
                                             <ul class="list-dropdown-menu">
