@@ -9,7 +9,6 @@ app.controller("IndexController", function($scope, $http, $location, userService
 	
 	$scope.menu = {};
     $scope.handbook = [];
-    $scope.favor = {};
     
     $scope.size = 2;    
     $scope.type = "全部";
@@ -41,17 +40,12 @@ app.controller("IndexController", function($scope, $http, $location, userService
     	console.log("fetchFavorite" + $scope.handbook.length);
     	if ($scope.user.id){
     		$http.get('/favor/' + $scope.user.id).success(function(favor){
-                $scope.favor = favor;
                 angular.forEach($scope.handbook, function (hb) {
                 	angular.forEach(hb.subType, function (type) {
                 		angular.forEach(favor, function (f) {
                 			if (type.id == f.handBook.id){
-                				type.favor = "true";
-                            	console.log("type:"+type.id);
-                            	console.log("favor:"+f.handBook.id);
+                				type.favor = true;
                 			}
-//                        	console.log("type:"+type.id);
-//                        	console.log("favor:"+f.handBook.id);
                         });
                     });
                 });
@@ -63,11 +57,10 @@ app.controller("IndexController", function($scope, $http, $location, userService
     	window.location = "/fridge?subtype="+type +"&count="+count;
   	} 
     
-    $scope.addFavorite = function(uid, hbid){	
-		console.log("addFavorite");
+    $scope.addFavorite = function(uid, sub){	
 		if (uid){
-			$http.post('/favor/'+uid+'/' + hbid, {}).success(function() {    	
-				
+			$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
+				sub.favor = true;
 	        });
     	}else{
     		window.location = "/signin";
