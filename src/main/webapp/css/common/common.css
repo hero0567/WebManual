@@ -3,8 +3,7 @@
 	display: table-cell;
 	font-style: normal;
 	padding: 5px;
-	vertical-align: middle;
-	border:1px red solid;
+	vertical-align: middle; 
 }
 	 
 }
@@ -9140,7 +9139,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	font-style: normal;
 	padding: 5px;
 	vertical-align: middle;
-	border:1px red solid;
+	
 }
 
 .list-multi-result .cell.pic,.list-main-incset .cell.pic {
