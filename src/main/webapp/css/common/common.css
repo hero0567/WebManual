@@ -17228,9 +17228,7 @@ ul[class|=list-main]:not(.thead) .tag {
 		margin-bottom: 10px
 	}
 
-	.thead {
-		display: none
-	}
+	 
 
 	.tabset.colum3 {
 		text-align: center
