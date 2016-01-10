@@ -13,7 +13,9 @@ app.controller("IndexController", function($scope, $http, $location, favoriteSer
     $scope.size = 2;    
     $scope.type = "全部";
     $scope.key = "";
-        
+    $scope.login = {status : false};
+    
+    
     $scope.fetchMenu = function() {
      	 $http.get('/menu').success(function(menu){
               $scope.menu = menu;
@@ -38,8 +40,12 @@ app.controller("IndexController", function($scope, $http, $location, favoriteSer
    	} 
     
     $scope.addFavorite = function() {
-    	console.log($scope.login);
-//    	favoriteService.addFavorite();
+    	if ($scope.login.status){
+//        	favoriteService.addFavorite();
+    	}else{
+    		window.location = "/signin";
+    	}
+
    	} 
     
     //Hide angularjs tag flicker

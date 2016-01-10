@@ -17,7 +17,7 @@ app.controller("SigninController", function($scope, $http, $location, $window) {
 	$scope.signin = function() {		
 	    $http({
 	        method  : 'POST',
-	        url     : '/login',
+	        url     : '/signin',
 	        data    : $.param($scope.user),  // pass in data as strings
 	        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
 	    })

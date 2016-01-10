@@ -10,7 +10,7 @@
 						        <a href="/">首页 </a> 
 						    </li>
 						   </ul> 
-						
+						   
 						   <div class="usernav"> 
 							    <div class="usersearch"> 
 								     <form ng-submit="search()"> 
@@ -24,11 +24,11 @@
 								     </a> 
 							    </div> 
 							    <!-- 未登录 --> 
-							    <div class="userlogin" ng-show="!login"> 
+							    <div class="userlogin" ng-show="!login.status"> 
 							     	<a class="wmanualbtn" href="/signin">登录</a>
 							     	<a class="wmanualbtn" href="/signup">注册</a> 
 							    </div> 
-							    <div class="userlogin" ng-show="login"> 
+							    <div class="userlogin" ng-show="login.status"> 
 							     	<!-- <a class="wmanualbtn" href="/signin">已登录{{user.username}}</a> -->
 							     	
 							     	<div class="usermenu hoversub">
@@ -37,7 +37,7 @@
                                         <div class="subblock">
                                             <ul class="list-dropdown-menu">
                                                 <li><a href="">我的收藏</a></li>
-                                                <li><a href="">退出</a></li>
+                                                <li><a href="" ng-click="logout()">退出</a></li>
                                             </ul>
                                         </div>
                                     </div>

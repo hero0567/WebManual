@@ -109,4 +109,9 @@ public class HandBookHomeController {
 		//EmailUtil.getInstance().sendEmail(user.getUsername(), emailConfigure);
 		return "login";
 	}
+	
+	@RequestMapping(value="/logout")
+	public String logout() {
+		return "login";
+	}
 }

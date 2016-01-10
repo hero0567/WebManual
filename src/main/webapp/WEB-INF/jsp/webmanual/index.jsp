@@ -44,8 +44,7 @@
     <![endif]-->
 </head>
 
-
-<body ng-app="app" ng-controller="IndexController" class="">	
+<body ng-app="app" ng-controller="IndexController" class="">  
 	<div class="none">
 		<img src="./img/favicon.png" />
 	</div> 
