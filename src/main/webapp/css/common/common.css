@@ -7843,7 +7843,7 @@ header .usernav .usersearch input {
 	-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
 	-ms-transform: translateY(-2px);
-	width: 200px;
+	width: 300px;
 	background-color: #f8f8f8;
 	border-color: rgba(0,0,0,.04);
 	text-indent: 5px;
@@ -16713,7 +16713,6 @@ ul[class|=list-main]:not(.thead) .tag {
 	}
 
 	.ui-pagechange>a:nth-child(n+7):not(:last-child) {
-		display: none
 	}
 
 	.list-timeline .incinfo.leri {
@@ -17224,7 +17223,7 @@ ul[class|=list-main]:not(.thead) .tag {
 	}
 
 	header .usernav .userlogin>:last-child,header .usernav .userlogin~.usermenu {
-		display: none
+		 
 	}
 
 	header .usernav .userlogin .wmanualbtn {
