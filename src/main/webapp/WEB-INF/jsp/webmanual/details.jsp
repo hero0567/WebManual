@@ -16,6 +16,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages/details.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -81,7 +82,7 @@
 			    <div class="titlebar">
 			      <span><i class="fa fa-th"></i>{{handbook.name}}</span>
 			      <div class="rightset">
-			          <a class="t-small" href=""><i ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i></a>
+			          <a class="t-small" href=""><i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i></a>
 			        </div>
 			          </div>
 			             <div>
@@ -109,7 +110,7 @@
 			                    <span ng-repeat="s in services" >{{s.site}} </span>
 			                  </li>
 			                </ul>
-			                <div class="pl-mt20">
+			                <div class="pl-mt20 margin-2">
 			                  <a class="wmanualbtn" href="">在线阅读</a>
 			                  <a class="wmanualbtn" href="{{handbook.url}}">下载PDF</a> 
 			                </div>

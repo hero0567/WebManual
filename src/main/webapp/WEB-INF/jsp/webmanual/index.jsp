@@ -52,7 +52,7 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> 
     
-	<div class="thewrap"> 
+	<div class=contentwrap> 
 		<%@ include file="../common/header.jsp" %>
 		<div class="boxed main"> 
 			<div class="sec nobg mobile-block"> 
@@ -122,5 +122,7 @@
 		</div>
 		<%@ include file="../common/footer.jsp" %>
 	</div>
+	
+	<div class="ui-maintoolbar-box">										<div class="ui-maintoolbar op1">											<a class="card hoverc scroll2top">												<span class="t-big">													<i class="fa fa-chevron-up"></i>												</span>											</a>											<a class="card hoverc scroll2bottom marb5">												<span class="t-big">													<i class="fa fa-chevron-down"></i>												</span>											</a>											<a href="http://itjuzi.com/app/" target="_blank" class="card hovertext">												<span>													<span class="t-small">APP</span>												</span>												<span class="left-qrcode">													<img src="https://www.itjuzi.com/assets/front/app/pic/qr.png">													<p><span class="c-gray t-small">下载IT桔子APP</span></p>												</span>											</a>											<a class="card hoverc">												<span>													<i class="fa fa-qrcode t-big"></i>												</span>												<span class="left-qrcode">													<img src="http://itjuzi.com/assets/front/images/photo/qrcode-juzi.png">													<p><span class="c-gray t-small">IT桔子公众号</span></p>												</span>											</a>											<a href="https://jinshuju.net/f/5AfxtD" target="_blank" class="card hovertext">												<span>													<span class="t-small">反馈</span>												</span>											</a>										</div>									</div>
 </body>
 </html>
