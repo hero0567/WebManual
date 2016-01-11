@@ -33,7 +33,7 @@
 							     	
 							     	<div class="usermenu hoversub">
                                         <a href="" title="进入个人中心">{{user.username}}</a>
-                                      	<a><img src="https://www.itjuzi.com/images/dfe1636977926623d86a9003ce61226d.png"></a>
+                                      	<a><img src="img/user.png"></a>
                                         <div class="subblock">
                                             <ul class="list-dropdown-menu">
                                                 <li><a href="/favorites">我的收藏</a></li>

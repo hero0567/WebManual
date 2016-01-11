@@ -52,7 +52,7 @@
 				</div>
 				<div class="contset">
 					<div class="cont on">
-						<form name="myForm" ng-submit="signup()">
+						<form id="form-signup" name="myForm" ng-submit="signup()">
 							<div class="row">
 								<div class="control-group text-center">
 									<input name="personalEmail" type="email" ng-model="user.username" ng-blur="checkEmailExist()" required
