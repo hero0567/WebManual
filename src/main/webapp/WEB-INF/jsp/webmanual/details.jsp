@@ -110,7 +110,7 @@
 			                    <span ng-repeat="s in services" >{{s.site}} </span>
 			                  </li>
 			                </ul>
-			                <div class="pl-mt20 margin-2">
+			                <div class="pl-mt20 margin-20">
 			                  <a class="wmanualbtn" href="">在线阅读</a>
 			                  <a class="wmanualbtn" href="{{handbook.url}}">下载PDF</a> 
 			                </div>
