@@ -81,7 +81,7 @@
 			    <div class="titlebar">
 			      <span><i class="fa fa-th"></i>{{handbook.name}}</span>
 			      <div class="rightset">
-			          <a class="t-small" href=""><i class="fa fa-plus"></i>收藏</a>
+			          <a class="t-small" href=""><i ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i></a>
 			        </div>
 			          </div>
 			             <div>

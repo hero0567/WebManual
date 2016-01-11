@@ -38,6 +38,7 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
     	 $http.get('/hb/x/x/' + id).success(function(handbook){
              $scope.handbook = handbook;
              $scope.fetchHandbookService(handbook.brand);
+             $scope.fetchFavorite();
        });
  	}  
     
@@ -46,6 +47,34 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
             $scope.services = services;
       });
 	}
+    
+    $scope.addFavorite = function(uid, sub){
+		if (uid){
+			if (sub.favor){
+				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
+					sub.favor = false;
+		        });
+			}else{
+				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
+					sub.favor = true;
+		        });
+			}
+    	}else{
+    		window.location = "/signin";
+    	}
+	}
+    
+    $scope.fetchFavorite = function() {
+    	if ($scope.user.id){
+    		$http.get('/favor/' + $scope.user.id).success(function(favor){
+    			angular.forEach(favor, function (f) {
+        			if ($scope.handbook.id == f.handBook.id){
+        				$scope.handbook.favor = true;
+        			}
+                });
+    		});
+    	}
+ 	}
     
     $scope.changeMenu = function(type, count) {
     	window.location = "/fridge?subtype="+type +"&count="+count;
