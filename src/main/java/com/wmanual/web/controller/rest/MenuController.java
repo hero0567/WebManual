@@ -16,11 +16,15 @@
 
 package com.wmanual.web.controller.rest;
 
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.beans.MenuBean;
+import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.service.HandBookRepository;
 
 @RestController
@@ -31,7 +35,15 @@ public class MenuController {
 	private HandBookRepository menuRepository;
 
 	@RequestMapping("")
-	public Iterable<MenuBean> allMenu() throws Exception {
-		return menuRepository.findMenu();
+	public Iterable<CountBean> allMenu() throws Exception {
+		List<CountBean> menu = new ArrayList<CountBean>();
+		List<Object[]> list = menuRepository.findMenu();
+		for (Object[] objs : list){
+			BigInteger count = (BigInteger ) objs[0];
+			String subType = (String) objs[1];
+			int sequence = (Integer) objs[2];
+			menu.add(new CountBean(count.longValue(), subType, sequence));
+		}
+		return menu;
 	}	
 }

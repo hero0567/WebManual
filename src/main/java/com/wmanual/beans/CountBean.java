@@ -3,6 +3,7 @@ package com.wmanual.beans;
 public class CountBean {
 	private long count;
 	private String subType;
+	private int sequence;
 	
 	public CountBean() {
 		super();
@@ -18,6 +19,14 @@ public class CountBean {
 		this.count = count;
 		this.subType = subType;
 	}
+	
+	public CountBean(long count, String subType, int sequence) {
+		super();
+		this.count = count;
+		this.subType = subType;
+		this.sequence = sequence;
+	}
+
 	public long getCount() {
 		return count;
 	}
@@ -30,6 +39,12 @@ public class CountBean {
 	public void setSubType(String subType) {
 		this.subType = subType;
 	}
-	
-	
+
+	public int getSequence() {
+		return sequence;
+	}
+
+	public void setSequence(int sequence) {
+		this.sequence = sequence;
+	}	
 }
