@@ -99,6 +99,30 @@ app.controller("FavoritesController", function($scope, $http, $location, userSer
     	}
  	} 
     
+    $scope.addFavorite = function(uid, sub, index){
+		if (uid){
+			$http.delete('/favor/' + sub.id).success(function() {
+				$scope.results.splice(index,1);
+	        });
+    	}else{
+    		window.location = "/signin";
+    	}
+	}
+    
+    $scope.fetchFavorite = function() {
+    	if ($scope.user.id){
+    		$http.get('/favor/' + $scope.user.id).success(function(favor){
+    			angular.forEach(favor, function (f) {
+                	angular.forEach($scope.results, function (type) {
+            			if (type.id == f.handBook.id){
+            				type.favor = true;
+            			}
+                    });
+                });
+    		});
+    	}
+ 	}
+    
     $scope.changeSubType = function(type, count) {
         $scope.page.total = count;    
         $scope.currentSubType = type;

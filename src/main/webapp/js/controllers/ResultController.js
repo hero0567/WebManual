@@ -105,10 +105,12 @@ app.controller("ResultController", function($scope, $http, $location, userServic
     	if (angular.isDefined(type)){
     		$http.get('/s/大家电/'+type, {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
+           	 	$scope.fetchFavorite();
             });  
     	}else{
     		$http.get('/s', {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
+           	 	$scope.fetchFavorite();
             });  
     	}
  	} 
@@ -131,6 +133,36 @@ app.controller("ResultController", function($scope, $http, $location, userServic
     $scope.search = function() {
       	window.location = "/result?key=" + $scope.key;
    	}
+    
+    $scope.addFavorite = function(uid, sub){
+		if (uid){
+			if (sub.favor){
+				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
+					sub.favor = false;
+		        });
+			}else{
+				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
+					sub.favor = true;
+		        });
+			}
+    	}else{
+    		window.location = "/signin";
+    	}
+	}
+    
+    $scope.fetchFavorite = function() {
+    	if ($scope.user.id){
+    		$http.get('/favor/' + $scope.user.id).success(function(favor){
+    			angular.forEach(favor, function (f) {
+                	angular.forEach($scope.results, function (type) {
+            			if (type.id == f.handBook.id){
+            				type.favor = true;
+            			}
+                    });
+                });
+    		});
+    	}
+ 	}
     
     //Hide angularjs tag flicker
 	$scope.hideFlicker = function(){
