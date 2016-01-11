@@ -67,7 +67,7 @@
 			<div class="sec" ng-repeat="book in handbook"> 
 			  	<div class="titlebar tall"> 
 				    <span class="on">{{book.name}}</span> 
-				    <i class="rightset"> <a target="_blank" href="/fridge?subtype={{book.name}}&count={{book.count}}">查看全部</a> </i> 
+				    <i class="rightset"> <a target="_blank" href="/appliance?subtype={{book.name}}&count={{book.count}}">查看全部</a> </i> 
 		  		</div>
 			    <div> 
 			     <!-- block 搜索列表区 --> 

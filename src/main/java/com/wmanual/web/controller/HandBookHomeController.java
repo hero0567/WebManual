@@ -58,9 +58,9 @@ public class HandBookHomeController {
 		return "webmanual/tv";
 	}
 	
-	@RequestMapping("/fridge")
+	@RequestMapping("/appliance")
 	public String fridge() throws Exception {
-		return "webmanual/fridge";
+		return "webmanual/appliance";
 	}
 	
 	@RequestMapping("/result")

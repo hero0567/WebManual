@@ -31,14 +31,14 @@
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<script src="js/lib/angular/angular.js"></script>
 	<script src="js/app.js"></script>	
-	<script src="js/controllers/FridgeController.js"></script>
+	<script src="js/controllers/ApplianceController.js"></script>
 	<script src="js/service/UserService.js"></script>	
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="app" ng-controller="FridgeController" class="">
+<body ng-app="app" ng-controller="ApplianceController" class="">
 	<div class="none">
 		<img src="./img/favicon.png"/>
 	</div>

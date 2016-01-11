@@ -77,7 +77,7 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
  	}
     
     $scope.changeMenu = function(type, count) {
-    	window.location = "/fridge?subtype="+type +"&count="+count;
+    	window.location = "/appliance?subtype="+type +"&count="+count;
   	} 
         
     //Hide angularjs tag flicker

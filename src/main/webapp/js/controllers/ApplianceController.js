@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * FridgeController
+ * ApplianceController
  * @constructor
  */
-app.controller("FridgeController", function($scope, $http, $location, userService) {
+app.controller("ApplianceController", function($scope, $http, $location, userService) {
 	
 	$scope.menu = {};
 	$scope.subTypes = {};

@@ -127,7 +127,7 @@ app.controller("ResultController", function($scope, $http, $location, userServic
   	} 
     
     $scope.changeMenu = function(type, count) {
-    	window.location = "/fridge?subtype="+type +"&count="+count;
+    	window.location = "/appliance?subtype="+type +"&count="+count;
   	} 
     
     $scope.search = function() {

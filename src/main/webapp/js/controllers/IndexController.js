@@ -26,7 +26,7 @@ app.controller("IndexController", function($scope, $http, $location, userService
   	}  
     
     $scope.changeMenu = function(type, count) {
-    	window.location = "/fridge?subtype="+type +"&count="+count;
+    	window.location = "/appliance?subtype="+type +"&count="+count;
   	}
     
     $scope.fetchSubTypes = function() {
