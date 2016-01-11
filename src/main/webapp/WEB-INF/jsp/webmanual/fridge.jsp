@@ -87,7 +87,7 @@
 					            <i class="cell round"> 
 					              <a href=""><span class="tag gray">{{sub.version}}</span></a> 
 					            </i> 
-					            <i class="cell action"> <a href="" class="fa fa-star-o"></a> </i> 
+					            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
 					         </li>							
 						</ul>
 					</div>

@@ -46,6 +46,14 @@ app.controller("FridgeController", function($scope, $http, $location, userServic
          });
    	}  
     
+    $scope.changeMenu = function(type, count) {
+    	$scope.page.subtype = type;
+        $scope.page.total = count;        
+    	$scope.resetPageNavi();
+    	$scope.fetchSubType(type);
+        
+  	}
+    
     $scope.changePageNavi = function() {
     	$scope.page.pre = $scope.page.ppn == 0;
     	$scope.page.next = ($scope.page.total / ($scope.page.size * $scope.page.ps) > $scope.page.ppn + 1);
@@ -88,18 +96,41 @@ app.controller("FridgeController", function($scope, $http, $location, userServic
     
     $scope.fetchSubType = function(subtype) {
         $http.get('/hb/大家电/'+subtype, {params: {pn:$scope.page.pn, size:$scope.page.size}}).success(function(subTypes) {  
-       	 $scope.subTypes = subTypes;
+       	 	$scope.subTypes = subTypes;
+       	 	$scope.fetchFavorite();
         });  
  	} 
+    
+    $scope.addFavorite = function(uid, sub){
+		if (uid){
+			if (sub.favor){
+				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
+					sub.favor = false;
+		        });
+			}else{
+				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
+					sub.favor = true;
+		        });
+			}
+    	}else{
+    		window.location = "/signin";
+    	}
+	}
+    
+    $scope.fetchFavorite = function() {
+    	if ($scope.user.id){
+    		$http.get('/favor/' + $scope.user.id).success(function(favor){
+    			angular.forEach(favor, function (f) {
+                	angular.forEach($scope.subTypes, function (type) {
+            			if (type.id == f.handBook.id){
+            				type.favor = true;
+            			}
+                    });
+                });
+    		});
+    	}
+ 	}
             
-    $scope.changeMenu = function(type, count) {
-    	$scope.page.subtype = type;
-        $scope.page.total = count;        
-    	$scope.resetPageNavi();
-    	$scope.fetchSubType(type);
-        
-  	} 
-        
     //Hide angularjs tag flicker
 	$scope.hideFlicker = function(){
 		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 

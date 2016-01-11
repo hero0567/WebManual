@@ -25,6 +25,10 @@ app.controller("IndexController", function($scope, $http, $location, userService
         });
   	}  
     
+    $scope.changeMenu = function(type, count) {
+    	window.location = "/fridge?subtype="+type +"&count="+count;
+  	}
+    
     $scope.fetchSubTypes = function() {
     	angular.forEach($scope.menu, function (m, index) {
     		$http.get('/hb/大家电/'+m.subType+'?size=' + $scope.size).success(function(types){
@@ -36,13 +40,28 @@ app.controller("IndexController", function($scope, $http, $location, userService
     	});    	
   	} 
     
+    $scope.addFavorite = function(uid, sub){
+		if (uid){
+			if (sub.favor){
+				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
+					sub.favor = false;
+		        });
+			}else{
+				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
+					sub.favor = true;
+		        });
+			}
+    	}else{
+    		window.location = "/signin";
+    	}
+	}
+    
     $scope.fetchFavorite = function() {
-    	console.log("fetchFavorite" + $scope.handbook.length);
     	if ($scope.user.id){
     		$http.get('/favor/' + $scope.user.id).success(function(favor){
-                angular.forEach($scope.handbook, function (hb) {
-                	angular.forEach(hb.subType, function (type) {
-                		angular.forEach(favor, function (f) {
+    			angular.forEach(favor, function (f) {
+	                angular.forEach($scope.handbook, function (hb) {
+	                	angular.forEach(hb.subType, function (type) {
                 			if (type.id == f.handBook.id){
                 				type.favor = true;
                 			}
@@ -51,21 +70,7 @@ app.controller("IndexController", function($scope, $http, $location, userService
                 });
     		});
     	}
- 	} 
-    
-    $scope.changeMenu = function(type, count) {
-    	window.location = "/fridge?subtype="+type +"&count="+count;
-  	} 
-    
-    $scope.addFavorite = function(uid, sub){	
-		if (uid){
-			$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
-				sub.favor = true;
-	        });
-    	}else{
-    		window.location = "/signin";
-    	}
-	}
+ 	}     
     
     //Hide angularjs tag flicker
 	$scope.hideFlicker = function(){

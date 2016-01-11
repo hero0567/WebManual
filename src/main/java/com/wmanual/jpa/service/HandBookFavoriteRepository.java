@@ -3,9 +3,11 @@ package com.wmanual.jpa.service;
 import java.util.List;
 
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.domain.HandBookFavoriteDomain;
@@ -23,6 +25,11 @@ public interface HandBookFavoriteRepository extends CrudRepository<HandBookFavor
 	
 	@Query("from HandBookFavoriteDomain hbf where hbf.user.id = ? and hbf.handBook.subType = ?")
 	public List<HandBookFavoriteDomain> findByUserIdAndHandBookSubTypePage(Long id, String subType, Pageable pageable);
+	
+	@Transactional
+	@Modifying
+	@Query("delete from HandBookFavoriteDomain hbf where hbf.user.id = ? and hbf.handBook.id = ?")
+	public void deleteByUIDAndHBID(Long uid, Long hbid);
 	
 	// Count	
 	@Query("select new com.wmanual.beans.CountBean(count(hbf)) from HandBookFavoriteDomain hbf where hbf.user.id = ?1" )

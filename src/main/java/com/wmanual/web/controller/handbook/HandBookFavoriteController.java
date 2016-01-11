@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.configure.EmailConfigure;
 import com.wmanual.jpa.domain.HandBookDomain;
 import com.wmanual.jpa.domain.HandBookFavoriteDomain;
 import com.wmanual.jpa.domain.User;
@@ -77,13 +76,20 @@ public class HandBookFavoriteController {
 		hbookfav.setComment(favorteLoad.getComment());
 		
 		hbfRepository.save(hbookfav);
-		return new ResponseEntity<String>("", HttpStatus.OK);
+		return new ResponseEntity<String>("Add favorite successful!", HttpStatus.OK);
+	}
+	
+	
+	@RequestMapping(value = "/{uid}/{hbid}", method = RequestMethod.DELETE)
+	public ResponseEntity<String> deleteByUID(@PathVariable("uid") Long uid, @PathVariable("hbid") Long hbid) throws Exception {
+		hbfRepository.deleteByUIDAndHBID(uid, hbid);
+		return new ResponseEntity<String>("Delete favorite successful!", HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/{fid}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> delete(@PathVariable("fid") Long fid) throws Exception {
 		hbfRepository.delete(fid);
-		return new ResponseEntity<String>("", HttpStatus.OK);
+		return new ResponseEntity<String>("Delete favorite successful!", HttpStatus.OK);
 	}
 
 }
