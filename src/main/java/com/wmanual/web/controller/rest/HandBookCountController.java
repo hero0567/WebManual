@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.wmanual.web.controller.handbook;
+package com.wmanual.web.controller.rest;
 
 import java.util.List;
 

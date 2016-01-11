@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.wmanual.web.controller.handbook;
+package com.wmanual.web.controller.rest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

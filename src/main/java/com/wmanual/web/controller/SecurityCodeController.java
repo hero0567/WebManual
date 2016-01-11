@@ -1,4 +1,4 @@
-package com.wmanual.web.controller.handbook;
+package com.wmanual.web.controller;
 
 import java.io.IOException;
 

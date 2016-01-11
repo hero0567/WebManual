@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.wmanual.web.controller.setting;
+package com.wmanual.web.controller.rest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,11 +24,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.jpa.domain.User;
 import com.wmanual.jpa.service.UserRepository;
 
-@Controller
+@RestController
 @RequestMapping(value="/user")
 public class UserController {
 
@@ -41,16 +42,6 @@ public class UserController {
 		UserDetails principal = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		User user = userRepository.findByUsername(principal.getUsername());
 		return user;
-	}
-		
-	@RequestMapping(value="/index")
-	public String index() {
-		return "index";
-	}
-	
-	@RequestMapping(value="/access")
-	public String access() {
-		return "access";
 	}
 	
 }
