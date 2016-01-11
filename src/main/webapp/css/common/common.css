@@ -1,4 +1,11 @@
- 
+#form-signup a, #form-signin a{
+	color:#00aeef !important;
+}
+#form-signup a:hover, #form-signin a:hover{
+	color:#428bca !important;
+}
+
+
 @media (max-width:850px) {
 	
 	.list-multi-result .cell,.list-main-incset .cell {
@@ -28,7 +35,7 @@
 	display:none !important;
 }
 .captcha{
-	float:right;width:100px; height:30px; margin-top:-30px; position:relative
+	float:right;width:100px; height:28px; margin-top:-29px; margin-right:1px; position:relative
 }
 .personalEmail{
 	width:100%;
@@ -249,7 +256,7 @@ optgroup {
 }
 
 @font-face {
-	font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+	font-family:'Glyphicons Halflings';src:url(../../fonts/glyphicons-halflings-regular.eot);src:url(../../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
 }
 
 .glyphicon {
@@ -7896,10 +7903,8 @@ header .usernav .usermenu {
 }
 
 header .usernav .usermenu>a img,header .usernav .usermenu>span img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 1px solid rgba(0,0,0,.06);
+	width: 30px;
+	height: 30px;
 	vertical-align: middle;
 	margin-left: 10px
 }

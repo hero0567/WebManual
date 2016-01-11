@@ -50,7 +50,7 @@
 
 				<div class="content">
 					<div class="on">
-						<form name="myForm" ng-submit="signin()">
+						<form id="form-signin" name="myForm" ng-submit="signin()">
 			                <div>
 			                    <div class="span12 alert alert-error" ng-show="error">
 			                        <strong>{{errorMessage}}</strong>
