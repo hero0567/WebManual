@@ -5,7 +5,7 @@
  * @constructor
  */
 
-app.controller("HeaderController", function($scope, $http) {			
+app.controller("HeaderController", function($scope, $http, $cookieStore) {			
 		
 	$scope.addBookMark = function() {
 		if (document.all){
@@ -21,7 +21,7 @@ app.controller("HeaderController", function($scope, $http) {
    	} 
 	
 	$scope.logout = function() {
-		delete sessionStorage.user;
+		$cookieStore.remove("user");
 		window.location = "/logout";
 	}	
 });
