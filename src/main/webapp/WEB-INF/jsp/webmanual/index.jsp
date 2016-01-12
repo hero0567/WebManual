@@ -74,7 +74,7 @@
 			     <!-- block 搜索列表区 --> 
 				     <div> 
 					      <ul class="list-multi-result thead"> 
-					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
+					       	<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i> <i class="cell date"> 上市时间 </i> <i class="cell action"> 关注 </i> </li> 
 					      </ul> 
 					      <ul class="list-multi-result"> 
 					        <li ng-repeat="sub in book.subType"> 
@@ -84,16 +84,16 @@
 					             </a> 
 					           </i> 
 					           <i class="cell maincell"> 
-					             <p class="title"><a ng-href="/details?id={{sub.id}}">{{sub.name}}</a></p> 
-					             <p class="des">{{sub.productSize}}</p> 
-					             <p> 
-					               <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
-					             </p> 
+					              <a ng-href="/details?id={{sub.id}}">{{sub.name}}</a>  
 					           </i> 
-					           <i class="cell brand">{{sub.brand}} </i> 
+					           
+					           <i class="cell brand">
+					           	 <a href="">{{sub.brand}}</a> 
+					           </i> 
 					           <i class="cell version"> 
-					             <a href=""><span class="tag gray">{{sub.version}}</span></a> 
+					             <a href=""> {{sub.version}} </a> 
 					           </i> 
+					           <i class="cell date"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a> </i>
 					           <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a></i> 
 					      	</li>   
 					      </ul> 
