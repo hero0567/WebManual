@@ -32,7 +32,7 @@ app.controller("IndexController", function($scope, $http, $location, userService
     $scope.fetchSubTypes = function() {
     	angular.forEach($scope.menu, function (m, index) {
     		$http.get('/hb/大家电/'+m.subType+'?size=' + $scope.size).success(function(types){
-                $scope.handbook.push({name:m.subType, count:m.count, subType: types});  
+                $scope.handbook.push({name:m.subType, count:m.count, subType: types, sequence: m.sequence});  
                 if ($scope.handbook.length == $scope.menu.length){
                 	$scope.fetchFavorite();
                 }

@@ -64,7 +64,7 @@
 				 </div> 
 			</div> 
 		
-			<div class="sec" ng-repeat="book in handbook"> 
+			<div class="sec" ng-repeat="book in handbook | orderBy: 'sequence'""> 
 			  	<div class="titlebar tall"> 
 				    <span class="on">{{book.name}}</span> 
 				    <i class="rightset"> <a target="_blank" href="/appliance?subtype={{book.name}}&count={{book.count}}">查看全部</a> </i> 

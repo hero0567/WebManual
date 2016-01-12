@@ -29,8 +29,8 @@ public interface HandBookRepository extends PagingAndSortingRepository<HandBookD
 	public List<HandBookDomain> findByTypeAndSubTypeAndNameLike(String type, String subType, String name);
 
 	@Query(value = "select b.count, b.subType, a.sequence from handbook_type a,"
-			+ "(select subtype,count(1) count from handbook group by subtype) b "
-			+ "where a.name = b.subtype", nativeQuery = true)
+			+ "(select subType,count(1) count from handbook group by subType) b "
+			+ "where a.name = b.subType", nativeQuery = true)
 	public List<Object[]> findMenu();
 
 	// Pageable
