@@ -90,7 +90,7 @@
 			                </div>
 			
 			                <div class="row tip tipbottom">
-								<label><input ng-model="user.rememberMe" type="checkbox" value="false"> 记住我</label> 
+								<label><input name="_spring_security_remember_me" ng-model="user.rememberMe" type="checkbox" value="false"> 记住我</label> 
 								<a href=" " class="flr">忘记密码</a>
 							</div>
 			

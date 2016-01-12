@@ -79,6 +79,8 @@ public class WebSecurityConfiguration extends WebMvcConfigurerAdapter {
 //								.successHandler(crossPSuccessHandler)
 								.failureUrl("/login?error").permitAll()
 					.and()
+						.rememberMe()
+					.and()
 						.logout()
 							.deleteCookies("remove")
 							.invalidateHttpSession(false)
