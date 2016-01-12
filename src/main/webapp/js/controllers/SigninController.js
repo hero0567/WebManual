@@ -4,7 +4,7 @@
  * SigninController
  * @constructor
  */
-app.controller("SigninController", function($scope, $http, $location, $cookieStore, $cookies) {
+app.controller("SigninController", function($scope, $http, $location, $cookieStore) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
@@ -13,11 +13,7 @@ app.controller("SigninController", function($scope, $http, $location, $cookieSto
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
-	
-	var expireDate = new Date();
-	expireDate.setDate(expireDate.getDate() + 1);
-	$cookies.put("user", $scope.user, {'expires': expireDate});
-	
+		
 	
 	$scope.signin = function() {		
 	    $http({
