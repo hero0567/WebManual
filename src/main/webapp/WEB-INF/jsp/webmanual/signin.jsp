@@ -29,11 +29,12 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/controllers/SigninController.js"></script>	  
 
 </head>
-<body ng-app="app" ng-controller="SigninController" class="">
+<body ng-cloak ng-app="app" ng-controller="SigninController" class="">
 	<div class="none">
 		<img src="./img/favicon.png">
 	</div>

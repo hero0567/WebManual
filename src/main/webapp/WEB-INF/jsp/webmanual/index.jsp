@@ -34,6 +34,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/controllers/IndexController.js"></script>
 	<script src="js/service/UserService.js"></script>

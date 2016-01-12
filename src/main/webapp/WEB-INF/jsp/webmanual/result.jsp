@@ -21,6 +21,7 @@
 	</script> 
 	<script src="js/lib/others/modernizr.js"></script>
 	<script src="js/lib/angular/angular.js"></script>
+	<script src="js/lib/angular/angular-cookies.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/controllers/ResultController.js"></script>
 	<script src="js/service/UserService.js"></script>	

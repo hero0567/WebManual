@@ -1,16 +1,12 @@
 'use strict';
 
-app.factory('userService', ['$http', function($http) {
+app.factory('userService', ['$http','$cookieStore', function($http, $cookieStore) {
 
 	var user = {};
 	
 	function initUser(){
-//		if (angular.isUndefined($scope.login)){
-//			$scope.login = {status : false};
-//			$scope.user = {};
-//		}
-		if (angular.isDefined(sessionStorage.user)){
-			var u = JSON.parse(sessionStorage.user);	
+		var u = $cookieStore.get("user");
+		if (angular.isDefined(u)){
 			user.id = u.id;
 			user.username = u.username;
 		}
@@ -19,7 +15,6 @@ app.factory('userService', ['$http', function($http) {
 	function getUser(){
 		return user;
 	}	
-	
 	
 	return {
 		initUser : initUser,

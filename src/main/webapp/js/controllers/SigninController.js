@@ -4,7 +4,7 @@
  * SigninController
  * @constructor
  */
-app.controller("SigninController", function($scope, $http, $location, $window) {
+app.controller("SigninController", function($scope, $http, $location, $cookieStore) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
@@ -13,7 +13,7 @@ app.controller("SigninController", function($scope, $http, $location, $window) {
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
-		
+	
 	$scope.signin = function() {		
 	    $http({
 	        method  : 'POST',
@@ -23,7 +23,7 @@ app.controller("SigninController", function($scope, $http, $location, $window) {
 	    })
         .success(function(data) {
         	$http.get('/u?uname=' + $scope.user.username).success(function(user){
-        		$window.sessionStorage.user = JSON.stringify(user);
+        		$cookieStore.put("user", user);        		
         		window.location = "/";
             })        	
         }).error(function() {

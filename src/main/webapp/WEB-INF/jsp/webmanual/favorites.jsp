@@ -30,6 +30,7 @@
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/others/modernizr.js"></script>
     <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/controllers/FavoritesController.js"></script>
 	<script src="js/service/UserService.js"></script>	
