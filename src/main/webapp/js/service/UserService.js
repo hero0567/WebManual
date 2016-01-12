@@ -1,11 +1,11 @@
 'use strict';
 
-app.factory('userService', ['$http','$cookieStore', function($http, $cookieStore) {
+app.factory('userService', ['$http','$cookies', function($http, $cookies) {
 
 	var user = {};
 	
 	function initUser(){
-		var u = $cookieStore.get("user");
+		var u = $cookies.getObject("user");
 		if (angular.isDefined(u)){
 			user.id = u.id;
 			user.username = u.username;

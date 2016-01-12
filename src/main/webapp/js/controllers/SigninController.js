@@ -4,16 +4,17 @@
  * SigninController
  * @constructor
  */
-app.controller("SigninController", function($scope, $http, $location, $cookieStore) {
+app.controller("SigninController", function($scope, $http, $location, $cookies) {
 	
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
 	$scope.error = {captcha : false, loginfailed : false};
+	$scope.expired = 7;
 		
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
-		
+	
 	
 	$scope.signin = function() {		
 	    $http({
@@ -25,7 +26,13 @@ app.controller("SigninController", function($scope, $http, $location, $cookieSto
         .success(function(data) {
         	$http.get('/u?uname=' + $scope.user.username).success(function(user){
         		user.password = $scope.user.password;
-        		$cookieStore.put("user", user);        		
+        		if ($scope.user.rememberMe){
+        			var expireDate = new Date();
+        			expireDate.setDate(expireDate.getDate() + $scope.expired);
+        			$cookies.putObject("user", user, {'expires': expireDate});
+        		}else{
+        			$cookies.putObject("user", user);   
+        		}
         		window.location = "/";
             })        	
         }).error(function() {
