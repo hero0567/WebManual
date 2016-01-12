@@ -8,16 +8,19 @@
 
 @media (max-width:850px) {
 	
-	.list-multi-result .cell,.list-main-incset .cell {
+	.list-multi-result .cell,.list-main-incset .cell{
 		display: table-cell;
 		font-style: normal;
 		padding: 5px;
 		vertical-align: middle; 
 	}
+	.list-multi-result li, list-multi-result li{
+		padding-left:20px !important;
+	}
 		 
 }
 @media (max-width:768px) {
-	.list-multi-result .pic, .list-multi-result .brand{
+	.list-multi-result .pic {
 		display:none !important;
 	}
 }
@@ -9164,13 +9167,13 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-multi-result .cell.pic,.list-main-incset .cell.pic {
-	min-width: 65px;
+	width: 65px;
 	padding-left: 0;
 	padding-right: 0
 }
 
 .list-multi-result .cell.maincell,.list-main-incset .cell.maincell {
-	min-width: 300px
+	width: 300px
 }
 
 .list-multi-result .cell.maincell .des,.list-main-incset .cell.maincell .des {
@@ -9196,13 +9199,13 @@ ul[class|=list-main]:not(.thead) .tag {
 }
 
 .list-multi-result .cell.date,.list-multi-result .cell.fina,.list-multi-result .cell.normalsmall,.list-multi-result .cell.version,.list-main-incset .cell.date,.list-main-incset .cell.fina,.list-main-incset .cell.normalsmall,.list-main-incset .cell.round {
-	width: 100px;
+	width: 200px;
 	text-align: center;
 	overflow: hidden
 }
 .list-multi-result .cell.brand{
-	min-width:200px;
-	font-size:12px;
+	width:200px;
+	font-size:14px;
 }
 
 .list-multi-result .cell.round,.list-main-incset .cell.version {
@@ -9213,9 +9216,12 @@ ul[class|=list-main]:not(.thead) .tag {
 	padding-left: 0;
 	padding-right: 0;
 	min-width: 85px;
-	text-align: center
+	text-align: right; 
+	padding-right:25px;
 }
-
+.list-multi-result.thead .cell.action,.list-main-incset.head .cell.action {
+	padding-right:20px;
+}
 .list-multi-result .cell.action .fa,.list-main-incset .cell.action .fa {
 	font-size: 1.6em
 }
@@ -16931,7 +16937,7 @@ ul[class|=list-main]:not(.thead) .tag {
 		padding-left: 5%
 	}
 
-	.list-multi-result .cell.action,.list-multi-result .cell.date,.list-multi-result .cell.round {
+	.list-multi-result .cell.date,.list-multi-result .cell.round {
 		display: none!important
 	}
 
