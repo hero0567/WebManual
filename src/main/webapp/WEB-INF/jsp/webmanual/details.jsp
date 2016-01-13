@@ -81,7 +81,7 @@
 			<div class="main">
 			  <div class="sec height-292">
 			    <div class="titlebar">
-			      <span><i class="fa fa-th"></i>{{handbook.name}}</span>
+			      <span ng-bind="handbook.name"><i class="fa fa-th"></i></span>
 			      <div class="rightset">
 			          <a class="t-small" href=""><i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i></a>
 			        </div>
@@ -90,25 +90,25 @@
 			                <ul class="list-block aboutus">
 			                  <li>
 			                    <i class="fa fa-dot-circle-o"></i>厂商： 
-			                    <a href="">{{handbook.brand}}</a>
+			                    <a href="" ng-bind="handbook.brand"></a>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-newspaper-o"></i>上架时间： 
-			                    <a href="">{{ handbook.productDate | date:'yyyy-MM-dd' }}</a>
+			                    <a href="" ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></a>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-phone"></i>官方客服电话： 
-			                    <a href="tel:02885303320" ng-repeat="s in services ">{{s.tel}} </a>
+			                    <a href="tel:02885303320" ng-repeat="s in services " ng-bind="s.tel"> </a>
 			                  </li>
 			                
 			                  <li>
 			                    <i class="fa fa-envelope"></i>官方邮箱： 
-			                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services ">{{s.email}} </a>
+			                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services " ng-bind="s.email"> </a>
 			                  </li>
 			                
 			                  <li>
 			                    <i class="fa fa-map-marker"></i>官方网站： 
-			                    <span ng-repeat="s in services" >{{s.site}} </span>
+			                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
 			                  </li>
 			                </ul>
 			                <div class="pl-mt20 margin-20">

@@ -54,7 +54,7 @@
 						<form id="form-signin" name="myForm" ng-submit="signin()">
 			                <div>
 			                    <div class="span12 alert alert-error" ng-show="error">
-			                        <strong>{{errorMessage}}</strong>
+			                        <strong ng-bind="errorMessage"></strong>
 			                    </div>
 			                </div>
 			                
@@ -73,7 +73,7 @@
 				                        class="pull-left" id="login-pass"><span
 				                        class="add-on margin-left-40"><i class="icon-lock"></i></span>
 				                    <div ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
-				                        class="span12 alert alert-error text-left">必填字段，请输入长度在6-16位的密码！</div>
+				                        class="span12 alert alert-error text-left" ng-bind="'必填字段，请输入长度在6-16位的密码！'"></div>
 				                </div>
 							</div>
 							
@@ -83,14 +83,14 @@
 				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required/>
 				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" />
 				                    <div ng-show="error.captcha"
-										class="span12 alert alert-error text-left">验证码错误，请重新输入！</div>
+										class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
 									<div ng-show="error.loginfailed"
-										class="span12 alert alert-error text-left">登录失败，请重新登录！</div>
+										class="span12 alert alert-error text-left" ng-bind="'登录失败，请重新登录！'"></div>
 				                </div>
 			                </div>
 			
 			                <div class="row tip tipbottom">
-								<label><input name="_spring_security_remember_me" ng-model="user.rememberMe" type="checkbox" value="false"> 记住我</label> 
+								<label><input name="remember-me" ng-model="user.rememberMe" type="checkbox" value="false"> 记住我</label> 
 								<a href=" " class="flr">忘记密码</a>
 							</div>
 			

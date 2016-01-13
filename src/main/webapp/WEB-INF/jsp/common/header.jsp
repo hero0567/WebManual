@@ -32,7 +32,7 @@
 							     	<!-- <a class="wmanualbtn" href="/signin">已登录{{user.username}}</a> -->
 							     	
 							     	<div class="usermenu hoversub">
-                                        <a href="" title="进入个人中心">{{user.username}}</a>
+                                        <a href="" title="进入个人中心" ng-bind="user.username"></a>
                                       	<a><img src="img/user.png"></a>
                                         <div class="subblock">
                                             <ul class="list-dropdown-menu">
@@ -50,7 +50,7 @@
 			  <div class="boxed"> 
 				   <div class="cont"> 
 					    <ul class="subnav nav-comp"> 
-					    	<li ng-repeat="m in menu | orderBy: 'sequence'"><a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span>{{m.subType}}</span><i>{{m.count}}</i></a></li>
+					    	<li ng-repeat="m in menu | orderBy: 'sequence'"><a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span ng-bind="m.subType"></span><i ng-bind="m.count"></i></a></li>
 					    </ul> 
 				   </div> 
 			  </div> 

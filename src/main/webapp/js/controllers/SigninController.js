@@ -48,7 +48,6 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
 	            $scope.error.captcha = false;
 	        }).error(function() {
 	        	$scope.error.captcha = true;
-	        	$scope.changeCaptcha();
 	        });
 		}
 	}

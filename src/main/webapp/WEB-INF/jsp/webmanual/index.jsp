@@ -67,7 +67,7 @@
 		
 			<div class="sec" ng-repeat="book in handbook | orderBy: 'sequence'""> 
 			  	<div class="titlebar tall"> 
-				    <span class="on">{{book.name}}</span> 
+				    <span class="on" ng-bind="book.name"></span> 
 				    <i class="rightset"> <a target="_blank" href="/appliance?subtype={{book.name}}&count={{book.count}}">查看全部</a> </i> 
 		  		</div>
 			    <div> 
@@ -84,16 +84,16 @@
 					             </a> 
 					           </i> 
 					           <i class="cell maincell"> 
-					              <a ng-href="/details?id={{sub.id}}">{{sub.name}}</a>  
+					              <a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>  
 					           </i> 
 					           
 					           <i class="cell brand">
-					           	 <a href="">{{sub.brand}}</a> 
+					           	 <a href="" ng-bind="sub.brand"></a> 
 					           </i> 
 					           <i class="cell version"> 
-					             <a href=""> {{sub.version}} </a> 
+					             <a href="" ng-bind="sub.version"> </a> 
 					           </i> 
-					           <i class="cell date"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a> </i>
+					           <i class="cell date"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a> </i>
 					           <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a></i> 
 					      	</li>   
 					      </ul> 

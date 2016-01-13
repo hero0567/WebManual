@@ -79,7 +79,7 @@ public class WebSecurityConfiguration extends WebMvcConfigurerAdapter {
 //								.successHandler(crossPSuccessHandler)
 								.failureUrl("/login?error").permitAll()
 					.and()
-						.rememberMe()
+						.rememberMe().tokenValiditySeconds(1209600)
 					.and()
 						.logout()
 							.deleteCookies("remove")

@@ -60,11 +60,11 @@
 										placeholder="请输入注册邮箱地址 " class="pull-left personalEmail" required> <span
 										class="add-on margin-left-40"><i class="icon-envelope"></i></span>
 									<div ng-show="myForm.personalEmail.$dirty && !myForm.personalEmail.$valid"
-										class="span12 alert alert-error text-left">必填字段，请输入正确的邮件格式！</div>
+										class="span12 alert alert-error text-left" ng-bind="'必填字段，请输入正确的邮件格式！'"></div>
 									<div ng-show="error.userexisted"
-										class="span12 alert alert-error text-left">用户名已经存在，请输入另外一个用户名！</div>
+										class="span12 alert alert-error text-left" ng-bind="'用户名已经存在，请输入另外一个用户名！'"></div>
 									<div ng-show="!error.register"
-										class="span12 alert alert-error text-left">注册失败，请重新注册！</div>
+										class="span12 alert alert-error text-left" ng-bind="'注册失败，请重新注册！'"></div>
 
 								</div>
 							</div>
@@ -76,7 +76,7 @@
 										class="add-on margin-left-40"><i class="icon-lock"></i></span>
 									<div
 										ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
-										class="span12 alert alert-error text-left">必填字段，请输入长度在6-16位的密码！</div>
+										class="span12 alert alert-error text-left" ng-bind="'必填字段，请输入长度在6-16位的密码！'"></div>
 								</div>
 							</div>
 
@@ -88,7 +88,7 @@
 										class="icon-lock"></i></span>
 									<div
 										ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.password"
-										class="span12 alert alert-error text-left">密码确认不对，请再次输入！</div>
+										class="span12 alert alert-error text-left" ng-bind="'密码确认不对，请再次输入！'"></div>
 								</div>
 							</div>
 							
@@ -98,7 +98,7 @@
 				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required />
 				                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" />
 				                    <div ng-show="error.captcha"
-										class="span12 alert alert-error text-left">验证码错误，请重新输入！</div>
+										class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
 				                </div>
 			                </div>
 

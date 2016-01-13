@@ -53,7 +53,7 @@
 	     	<div class="sidebar left">
 				<div class="sec">
 					<ul class="list-lite">
-						<li ng-repeat="m in favorList" ng-click="changeSubType(m.subType, m.count)"><a ng-class="{on: m.subType == currentSubType}" href="">{{m.subType}} <span>{{m.count}}</span></a></li>
+						<li ng-repeat="m in favorList" ng-click="changeSubType(m.subType, m.count)"><a ng-class="{on: m.subType == currentSubType}" href="" ng-bind="m.subType"> <span ng-bind="">{{m.count}}</span></a></li>
 					</ul>
 				</div>	
 			</div>
@@ -63,7 +63,7 @@
 		       <div class="sec">
 		       	<div class="search-title-bar">
 					<span class="flr">
-						你收藏的“ <b>说明书</b> ”，共有 {{count}} 本
+						你收藏的“ <b>说明书</b> ”，共有  <span ng-bind="count"></span> 本
 					</span>
 				</div> 
 		        <ul class="list-multi-result thead"> 
@@ -77,15 +77,15 @@
 		              </a> 
 		            </i> 
 		            <i class="cell maincell"> 
-		              <p class="title"><a ng-href="/details?id={{sub.handBook.id}}">{{sub.handBook.name}}</a></p> 
+		              <p class="title"><a ng-href="/details?id={{sub.handBook.id}}" ng-bind="sub.handBook.name"></a></p> 
 		              <p class="des">{{sub.handBook.productSize}}</p> 
 		              <p> 
-		                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.handBook.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
+		                <span class="tags t-small c-gray-aset"> <a href="" ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></a>上市</span>   
 		              </p> 
 		            </i> 
-		            <i class="cell">{{sub.handBook.brand}} </i> 
+		            <i class="cell" ng-bind="sub.handBook.brand"> </i> 
 		            <i class="cell round"> 
-		              <a href=""><span class="tag gray">{{sub.handBook.version}}</span></a> 
+		              <a href=""><span class="tag gray" ng-bind="sub.handBook.version"></span></a> 
 		            </i> 
 		            <i class="cell action"> <a href="" class="fa fa-star" ng-click="addFavorite(user.id, sub, $index)"></a> </i> 
 		          </li>			          

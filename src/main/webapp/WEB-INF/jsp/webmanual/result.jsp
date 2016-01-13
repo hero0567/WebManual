@@ -54,7 +54,7 @@
 		       <div class="sec">
 		       	<div class="search-title-bar">
 					<span class="flr">
-						你正在搜索 “ <b>{{params.key}}</b> ”，共找到 {{count}} 条结果
+						你正在搜索 “ <b ng-bind="params.key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
 					</span>
 				</div> 
 		        <ul class="list-multi-result thead"> 
@@ -68,15 +68,15 @@
 			              </a> 
 			            </i> 
 			            <i class="cell maincell"> 
-			              <p class="title"><a ng-href="/details?id={{sub.id}}">{{sub.name}}</a></p> 
+			              <p class="title"><a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a></p> 
 			              <p class="des">{{sub.productSize}}</p> 
 			              <p> 
-			                <span class="tags t-small c-gray-aset"> <a href="">{{ sub.productDate | date:'yyyy-MM-dd' }}</a>上市</span>   
+			                <span class="tags t-small c-gray-aset"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a>上市</span>   
 			              </p> 
 			            </i> 
-			            <i class="cell">{{sub.brand}} </i> 
+			            <i class="cell" ng-bind="sub.brand"> </i> 
 			            <i class="cell round"> 
-			              <a href=""><span class="tag gray">{{sub.version}}</span></a> 
+			              <a href=""><span class="tag gray" ng-bind="sub.version"></span></a> 
 			            </i> 
 			            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
 			         </li>							
