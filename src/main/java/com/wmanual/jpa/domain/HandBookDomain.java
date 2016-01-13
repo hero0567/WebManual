@@ -1,5 +1,6 @@
 package com.wmanual.jpa.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,16 +23,23 @@ public class HandBookDomain {
 	private String tags;
 	private String des;
 	private String version;
-	private int size;
+	private String size;
+	@Column(columnDefinition="BIGINT default 0")
 	private long uploadDate;
+	@Column(columnDefinition="BIGINT default 0")
 	private long productDate;
 	private String productSize;
+	@Column(columnDefinition="INT default 0")
 	private int status;
+	@Column(length = 500)
 	private String url;
 	private String imgUrl;
 	private String owner;
+	@Column(columnDefinition="INT default 0")
 	private int downloadCount;
+	@Column(columnDefinition="INT default 0")
 	private int viewCount;
+	@Column(columnDefinition="INT default 0")
 	private int favorCount;
 	private String lan;
 		
@@ -84,7 +92,7 @@ public class HandBookDomain {
 	public void setVersion(String version) {
 		this.version = version;
 	}
-	public int getSize() {
+	public String getSize() {
 		return size;
 	}
 	public long getProductDate() {
@@ -99,7 +107,7 @@ public class HandBookDomain {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-	public void setSize(int size) {
+	public void setSize(String size) {
 		this.size = size;
 	}
 	public long getUploadDate() {
