@@ -4,19 +4,19 @@
 			<div class="column-custom"> 
 			 <ul> 
 			  <li><b>关于</b></li> 
-			  <li><a target="_blank" href="">关于我们</a></li> 
-			  <li><a target="_blank" href="">如何上传说明书</a></li> 
-			  <li><a target="_blank" href="https://www.92shuomingshu.com/partners">合作伙伴</a></li> 
-			  <li><a target="_blank" href="https://www.92shuomingshu.com/faq">FAQ</a></li> 
+			  <li><a target="_blank" href="/aboutus">关于我们</a></li> 
+			  <li><a target="_blank" href="/declare">免责声明</a></li> 
+			  <li><a target="_blank" href="/friends">合作伙伴</a></li> 
+			  <li><a target="_blank" href="/faq">FAQ</a></li> 
 			 </ul> 
 			</div> 
 			<div class="column-custom"> 
 			 <ul> 
 			   <li><b>发现</b></li> 
-			   <li><a target="_blank" href="">数据服务</a></li> 
-			   <li><a target="_blank" href="">技术咨询</a></li> 
-			   <li><a target="_blank" href="">定制服务</a></li> 
-			   <li><a target="_blank" href="">自助建站</a></li> 
+			   <li><a target="_blank" href="/service">数据服务</a></li> 
+			   <li><a target="_blank" href="/consult">技术咨询</a></li> 
+			   <li><a target="_blank" href="/custom">定制服务</a></li> 
+			   <li><a target="_blank" href="http://www.sitecomer.com/">自助建站</a></li> 
 			 </ul> 
 			</div> 
 			<div class="column-custom" > 

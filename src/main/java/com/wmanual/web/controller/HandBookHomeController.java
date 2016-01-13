@@ -83,11 +83,50 @@ public class HandBookHomeController {
 		return "webmanual/favorites";
 	}
 	
+	@RequestMapping("/custom")
+	public String custom() throws Exception {
+		return "webmanual/custom";
+	}
+	
+	@RequestMapping("/declare")
+	public String declare() throws Exception {
+		return "webmanual/declare";
+	}
+	
+	@RequestMapping("/friends")
+	public String friends() throws Exception {
+		return "webmanual/custom";
+	}
+	
+	@RequestMapping("/service")
+	public String service() throws Exception {
+		return "webmanual/service";
+	}
+	
+	@RequestMapping("/support")
+	public String support() throws Exception {
+		return "webmanual/support";
+	}
+	
+	@RequestMapping("/faq")
+	public String faq() throws Exception {
+		return "webmanual/faq";
+	}
+	
+	@RequestMapping("/consult")
+	public String consult() throws Exception {
+		return "webmanual/consult";
+	}
+	
 	@RequestMapping("/details")
 	public String details() throws Exception {
 		return "webmanual/details";
 	}
 	
+	@RequestMapping("/aboutus")
+	public String aboutus() throws Exception {
+		return "webmanual/aboutus";
+	}
 	/**
 	 * http://localhost:8080/register?username=11112121&password=1212121
 	 * @param user
