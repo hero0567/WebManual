@@ -88,7 +88,7 @@
 					           </i> 
 					           
 					           <i class="cell brand">
-					           	 <a href="" ng-bind="sub.brand"></a> 
+					           	 <a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> 
 					           </i> 
 					           <i class="cell version"> 
 					             <a href="" ng-bind="sub.version"> </a> 

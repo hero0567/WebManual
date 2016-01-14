@@ -83,7 +83,7 @@
 		                <span class="tags t-small c-gray-aset"> <a href="" ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></a>上市</span>   
 		              </p> 
 		            </i> 
-		            <i class="cell" ng-bind="sub.handBook.brand"> </i> 
+		            <i class="cell"><a ng-href="/result?key={{sub.handBook.brand}}" ng-bind="sub.handBook.brand"></a>  </i> 
 		            <i class="cell round"> 
 		              <a href=""><span class="tag gray" ng-bind="sub.handBook.version"></span></a> 
 		            </i> 

@@ -90,7 +90,7 @@
 			                <ul class="list-block aboutus">
 			                  <li>
 			                    <i class="fa fa-dot-circle-o"></i>厂商： 
-			                    <a href="" ng-bind="handbook.brand"></a>
+			                    <a ng-href="/result?key={{handbook.brand}}" ng-bind="handbook.brand"></a>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-newspaper-o"></i>上架时间： 

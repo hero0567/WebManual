@@ -74,7 +74,7 @@
 			                <span class="tags t-small c-gray-aset"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a>上市</span>   
 			              </p> 
 			            </i> 
-			            <i class="cell" ng-bind="sub.brand"> </i> 
+			            <i class="cell"><a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> </i> 
 			            <i class="cell round"> 
 			              <a href=""><span class="tag gray" ng-bind="sub.version"></span></a> 
 			            </i> 
