@@ -81,7 +81,7 @@
 		              <p class="title"><a ng-href="/details?id={{sub.handBook.id}}" ng-bind="sub.handBook.name"></a></p> 
 		              <p class="des">{{sub.handBook.productSize}}</p> 
 		              <p> 
-		                <span class="tags t-small c-gray-aset"> <a href="" ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></a>上市</span>   
+		                <span class="tags t-small c-gray-aset"> <span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span>上市</span>   
 		              </p> 
 		            </i> 
 		            <i class="cell"><a ng-href="/result?key={{sub.handBook.brand}}" ng-bind="sub.handBook.brand"></a>  </i> 

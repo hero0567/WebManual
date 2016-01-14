@@ -94,7 +94,7 @@
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-newspaper-o"></i>上架时间： 
-			                    <a href="" ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></a>
+			                    <span ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></span>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-phone"></i>官方客服电话： 

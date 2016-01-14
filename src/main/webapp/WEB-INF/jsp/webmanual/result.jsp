@@ -71,7 +71,7 @@
 			              <p class="title"><a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a></p> 
 			              <p class="des">{{sub.productSize}}</p> 
 			              <p> 
-			                <span class="tags t-small c-gray-aset"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a>上市</span>   
+			                <span class="tags t-small c-gray-aset"> <span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span>上市</span>   
 			              </p> 
 			            </i> 
 			            <i class="cell"><a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> </i> 

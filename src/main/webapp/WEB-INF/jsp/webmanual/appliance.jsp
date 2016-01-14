@@ -83,7 +83,7 @@
 					            <i class="cell version"> 
 					             <a href="" ng-bind="sub.version"> </a> 
 					           </i> 
-					           <i class="cell date"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a> </i>
+					           <i class="cell date"> <span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> </i>
 					            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
 					         </li>							
 						</ul>

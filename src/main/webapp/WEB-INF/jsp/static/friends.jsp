@@ -16,6 +16,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages/friends.css" />
 	
 	<script src="js/lib/others/modernizr.js"></script>
 	<script>
