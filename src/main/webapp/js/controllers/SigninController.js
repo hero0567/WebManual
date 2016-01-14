@@ -9,7 +9,7 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
 	$scope.imageUrl = "/sec/img";
 	$scope.user = {username : "1111@163.com", password : "111111" };
 	$scope.error = {captcha :false, loginfailed : false};
-	$scope.expired = 7;
+//	$scope.expired = 7;
 		
 	$scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
@@ -17,13 +17,11 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
 	
 	
 	$scope.signin = function() {
-		if($scope.myForm.$valid){
-			$http.get('/sec/img/check?code=' + $scope.user.captcha).success(function(){
-				submitLogin();
-	        }).error(function() {
-	        	$scope.error.captcha = true;
-	        });
-		}				
+		$http.get('/sec/img/check?code=' + $scope.user.captcha).success(function(){
+			submitLogin();
+        }).error(function() {
+        	$scope.error.captcha = true;
+        });		
 	};
 	
 	
@@ -47,13 +45,13 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
         .success(function(data) {
         	$http.get('/u?uname=' + $scope.user.username).success(function(user){
         		user.password = $scope.user.password;
-        		if ($scope.user.rememberMe){
-        			var expireDate = new Date();
-        			expireDate.setDate(expireDate.getDate() + $scope.expired);
-        			$cookies.putObject("user", user, {'expires': expireDate});
-        		}else{
-        			$cookies.putObject("user", user);   
-        		}
+//        		if ($scope.user.rememberMe){
+//        			var expireDate = new Date();
+//        			expireDate.setDate(expireDate.getDate() + $scope.expired);
+//        			$cookies.putObject("user", user, {'expires': expireDate});
+//        		}else{
+//        			$cookies.putObject("user", user);   
+//        		}
         		window.location = "/";
             })        	
         }).error(function() {

@@ -95,7 +95,7 @@
 							</div>
 			
 							<div class="row">
-								<button type="submit" class="wmanualbtn" ng-disabled="myForm.$invalid  || error.captcha">登 录</button>
+								<button type="submit" class="wmanualbtn" ng-disabled="myForm.$invalid">登 录</button>
 							</div>
 			                 
 		                </form> 
