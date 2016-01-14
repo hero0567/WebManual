@@ -99,13 +99,12 @@ app.controller("FavoritesController", function($scope, $http, $location, userSer
     	}
  	} 
     
-    $scope.addFavorite = function(uid, sub, index){
+    $scope.addFavorite = function(uid, sub){
 		if (uid){
-			$http.delete('/favor/' + sub.id).success(function() {
-//				$scope.results.splice(index,1);
+			$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
 				$scope.fetchFavorList($scope.user.id);        
 			    $scope.searchSubType($scope.user.id);
-	        });
+	        });			
     	}else{
     		window.location = "/signin";
     	}

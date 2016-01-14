@@ -1,5 +1,7 @@
 package com.wmanual.web.controller.rest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -23,6 +25,8 @@ import com.wmanual.web.playload.FavoritePlayLoad;
 @RestController
 @RequestMapping(value = "/favor")
 public class HandBookFavoriteController {
+	
+	private Logger logger = LoggerFactory.getLogger(getClass());
 	
 	@Autowired
 	private HandBookFavoriteRepository hbfRepository;
@@ -67,29 +71,55 @@ public class HandBookFavoriteController {
 	public ResponseEntity<String> add(@PathVariable("uid") Long uid, @PathVariable("hbid") Long hbid,
 			@RequestBody FavoritePlayLoad favorteLoad) throws Exception {
 
+		logger.info("User[{}] Add handbook[{}] as favorite.", uid, hbid);
+		
 		User user = userRepository.findOne(uid);
 		HandBookDomain hbook = hbRepository.findOne(hbid);
 		HandBookFavoriteDomain hbookfav = new HandBookFavoriteDomain();
 		hbookfav.setUser(user);
 		hbookfav.setHandBook(hbook);
 		hbookfav.setAlias(favorteLoad.getAlias());
-		hbookfav.setComment(favorteLoad.getComment());
-		
+		hbookfav.setComment(favorteLoad.getComment());		
 		hbfRepository.save(hbookfav);
-		return new ResponseEntity<String>("Add favorite successful!", HttpStatus.OK);
+
+		HandBookDomain hb = hbRepository.findOne(hbid);
+		int favorCount = hb.getFavorCount();
+		hb.setFavorCount(++favorCount);	
+		hbRepository.save(hb);
+		
+		logger.info("User[{}] Add handbook[{}] as successful. {}", uid, hbid, hb.getId());
+		
+		return new ResponseEntity<String>(HttpStatus.OK);
 	}
 	
 	
 	@RequestMapping(value = "/{uid}/{hbid}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deleteByUID(@PathVariable("uid") Long uid, @PathVariable("hbid") Long hbid) throws Exception {
 		hbfRepository.deleteByUIDAndHBID(uid, hbid);
-		return new ResponseEntity<String>("Delete favorite successful!", HttpStatus.OK);
+		
+		HandBookDomain hb = hbRepository.findOne(hbid);
+		int favorCount = hb.getFavorCount();
+		favorCount = favorCount <= 0 ? 0 : --favorCount;
+		hb.setFavorCount(favorCount);	
+		hbRepository.save(hb);
+		return new ResponseEntity<String>(HttpStatus.OK);
 	}
 	
 	@RequestMapping(value = "/{fid}", method = RequestMethod.DELETE)
-	public ResponseEntity<String> delete(@PathVariable("fid") Long fid) throws Exception {
-		hbfRepository.delete(fid);
-		return new ResponseEntity<String>("Delete favorite successful!", HttpStatus.OK);
+	public ResponseEntity<String> delete(@PathVariable("fid") Long fid, @RequestParam(value = "hbid", required = false, defaultValue = "0") Long hbid) throws Exception {
+		if (hbid != 0){
+			hbfRepository.delete(fid);
+			
+			HandBookDomain hb = hbRepository.findOne(hbid);
+			int favorCount = hb.getFavorCount();
+			favorCount = favorCount <= 0 ? 0 : favorCount--;
+			hb.setFavorCount(favorCount);	
+			hbRepository.save(hb);
+		}else{
+			hbfRepository.delete(fid);
+		}
+		
+		return new ResponseEntity<String>(HttpStatus.OK);
 	}
 
 }

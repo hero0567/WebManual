@@ -87,7 +87,7 @@
 		            <i class="cell round"> 
 		              <a href=""><span class="tag gray" ng-bind="sub.handBook.version"></span></a> 
 		            </i> 
-		            <i class="cell action"> <a href="" class="fa fa-star" ng-click="addFavorite(user.id, sub, $index)"></a> </i> 
+		            <i class="cell action"> <a href="" class="fa fa-star" ng-click="addFavorite(user.id, sub.handBook)"></a> </i> 
 		          </li>			          
 		        </ul> 
 		       </div> 
