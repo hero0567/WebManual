@@ -17,6 +17,9 @@ public interface HandBookRepository extends PagingAndSortingRepository<HandBookD
 
 	@Query("from HandBookDomain where name like %?1%")
 	public List<HandBookDomain> findByNameLike(String name);
+	
+	@Query("from HandBookDomain where name like %?1% or brand like %?1%")
+	public List<HandBookDomain> findByNameOrBrandLike(String name);
 
 	public List<HandBookDomain> findByType(String type);
 
@@ -36,6 +39,9 @@ public interface HandBookRepository extends PagingAndSortingRepository<HandBookD
 	// Pageable
 	@Query("from HandBookDomain where name like %?1%")
 	public List<HandBookDomain> findByNameLikePage(String name, Pageable pageable);
+	
+	@Query("from HandBookDomain where name like %?1% or brand like %?1%")
+	public List<HandBookDomain> findByNameOrBrandLikePage(String name, Pageable pageable);
 
 	@Query("from HandBookDomain")
 	public Page<HandBookDomain> findSize(Pageable pageable);

@@ -45,9 +45,9 @@ public class HandBookSearchController {
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
 		if (size > 0) {
 			Pageable page = new PageRequest(pn, size);
-			return hbRepository.findByNameLikePage(key, page);
+			return hbRepository.findByNameOrBrandLikePage(key, page);
 		}
-		return hbRepository.findByNameLike(key);
+		return hbRepository.findByNameOrBrandLike(key);
 	}
 
 	@RequestMapping("/{type}")

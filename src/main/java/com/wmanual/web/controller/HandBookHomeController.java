@@ -16,6 +16,8 @@
 
 package com.wmanual.web.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.mail.EmailException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,37 +46,44 @@ public class HandBookHomeController {
 	private EmailConfigure emailConfigure;
 	
 	@RequestMapping("/")
-	public String home() throws Exception {
+	public String home(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
 		return "webmanual/index";
 	}
 	
 	@RequestMapping("/index")
-	public String index() throws Exception {
+	public String index(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
 		return "webmanual/index";
 	}
 	
 	@RequestMapping("/appliance")
-	public String fridge() throws Exception {
+	public String fridge(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "appliance");
 		return "webmanual/appliance";
 	}
 	
 	@RequestMapping("/result")
-	public String result() throws Exception {
+	public String result(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "result");
 		return "webmanual/result";
 	}
 
 	@RequestMapping("/signin")
-	public String signin() throws Exception {
+	public String signin(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "signin");
 		return "webmanual/signin";
 	}
 	
 	@RequestMapping("/signup")
-	public String signup() throws Exception {
+	public String signup(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "signup");
 		return "webmanual/signup";
 	}
 	
 	@RequestMapping("/favorites")
-	public String favorites() throws Exception {
+	public String favorites(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "favorites");
 		return "webmanual/favorites";
 	}
 	
