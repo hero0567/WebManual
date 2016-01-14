@@ -16,6 +16,8 @@
 
 package com.wmanual.web.controller.rest;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,9 +41,24 @@ public class HandBookController {
 	@Autowired
 	private HandBookRepository hbRepository;
 	
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	public void update(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
+		logger.info("[{}] visit wmanual try to download {} ", request.getRemoteAddr(), id);
+		HandBookDomain hb = hbRepository.findOne(id);
+		int downloadCount = hb.getDownloadCount();
+		hb.setDownloadCount(++downloadCount);	
+		hbRepository.save(hb);
+	}
+	
 	@RequestMapping("/{type}/{subType}/{id}")
-	public HandBookDomain findByID(@PathVariable("id") long id) throws Exception {
-		return hbRepository.findOne(id);
+	public HandBookDomain findByID(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
+		logger.info("[{}] visit wmanual try to view {} ", request.getRemoteAddr(), id);
+		HandBookDomain hb = hbRepository.findOne(id);
+		int viewCount = hb.getViewCount();
+		hb.setViewCount(++viewCount);	
+		hbRepository.save(hb);
+		
+		return hb;
 	}	
 
 	@RequestMapping("")

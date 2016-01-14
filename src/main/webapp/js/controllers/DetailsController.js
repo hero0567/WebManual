@@ -80,6 +80,11 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
     	window.location = "/appliance?subtype="+type +"&count="+count;
   	}
     
+    $scope.download = function() {
+    	$http.put('/hb/' + $scope.id);
+    	window.location = $scope.handbook.url;
+  	}
+    
     $scope.fetchMenu();
     $scope.parseParams();
     $scope.fetchHandbook($scope.id);

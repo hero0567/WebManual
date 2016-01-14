@@ -44,7 +44,7 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
 	    })
         .success(function(data) {
         	$http.get('/u?uname=' + $scope.user.username).success(function(user){
-        		user.password = $scope.user.password;
+//        		user.password = $scope.user.password;
 //        		if ($scope.user.rememberMe){
 //        			var expireDate = new Date();
 //        			expireDate.setDate(expireDate.getDate() + $scope.expired);
