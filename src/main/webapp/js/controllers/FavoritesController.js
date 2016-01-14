@@ -123,14 +123,7 @@ app.controller("FavoritesController", function($scope, $http, $location, userSer
     
     $scope.changeMenu = function(type, count) {
     	window.location = "/appliance?subtype="+type +"&count="+count;
-  	} 
-        
-    //Hide angularjs tag flicker
-	$scope.hideFlicker = function(){
-		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 
-	}
-	
-	//$scope.hideFlicker();
+  	}
 	
     $scope.fetchMenu();
     $scope.fetchFavorList($scope.user.id);        

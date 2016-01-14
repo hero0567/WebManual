@@ -78,14 +78,8 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
     
     $scope.changeMenu = function(type, count) {
     	window.location = "/appliance?subtype="+type +"&count="+count;
-  	} 
-        
-    //Hide angularjs tag flicker
-	$scope.hideFlicker = function(){
-		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 
-	}
-	
-	//$scope.hideFlicker();
+  	}
+    
     $scope.fetchMenu();
     $scope.parseParams();
     $scope.fetchHandbook($scope.id);

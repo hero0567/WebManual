@@ -164,12 +164,6 @@ app.controller("ResultController", function($scope, $http, $location, userServic
     	}
  	}
     
-    //Hide angularjs tag flicker
-	$scope.hideFlicker = function(){
-		if($('body').hasClass('d-n'))$('body').removeClass('d-n'); 
-	}
-	
-	//$scope.hideFlicker();
     $scope.parseParams();
     $scope.fetchMenu();
     $scope.fetchTopList($scope.params.key);        
