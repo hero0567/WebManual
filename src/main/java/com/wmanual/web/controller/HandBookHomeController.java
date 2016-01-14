@@ -53,11 +53,6 @@ public class HandBookHomeController {
 		return "webmanual/index";
 	}
 	
-	@RequestMapping("/tv")
-	public String tv() throws Exception {
-		return "webmanual/tv";
-	}
-	
 	@RequestMapping("/appliance")
 	public String fridge() throws Exception {
 		return "webmanual/appliance";
@@ -85,37 +80,37 @@ public class HandBookHomeController {
 	
 	@RequestMapping("/custom")
 	public String custom() throws Exception {
-		return "webmanual/custom";
+		return "static/custom";
 	}
 	
 	@RequestMapping("/declare")
 	public String declare() throws Exception {
-		return "webmanual/declare";
+		return "static/declare";
 	}
 	
 	@RequestMapping("/friends")
 	public String friends() throws Exception {
-		return "webmanual/custom";
+		return "static/custom";
 	}
 	
 	@RequestMapping("/service")
 	public String service() throws Exception {
-		return "webmanual/service";
+		return "static/service";
 	}
 	
 	@RequestMapping("/support")
 	public String support() throws Exception {
-		return "webmanual/support";
+		return "static/support";
 	}
 	
 	@RequestMapping("/faq")
 	public String faq() throws Exception {
-		return "webmanual/faq";
+		return "static/faq";
 	}
 	
 	@RequestMapping("/consult")
 	public String consult() throws Exception {
-		return "webmanual/consult";
+		return "static/consult";
 	}
 	
 	@RequestMapping("/details")
@@ -125,7 +120,7 @@ public class HandBookHomeController {
 	
 	@RequestMapping("/aboutus")
 	public String aboutus() throws Exception {
-		return "webmanual/aboutus";
+		return "static/aboutus";
 	}
 	/**
 	 * http://localhost:8080/register?username=11112121&password=1212121
