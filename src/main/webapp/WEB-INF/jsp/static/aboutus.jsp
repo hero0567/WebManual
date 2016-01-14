@@ -44,60 +44,7 @@
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]--> 
 	<div class="contentwrap"> 
-		<header> 
-			<div> 
-				<div class="navbox"> 
-					 <div class="boxed"> 
-						  <a class="logo fll" href=""> <h1 class="seeo">92说明书</h1> </a> 
-						  <ul class="mainnav"> 
-						   <li class="tab on"> 
-						       <a href="">首页</a> 
-						   </li>  
-						  </ul> 
-						  <div class="usernav"> 
-							   <div class="usersearch"> 
-								    <form action=""> 
-								     	<input type="text" name="key" spellcheck="false" autocomplete="off" placeholder="请输入搜索关键字" /> 
-								     	<button class="wmanualbtn bg-c" type="submit"><i class="fa fa-search"></i></button> 
-								    </form> 
-							   </div> 
-							   <div class="useradd"> 
-							    	<a target="_blank" href=""><span class="wmanualbtn c-lined">
-							     	<i class="fa fa-plus"></i> 添加搜藏</span>
-							   </a> 
-							   </div> 
-							   <!-- 未登录 --> 
-							   <div class="usermenu hoversub">
-						          <a href="https://www.92shuomingshu.com/user/205401" title="进入个人中心">栖牛_f166a7d988</a>
-						          <a><img src="https://www.92shuomingshu.com/images/dfe1636977926623d86a9003ce61226d.png"></a>
-						          <div class="subblock">
-						            <ul class="list-dropdown-menu">
-						                <li><a href="https://www.92shuomingshu.com/user/205401">我的收藏</a></li>
-						                <!-- <li><a href="https://www.92shuomingshu.com/user/edit">个人中心</a></li> -->
-						                <li><a href="https://www.92shuomingshu.com/user/logout">退出</a></li>
-						            </ul>
-						          </div>
-						       </div>
-						  </div> 
-					 </div> 
-				</div> 
-				<div class="subnavbox"> 
-					<div class="boxed"> 
-						 <div class="cont"> 
-							  <ul class="subnav nav-comp"> 
-							   <li><a href=""><span>空气净化器</span><i>25727</i></a></li> 
-							   <li><a href=""><span>电视</span><i>18839</i></a></li> 
-							   <li><a href=""><span>冰箱</span><i>18839</i></a></li> 
-							   <li><a href=""><span>空调</span><i>14933</i></a></li> 
-							   <li><a href=""><span>洗衣机</span><i>2270</i></a></li> 
-							   <li><a href=""><span>热水器</span><i>1682</i></a></li> 
-							   <li><a href=""><span>净水器</span><i>7078</i></a></li> 
-							  </ul> 
-						 </div> 
-					</div> 
-				</div> 
-			</div> 
-		</header> 
+		<%@ include file="../common/header.jsp" %>
 		
 		<div class="main about-us">
 			<section class="sec about-us-banner"><!-- for css --></section>
