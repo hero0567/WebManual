@@ -15,6 +15,7 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages/favorites.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
@@ -60,7 +61,7 @@
 
 			<div class="main">
 				<!-- block 搜索列表区 --> 
-		       <div class="sec">
+		       <div class="sec favorites-list">
 		       	<div class="search-title-bar">
 					<span class="flr">
 						你收藏的“ <b>说明书</b> ”，共有  <span ng-bind="count"></span> 本

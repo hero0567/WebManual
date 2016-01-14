@@ -114,10 +114,15 @@
 			                    <i class="fa fa-map-marker"></i>浏览次数： 
 			                    <span  ng-bind="handbook.viewCount"> </span>
 			                  </li>
+			                   <li>
+			                    <i class="fa fa-map-marker"></i>说明书大小： 
+			                    <span ng-bind="handbook.downloadCount"> </span>
+			                  </li>
 			                  <li>
 			                    <i class="fa fa-map-marker"></i>下载次数： 
 			                    <span ng-bind="handbook.downloadCount"> </span>
 			                  </li>
+			                  
 			                  <li>
 			                    <i class="fa fa-map-marker"></i>收藏次数： 
 			                    <span ng-bind="handbook.favorCount"> </span>
@@ -156,9 +161,6 @@
 		
 		 
 	</div>
-	<script src="js/lib/others/modernizr.js"></script>
-	<script>
-	  window.site_url = 'https://92shuomingshu.com/';
-	</script> 
+	
 </body>
 </html>

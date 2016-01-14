@@ -65,10 +65,7 @@
 					<!-- block 搜索列表区 -->
 					<div>
 						<ul class="list-multi-result thead">
-							<li><i class="cell pic"> </i> <i class="cell maincell">
-									<span class="t-small">说明书名称</span>
-							</i> <i class="cell"> 品牌 </i> <i class="cell round"> 型号 </i> <i
-								class="cell action"> 关注 </i></li>
+							<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i> <i class="cell date"> 上市时间 </i> <i class="cell action"> 关注 </i> </li>
 						</ul>
 						<ul class="list-multi-result">
 							<li ng-repeat="sub in subTypes"> 
@@ -78,16 +75,15 @@
 					              </a> 
 					            </i> 
 					            <i class="cell maincell"> 
-					              <p class="title"><a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a></p> 
-					              <p class="des" ng-bind="sub.productSize"></p> 
-					              <p> 
-					                <span class="tags t-small c-gray-aset"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a>上市</span>   
-					              </p> 
+					              <a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>
 					            </i> 
-					            <i class="cell"><a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a></i> 
-					            <i class="cell round"> 
-					              <a href=""><span class="tag gray" ng-bind="sub.version">/span></a> 
-					            </i> 
+					            <i class="cell brand">
+					            	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>
+				            	</i> 
+					            <i class="cell version"> 
+					             <a href="" ng-bind="sub.version"> </a> 
+					           </i> 
+					           <i class="cell date"> <a href="" ng-bind="sub.productDate | date:'yyyy-MM-dd'"></a> </i>
 					            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
 					         </li>							
 						</ul>
