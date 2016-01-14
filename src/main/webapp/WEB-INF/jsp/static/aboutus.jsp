@@ -16,6 +16,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages/aboutus.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -26,10 +27,19 @@
     <script src="js/lib/jquery/jquery.min.js"></script>
     <script src="js/lib/bootstrap/bootstrap.min.js"></script>
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/angular/angular-cookies.min.js"></script>
+    <script src="js/app.js"></script>
 	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/service/UserService.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -47,24 +57,17 @@
 		<%@ include file="../common/header.jsp" %>
 		
 		<div class="main about-us">
-			<section class="sec about-us-banner"><!-- for css --></section>
 			<div class="about-us-tab">
-				<div class="tab-bar sec">
-					<a href=" class="tab on">关于我们</a>
-					<a href="" class="tab">合作伙伴</a>
-					<a href="" class="tab">联系我们</a>
-					<a href="" class="tab">常见问题</a>
-				</div>
 				<div>
 					<div class="cont about">
 						<section class="our-about">
 							<h3>关于我们</h3>
-							<p>IT桔子是关注IT互联网行业的结构化的公司数据库和商业信息服务提供商,</p>
+							<p>92说明书是关注IT互联网行业的结构化的公司数据库和商业信息服务提供商,</p>
 							<p>于2013年5月21日上线。</p>
-							<p>IT桔子致力于通过信息和数据的生产、聚合、挖掘、加工、处理，</p>
+							<p>致力于通过信息和数据的生产、聚合、挖掘、加工、处理，</p>
 							<p>帮助目标用户和客户节约时间和金钱、提高效率，以辅助其各类商业行为，</p>
 							<p>包括风险投资、收购、竞争情报、细分行业信息、国外公司产品信息数据服务等。</p>
-							<p>产品服务包括但不限于：IT桔子网站和APP、猎桔、桔子雷达、线下活动、数据和信息服务等。</p>
+							<p>产品服务包括但不限于：在线说明书、数据和信息服务等。</p>
 						</section>
 						<section class="our-product">
 							<h3>我们的产品</h3>
@@ -145,68 +148,8 @@
 			</div>
 		</div>
 		
-		<footer> 
-			<div class="footer-info boxed"> 
-				<div class="column-custom"> 
-					<ul> 
-						<li><b>关于</b></li> 
-						<li><a target="_blank" href="">关于我们</a></li> 
-						<li><a target="_blank" href="">如何上传说明书</a></li> 
-						<li><a target="_blank" href="https://www.92shuomingshu.com/partners">合作伙伴</a></li> 
-						<li><a target="_blank" href="https://www.92shuomingshu.com/faq">FAQ</a></li> 
-					</ul> 
-		   		</div> 
-				<div class="column-custom"> 
-					<ul> 
-						<li><b>发现</b></li> 
-						<li><a target="_blank" href="">数据服务</a></li> 
-						<li><a target="_blank" href="">技术咨询</a></li> 
-						<li><a target="_blank" href="">定制服务</a></li> 
-						<li><a target="_blank" href="">自助建站</a></li> 
-					</ul> 
-				</div> 
-		
-				<div class="column-custom" > 
-					<img src="./img/qrcode-juzi.png" style="height:130px; float:left; margin-right:10px; margin-top:5px"/> 
-					<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" style="float:right;"> 
-						<ul> 
-							<li><b>发说明书给我们</b></li> 
-							<li>方便他人，快乐你我</li> 
-							<li class="block-footer-getinfo"> 
-								<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@92shuomingshu.com" /> 
-							  	<button type="submit" class="wmanualbtn bg-c">订阅</button> 
-							</li> 
-							<li class="block-footer-iconlink"> 
-							  	<a href="" target="_blank">
-							  		<i class="fa fa-weibo"></i>
-						  		</a> 
-						  		<a class="hoversub"> 
-						  			<i class="fa fa-weixin"></i> <span class="subblock iconblock"> <img src="./img/qrcode-juzi.png" /> </span> 
-					  			</a> 
-							  	<a href="http://shang.qq.com/wpa/qunwpa?idkey=92942d"> 
-							    	<i class="fa fa-qq"></i> 
-							  	</a> 
-							  	<a href="mailto:hello@92shuomingshu.com" target="_blank">
-							  		<i class="fa fa-envelope-o"></i>
-							  	</a> 
-							</li> 
-						</ul> 
-					</form> 
-				</div> 
-		  </div> 
-			<div class="copyright-92"> 
-				<div class="boxed">
-				  92说明书 - 个人说明书信息服务 
-				  <span class="flr copy"> &copy; 2016-2019 92shuomingshu.com 蜀ICP备14026526号-2</span> 
-				</div> 
-			</div> 
-		</footer> 
+		 <%@ include file="../common/footer.jsp" %>
 	</div> 
-	
-	<script src="js/lib/others/modernizr.js"></script>
-	<script>
-	  window.site_url = 'https://92shuomingshu.com/';
-	</script> 
 </body>
 </html>
 

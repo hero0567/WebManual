@@ -14752,19 +14752,14 @@ ul[class|=list-main]:not(.thead) .tag {
 	margin: 0 3px
 }
 
-.site-bgbanner-albuminfo,.site-bgbanner-albumlist,.site-bgbanner-uni {
-	background: url(../images/img/pattrn-01.png) center top/180px #505050
-}
-
+ 
 .site-bgbanner-albuminfo[style] {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover
 }
 
-.site-bgbanner-activitylist,.site-bgbanner-commentlist,.site-bgbanner-edulist,.site-bgbanner-liejuform,.site-bgbanner-newslist,.site-bgbanner-scopelist,.site-bgbanner-taglist,.site-bgbanner-ugc {
-	background: url(../images/img/pattrn-01.png) center top/180px #505050
-}
+ 
 
 .site-bgbanner-investfirm {
 	background: url(../images/img/bg-banner-investfirm.jpg) center top/cover #505050

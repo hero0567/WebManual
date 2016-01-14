@@ -99,7 +99,7 @@ public class HandBookHomeController {
 	
 	@RequestMapping("/friends")
 	public String friends() throws Exception {
-		return "static/custom";
+		return "static/friends";
 	}
 	
 	@RequestMapping("/service")
