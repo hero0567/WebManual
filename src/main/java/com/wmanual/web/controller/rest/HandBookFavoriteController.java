@@ -97,11 +97,11 @@ public class HandBookFavoriteController {
 	public ResponseEntity<String> deleteByUID(@PathVariable("uid") Long uid, @PathVariable("hbid") Long hbid) throws Exception {
 		hbfRepository.deleteByUIDAndHBID(uid, hbid);
 		
-		HandBookDomain hb = hbRepository.findOne(hbid);
-		int favorCount = hb.getFavorCount();
-		favorCount = favorCount <= 0 ? 0 : --favorCount;
-		hb.setFavorCount(favorCount);	
-		hbRepository.save(hb);
+		//		HandBookDomain hb = hbRepository.findOne(hbid);
+		//		int favorCount = hb.getFavorCount();
+		//		favorCount = favorCount <= 0 ? 0 : --favorCount;
+		//		hb.setFavorCount(favorCount);	
+		//		hbRepository.save(hb);
 		return new ResponseEntity<String>(HttpStatus.OK);
 	}
 	

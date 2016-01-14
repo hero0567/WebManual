@@ -112,15 +112,15 @@
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-map-marker"></i>浏览次数： 
-			                    <span ng-repeat="s in services" ng-bind=" "> </span>
+			                    <span  ng-bind="handbook.viewCount"> </span>
 			                  </li>
 			                  <li>
 			                    <i class="fa fa-map-marker"></i>下载次数： 
-			                    <span ng-repeat="s in services" ng-bind=" "> </span>
+			                    <span ng-bind="handbook.downloadCount"> </span>
 			                  </li>
 			                  <li>
-			                    <i class="fa fa-map-marker"></i>收藏次数：： 
-			                    <span ng-repeat="s in services" ng-bind=" "> </span>
+			                    <i class="fa fa-map-marker"></i>收藏次数： 
+			                    <span ng-bind="handbook.favorCount"> </span>
 			                  </li>
 			                </ul>
 			                <div class="pl-mt20 margin-20 d-b">

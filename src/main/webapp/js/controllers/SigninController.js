@@ -52,6 +52,7 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
 //        		}else{
 //        			$cookies.putObject("user", user);   
 //        		}
+        		$cookies.putObject("user", user);   
         		window.location = "/";
             })        	
         }).error(function() {
