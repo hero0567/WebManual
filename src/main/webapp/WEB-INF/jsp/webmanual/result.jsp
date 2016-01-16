@@ -58,7 +58,7 @@
 					</span>
 				</div> 
 		        <ul class="list-multi-result thead"> 
-		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">说明书名称</span> </i> <i class="cell fina"> 品牌 </i> <i class="cell fina"> 型号 </i> <i class="cell action"> 关注 </i> </li> 
+		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i><i class="cell date"> 上市时间 </i>  <i class="cell action"> 关注 </i> </li> 
 		        </ul> 
 		        <ul class="list-multi-result">
 					<li ng-repeat="sub in results"> 
@@ -69,15 +69,12 @@
 			            </i> 
 			            <i class="cell maincell"> 
 			              <p class="title"><a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a></p> 
-			              <p class="des">{{sub.productSize}}</p> 
-			              <p> 
-			                <span class="tags t-small c-gray-aset"> <span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span>上市</span>   
-			              </p> 
 			            </i> 
-			            <i class="cell"><a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> </i> 
-			            <i class="cell round"> 
+			            <i class="cell brand"><a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> </i> 
+			            <i class="cell version"> 
 			              <a href=""><span class="tag gray" ng-bind="sub.version"></span></a> 
 			            </i> 
+			            <i class="cell date"> <span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> </i>
 			            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
 			         </li>							
 				</ul>

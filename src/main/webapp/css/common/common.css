@@ -1,6 +1,12 @@
+body{
+	min-width: 480px !important;
+}
 .d-b{
 	display: inline-block !important;
 }
+
+
+
 #form-signup a, #form-signin a{
 	color:#00aeef !important;
 }
