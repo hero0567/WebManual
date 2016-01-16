@@ -2,11 +2,13 @@
 *Header
 */
 footer{
+	margin-top:20px;
 	display:inline-block;
 	width:100%;
 	background: #505050;
     padding: 35px 0 0;
     color: #888;
+    position:absolute;
 }
 footer .row{
 	margin-left:0px !important;

@@ -6,7 +6,7 @@
 	<nav class="custom-navbar">
       <div class="container">
         <div class="custom-navbar-header f-l">
-          <a class="logo" href="#">   </a>
+          <a class="logo" href="/index">   </a>
         </div>
         <div id="navbar">
           <!-- Main Navigation -->

@@ -1,6 +1,9 @@
 /*
 *Header
 */
+a{
+	text-decoration: none !important;
+}
 header{
 	min-width:480px !important;
 	margin-bottom:20px !important;
@@ -87,6 +90,7 @@ header ul{
 }
 
 .custom-search-button{
+	padding: 0px !important;
 	display: inline-block;
     vertical-align: middle;
     margin-top:0px !important;
@@ -182,8 +186,8 @@ header ul{
 .sub-menu .custom-nav li a{
 	padding-left:0px !important;
 	padding-right:0px !important;
-	padding-top:10px !important;
-	padding-bottom:10px !important;
+	padding-top:15px !important;
+	padding-bottom:5px !important;
 	text-align:center;
 }
 .navbar-nav{
