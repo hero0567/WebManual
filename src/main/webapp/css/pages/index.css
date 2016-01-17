@@ -44,9 +44,8 @@ body{
     
 }
 .custom-section-title{
-	font-weight:bold;
 	font-size: 14px;
-	color:#00aeef !important;
+	color:#383838 !important;
 }
 .custom-section-more{
 	font-size:12px;
@@ -115,5 +114,96 @@ ul.custom-tabs{
 table td.cell{
 	font-size:12px !important;
 	padding-bottom:0px !important;
+	min-width:100px !important;
 } 
+@media (min-width: 1200px){
+	table .maincell{
+		width:50%;
+	}
+	table .brand{
+		width:10%;
+	}
+	table .version{
+		width:15%;
+	}
+	table .date{
+		width:15%;
+	}
+	table .action{
+		width:10%;
+		text-align:right
+	}
+	table td.action{
+		padding-right:16px !important;
+	}
+}
+
+@media (max-width: 1200px){
+	table .maincell{
+		width:50%;
+	}
+	table .brand{
+		width:10%;
+	}
+	table .version{
+		width:15%;
+	}
+	table .date{
+		width:15%;
+	}
+	table .action{
+		width:10%;
+		text-align:right
+	}
+	table td.action{
+		padding-right:16px !important;
+	}
+}
+
+
+@media (max-width: 992px){
+	table .maincell{
+		width:50%;
+	}
+	table .brand{
+		width:10%;
+	}
+	table .version{
+		width:15%;
+	}
+	table .date{
+		width:15%;
+	}
+	table .action{
+		width:10%;
+		text-align:right
+	}
+	table td.action{
+		padding-right:16px !important;
+	}
+}
+
+@media (max-width: 768px){
+	table .maincell{
+		width:70%;
+	}
+	table .brand{
+		width:20%;
+	}
+	table .version{
+		display:none;
+		width:15%;
+	}
+	table .date{
+		display:none;
+		width:15%;
+	}
+	table .action{
+		width:15%;
+		text-align:right
+	}
+	table td.action{
+		padding-right:16px !important;
+	}
+}
 

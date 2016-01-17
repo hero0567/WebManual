@@ -4,6 +4,12 @@
  * IndexController
  * @constructor
  */
+$(document).ready(function(){
+	$('.user-menu').bind('click', function(){
+		$('custom-user-menu').show();
+	})
+});
+
 
 app.controller("HeaderController", function($scope, $http, $cookieStore) {			
 		

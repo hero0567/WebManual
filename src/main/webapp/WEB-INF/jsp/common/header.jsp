@@ -29,10 +29,10 @@
            		<a class="signup" href="/signup">注册</a> 
            	</li>
             <li ng-show="user.id">
-            	<div class="usermenu hoversub">
+            	<div class="user-menu">
                      <a href="" title="进入个人中心" ng-bind="user.username"></a>
                    	<a><img src="img/user.png"></a>
-                     <div class="subblock">
+                     <div id="custom-user-menu">
                          <ul class="list-dropdown-menu">
                              <li><a href="/favorites">我的收藏</a></li>
                              <li><a href="" ng-click="logout()">退出</a></li>
@@ -54,7 +54,9 @@
 	 <div class="sub-menu"> 
 	 	<div class="container"> 
 			<ul class="nav navbar-nav custom-nav"> 
-				<li ng-repeat="m in menu | orderBy: 'sequence'"><a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span class="sub-type" ng-bind="m.subType"></span><span class="subtype-amount" ng-bind="m.count"></span></a></li>
+				<li ng-repeat="m in menu | orderBy: 'sequence'">
+					<a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span class="sub-type" ng-bind="m.subType"></span><span class="subtype-amount" ng-bind="m.count"></span></a>
+				</li>
 			</ul> 
 		</div> 
 	 </div> 

@@ -74,8 +74,8 @@
 					<section>
 						<div class="custom-section-head">
 							<ul class="custom-tabs f-l">
-								<li id="tab-head-view-most-manual" class="on"><i class="fa fa-fire"></i> 浏览最多说明书</li>
-								<li id="tab-head-view-most-brand"><i class="fa fa-globe"></i> 浏览最多品牌</li>
+								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-fire"></i> 浏览最多说明书</li>
+								<li class="tab-head-view-most-brand-{{book.name}}"><i class="fa fa-globe"></i> 浏览最多品牌</li>
 							</ul>
 							<a class="custom-section-more f-r" href="/appliance?subtype={{book.name}}&count={{book.count}}">查看更多 <i class="fa fa-chevron-right"></i></a>
 						</div>

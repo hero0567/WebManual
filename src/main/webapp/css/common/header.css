@@ -211,6 +211,33 @@ header ul{
 .subtype-amount{
 	color:#aaa;
 }
+
+/*
+* 登录后菜单
+**/
+.list-dropdown-menu li{
+	float:none !important;
+	background-color:#fff;
+	border:#999;
+}
+.user-menu{
+	cursor:pointer;
+}
+#custom-user-menu{
+	display:none;
+}
+#custom-user-menu ul li, #custom-user-menu ul li a{
+	height:30px !important;
+	line-height:30px !important;
+}
+
+.list-dropdown-menu>li {
+    border: 1px solid rgba(0,0,0,.06);
+}
+.list-dropdown-menu>li:first-child{
+	border-bottom: none !important;
+}
+
 @media (min-width: 1200px){
 	heder .container {
 	    width: 1170px !important;
