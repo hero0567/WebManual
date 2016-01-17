@@ -5,7 +5,7 @@
 <footer class="main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-xs-4">
                 <div class="widget">
                     <h4 class="title">关于</h4>
                     <div class="content about-links">
@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-xs-4">
                 <div class="widget">
                     <h4 class="title">发现</h4>
                     <div class="content find-links">
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-xs-4">
                 <div class="widget">
                     <h4 class="title">联系我们</h4>
                     <div class="content contact-links">

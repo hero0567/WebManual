@@ -109,3 +109,11 @@ ul.custom-tabs{
 	padding-left:0px;
 }
 
+/*
+* Table
+*******/
+table td.cell{
+	font-size:12px !important;
+	padding-bottom:0px !important;
+} 
+
