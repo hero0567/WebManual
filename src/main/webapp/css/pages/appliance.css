@@ -10,10 +10,57 @@ body{
 .padding-0{
 	padding:0px !important;
 }
+.padding-top-15{
+	padding-top:15px;
+}
 .white-block{
 	background-color:#fff;
 }
- 
+.p-l-r{
+	padding-left:15px;
+	padding-right:15px;
+}
+
+/*
+* Brands filter
+*/
+.custom-brands-filter{
+	min-height:100px;
+} 
+.custom-filter-brand{
+	color:gray;
+	width:50px;
+	vertical-align: top;
+    height: 30px;
+    line-height: 30px;
+}
+.custom-tabs-tab{
+	padding:15px;
+}
+.custom-brands-list{
+	padding:0px;
+	list-style-type:none;
+	display:inline-block !important;
+	margin-bottom:0px !important;
+}
+.custom-brand-item{
+	text-align:center;
+	width:100px;
+	float:left;
+	padding:5px 10px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.custom-brand-item:hover, .custom-brand-item a:hover, .custom-brands-list .active{
+	color:#00aeef;
+	cursor:pointer;
+}
+.custom-brand-item a{
+	color:#383838;
+}
+.border-gray-dashed{
+	border-bottom: 1px gray dashed;
+}
 
 /*
 * Banner

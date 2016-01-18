@@ -14,8 +14,8 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages/appliance.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -40,14 +40,72 @@
     <![endif]-->
 </head>
 <body ng-app="app" ng-controller="ApplianceController" class="">
-	<div class="none">
-		<img src="./img/favicon.png"/>
-	</div>
+	<div class="d-n">
+		<img src="./img/favicon.png" />
+	</div> 
 	<!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	<div class="contentwrap">
 		<%@ include file="../common/header.jsp" %>
+		
+		<!-- Section -->
+		<div class="container margin-bottom-20">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<section class="custom-brands-filter white-block p-l-r">
+						<div class="custom-section-head">
+							<ul class="custom-tabs f-l">
+								<li class="tab-head-view-most-manual-{{book.name}}"><i class="fa fa-fire"></i> <b>筛选</b></li>
+							</ul>
+						</div>
+						<div class="custom-section-body">
+							<div id="tab-body-view-most-manual" class="custom-tabs-tab">
+								<table>
+									<tr class="border-gray-dashed">
+										<td class="custom-filter-brand">
+											品牌:
+										</td>
+										<td>
+											<ul class="custom-brands-list">
+										 		<li class="custom-brand-item active">全部</li>
+												<li class="custom-brand-item" ng-repeat="sub in subTypes"> 
+													<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>	
+												</li>
+											</ul>		
+										</td>
+									</tr>
+									<tr>
+										<td class="custom-filter-brand padding-top-15">
+											时间:
+										</td>
+										<td class="padding-top-15">
+											<ul class="custom-brands-list">
+										 		<li class="custom-brand-item active">全部</li>
+												<li class="custom-brand-item"> 
+													<a href="">2012</a>	
+												</li>
+												<li class="custom-brand-item"> 
+													<a href="">2013</a>	
+												</li>
+												<li class="custom-brand-item"> 
+													<a href="">2014</a>	
+												</li>
+												<li class="custom-brand-item"> 
+													<a href="">2015</a>	
+												</li>
+											</ul>		
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		
+		
 		<div class="boxed main">
 			<div class="sec nobg mobile-block">
 				<div class="ui-mobile-usersearch">
@@ -104,27 +162,7 @@
 			</div>
 
 		</div>
-
-		<div class="ui-maintoolbar-box">
-			<div class="ui-maintoolbar">
-				<a class="card hoverc scroll2top"> <span class="t-big"> <i
-						class="fa fa-chevron-up"></i>
-				</span>
-				</a> <a class="card hoverc scroll2bottom marb5"> <span class="t-big">
-						<i class="fa fa-chevron-down"></i>
-				</span>
-				</a> <a href="" target="_blank" class="card hovertext"> <span>
-						<i class="fa fa-mobile t-big"></i> <span class="text t-small">APP</span>
-				</span>
-				</a> <a class="card hoverc"> <span> <i
-						class="fa fa-qrcode t-big"></i>
-				</span> <span class="left-qrcode"> <img src="./img/qrcode-juzi.png" />
-						<span class="c-gray t-small">92说明书公众号</span>
-				</span>
-				</a> <a href="" target="_blank" class="card hovertext"><span
-					class="t-small">反馈</span></a>
-			</div>
-		</div>
+ 
 		<%@ include file="../common/footer.jsp" %>
 	</div>
 	<script>
