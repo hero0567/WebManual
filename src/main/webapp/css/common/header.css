@@ -245,7 +245,7 @@ header ul{
 }
 
 @media (max-width: 1200px){
-	header .container{
+	.container{
 		width: 100% !important;
 	}
 }
@@ -254,6 +254,14 @@ header ul{
 @media (max-width: 992px){
 	header .container {
 	    width: 100% !important;
+	}
+	.container{
+		width: 100% !important;
+	}
+}
+@media(max-width: 830px){
+	header .save-site, header .custom-main-menu{
+		display:none !important;
 	}
 }
 

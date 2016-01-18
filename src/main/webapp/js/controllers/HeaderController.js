@@ -5,8 +5,11 @@
  * @constructor
  */
 $(document).ready(function(){
-	$('.user-menu').bind('click', function(){
-		$('custom-user-menu').show();
+	$('.user-menu').mouseenter( function(){
+		$('#custom-user-menu').show();
+	})
+	$('.user-menu').mouseleave( function(){
+		$('#custom-user-menu').hide();
 	})
 });
 

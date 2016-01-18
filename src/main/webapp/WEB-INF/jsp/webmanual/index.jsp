@@ -70,7 +70,7 @@
 			</div>
 			
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-lg-9 col-md-9 col-sm-9">
 					<section>
 						<div class="custom-section-head">
 							<ul class="custom-tabs f-l">
@@ -115,7 +115,7 @@
 						</div>
 					</section>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-3 col-sm-3">
 					<section>
 						<div class="custom-section-head">
 							<a href="" class="custom-section-title f-l"><i class="fa fa-cog"></i> 维修保养常识</a>
