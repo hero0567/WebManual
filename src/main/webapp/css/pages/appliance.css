@@ -72,6 +72,30 @@ body{
 }
 
 /*
+* pagination
+*/
+.custom-pagination{
+	width:100%;
+	margin:20px auto;
+	display:inline-block;
+	text-align:center;
+}
+.custom-pagination .on {
+    color: #f60;
+    border-color: #f60;
+    cursor: default;
+}
+.custom-pagination a {
+    display: inline-block;
+    padding: 1px 5px;
+    border: 1px solid rgba(0,0,0,.05);
+    min-width: 30px;
+    margin: 0 2px;
+    background-color: rgba(180,180,180,.1);
+    border-radius: 2px;
+}
+
+/*
 * Banner
 */
 .cutom-banner{
@@ -82,6 +106,9 @@ body{
 /*
 * Appliance 
 */
+.custom-appliance-table{
+	width:100%;
+}
 .custom-appliance-head{
 	padding-left:15px;
 	background-color:#00aeef;

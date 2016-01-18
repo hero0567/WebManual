@@ -61,7 +61,7 @@
 						</div>
 						<div class="custom-section-body">
 							<div id="tab-body-view-most-manual" class="custom-tabs-tab">
-								<table>
+								<table class="custom-appliance-table">
 									<tr class="border-gray-dashed">
 										<td class="custom-filter-brand">
 											品牌:
@@ -140,68 +140,22 @@
 				            	</td>
 							</tr>
 						</table>
+						<!-- block 分页区 -->
+						<div>
+							<div class="custom-pagination">
+								<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
+								<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
+								<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
+									ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
+								<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
+								<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
 		</div>
 		
-		<div class="boxed main">
-			<div class="sec nobg mobile-block">
-				<div class="ui-mobile-usersearch">
-					<form action="#">
-						<input type="text" name="key" spellcheck="false"
-							autocomplete="off" placeholder="请输入搜索关键字" />
-						<button class="wmanualbtn bg-c" type="submit">
-							<i class="fa fa-search"></i>
-						</button>
-					</form>
-				</div>
-			</div>
-			<div class="sec">
-				<div>
-					<!-- block 搜索列表区 -->
-					<div>
-						<ul class="list-multi-result thead">
-							<li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i> <i class="cell date"> 上市时间 </i> <i class="cell action"> 关注 </i> </li>
-						</ul>
-						<ul class="list-multi-result">
-							<li ng-repeat="sub in subTypes"> 
-					            <i class="cell pic"> 
-					              <a href=""> 
-					                <span class="incicon"><img ng-src="{{sub.imgUrl}}" /></span> 
-					              </a> 
-					            </i> 
-					            <i class="cell maincell"> 
-					              <a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>
-					            </i> 
-					            <i class="cell brand">
-					            	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>
-				            	</i> 
-					            <i class="cell version"> 
-					             <a href="" ng-bind="sub.version"> </a> 
-					           </i> 
-					           <i class="cell date"> <span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> </i>
-					            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
-					         </li>							
-						</ul>
-					</div>
-					<!-- block 分页区 -->
-					<div>
-						<div class="ui-pagechange for-sec-bottom">
-							<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
-							<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
-							<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
-								ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
-							<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
-							<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-
-		</div>
- 
 		<%@ include file="../common/footer.jsp" %>
 	</div>
 	<script>
