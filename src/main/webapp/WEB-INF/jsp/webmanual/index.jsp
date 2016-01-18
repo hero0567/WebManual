@@ -89,7 +89,7 @@
 										<th class="cell date"> 上市时间 </th> 
 										<th class="cell action"> 关注 </th>
 									</tr>
-									<tr ng-repeat="sub in book.subType">
+									<tr class="border-gray-lower-dashed" ng-repeat="sub in book.subType">
 							            <td class="cell maincell"> &nbsp;
 							            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>  
 							            </td> 

@@ -105,6 +105,45 @@
 			</div>
 		</div>
 		
+		<div class="container margin-bottom-20">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<section class="custom-brands-filter white-block p-l-r">
+						<table class="table custom-appliance-table">
+							<tr>
+								<th class="cell pic"> 图片</th> 
+								<th class="cell maincell"> 名称 </th> 
+								<th class="cell brand"> 品牌 </th> 
+								<th class="cell version"> 型号 </th> 
+								<th class="cell date"> 上市时间 </th> 
+								<th class="cell action"> 关注 </th>
+							</tr>
+							<tr class="border-gray-lower-dashed" ng-repeat="sub in subTypes">
+								<td class="cell pic">
+									<img ng-src="{{sub.imgUrl}}" /> 
+								</td>
+					            <td class="cell maincell"> &nbsp;
+					            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>  
+					            </td> 
+						           
+					            <td class="cell brand">&nbsp;
+						           	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> 
+					            </td> 
+					            <td class="cell version"> &nbsp;
+						             <a href="" ng-bind="sub.version"> </a> 
+					            </td> 
+					            <td class="cell date"> &nbsp;
+					            	<span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> 
+				            	</td>
+					            <td class="cell action"> &nbsp;
+					            	<a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>
+				            	</td>
+							</tr>
+						</table>
+					</section>
+				</div>
+			</div>
+		</div>
 		
 		<div class="boxed main">
 			<div class="sec nobg mobile-block">

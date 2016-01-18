@@ -13,7 +13,9 @@ body{
 .white-block{
 	background-color:#fff;
 }
- 
+.border-gray-lower-dashed{
+	border-bottom: 1px #f7f7f7 solid;
+}
 
 /*
 * Banner

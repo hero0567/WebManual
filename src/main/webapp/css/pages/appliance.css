@@ -44,6 +44,7 @@ body{
 	margin-bottom:0px !important;
 }
 .custom-brand-item{
+	color:#383838;
 	text-align:center;
 	width:100px;
 	float:left;
@@ -52,14 +53,22 @@ body{
 	margin-bottom:10px;
 }
 .custom-brand-item:hover, .custom-brand-item a:hover, .custom-brands-list .active{
-	color:#00aeef;
+	background-color:#00aeef;
+	color:#fff !important;
 	cursor:pointer;
 }
+.custom-brand-item:hover{
+	background-color:#00aeef;
+	color:#fff !important;
+}
 .custom-brand-item a{
-	color:#383838;
+	color:inherit;
 }
 .border-gray-dashed{
 	border-bottom: 1px gray dashed;
+}
+.border-gray-lower-dashed{
+	border-bottom: 1px #f7f7f7 solid;
 }
 
 /*
