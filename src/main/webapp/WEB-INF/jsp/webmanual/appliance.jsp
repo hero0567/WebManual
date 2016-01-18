@@ -61,7 +61,7 @@
 						</div>
 						<div class="custom-section-body">
 							<div id="tab-body-view-most-manual" class="custom-tabs-tab">
-								<table class="custom-appliance-table">
+								<table class="">
 									<tr class="border-gray-dashed">
 										<td class="custom-filter-brand">
 											品牌:

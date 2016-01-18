@@ -81,8 +81,8 @@ body{
 	text-align:center;
 }
 .custom-pagination .on {
-    color: #f60;
-    border-color: #f60;
+    color: #00aeef;
+    border-color: #00aeef;
     cursor: default;
 }
 .custom-pagination a {
@@ -199,6 +199,10 @@ table td.cell{
 	padding-bottom:0px !important;
 	min-width:100px !important;
 } 
+.custom-appliance-table a{
+	color:#00aeef;
+}
+
 @media (min-width: 1200px){
 	table .maincell{
 		width:50%;
