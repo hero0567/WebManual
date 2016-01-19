@@ -9,8 +9,28 @@ ul{
 a{
 	color:#00aeef;
 }
+.custom-manual-btn{
+	background-color:#00aeef;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	border:1px #fff solid;
+	cursor:pointer;
+	color:#fff;
+}
+.custom-manual-btn:hover{
+	background-color:#337ab7;
+	color:#fff;
+}
+.h-lh-40{
+	height:40px;
+	line-height:40px;
+}
 .t-r{
 	text-align:right;
+}
+.d-i{
+	display:inline-block;
 }
 .d-n{
 	display:none;
@@ -30,6 +50,9 @@ a{
 .p-l-r{
 	padding-left:15px;
 	padding-right:15px;
+}
+.custom-default-tab-title{
+	color:#606060;
 }
 a.custom-btn{
 	color:#666;
@@ -393,6 +416,21 @@ table td.cell{
 }
 
 @media (max-width: 768px){
+	#main-search-box {
+	    margin-top: 20px !important;
+	}
+	#main-search-box .custom-search-button{
+		top:-30px !important;
+	}
+	.col-sm-4{
+		width:33.33333333% !important;
+	}
+	.col-sm-8{
+		width:66.66666666% !important;
+	}
+	.col-sm-6{
+		width:50% !important;
+	}
 	table .maincell{
 		width:70%;
 	}
