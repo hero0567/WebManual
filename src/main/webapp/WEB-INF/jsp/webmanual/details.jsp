@@ -14,7 +14,6 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/pages/details.css" />
 	<script>
@@ -41,7 +40,7 @@
     <![endif]-->
 </head>
 <body ng-app="app" ng-controller="DetailsController" class=""> 
-	<div class="none">
+	<div class="d-n">
 	  <img src="./img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
@@ -49,118 +48,115 @@
 	   <![endif]--> 
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>	
-		<div class="boxed"> 
-			<div class="sidebar right">
-				<div class="sec">
-					<div class="titlebar"><span>最热说明书</span><a href="" class="right-btn flr">查看所有</a></div>
-			    	<div>
-				    	<ul class="list-link-lite TOP">
-				           <li>
-					          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
-					       </li>
-				           <li>
-					          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
-					       </li>
-					       <li>
-					          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
-					       </li>
-					       <li>
-					          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
-					       </li>       
-					       <li>
-					          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
-					       </li>
-					       <li>
-					          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
-					       </li>       
-						</ul>
-			    	</div>
-			</div>  
-		</div>
 		
-			<div class="main">
-			  <div class="sec height-292">
-			    <div class="titlebar">
-			      <span ng-bind="handbook.name"><i class="fa fa-th"></i></span>
-			      <div class="rightset">
-			          <a class="t-small" href=""><i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i></a>
-			        </div>
-			          </div>
-			             <div>
-			                <ul class="list-block aboutus">
-			                  <li>
-			                    <i class="fa fa-dot-circle-o"></i>厂商： 
-			                    <a ng-href="/result?key={{handbook.brand}}" ng-bind="handbook.brand"></a>
-			                  </li>
-			                  <li>
-			                    <i class="fa fa-newspaper-o"></i>上架时间： 
-			                    <span ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></span>
-			                  </li>
-			                  <li>
-			                    <i class="fa fa-phone"></i>官方客服电话： 
-			                    <a href="tel:02885303320" ng-repeat="s in services " ng-bind="s.tel"> </a>
-			                  </li>
-			                
-			                  <li>
-			                    <i class="fa fa-envelope"></i>官方邮箱： 
-			                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services " ng-bind="s.email"> </a>
-			                  </li>
-			                
-			                  <li>
-			                    <i class="fa fa-map-marker"></i>官方网站： 
-			                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
-			                  </li>
-			                  <li>
-			                    <i class="fa fa-map-marker"></i>浏览次数： 
-			                    <span  ng-bind="handbook.viewCount"> </span>
-			                  </li>
-			                   <li>
-			                    <i class="fa fa-map-marker"></i>说明书大小： 
-			                    <span ng-bind="handbook.downloadCount"> </span>
-			                  </li>
-			                  <li>
-			                    <i class="fa fa-map-marker"></i>下载次数： 
-			                    <span ng-bind="handbook.downloadCount"> </span>
-			                  </li>
-			                  
-			                  <li>
-			                    <i class="fa fa-map-marker"></i>收藏次数： 
-			                    <span ng-bind="handbook.favorCount"> </span>
-			                  </li>
-			                </ul>
-			                <div class="pl-mt20 margin-20 d-b">
-			                  <a class="wmanualbtn" href="">在线阅读</a>
-			                  <a class="wmanualbtn" href="#" ng-click="download()">下载PDF</a> 
-			                </div>
-			    </div>
-			  </div>
+		<div class="container margin-bottom-20">
+			<div class="row">
+				<div class="col-lg-9 col-md-9 col-sm-9">
+					<section class="custom-brands-filter white-block p-l-r">
+						<div class="custom-section-head">
+							<a href="" class="custom-section-title f-l"><i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span></a>
+							<a class="f-r" href=""><i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i> <span>添加到收藏</span></a>
+						</div>
+						<div class="custom-section-body">
+							<div class="custom-tabs-tab">
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-12">
+										<img src="img/detailPageDefault.jpg" alt="..." class="img-rounded">
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-12">
+										<ul>
+											<li>
+							                    <i class="fa fa-home"></i> 厂商： 
+							                    <a ng-href="/result?key={{handbook.brand}}" ng-bind="handbook.brand"></a>
+						                    </li>
+							                <li>
+							                    <i class="fa fa-calendar"></i> 上架时间： 
+							                    <span ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></span>
+							                </li>
+							                <li>
+							                    <i class="fa fa-phone"></i> 官方客服电话： 
+							                    <a href="tel:02885303320" ng-repeat="s in services " ng-bind="s.tel"> </a>
+							                </li>
+							                
+							                <li>
+							                    <i class="fa fa-envelope"></i> 官方邮箱： 
+							                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services " ng-bind="s.email"> </a>
+							                </li>
+							                
+							                <li>
+							                    <i class="fa fa-map-marker"></i>官方网站： 
+							                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
+							                </li>
+							                <li>
+							                    <i class="fa fa-map-marker"></i>浏览次数： 
+							                    <span  ng-bind="handbook.viewCount"> </span>
+							                </li>
+							                <li>
+							                    <i class="fa fa-map-marker"></i>说明书大小： 
+							                    <span ng-bind="handbook.downloadCount"> </span>
+							                </li>
+							                <li>
+							                    <i class="fa fa-map-marker"></i>下载次数： 
+							                    <span ng-bind="handbook.downloadCount"> </span>
+							                </li>
+							                <li>
+							                    <i class="fa fa-map-marker"></i>收藏次数： 
+							                    <span ng-bind="handbook.favorCount"> </span>
+							                </li>
+						                </ul>
+									</div>
+								</div>
+							
+								<div class="row">
+									<div class="col-lg-12 col-md-12 col-sm-12 pl-mt20 margin-20 d-b t-r">
+						                  <a class="custom-btn" href="">在线阅读</a>
+						                  <a class="custom-btn" href="#" ng-click="download()">下载PDF</a> 
+						            </div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<section class="custom-brands-filter white-block p-l-r">
+						<div class="custom-section-head">
+							<a href="" class="custom-section-title f-l"><i class="fa fa-cog"></i> 维修保养常识 </span></a>
+							<a href="" class="custom-section-more f-r">查看所有</a>
+						</div> 
+						<div class="custom-section-body">
+							<ul class="list-link-lite top ">
+					           <li>
+						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
+						       </li>
+					           <li>
+						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
+						       </li>       
+						       <li>
+						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
+						       </li>       
+							</ul>
+						
+						</div>
+						
+					</section>
+				</div>
 			</div>
-			
 		</div>
-		<%@ include file="../common/footer.jsp" %>
-		<div class="ui-maintoolbar-box"> 
-		  <div class="ui-maintoolbar"> 
-		    <a class="card hoverc scroll2top"> 
-		      <span class="t-big"> <i class="fa fa-chevron-up"></i> </span> 
-		    </a> 
-		    <a class="card hoverc scroll2bottom marb5"> 
-		      <span class="t-big"> <i class="fa fa-chevron-down"></i> </span> 
-		    </a> 
-		    <a href="" target="_blank" class="card hovertext"> 
-		      <span> <i class="fa fa-mobile t-big"></i> <span class="text t-small">APP</span> </span> 
-		    </a> 
-		    <a class="card hoverc"> 
-		      <span> <i class="fa fa-qrcode t-big"></i> </span> 
-		      <span class="left-qrcode"> <img src="./img/qrcode-juzi.png" /> 
-		        <span class="c-gray t-small">92说明书公众号</span>  
-		      </span> 
-		    </a> 
-		    <a href="" target="_blank" class="card hovertext"><span class="t-small">反馈</span></a> 
-		  </div> 
-		 </div>
 		
-		 
+		<%@ include file="../common/footer.jsp" %>
 	</div>
 	
+	<script>
+	    window.site_url = 'https://92shuomingshu.com/';
+	</script>
 </body>
 </html>
