@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>搜索结果 ｜ 92说明书</title>
+	<title>搜索结果 ｜ 爱尚手册</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -54,7 +54,7 @@
 		       <div class="sec">
 		       	<div class="search-title-bar">
 					<span class="flr">
-						你正在搜索 “ <b ng-bind="params.key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
+						您正在搜索 “ <b ng-bind="params.key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
 					</span>
 				</div> 
 		        <ul class="list-multi-result thead"> 

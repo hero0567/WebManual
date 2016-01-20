@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>说明书详细 ｜ 92说明书</title>
+	<title>说明书详细 ｜ 爱尚手册</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -57,7 +57,7 @@
 							<ul class="custom-tabs f-l">
 								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span></li>
 							</ul>
-							<a class="f-r custom-default-tab-title" href=""><i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i> <span>添加到收藏</span></a>
+							<a class="f-r custom-default-tab-title" href=""><i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i> <span>添加到我的收藏</span></a>
 						</div>
 						<div class="custom-section-body">
 							<div class="custom-tabs-tab">
@@ -72,7 +72,7 @@
 							                    <a ng-href="/result?key={{handbook.brand}}" ng-bind="handbook.brand"></a>
 											</div>
 											<div class="col-lg-6 col-md-6 col-sm-6">
-												<i class="fa fa-calendar"></i> 上架时间： 
+												<i class="fa fa-calendar"></i> 上市时间： 
 							                    <span ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></span>
 											</div>
      									</div>
@@ -111,7 +111,7 @@
 				                <i class="fa fa-cloud"></i> <span>在线阅读</span>
 				            </a> 
 							<div class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" ng-click="addFavorite(user.id, handbook)">
-								<i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]"></i> <span>添加到收藏</span>
+								<i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]"></i> <span>添加到我的收藏</span>
 							</div>
 			                <a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" href="#" ng-click="download()"><i class="fa fa-download "></i> <span>下载PDF</span></a>
 						</div>
@@ -120,7 +120,7 @@
 					<section class="custom-brands-filter white-block p-l-r margin-bottom-20">
 						<div class="custom-section-head">
 							<ul class="custom-tabs f-l">
-								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span>官方信息</span></li>
+								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span>产品官方资源</span></li>
 							</ul>
 						</div>
 						<div class="custom-section-body">
