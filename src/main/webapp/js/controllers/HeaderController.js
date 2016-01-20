@@ -4,15 +4,6 @@
  * IndexController
  * @constructor
  */
-$(document).ready(function(){
-	$('.user-menu').mouseenter( function(){
-		$('#custom-user-menu').show();
-	})
-	$('.user-menu').mouseleave( function(){
-		$('#custom-user-menu').hide();
-	})
-});
-
 
 app.controller("HeaderController", function($scope, $http, $cookieStore) {			
 		

@@ -2,6 +2,17 @@
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />	
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />	
+<script src="js/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.user-menu').mouseenter( function(){
+		$('#custom-user-menu').show();
+	})
+	$('.user-menu').mouseleave( function(){
+		$('#custom-user-menu').hide();
+	})
+});
+</script>
 <header  ng-app="app" ng-controller="HeaderController"> 
 	<nav class="custom-navbar">
       <div class="container">

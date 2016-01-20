@@ -246,6 +246,13 @@ ul.top{
 }
 
 /*
+* favorites list styles
+*/
+.sidebar a{
+	color:#333;
+}
+
+/*
 * pagination
 */
 .custom-pagination{
@@ -298,7 +305,6 @@ ul.top{
 	border-bottom:1px #eee solid;
 	height: 50px;
     line-height: 50px;
-    
 }
 .custom-section-title{
 	font-size: 14px;
@@ -369,10 +375,13 @@ ul.custom-tabs{
 * Table
 *******/
 table td.cell{
-	font-size:12px !important;
+	font-size:14px !important;
 	padding-bottom:0px !important;
 	min-width:100px !important;
 } 
+table .fa-star{
+	font-size:18px;
+}
 .custom-appliance-table a{
 	color:#00aeef;
 }
