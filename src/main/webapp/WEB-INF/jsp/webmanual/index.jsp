@@ -58,8 +58,8 @@
 		
 		<!-- Banner -->
 		<div class="container white-block margin-bottom-20 padding-0">
-			<a href="https://www.itjuzi.com/2015" target="_blank">
-				<img class="cutom-banner" src="https://www.itjuzi.com/assets/front/tmp_banner/baogao.png">
+			<a href="" target="_blank">
+				<img class="cutom-banner" src="img/baogao.png">
 			</a>
 		</div>
 		

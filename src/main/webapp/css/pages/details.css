@@ -423,12 +423,15 @@ table td.cell{
 		top:-30px !important;
 	}
 	.col-sm-4{
+		float:left;
 		width:33.33333333% !important;
 	}
 	.col-sm-8{
+		float:left;
 		width:66.66666666% !important;
 	}
 	.col-sm-6{
+		float:left;
 		width:50% !important;
 	}
 	table .maincell{
