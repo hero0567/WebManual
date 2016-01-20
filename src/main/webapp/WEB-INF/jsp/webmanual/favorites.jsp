@@ -64,7 +64,7 @@
 					<section class="custom-my-favorites white-block p-l-r margin-bottom-20 ">
 						<div class="custom-section-head">
 							<span class="f-r">
-								你收藏的“ <b>说明书</b> ”，共有  <span ng-bind="count"></span> 本
+								我收藏的“ <b>说明书</b> ”，共有  <span ng-bind="count"></span> 本
 							</span>
 						</div>
 						<div class="custom-section-body">
