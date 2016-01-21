@@ -27,20 +27,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.jpa.domain.HandBookDomain;
-import com.wmanual.jpa.service.HandBookRepository;
+import com.wmanual.jpa.domain.ManualDomain;
+import com.wmanual.jpa.service.ManualRepository;
 
 @RestController
 @RequestMapping(value = "/s")
-public class HandBookSearchController {
+public class ManualSearchController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
-	private HandBookRepository hbRepository;
+	private ManualRepository hbRepository;
 
 	@RequestMapping("")
-	public Iterable<HandBookDomain> search(@RequestParam(value = "key", required = false) String key,
+	public Iterable<ManualDomain> search(@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
 		if (size > 0) {
@@ -51,7 +51,7 @@ public class HandBookSearchController {
 	}
 
 	@RequestMapping("/{type}")
-	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
+	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
 			@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
@@ -63,7 +63,7 @@ public class HandBookSearchController {
 	}
 
 	@RequestMapping("/{type}/{subType}")
-	public Iterable<HandBookDomain> allByTyepSubTypeKeyword(@PathVariable("type") String type,
+	public Iterable<ManualDomain> allByTyepSubTypeKeyword(@PathVariable("type") String type,
 			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {

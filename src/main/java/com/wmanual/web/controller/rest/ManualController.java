@@ -29,31 +29,31 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.jpa.domain.HandBookDomain;
-import com.wmanual.jpa.service.HandBookRepository;
+import com.wmanual.jpa.domain.ManualDomain;
+import com.wmanual.jpa.service.ManualRepository;
 
 @RestController
 @RequestMapping(value = "/hb")
-public class HandBookController {
+public class ManualController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
-	private HandBookRepository hbRepository;
+	private ManualRepository hbRepository;
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public void update(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
 		logger.info("[{}] visit wmanual try to download {} ", request.getRemoteAddr(), id);
-		HandBookDomain hb = hbRepository.findOne(id);
+		ManualDomain hb = hbRepository.findOne(id);
 		int downloadCount = hb.getDownloadCount();
 		hb.setDownloadCount(++downloadCount);	
 		hbRepository.save(hb);
 	}
 	
 	@RequestMapping("/{type}/{subType}/{id}")
-	public HandBookDomain findByID(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
+	public ManualDomain findByID(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
 		logger.info("[{}] visit wmanual try to view {} ", request.getRemoteAddr(), id);
-		HandBookDomain hb = hbRepository.findOne(id);
+		ManualDomain hb = hbRepository.findOne(id);
 		int viewCount = hb.getViewCount();
 		hb.setViewCount(++viewCount);	
 		hbRepository.save(hb);
@@ -62,12 +62,12 @@ public class HandBookController {
 	}	
 
 	@RequestMapping("")
-	public Iterable<HandBookDomain> all() throws Exception {
+	public Iterable<ManualDomain> all() throws Exception {
 		return hbRepository.findAll();
 	}
 
 	@RequestMapping("/{type}")
-	public Iterable<HandBookDomain> allByType(@PathVariable("type") String type,
+	public Iterable<ManualDomain> allByType(@PathVariable("type") String type,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
 		if (size > 0) {
@@ -78,7 +78,7 @@ public class HandBookController {
 	}
 
 	@RequestMapping("/{type}/{subType}")
-	public Iterable<HandBookDomain> allByTyepSubType(@PathVariable("type") String type,
+	public Iterable<ManualDomain> allByTyepSubType(@PathVariable("type") String type,
 			@PathVariable("subType") String subType,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {

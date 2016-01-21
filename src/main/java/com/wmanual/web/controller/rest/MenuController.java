@@ -25,14 +25,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.beans.CountBean;
-import com.wmanual.jpa.service.HandBookRepository;
+import com.wmanual.jpa.service.ManualRepository;
 
 @RestController
 @RequestMapping(value = "/menu")
 public class MenuController {
 
 	@Autowired
-	private HandBookRepository menuRepository;
+	private ManualRepository menuRepository;
 
 	@RequestMapping("")
 	public Iterable<CountBean> allMenu() throws Exception {

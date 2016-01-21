@@ -30,24 +30,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.beans.CountBean;
-import com.wmanual.jpa.domain.HandBookDomain;
-import com.wmanual.jpa.service.HandBookFavoriteRepository;
-import com.wmanual.jpa.service.HandBookRepository;
+import com.wmanual.jpa.domain.ManualDomain;
+import com.wmanual.jpa.service.ManualFavoriteRepository;
+import com.wmanual.jpa.service.ManualRepository;
 
 @RestController
 @RequestMapping(value = "/c")
-public class HandBookCountController {
+public class ManualCountController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
-	private HandBookRepository hbRepository;
+	private ManualRepository hbRepository;
 	
 	@Autowired
-	private HandBookFavoriteRepository hbfRepository;
+	private ManualFavoriteRepository hbfRepository;
 
 	@RequestMapping("/{type}")
-	public Iterable<HandBookDomain> allByKeyword(@PathVariable("type") String type,
+	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
 			@RequestParam(value = "key", required = false) String key) {
 		logger.info("Search by keyword " + key);
 		Pageable page = new PageRequest(0, 10);

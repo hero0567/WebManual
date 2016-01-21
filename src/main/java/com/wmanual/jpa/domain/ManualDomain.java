@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="handbook")
 //@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
-public class HandBookDomain {
+public class ManualDomain {
 		
 		
 	@Id

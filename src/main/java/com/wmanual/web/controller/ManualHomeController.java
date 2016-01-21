@@ -34,7 +34,7 @@ import com.wmanual.jpa.service.AuthorityRepository;
 import com.wmanual.jpa.service.UserRepository;
 
 @Controller
-public class HandBookHomeController {
+public class ManualHomeController {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass()); 
 	

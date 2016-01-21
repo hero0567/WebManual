@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="handbook_type")
-public class HandBookTypeDomain {
+public class ManualTypeDomain {
 		  
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

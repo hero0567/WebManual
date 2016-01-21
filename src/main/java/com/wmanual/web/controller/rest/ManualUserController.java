@@ -17,7 +17,7 @@ import com.wmanual.jpa.service.UserRepository;
 
 @RestController
 @RequestMapping(value = "/u")
-public class HandBookUserController {
+public class ManualUserController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 	

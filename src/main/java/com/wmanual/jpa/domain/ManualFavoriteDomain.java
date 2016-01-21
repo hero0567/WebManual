@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "handbook_favor", uniqueConstraints = { @UniqueConstraint(columnNames = { "handBook_id", "user_id" }) })
-public class HandBookFavoriteDomain {
+public class ManualFavoriteDomain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class HandBookFavoriteDomain {
 	private String comment;
 
 	@ManyToOne
-	private HandBookDomain handBook;
+	private ManualDomain handBook;
 
 	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY, optional = false)
@@ -62,11 +62,11 @@ public class HandBookFavoriteDomain {
 		this.comment = comment;
 	}
 
-	public HandBookDomain getHandBook() {
+	public ManualDomain getHandBook() {
 		return handBook;
 	}
 
-	public void setHandBook(HandBookDomain handBook) {
+	public void setHandBook(ManualDomain handBook) {
 		this.handBook = handBook;
 	}
 

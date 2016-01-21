@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="handbook_service")
-public class HandBookServiceDomain {
+public class ManualServiceDomain {
 	
 	
 	@Id

@@ -14,36 +14,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.jpa.domain.HandBookDomain;
-import com.wmanual.jpa.domain.HandBookFavoriteDomain;
+import com.wmanual.jpa.domain.ManualDomain;
+import com.wmanual.jpa.domain.ManualFavoriteDomain;
 import com.wmanual.jpa.domain.User;
-import com.wmanual.jpa.service.HandBookFavoriteRepository;
-import com.wmanual.jpa.service.HandBookRepository;
+import com.wmanual.jpa.service.ManualFavoriteRepository;
+import com.wmanual.jpa.service.ManualRepository;
 import com.wmanual.jpa.service.UserRepository;
 import com.wmanual.web.playload.FavoritePlayLoad;
 
 @RestController
 @RequestMapping(value = "/favor")
-public class HandBookFavoriteController {
+public class ManualFavoriteController {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 	
 	@Autowired
-	private HandBookFavoriteRepository hbfRepository;
+	private ManualFavoriteRepository hbfRepository;
 	
 	@Autowired
-	private HandBookRepository hbRepository;
+	private ManualRepository hbRepository;
 
 	@Autowired
 	private UserRepository userRepository;
 		
 	@RequestMapping("")
-	public Iterable<HandBookFavoriteDomain> all() throws Exception {
+	public Iterable<ManualFavoriteDomain> all() throws Exception {
 		return hbfRepository.findAll();
 	}
 
 	@RequestMapping("/{uid}")
-	public Iterable<HandBookFavoriteDomain> allByUser(@PathVariable("uid") Long uid,
+	public Iterable<ManualFavoriteDomain> allByUser(@PathVariable("uid") Long uid,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
 		if (size > 0) {
@@ -54,7 +54,7 @@ public class HandBookFavoriteController {
 	}
 	
 	@RequestMapping("/{uid}/{subType}")
-	public Iterable<HandBookFavoriteDomain> findByUserIDAndSubType(@PathVariable("uid") Long uid,
+	public Iterable<ManualFavoriteDomain> findByUserIDAndSubType(@PathVariable("uid") Long uid,
 			@PathVariable(value = "subType") String subType,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
@@ -74,15 +74,15 @@ public class HandBookFavoriteController {
 		logger.info("User[{}] Add handbook[{}] as favorite.", uid, hbid);
 		
 		User user = userRepository.findOne(uid);
-		HandBookDomain hbook = hbRepository.findOne(hbid);
-		HandBookFavoriteDomain hbookfav = new HandBookFavoriteDomain();
+		ManualDomain hbook = hbRepository.findOne(hbid);
+		ManualFavoriteDomain hbookfav = new ManualFavoriteDomain();
 		hbookfav.setUser(user);
 		hbookfav.setHandBook(hbook);
 		hbookfav.setAlias(favorteLoad.getAlias());
 		hbookfav.setComment(favorteLoad.getComment());		
 		hbfRepository.save(hbookfav);
 
-		HandBookDomain hb = hbRepository.findOne(hbid);
+		ManualDomain hb = hbRepository.findOne(hbid);
 		int favorCount = hb.getFavorCount();
 		hb.setFavorCount(++favorCount);	
 		hbRepository.save(hb);
@@ -110,7 +110,7 @@ public class HandBookFavoriteController {
 		if (hbid != 0){
 			hbfRepository.delete(fid);
 			
-			HandBookDomain hb = hbRepository.findOne(hbid);
+			ManualDomain hb = hbRepository.findOne(hbid);
 			int favorCount = hb.getFavorCount();
 			favorCount = favorCount <= 0 ? 0 : favorCount--;
 			hb.setFavorCount(favorCount);	

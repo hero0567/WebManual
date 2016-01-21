@@ -23,21 +23,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.jpa.domain.HandBookServiceDomain;
-import com.wmanual.jpa.service.HandBookServiceRepository;
+import com.wmanual.jpa.domain.ManualServiceDomain;
+import com.wmanual.jpa.service.ManualServiceRepository;
 
 @RestController
 @RequestMapping(value = "/hbs")
-public class HandBookServiceController {
+public class ManualServiceController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
-	private HandBookServiceRepository hbsRepository;
+	private ManualServiceRepository hbsRepository;
 	
 
 	@RequestMapping("/{brand}")
-	public Iterable<HandBookServiceDomain> allByKeyword(@PathVariable("brand") String brand) {
+	public Iterable<ManualServiceDomain> allByKeyword(@PathVariable("brand") String brand) {
 		return hbsRepository.findByBrand(brand);
 	}
 }
