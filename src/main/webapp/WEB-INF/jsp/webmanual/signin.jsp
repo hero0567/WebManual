@@ -12,7 +12,7 @@
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
@@ -35,7 +35,7 @@
 
 </head>
 <body ng-cloak ng-app="app" ng-controller="SigninController" class="">
-	<div class="none">
+	<div class="d-n">
 		<img src="./img/favicon.png">
 	</div>
 	<!--[if lt IE 10]>

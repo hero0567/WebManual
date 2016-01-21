@@ -16,7 +16,7 @@
 <meta name="Description" content=" " />
 
 <link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 
 <script src="js/lib/others/modernizr.js"></script>
@@ -38,12 +38,13 @@
     <![endif]-->
 </head>
 <body ng-app="app" ng-controller="SignupController" class="">
-	<div class="none">
+	<div class="d-n">
 		<img src="./img/favicon.png">
 	</div>
 	<!--[if lt IE 10]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--><!-- Header -->
+	<%@ include file="../common/header.jsp" %>
 
 	<div class="main boxed">
 		<div class="loginbox-thin">

@@ -551,3 +551,685 @@ table .fa-star{
     border-radius: 2px;
 }
 
+/*
+* Login
+*/
+.main {
+    position: relative;
+}
+.boxed {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 1px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.captcha{
+	float:right;width:100px; height:28px; margin-top:-29px; margin-right:1px; position:relative
+}
+.personalEmail{
+	width:100%;
+}
+div.alert{
+	padding:0px !important;
+	margin:0px !important;
+	color:red !important;
+}
+input[type=date],input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=time],input[type=week] {
+	-webkit-appearance: none;
+	border: 1px solid #ddd;
+	outline: 0;
+	padding-left: 5px;
+	height: 30px
+}
+
+.loginbox-thin .row {
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.loginbox-thin .row>.wmanualbtn {
+	width: 100%;
+	text-align: center
+}
+
+.loginbox-thin .vcodeblock {
+	position: relative
+}
+.wmanualbtn {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 0 15px;
+	margin-right: 5px;
+	font-size: .8em;
+	font-weight: 400;
+	height: 30px;
+	line-height: 28px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+	border-radius: 2px;
+	text-align: center
+}
+
+.wmanualbtn.small {
+	height: 25px;
+	line-height: 23px
+}
+
+.wmanualbtn:hover {
+	border-color: #00aeef;
+	color: #00aeef
+}
+
+.wmanualbtn:active {
+	-webkit-filter: grayscale(0.2);
+	filter: gray
+}
+
+.wmanualbtn.c {
+	border-color: #00aeef;
+	background-color: #00aeef;
+	color: #fff!important
+}
+
+.wmanualbtn.c-lined {
+	border-color: #00aeef;
+	color: #00aeef
+}
+
+.wmanualbtn.bg-green {
+	color: #fff!important;
+	border-color: #7cc020;
+	background-color: #7cc020
+}
+
+.wmanualbtn.bg-red {
+	color: #fff!important;
+	border-color: #d71c0b;
+	background-color: #d71c0b
+}
+
+.wmanualbtn.bg-yellow {
+	color: #fff!important;
+	border-color: #f2a622;
+	background-color: #f2a622
+}
+
+.wmanualbtn.bg-blue {
+	color: #fff!important;
+	border-color: #3cb0df;
+	background-color: #3cb0df
+}
+
+.wmanualbtn.bg-gold {
+	color: #fff!important;
+	border-color: #d9b77f;
+	background-color: #d9b77f
+}
+
+.wmanualbtn.bg-white {
+	color: #fff!important;
+	border-color: #fff;
+	background-color: #fff
+}
+
+.wmanualbtn.bg-c {
+	color: #fff!important;
+	border-color: rgba(0,0,0,.1);
+	background-color: #00aeef
+}
+
+.wmanualbtn.row {
+	display: block;
+	text-align: center
+}
+
+a .wmanualbtn {
+	color: #888;
+	border-color: #999
+}
+
+a .wmanualbtn:hover {
+	color: #00aeef;
+	border-color: #00aeef
+}
+
+.loginbox {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	min-height: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 300px
+}
+
+.loginbox .row {
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.loginbox .row>.btn {
+	width: 100%;
+	text-align: center
+}
+
+.loginbox input[type=password],.loginbox input[type=text] {
+	width: 100%;
+	height: 30px!important;
+	background-color: #fafafa
+}
+
+.loginbox input[type=password]~input,.loginbox input[type=text]~input {
+	margin-top: 10px
+}
+
+.loginbox .btn {
+	height: 30px
+}
+
+.loginbox .tip {
+	color: #aaa;
+	font-size: .8em
+}
+
+.loginbox .tip a {
+	color: #00aeef
+}
+
+.loginbox .tiptop {
+	text-align: center;
+	color: #00aeef
+}
+
+.loginbox .tipcenter {
+	text-align: center;
+	font-size: .8em;
+	color: #aaa
+}
+
+.loginbox .snslogin {
+	text-align: center;
+	padding-top: 15px
+}
+
+.loginbox .snslogin .fa {
+	font-size: 1.3em;
+	margin-top: 10px
+}
+
+.loginbox .snslogin a {
+	color: #aaa;
+	margin-right: 8px
+}
+
+.loginbox .snslogin a:hover {
+	color: #00aeef
+}
+
+.loginbox-thin {
+	box-shadow: 0 0 2px rgba(0,0,0,.1);
+	margin: 50px auto;
+	padding: 30px;
+	min-height: 430px;
+	background-color: #fff;
+	max-width: 350px
+}
+
+.loginbox-thin .row {
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.loginbox-thin .row>.wmanualbtn {
+	width: 100%;
+	text-align: center
+}
+
+.loginbox-thin .vcodeblock {
+	position: relative
+}
+
+.loginbox-thin .vcodeblock .vcode {
+	height: 25px;
+	width: 80px;
+	position: absolute;
+	display: block;
+	right: 2px;
+	top: 2px;
+	border: 1px solid rgba(0,0,0,.06);
+	border-radius: 2px;
+	overflow: hidden
+}
+
+.loginbox-thin .vcodeblock .vcode img {
+	width: 100%;
+	height: 100%
+}
+
+.loginbox-thin input[type=password],.loginbox-thin input[type=text] {
+	width: 100%;
+	height: 30px!important;
+	background-color: #fafafa
+}
+
+.loginbox-thin input[type=password]~input,.loginbox-thin input[type=text]~input {
+	margin-top: 10px
+}
+
+.loginbox-thin .btn {
+	height: 30px
+}
+
+.loginbox-thin .tip {
+	color: #aaa
+}
+
+.loginbox-thin .tip a {
+	color: #00aeef
+}
+
+.loginbox-thin .tiptop {
+	overflow: auto;
+	zoom: 1;
+	margin-bottom: 30px;
+	margin-top: 20px
+}
+
+.loginbox-thin .tiptop>a,.loginbox-thin .tiptop>span {
+	opacity: .8;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	width: 50%;
+	color: #666;
+	border-bottom: 2px solid #aaa;
+	float: left;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none
+}
+
+.loginbox-thin .tiptop>a:hover,.loginbox-thin .tiptop>span:hover {
+	background-color: #fafafa
+}
+
+.loginbox-thin .tiptop>a.on,.loginbox-thin .tiptop>a:only-child,.loginbox-thin .tiptop>span.on,.loginbox-thin .tiptop>span:only-child {
+	border-bottom-color: #00aeef;
+	color: #4d4d4d
+}
+
+.loginbox-thin .tiptop>a:only-child,.loginbox-thin .tiptop>span:only-child {
+	width: 100%
+}
+
+.loginbox-thin .tiptop>a:only-child:hover,.loginbox-thin .tiptop>span:only-child:hover {
+	background-color: transparent;
+	cursor: default
+}
+
+.loginbox-thin .tipcenter {
+	text-align: center;
+	font-size: .8em;
+	color: #aaa
+}
+
+.loginbox-thin .tipbottom {
+	font-size: .8em
+}
+
+.loginbox-thin .snslogin {
+	text-align: center;
+	padding-top: 25px
+}
+
+.loginbox-thin .snslogin .fa {
+	font-size: 1.3em
+}
+
+.loginbox-thin .snslogin a {
+	border: 1px solid #aaa;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 5px;
+	text-align: center;
+	border-radius: 15px;
+	color: #aaa
+}
+
+.loginbox-thin .snslogin a:hover {
+	color: #00aeef;
+	border-color: #00aeef
+}
+
+.loginbox-thin .ui-info {
+	margin: 0
+}
+
+.loginbox-complete {
+	box-shadow: 0 0 2px rgba(0,0,0,.1);
+	margin: 50px auto;
+	padding: 30px;
+	min-height: 350px;
+	background-color: #fff;
+	max-width: 550px
+}
+
+.loginbox-complete .setpset i {
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #7cc020;
+	color: #fff;
+	font-style: normal;
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	margin-bottom: 15px;
+	position: relative;
+	z-index: 9
+}
+
+.loginbox-complete .setpset>span {
+	display: block;
+	text-align: center;
+	width: 33%;
+	float: left;
+	-webkit-filter: grayscale(1);
+	filter: gray;
+	opacity: .5;
+	position: relative
+}
+
+.loginbox-complete .setpset>span.on {
+	-webkit-filter: grayscale(0);
+	filter: gray;
+	opacity: 1
+}
+
+.loginbox-complete .row {
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.loginbox-complete .row>.wmanualbtn {
+	width: 100%;
+	text-align: center
+}
+
+.loginbox-complete .redstar {
+	color: #d71c0b
+}
+
+.loginbox-complete input[type=password],.loginbox-complete input[type=text] {
+	width: 100%;
+	height: 30px!important;
+	background-color: #fafafa;
+	margin-bottom: 20px
+}
+
+.loginbox-complete .btn {
+	height: 30px
+}
+
+.loginbox-complete .tip {
+	color: #aaa
+}
+
+.loginbox-complete .tip a {
+	color: #00aeef
+}
+
+.loginbox-complete .tiptop {
+	overflow: auto;
+	zoom: 1;
+	margin-bottom: 30px;
+	margin-top: 20px
+}
+
+.loginbox-complete .tiptop>span {
+	opacity: .8;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	width: 50%;
+	color: #666;
+	border-bottom: 2px solid #aaa;
+	float: left;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none
+}
+
+.loginbox-complete .tiptop>span:hover {
+	background-color: #fafafa
+}
+
+.loginbox-complete .tiptop>span.on {
+	border-bottom-color: #00aeef;
+	color: #4d4d4d
+}
+
+.loginbox-complete .tipcenter {
+	text-align: center;
+	font-size: .8em;
+	color: #aaa
+}
+
+.loginbox-complete .tipbottom {
+	font-size: .8em
+}
+
+.loginbox-complete .snslogin {
+	text-align: center;
+	padding-top: 15px
+}
+
+.loginbox-complete .snslogin .fa {
+	font-size: 1.3em
+}
+
+.loginbox-complete .snslogin a {
+	border: 1px solid #aaa;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 5px;
+	text-align: center;
+	border-radius: 15px;
+	color: #aaa
+}
+
+.loginbox-complete .snslogin a:hover {
+	color: #00aeef;
+	border-color: #00aeef
+}
+
+.loginbox-mail {
+	box-shadow: 0 0 2px rgba(0,0,0,.1);
+	margin: 50px auto;
+	min-height: 350px;
+	background-color: #fff;
+	max-width: 550px;
+	padding-top: 20px
+}
+
+.loginbox-mail .envelope {
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	color: #00aeef
+}
+
+.loginbox-mail .row {
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.loginbox-mail .row>.wmanualbtn {
+	width: 100%;
+	text-align: center
+}
+
+.loginbox-mail .redstar {
+	color: #d71c0b
+}
+
+.loginbox-mail .btn {
+	height: 30px;
+	line-height: 28px
+}
+
+.loginbox-mail .tip {
+	color: #aaa
+}
+
+.loginbox-mail .tip a {
+	color: #00aeef
+}
+
+.loginbox-sns {
+	box-shadow: 0 0 2px rgba(0,0,0,.1);
+	margin: 50px auto;
+	min-height: 350px;
+	background-color: #fff;
+	max-width: 550px
+}
+
+.loginbox-sns .sns-top {
+	background-color: #fafafa;
+	padding: 40px 30px 30px;
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	text-align: center
+}
+
+.loginbox-sns .sns-top .iconset {
+	text-align: center
+}
+
+.loginbox-sns .sns-top .iconset>span {
+	display: inline-block;
+	width: 100px;
+	height: 70px;
+	text-align: center
+}
+
+.loginbox-sns .sns-top .iconset .exchange {
+	font-size: 1.7em;
+	color: #7cc020
+}
+
+.loginbox-sns .row {
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.loginbox-sns .row>.wmanualbtn {
+	width: 100%;
+	text-align: center
+}
+
+.loginbox-sns .redstar {
+	color: #d71c0b
+}
+
+.loginbox-sns input[type=password],.loginbox-sns input[type=text] {
+	width: 100%;
+	height: 30px!important;
+	background-color: #fafafa;
+	margin-bottom: 20px
+}
+
+.loginbox-sns .btn {
+	height: 30px
+}
+
+.loginbox-sns .tip {
+	color: #aaa
+}
+
+.loginbox-sns .tip a {
+	color: #00aeef
+}
+
+.loginbox-sns .tiptop {
+	overflow: auto;
+	zoom: 1;
+	margin-bottom: 30px;
+	margin-top: 20px
+}
+
+.loginbox-sns .tiptop>span {
+	opacity: .8;
+	line-height: 30px;
+	text-align: center;
+	display: block;
+	width: 50%;
+	color: #666;
+	border-bottom: 2px solid #aaa;
+	float: left;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none
+}
+
+.loginbox-sns .tiptop>span:hover {
+	background-color: #fafafa
+}
+
+.loginbox-sns .tiptop>span.on {
+	border-bottom-color: #00aeef;
+	color: #4d4d4d
+}
+
+.loginbox-sns .tipcenter {
+	text-align: center;
+	font-size: .8em;
+	color: #aaa
+}
+
+.loginbox-sns .tipbottom {
+	font-size: .8em
+}
+
+.loginbox-sns .snslogin {
+	text-align: center;
+	padding-top: 15px
+}
+
+.loginbox-sns .snslogin .fa {
+	font-size: 1.3em
+}
+
+.loginbox-sns .snslogin a {
+	border: 1px solid #aaa;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 5px;
+	text-align: center;
+	border-radius: 15px;
+	color: #aaa
+}
+
+.loginbox-sns .snslogin a:hover {
+	color: #00aeef;
+	border-color: #00aeef
+}
+
