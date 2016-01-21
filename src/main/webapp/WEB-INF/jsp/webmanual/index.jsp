@@ -17,7 +17,7 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/pages/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	
 	<script src="js/lib/others/modernizr.js"></script>
@@ -90,20 +90,20 @@
 										<th class="cell action"> 关注 </th>
 									</tr>
 									<tr class="border-gray-lower-dashed" ng-repeat="sub in book.subType">
-							            <td class="cell maincell"> &nbsp;
+							            <td class="cell maincell">
 							            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>  
 							            </td> 
 								           
-							            <td class="cell brand">&nbsp;
+							            <td class="cell brand">
 								           	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> 
 							            </td> 
-							            <td class="cell version"> &nbsp;
+							            <td class="cell version">
 								             <a href="" ng-bind="sub.version"> </a> 
 							            </td> 
-							            <td class="cell date"> &nbsp;
+							            <td class="cell date">
 							            	<span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> 
 						            	</td>
-							            <td class="cell action"> &nbsp;
+							            <td class="cell action">
 							            	<a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>
 						            	</td>
 									</tr>

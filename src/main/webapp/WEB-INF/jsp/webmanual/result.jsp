@@ -13,8 +13,8 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 
-	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	
 	<script>
 		window.site_url = 'https://92shuomingshu.com/';
@@ -32,7 +32,7 @@
     <![endif]-->
 </head>
 <body ng-app="app" ng-controller="ResultController" class=""> 
-	<div class="none">
+	<div class="d-n">
 	  <img src="./img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
@@ -40,80 +40,94 @@
    <![endif]--> 
 	<div class="contentwrap"> 
 		 <%@ include file="../common/header.jsp" %>
-		 <div class="boxed"> 
-	     	<div class="sidebar left">
-				<div class="sec">
-					<ul class="list-lite">
-						<li ng-repeat="m in topList" ng-click="changeSubType(m.subType, m.count)"><a ng-class="{on: m.subType == currentSubType}" href="">{{m.subType}} <span>{{m.count}}</span></a></li>
-					</ul>
-				</div>	
-			</div>
-
-			<div class="main">
-				<!-- block 搜索列表区 --> 
-		       <div class="sec">
-		       	<div class="search-title-bar">
-					<span class="flr">
-						您正在搜索 “ <b ng-bind="params.key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
-					</span>
-				</div> 
-		        <ul class="list-multi-result thead"> 
-		         <li> <i class="cell pic"> </i> <i class="cell maincell"> <span class="t-small">名称</span> </i> <i class="cell brand"> 品牌 </i> <i class="cell version"> 型号 </i><i class="cell date"> 上市时间 </i>  <i class="cell action"> 关注 </i> </li> 
-		        </ul> 
-		        <ul class="list-multi-result">
-					<li ng-repeat="sub in results"> 
-			            <i class="cell pic"> 
-			              <a href=""> 
-			                <span class="incicon"><img ng-src="{{sub.imgUrl}}" /></span> 
-			              </a> 
-			            </i> 
-			            <i class="cell maincell"> 
-			              <p class="title"><a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a></p> 
-			            </i> 
-			            <i class="cell brand"><a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> </i> 
-			            <i class="cell version"> 
-			              <a href=""><span class="tag gray" ng-bind="sub.version"></span></a> 
-			            </i> 
-			            <i class="cell date"> <span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> </i>
-			            <i class="cell action"> <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a> </i> 
-			         </li>							
-				</ul>
-		       </div>        
-		       <!-- block 分页区 -->
-			   <div>
-					<div class="ui-pagechange for-sec-bottom">
-						<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
-						<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
-						<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
-							ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
-						<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
-						<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
-					</div>
+		 
+		 <div class="container margin-bottom-20">
+		 	<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-12 margin-bottom-20">
+					<section class="sidebar white-block">
+						<ul class="list-lite">
+							<li ng-repeat="m in topList" ng-click="changeSubType(m.subType, m.count)">
+								<a ng-class="{on: m.subType == currentSubType}" href="">{{m.subType}} <span class="subtype-amount">{{m.count}}</span></a>
+							</li>
+						</ul>
+					</section>
+				</div>
+				
+				<div class="col-lg-9 col-md-9 col-sm-12">
+					<section class="white-block p-l-r margin-bottom-20 ">
+						<div class="custom-section-head">
+							<span class="f-r">
+								您正在搜索 “ <b ng-bind="params.key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
+							</span>
+						</div>
 					
-			   </div> 
-			</div>
-	    </div> 
-		<div class="ui-maintoolbar-box"> 
-			<div class="ui-maintoolbar"> 
-				  <a class="card hoverc scroll2top"> 
-				    <span class="t-big"> <i class="fa fa-chevron-up"></i> </span> 
-				  </a> 
-				  <a class="card hoverc scroll2bottom marb5"> 
-				    <span class="t-big"> <i class="fa fa-chevron-down"></i> </span> 
-				  </a> 
-				  <a href="" target="_blank" class="card hovertext"> 
-				    <span> <i class="fa fa-mobile t-big"></i> <span class="text t-small">APP</span> </span> 
-				  </a> 
-				  <a class="card hoverc"> 
-				    <span> <i class="fa fa-qrcode t-big"></i> </span> 
-				    <span class="left-qrcode"> <img src="./img/qrcode-juzi.png" /> 
-				      <span class="c-gray t-small">92说明书公众号</span>  
-				    </span> 
-				  </a> 
-				  <a href="" target="_blank" class="card hovertext"><span class="t-small">反馈</span></a> 
-			</div> 
-		</div>
-		<%@ include file="../common/footer.jsp" %> 
+						<div class="custom-section-body">
+							<section class="custom-brands-filter white-block p-l-r">
+								<div class="custom-section-body">
+									<div id="tab-body-view-most-manual" class="custom-tabs-tab">
+										<table class="">
+											<tr>
+												<td>
+													<ul class="custom-brands-list">
+												 		<li class="custom-brand-item active">全部品牌</li>
+														<li class="custom-brand-item" ng-repeat="sub in results"> 
+															<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>	
+														</li>
+													</ul>		
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</section>
+						</div>
+					</section>
+					
+					<section class="white-block p-l-r margin-bottom-20 ">
+						<table class=" table custom-appliance-table">
+							<tr>
+								<th class="cell maincell">名称 </th> 
+								<th class="cell brand">品牌 </th> 
+								<th class="cell version">型号 </th> 
+								<th class="cell date">上市时间 </th> 
+								<th class="cell action">关注 </th>
+							</tr>
+							<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
+					            <td class="cell maincell">
+					            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a> 
+					            </td> 
+						           
+					            <td class="cell brand">
+					            	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>
+					            </td> 
+					            <td class="cell version">
+						            <span class="tag gray" ng-bind="sub.version"></span>
+					            </td> 
+					            <td class="cell date">
+					            	<span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span>
+				            	</td>
+					            <td class="cell action">
+					            	 <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  
+				            	</td>
+							</tr>
+						</table>
+						<!-- block 分页区 -->
+					    <div>
+							<div class="custom-pagination">
+								<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
+								<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
+								<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
+									ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
+								<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
+								<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
+							</div>
+					    </div> 
+				   </section>
+				</div>
+			</div>	
+		 </div>
+		 
+		 <%@ include file="../common/footer.jsp" %> 
 	</div> 
 </body>
 </html>

@@ -52,7 +52,6 @@ header ul{
 }
 .custom-navbar-nav a
 {
-	display:inline-block;
 	height:60px !important;
     line-height: 60px !important;
     text-decoration: none;

@@ -15,7 +15,7 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	<link rel="stylesheet" type="text/css" href="css/pages/appliance.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -111,7 +111,6 @@
 					<section class="custom-brands-filter white-block p-l-r">
 						<table class="table custom-appliance-table">
 							<tr>
-								<th class="cell pic"> 图片</th> 
 								<th class="cell maincell"> 名称 </th> 
 								<th class="cell brand"> 品牌 </th> 
 								<th class="cell version"> 型号 </th> 
@@ -119,23 +118,20 @@
 								<th class="cell action"> 关注 </th>
 							</tr>
 							<tr class="border-gray-lower-dashed" ng-repeat="sub in subTypes">
-								<td class="cell pic">
-									<img ng-src="{{sub.imgUrl}}" /> 
-								</td>
-					            <td class="cell maincell"> &nbsp;
+					            <td class="cell maincell">
 					            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>  
 					            </td> 
 						           
-					            <td class="cell brand">&nbsp;
+					            <td class="cell brand">
 						           	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> 
 					            </td> 
-					            <td class="cell version"> &nbsp;
+					            <td class="cell version">
 						             <a href="" ng-bind="sub.version"> </a> 
 					            </td> 
-					            <td class="cell date"> &nbsp;
+					            <td class="cell date">
 					            	<span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> 
 				            	</td>
-					            <td class="cell action"> &nbsp;
+					            <td class="cell action">
 					            	<a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>
 				            	</td>
 							</tr>

@@ -14,7 +14,7 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/pages/favorites.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
@@ -52,50 +52,74 @@
 		
 		<div class="container margin-bottom-20">
 			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-12">
+				<div class="col-lg-3 col-md-3 col-sm-12 margin-bottom-20">
 					<section class="sidebar white-block">
 						<ul class="list-lite">
-							<li ng-repeat="m in favorList" ng-click="changeSubType(m.subType, m.count)"><a ng-class="{on: m.subType == currentSubType}" href="" ng-bind="m.subType"> <span ng-bind="">{{m.count}}</span></a></li>
+							<li ng-repeat="m in favorList" ng-click="changeSubType(m.subType, m.count)">
+								<a ng-class="{on: m.subType == currentSubType}" href="" ng-bind="m.subType"> <span ng-bind="">{{m.count}}</span></a>
+							</li>
 						</ul>
 					</section>
 				</div>
 				
 				<div class="col-lg-9 col-md-9 col-sm-12">
-					<section class="custom-my-favorites white-block p-l-r margin-bottom-20 ">
+					<section class="white-block p-l-r margin-bottom-20 ">
 						<div class="custom-section-head">
 							<span class="f-r">
 								我收藏的“ <b>说明书</b> ”，共有  <span ng-bind="count"></span> 本
 							</span>
 						</div>
 						<div class="custom-section-body">
-							 <table class="table custom-appliance-table">
-								<tr>
-									<th class="cell maincell"> 名称 </th> 
-									<th class="cell brand"> 品牌 </th> 
-									<th class="cell version"> 型号 </th> 
-									<th class="cell date"> 上市时间 </th> 
-									<th class="cell action"> 关注 </th>
-								</tr>
-								<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
-						            <td class="cell maincell"> &nbsp;
-						            	<a ng-href="/details?id={{sub.handBook.id}}" ng-bind="sub.handBook.name"></a>  
-						            </td> 
-							           
-						            <td class="cell brand">&nbsp;
-						            	<a ng-href="/result?key={{sub.handBook.brand}}" ng-bind="sub.handBook.brand"></a> 
-						            </td> 
-						            <td class="cell version"> &nbsp;
-							             <span class="tag gray" ng-bind="sub.handBook.version"></span> 
-						            </td> 
-						            <td class="cell date"> &nbsp;
-						            	<span class="tags t-small c-gray-aset"> <span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span></span>
-					            	</td>
-						            <td class="cell action"> &nbsp;
-						            	 <a href="" class="fa fa-star" ng-click="addFavorite(user.id, sub.handBook)"></a> 
-					            	</td>
-								</tr>
-							</table>
+							<section class="custom-brands-filter white-block p-l-r">
+								<div class="custom-section-body">
+									<div id="tab-body-view-most-manual" class="custom-tabs-tab">
+										<table class="">
+											<tr>
+												<td>
+													<ul class="custom-brands-list">
+												 		<li class="custom-brand-item active">全部品牌</li>
+														<li class="custom-brand-item" ng-repeat="sub in results"> 
+															<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.handbook.brand"></a>	
+														</li>
+													</ul>		
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</section>
 						</div>
+					</section>
+					
+					<section class="white-block p-l-r margin-bottom-20 ">	
+						 <table class="table custom-appliance-table">
+							<tr>
+								<th class="cell maincell"> 名称 </th> 
+								<th class="cell brand"> 品牌 </th> 
+								<th class="cell version"> 型号 </th> 
+								<th class="cell date"> 上市时间 </th> 
+								<th class="cell action"> 关注 </th>
+							</tr>
+							<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
+					            <td class="cell maincell"> &nbsp;
+					            	<a ng-href="/details?id={{sub.handBook.id}}" ng-bind="sub.handBook.name"></a>  
+					            </td> 
+						           
+					            <td class="cell brand">&nbsp;
+					            	<a ng-href="/result?key={{sub.handBook.brand}}" ng-bind="sub.handBook.brand"></a> 
+					            </td> 
+					            <td class="cell version"> &nbsp;
+						             <span class="tag gray" ng-bind="sub.handBook.version"></span> 
+					            </td> 
+					            <td class="cell date"> &nbsp;
+					            	<span class="tags t-small c-gray-aset"> <span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span></span>
+				            	</td>
+					            <td class="cell action"> &nbsp;
+					            	 <a href="" class="fa fa-star" ng-click="addFavorite(user.id, sub.handBook)"></a> 
+				            	</td>
+							</tr>
+						</table>
+						 
 						
 						<!-- block 分页区 -->
 					    <div>

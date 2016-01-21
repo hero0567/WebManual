@@ -15,7 +15,7 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	<link rel="stylesheet" type="text/css" href="css/pages/details.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
