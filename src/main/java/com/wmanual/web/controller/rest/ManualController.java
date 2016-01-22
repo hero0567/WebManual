@@ -80,11 +80,18 @@ public class ManualController {
 	@RequestMapping("/{type}/{subType}")
 	public Iterable<ManualDomain> allByTyepSubType(@PathVariable("type") String type,
 			@PathVariable("subType") String subType,
+			@RequestParam(value = "brand", required = false, defaultValue = "") String brand,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
 		if (size > 0) {
 			Pageable page = new PageRequest(pn, size);
+			if (brand != null && brand.length() > 0){
+				return hbRepository.findByTypeAndSubTypeAndBrandPage(type, subType, brand, page);
+			}
 			return hbRepository.findByTypeAndSubTypePage(type, subType, page);
+		}		
+		if (brand != null && brand.length() > 0){
+			return hbRepository.findByTypeAndSubTypeAndBrand(type, subType, brand);
 		}
 		return hbRepository.findByTypeAndSubType(type, subType);
 	}

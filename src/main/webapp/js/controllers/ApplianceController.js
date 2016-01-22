@@ -21,7 +21,6 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
 		    		total:0 };
     $scope.ps = [1,2,3,4,5];
     
-    $scope.type = "全部";
     $scope.brand = "全部";
     $scope.key = "";
     
@@ -52,8 +51,8 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     	$scope.page.subtype = type;
         $scope.page.total = count;        
     	$scope.resetPageNavi();
-    	$scope.fetchSubType(type);
-    	$scope.fetchBrandGroup(type);
+    	$scope.fetchSubType();
+    	$scope.fetchBrandGroup();
         
   	}
     
@@ -70,50 +69,65 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     
     $scope.goPage = function(pn) {
     	$scope.page.pn = pn - 1;
-    	$scope.fetchSubType($scope.page.subtype);
+    	$scope.fetchSubType();
   	} 
     
     $scope.goPrePage = function(pn) {
     	$scope.page.ppn--;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.fetchSubType($scope.page.subtype);
+    	$scope.fetchSubType();
     	$scope.changePageNavi();
   	} 
     $scope.goFirstPage = function(pn) {
     	$scope.resetPageNavi()
-    	$scope.fetchSubType($scope.page.subtype);
+    	$scope.fetchSubType();
   	}
     
     $scope.goNextPage = function(pn) {
     	$scope.page.ppn++;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.fetchSubType($scope.page.subtype);
+    	$scope.fetchSubType();
     	$scope.changePageNavi();
   	} 
     $scope.goLastPage = function(pn) {
     	$scope.page.ppn = parseInt($scope.page.total / ($scope.page.size * $scope.page.ps));
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.fetchSubType($scope.page.subtype);
+    	$scope.fetchSubType();
     	$scope.changePageNavi();
   	} 
     
-    $scope.fetchSubType = function(subtype) {
-        $http.get('/hb/大家电/'+subtype, {params: {pn:$scope.page.pn, size:$scope.page.size}}).success(function(subTypes) {  
-       	 	$scope.subTypes = subTypes;
-       	 	$scope.fetchFavorite();
-        });  
+    $scope.fetchSubType = function() {        
+        if ($scope.brand == "全部"){
+        	$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size}}).success(function(subTypes) {  
+           	 	$scope.subTypes = subTypes;
+           	 	$scope.fetchFavorite();
+            });  
+    	}else{
+    		$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, brand: $scope.brand}}).success(function(subTypes) {  
+           	 	$scope.subTypes = subTypes;
+           	 	$scope.fetchFavorite();
+            });  
+    	}
  	} 
     
-    $scope.fetchBrandGroup = function(key) {
-    	$http.get('/c/s/st', {params: {"key": key, "group":true}}).success(function(brandGroup){
+    $scope.fetchBrandGroup = function() {
+    	$http.get('/c/s/st', {params: {"key": $scope.page.subtype, "group":true}}).success(function(brandGroup){
      		$scope.brandGroup = brandGroup
+     		var count = 0;
+     		angular.forEach(brandGroup, function (m) {
+     			count += m.count; 
+        	});
+     		$scope.brandGroup.unshift({"count":count, subType: "全部"});
         });
   	}
     
-    $scope.changeBrandGroup = function(key) {
-    	$scope.brand = key;
+    $scope.changeBrandGroup = function(brand, count) {
+    	$scope.brand = brand;    	
+    	$scope.page.total = count;    
+    	$scope.resetPageNavi();
+    	$scope.fetchSubType();
   	}
-    
+        
     $scope.addFavorite = function(uid, sub){
 		if (uid){
 			if (sub.favor){
@@ -147,6 +161,6 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     $scope.parseParams();
     $scope.changePageNavi();
     $scope.fetchMenu();
-    $scope.fetchBrandGroup($scope.page.subtype);
-    $scope.fetchSubType($scope.page.subtype); 
+    $scope.fetchBrandGroup();
+    $scope.fetchSubType(); 
 });

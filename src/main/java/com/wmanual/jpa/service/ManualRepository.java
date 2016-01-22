@@ -27,6 +27,8 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 	public List<ManualDomain> findByTypeAndNameLike(String type, String name);
 
 	public List<ManualDomain> findByTypeAndSubType(String type, String subType);
+	
+	public List<ManualDomain> findByTypeAndSubTypeAndBrand(String type, String subType, String brand);
 
 	@Query("from ManualDomain where type = ?1 and subType = ?2  and name like %?3%")
 	public List<ManualDomain> findByTypeAndSubTypeAndNameLike(String type, String subType, String name);
@@ -58,6 +60,9 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 
 	@Query("from ManualDomain where type = ? and subType = ?")
 	public List<ManualDomain> findByTypeAndSubTypePage(String type, String subType, Pageable pageable);
+	
+	@Query("from ManualDomain where type = ? and subType = ? and brand = ?")
+	public List<ManualDomain> findByTypeAndSubTypeAndBrandPage(String type, String subType, String brand, Pageable pageable);
 
 	// Count
 	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where name like %?1%")
