@@ -80,18 +80,8 @@
 										</td>
 										<td class="padding-top-15">
 											<ul class="custom-brands-list">
-										 		<li class="custom-brand-item active">全部</li>
-												<li class="custom-brand-item"> 
-													<a href="">2012</a>	
-												</li>
-												<li class="custom-brand-item"> 
-													<a href="">2013</a>	
-												</li>
-												<li class="custom-brand-item"> 
-													<a href="">2014</a>	
-												</li>
-												<li class="custom-brand-item"> 
-													<a href="">2015</a>	
+												<li class="custom-brand-item" ng-repeat="t in timeline" ng-class="{active: currentTime == t}" ng-click="changeTime(t)"> 
+													<a href="" ng-bind="t"></a>	
 												</li>
 											</ul>		
 										</td>

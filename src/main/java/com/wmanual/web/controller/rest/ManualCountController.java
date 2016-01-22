@@ -54,6 +54,11 @@ public class ManualCountController {
 //		return hbRepository.findSize(page).getContent();
 //	}
 
+	/**
+	 * @param nm means name condition
+	 * @param key the search key
+	 * @param group if group by subType 
+	 */
 	@RequestMapping("/s/nm")
 	public List<CountBean> searchNameByGroup(@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
@@ -63,17 +68,37 @@ public class ManualCountController {
 		return hbRepository.countByNameLike(key);
 	}
 	
+	/**
+	 * @param st means name subtype
+	 * @param key the search key
+	 * @param group if group by subType 
+	 * @param ct time user choose
+	 */
 	@RequestMapping("/s/st")
 	public List<CountBean> searchBrandByGroup(@RequestParam(value = "key", required = false) String key,
-			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
+			@RequestParam(value = "group", required = false) boolean group,
+			@RequestParam(value = "ct", required = false) String time) throws Exception {	
+		if (time!=null && time.endsWith("全部")){
+			time = "";
+		}
+		
 		if (group){
+			if (time != null && time.length() > 0){
+				if (time.length() > 4 ){
+					time = time.substring(0, 4);
+				}
+				return hbRepository.countBySubTypeAndTimeGroupBrand(key, Long.valueOf(time));
+			}
 			return hbRepository.countBySubTypeGroupBrand(key);
+		}
+		if (time != null && time.length() > 0){
+			if (time.length() > 4 ){
+				time = time.substring(0, 4);
+			}
+			return hbRepository.countBySubTypeAndTime(key, Long.valueOf(time));
 		}
 		return hbRepository.countBySubType(key);
 	}
-	
-	
-
 	
 	
 //	@RequestMapping("/s/{type}")

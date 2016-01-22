@@ -3,6 +3,7 @@
 app.factory('userService', ['$http','$cookies', function($http, $cookies) {
 
 	var user = {};
+	var timeline = ['全部', '2012以前', '2013', '2014', '2015', '2016'];
 	
 	function initUser(){
 		var u = $cookies.getObject("user");
@@ -16,9 +17,14 @@ app.factory('userService', ['$http','$cookies', function($http, $cookies) {
 		return user;
 	}	
 	
+	function getTimeline(){
+		return timeline;
+	}
+	
 	return {
 		initUser : initUser,
-		getUser : getUser
+		getUser : getUser,
+		getTimeline : getTimeline
 	}
 }]);
  

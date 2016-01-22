@@ -9,7 +9,7 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
 	$scope.menu = {};
 	$scope.subTypes = {};
 	$scope.brandGroup = {};
-    $scope.params = {};
+    $scope.params = {};    
     // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
     $scope.page = {	pn:0, 
 		    		ppn:0, 
@@ -22,10 +22,12 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     $scope.ps = [1,2,3,4,5];
     
     $scope.brand = "全部";
+    $scope.currentTime = "全部";
     $scope.key = "";
     
     userService.initUser();
 	$scope.user = userService.getUser();
+	$scope.timeline = userService.getTimeline();
         
     $scope.parseParams = function(){
     	var paramString = window.location.search;
@@ -98,34 +100,45 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     
     $scope.fetchSubType = function() {        
         if ($scope.brand == "全部"){
-        	$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size}}).success(function(subTypes) {  
+        	$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, ct: $scope.currentTime}}).success(function(subTypes) {  
            	 	$scope.subTypes = subTypes;
            	 	$scope.fetchFavorite();
             });  
     	}else{
-    		$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, brand: $scope.brand}}).success(function(subTypes) {  
+    		$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, brand: $scope.brand, ct: $scope.currentTime}}).success(function(subTypes) {  
            	 	$scope.subTypes = subTypes;
            	 	$scope.fetchFavorite();
             });  
     	}
  	} 
     
-    $scope.fetchBrandGroup = function() {
-    	$http.get('/c/s/st', {params: {"key": $scope.page.subtype, "group":true}}).success(function(brandGroup){
+    $scope.fetchBrandGroup = function(ct) {
+    	$http.get('/c/s/st', {params: {"key": $scope.page.subtype, "group":true, ct: $scope.currentTime}}).success(function(brandGroup){
      		$scope.brandGroup = brandGroup
      		var count = 0;
      		angular.forEach(brandGroup, function (m) {
      			count += m.count; 
         	});
-     		$scope.brandGroup.unshift({"count":count, subType: "全部"});
+     		$scope.brandGroup.unshift({"count":count, subType: "全部"});     		
+     		$scope.page.total = count;
+        	$scope.resetPageNavi();
         });
   	}
     
     $scope.changeBrandGroup = function(brand, count) {
-    	$scope.brand = brand;    	
-    	$scope.page.total = count;    
+    	$scope.brand = brand;  
+    	$scope.page.total = count;
     	$scope.resetPageNavi();
     	$scope.fetchSubType();
+    	if ($scope.currentTime != "全部"){
+    		$scope.fetchBrandGroup(true);
+    	}
+  	}
+    
+    $scope.changeTime = function(t) {
+    	$scope.currentTime = t;   
+    	$scope.fetchSubType();
+       	$scope.fetchBrandGroup(true);
   	}
         
     $scope.addFavorite = function(uid, sub){
