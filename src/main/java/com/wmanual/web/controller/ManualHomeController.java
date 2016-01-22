@@ -27,6 +27,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.wmanual.configure.ConditionConfigure;
 import com.wmanual.configure.EmailConfigure;
 import com.wmanual.jpa.domain.Authority;
 import com.wmanual.jpa.domain.User;
@@ -45,9 +46,12 @@ public class ManualHomeController {
 	@Autowired
 	private EmailConfigure emailConfigure;
 	
+	@Autowired
+	private ConditionConfigure condition;
+	
 	@RequestMapping("/")
 	public String home(HttpServletRequest request) throws Exception {
-		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");		
 		return "webmanual/index";
 	}
 	
@@ -89,6 +93,7 @@ public class ManualHomeController {
 	
 	@RequestMapping("/custom")
 	public String custom() throws Exception {
+		logger.info(condition.getTimeline());
 		return "static/custom";
 	}
 	

@@ -48,7 +48,7 @@ app.controller("ResultController", function($scope, $http, $location, userServic
    	}  
     
     $scope.fetchTopList = function(key) {
-    	$http.get('/c/s', {params: {"key": key, "group":true}}).success(function(topList){
+    	$http.get('/c/s/nm', {params: {"key": key, "group":true}}).success(function(topList){
      		$scope.topList = topList;
      		var count = 0;
      		angular.forEach(topList, function (m) {

@@ -46,35 +46,48 @@ public class ManualCountController {
 	@Autowired
 	private ManualFavoriteRepository hbfRepository;
 
-	@RequestMapping("/{type}")
-	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
-			@RequestParam(value = "key", required = false) String key) {
-		logger.info("Search by keyword " + key);
-		Pageable page = new PageRequest(0, 10);
-		return hbRepository.findSize(page).getContent();
-	}
+//	@RequestMapping("/{type}")
+//	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
+//			@RequestParam(value = "key", required = false) String key) {
+//		logger.info("Search by keyword " + key);
+//		Pageable page = new PageRequest(0, 10);
+//		return hbRepository.findSize(page).getContent();
+//	}
 
-	@RequestMapping("/s")
-	public List<CountBean> searchByGroup(@RequestParam(value = "key", required = false) String key,
+	@RequestMapping("/s/nm")
+	public List<CountBean> searchNameByGroup(@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
 		if (group){
-			return hbRepository.countByNameLikeGroup(key);
+			return hbRepository.countByNameLikeGroupSubType(key);
 		}
 		return hbRepository.countByNameLike(key);
 	}
-
-	@RequestMapping("/s/{type}")
-	public List<CountBean> searchByKeyword(@PathVariable("type") String type,
-			@RequestParam(value = "key", required = false) String key) {
-		return hbRepository.countByTypeAndNameLike(type, key);
+	
+	@RequestMapping("/s/st")
+	public List<CountBean> searchBrandByGroup(@RequestParam(value = "key", required = false) String key,
+			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
+		if (group){
+			return hbRepository.countBySubTypeGroupBrand(key);
+		}
+		return hbRepository.countBySubType(key);
 	}
+	
+	
 
-	@RequestMapping("/s/{type}/{subType}")
-	public List<CountBean> allByTyepSubTypeKeyword(@PathVariable("type") String type,
-			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key)
-					throws Exception {
-		return hbRepository.countByTypeAndSubTypeAndNameLike(type, subType, key);
-	}
+	
+	
+//	@RequestMapping("/s/{type}")
+//	public List<CountBean> searchByKeyword(@PathVariable("type") String type,
+//			@RequestParam(value = "key", required = false) String key) {
+//		return hbRepository.countByTypeAndNameLike(type, key);
+//	}
+//
+//	@RequestMapping("/s/{type}/{subType}")
+//	public List<CountBean> allByTyepSubTypeKeyword(@PathVariable("type") String type,
+//			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key)
+//					throws Exception {
+//		return hbRepository.countByTypeAndSubTypeAndNameLike(type, subType, key);
+//	}
 	
 	@RequestMapping("/f")
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,

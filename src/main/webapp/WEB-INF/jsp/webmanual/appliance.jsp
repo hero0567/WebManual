@@ -68,9 +68,9 @@
 										</td>
 										<td>
 											<ul class="custom-brands-list">
-										 		<li class="custom-brand-item active">全部</li>
-												<li class="custom-brand-item" ng-repeat="sub in subTypes"> 
-													<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>	
+										 		<li class="custom-brand-item" ng-class="{active: brand == '全部'}" ng-click="changeBrandGroup('全部')">全部</li>
+												<li class="custom-brand-item" ng-repeat="manual in brandGroup" ng-class="{active: brand == manual.subType}" ng-click="changeBrandGroup(manual.subType)"> 
+													<a ng-bind="manual.subType +'('+ manual.count+')'"></a>
 												</li>
 											</ul>		
 										</td>

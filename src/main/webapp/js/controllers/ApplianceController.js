@@ -8,6 +8,7 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
 	
 	$scope.menu = {};
 	$scope.subTypes = {};
+	$scope.brandGroup = {};
     $scope.params = {};
     // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
     $scope.page = {	pn:0, 
@@ -21,6 +22,7 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     $scope.ps = [1,2,3,4,5];
     
     $scope.type = "全部";
+    $scope.brand = "全部";
     $scope.key = "";
     
     userService.initUser();
@@ -51,6 +53,7 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
         $scope.page.total = count;        
     	$scope.resetPageNavi();
     	$scope.fetchSubType(type);
+    	$scope.fetchBrandGroup(type);
         
   	}
     
@@ -101,6 +104,16 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
         });  
  	} 
     
+    $scope.fetchBrandGroup = function(key) {
+    	$http.get('/c/s/st', {params: {"key": key, "group":true}}).success(function(brandGroup){
+     		$scope.brandGroup = brandGroup
+        });
+  	}
+    
+    $scope.changeBrandGroup = function(key) {
+    	$scope.brand = key;
+  	}
+    
     $scope.addFavorite = function(uid, sub){
 		if (uid){
 			if (sub.favor){
@@ -130,9 +143,10 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     		});
     	}
  	}
-
+    
     $scope.parseParams();
     $scope.changePageNavi();
     $scope.fetchMenu();
+    $scope.fetchBrandGroup($scope.page.subtype);
     $scope.fetchSubType($scope.page.subtype); 
 });

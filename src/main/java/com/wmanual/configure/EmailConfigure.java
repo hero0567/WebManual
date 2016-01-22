@@ -50,7 +50,4 @@ public class EmailConfigure {
 	public void setEnable(boolean enable) {
 		this.enable = enable;
 	}
-	
-	
-
 }

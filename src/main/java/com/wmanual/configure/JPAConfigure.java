@@ -33,6 +33,9 @@ public class JPAConfigure {
 	@Value("${spring.jpa.hibernate.show_sql}")
 	private String hibShowSQL;
 	
+	@Value("${manual.condition.timeline}")
+	private String timeline;
+	
 
 	@Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(){
@@ -45,6 +48,13 @@ public class JPAConfigure {
         em.setJpaProperties(additionalJpaProperties());
 
         return em;
+    }
+	
+	@Bean
+    public ConditionConfigure conditionConfigure(){
+		ConditionConfigure condition = new ConditionConfigure();
+		condition.setTimeline(timeline);
+        return condition;
     }
 
 	Properties additionalJpaProperties(){
