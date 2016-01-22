@@ -16,6 +16,8 @@
 
 package com.wmanual.web.controller.rest;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -29,6 +31,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.domain.ManualDomain;
 import com.wmanual.jpa.service.ManualRepository;
 
@@ -40,26 +43,26 @@ public class ManualController {
 
 	@Autowired
 	private ManualRepository hbRepository;
-	
+
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public void update(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
 		logger.info("[{}] visit wmanual try to download {} ", request.getRemoteAddr(), id);
 		ManualDomain hb = hbRepository.findOne(id);
 		int downloadCount = hb.getDownloadCount();
-		hb.setDownloadCount(++downloadCount);	
+		hb.setDownloadCount(++downloadCount);
 		hbRepository.save(hb);
 	}
-	
+
 	@RequestMapping("/{type}/{subType}/{id}")
 	public ManualDomain findByID(HttpServletRequest request, @PathVariable("id") long id) throws Exception {
 		logger.info("[{}] visit wmanual try to view {} ", request.getRemoteAddr(), id);
 		ManualDomain hb = hbRepository.findOne(id);
 		int viewCount = hb.getViewCount();
-		hb.setViewCount(++viewCount);	
+		hb.setViewCount(++viewCount);
 		hbRepository.save(hb);
-		
+
 		return hb;
-	}	
+	}
 
 	@RequestMapping("")
 	public Iterable<ManualDomain> all() throws Exception {
@@ -82,17 +85,107 @@ public class ManualController {
 			@PathVariable("subType") String subType,
 			@RequestParam(value = "brand", required = false, defaultValue = "") String brand,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+			@RequestParam(value = "size", required = false, defaultValue = "0") int size,
+			@RequestParam(value = "ct", required = false) String time) throws Exception {
+
+		boolean before = false;
+		if (time == null || time.endsWith("全部")) {
+			time = "";
+		}
+		if (time.length() > 4) {
+			time = time.substring(0, 4);
+			before = true;
+		}
+
 		if (size > 0) {
-			Pageable page = new PageRequest(pn, size);
-			if (brand != null && brand.length() > 0){
-				return hbRepository.findByTypeAndSubTypeAndBrandPage(type, subType, brand, page);
+			return searchByGroup(pn, size, brand, type, subType, time, before);
+		} else {
+			return searchWithoutGroup(brand, type, subType, time, before);
+		}
+	}
+	
+	
+
+	//================================= without group==============================================================================
+	
+	public List<ManualDomain> searchWithoutGroup(String brand, String type, String subType, String time, boolean before) {
+		if (time.length() > 0) {
+			return searchWithoutGroupWithTime(brand, type, subType, time, before);
+		}else{
+			return searchWithoutGroupWithoutTime(brand, type, subType);
+		}
+	}
+
+	public List<ManualDomain> searchWithoutGroupWithTime(String brand, String type, String subType, String time, boolean before) {
+		if (before) {
+			// retrieve 2012以前
+			if (brand.length() > 0) {
+				return hbRepository.findByTypeAndSubTypeAndBrandAndProductDateLessThanEqual(type, subType, brand, Long.valueOf(time));
 			}
-			return hbRepository.findByTypeAndSubTypePage(type, subType, page);
-		}		
-		if (brand != null && brand.length() > 0){
+			return hbRepository.findByTypeAndSubTypeAndProductDateLessThanEqual(type, subType, Long.valueOf(time));
+		} else {
+			// retrieve 2013
+			if (brand.length() > 0) {
+				return hbRepository.findByTypeAndSubTypeAndBrandAndProductDate(type, subType, brand, Long.valueOf(time));
+			}
+			return hbRepository.findByTypeAndSubTypeAndProductDate(type, subType, Long.valueOf(time));
+		}
+	}
+	
+	public List<ManualDomain> searchWithoutGroupWithoutTime(String brand, String type, String subType) {
+		if (brand.length() > 0) {
 			return hbRepository.findByTypeAndSubTypeAndBrand(type, subType, brand);
 		}
 		return hbRepository.findByTypeAndSubType(type, subType);
+	}
+	
+	//================================= with group==============================================================================
+	
+	/**
+	 * retrieve with group
+	 */
+	public List<ManualDomain> searchByGroup(int pn, int size, String brand, String type, String subType, String time,
+			boolean before) {
+		if (time.length() > 0) {
+			return searchByGroupWithTime(pn, size, brand, type, subType, time, before);
+		} else {
+			return searchByGroupWithoutTime(pn, size, brand, type, subType);
+		}
+	}
+
+	/**
+	 * retrieve with group and time
+	 */
+	public List<ManualDomain> searchByGroupWithTime(int pn, int size, String brand, String type, String subType,
+			String time, boolean before) {
+
+		if (before) {
+			// retrieve 2012以前
+			Pageable page = new PageRequest(pn, size);
+			if (brand.length() > 0) {
+				return hbRepository.findByTypeAndSubTypeAndBrandAndTimeBeforePage(type, subType, brand,
+						Long.valueOf(time), page);
+			}
+			return hbRepository.findByTypeAndSubTypeTimeBeforePage(type, subType, Long.valueOf(time), page);
+		} else {
+			// retrieve 2013
+			Pageable page = new PageRequest(pn, size);
+			if (brand.length() > 0) {
+				return hbRepository.findByTypeAndSubTypeAndBrandAndTimePage(type, subType, brand, Long.valueOf(time), page);
+			}
+			return hbRepository.findByTypeAndSubTypeTimePage(type, subType, Long.valueOf(time), page);
+		}
+
+	}
+
+	/**
+	 * retrieve with group without time
+	 */
+	public List<ManualDomain> searchByGroupWithoutTime(int pn, int size, String brand, String type, String subType) {
+		Pageable page = new PageRequest(pn, size);
+		if (brand.length() > 0) {
+			return hbRepository.findByTypeAndSubTypeAndBrandPage(type, subType, brand, page);
+		}
+		return hbRepository.findByTypeAndSubTypePage(type, subType, page);
 	}
 }
