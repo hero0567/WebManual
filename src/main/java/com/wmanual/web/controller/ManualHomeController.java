@@ -155,11 +155,11 @@ public class ManualHomeController {
 		authorityRepository.save(auth);
 		
 		//EmailUtil.getInstance().sendEmail(user.getUsername(), emailConfigure);
-		return "login";
+		return "webmanual/signin";
 	}
 	
 	@RequestMapping(value="/logout")
 	public String logout() {
-		return "login";
+		return "webmanual/signin";
 	}
 }

@@ -77,7 +77,7 @@ public class WebSecurityConfiguration extends WebMvcConfigurerAdapter {
 							.loginPage("/signin")								
 								.defaultSuccessUrl("/")
 //								.successHandler(crossPSuccessHandler)
-								.failureUrl("/login?error").permitAll()
+								.failureUrl("/signin?error").permitAll()
 					.and()
 						.rememberMe().tokenValiditySeconds(1209600)
 					.and()
