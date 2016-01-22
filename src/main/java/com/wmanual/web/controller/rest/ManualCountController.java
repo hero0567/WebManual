@@ -78,26 +78,43 @@ public class ManualCountController {
 	public List<CountBean> searchBrandByGroup(@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "group", required = false) boolean group,
 			@RequestParam(value = "ct", required = false) String time) throws Exception {	
-		if (time!=null && time.endsWith("全部")){
+		boolean before = false;
+		if (time == null || time.endsWith("全部")) {
 			time = "";
+		}
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+			before = true;
 		}
 		
 		if (group){
-			if (time != null && time.length() > 0){
-				if (time.length() > 4 ){
-					time = time.substring(0, 4);
-				}
-				return hbRepository.countBySubTypeAndTimeGroupBrand(key, Long.valueOf(time));
-			}
-			return hbRepository.countBySubTypeGroupBrand(key);
+			return searchByGroup(key, time, before);
+		}else{
+			return search(key, time, before);
 		}
-		if (time != null && time.length() > 0){
-			if (time.length() > 4 ){
-				time = time.substring(0, 4);
+	}
+	
+	public List<CountBean> search(String key, String time, boolean before){
+		if ( time.length() > 0){
+			if (before){
+				return hbRepository.countBySubTypeAndTimeBefore(key, Long.valueOf(time));
+			}else{
+				return hbRepository.countBySubTypeAndTime(key, Long.valueOf(time));
 			}
-			return hbRepository.countBySubTypeAndTime(key, Long.valueOf(time));
+			
 		}
 		return hbRepository.countBySubType(key);
+	}
+	
+	public List<CountBean> searchByGroup(String key, String time, boolean before){
+		if (time.length() > 0){
+			if (before){
+				return hbRepository.countBySubTypeAndTimeBeforeGroupBrand(key, Long.valueOf(time));
+			}else{
+				return hbRepository.countBySubTypeAndTimeGroupBrand(key, Long.valueOf(time));
+			}			
+		}
+		return hbRepository.countBySubTypeGroupBrand(key);
 	}
 	
 	
