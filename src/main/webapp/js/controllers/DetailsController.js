@@ -11,6 +11,8 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 	$scope.params = {};
 	$scope.services = {};
 	$scope.id = "";
+	$scope.imageUrl = "";
+	$scope.error = {captcha :false};
     
 	userService.initUser();
 	$scope.user = userService.getUser();
@@ -68,10 +70,24 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
     	window.location = "/appliance?subtype="+type +"&count="+count;
   	}
     
-    $scope.download = function() {
-    	$http.put('/hb/' + $scope.id);
-    	window.location = $scope.handbook.url;
+    $scope.checkSecCode = function(){
+		$http.get('/sec/img/check?code=' + $scope.user.captcha).success(function(){
+			$scope.error.captcha = false;
+	    	$http.put('/hb/' + $scope.id);
+	    	window.location = $scope.handbook.url;
+	    	
+        }).error(function() {
+        	$scope.error.captcha = true;
+        });
+	}
+    
+    $scope.download = function() {    	
+    	$scope.imageUrl = "/sec/img";
   	}
+    
+    $scope.changeCaptcha = function(){
+		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
+	}
     
     $scope.fetchMenu();
     $scope.parseParams();

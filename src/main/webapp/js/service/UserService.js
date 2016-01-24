@@ -26,6 +26,14 @@ app.factory('userService', ['$http','$cookies', '$window', function($http, $cook
     	}
 	}
 	
+	function checkSecCode(){
+		$http.get('/sec/img/check?code=' + $scope.user.captcha).success(function(){
+            $scope.error.captcha = false;
+        }).error(function() {
+        	$scope.error.captcha = true;
+        });
+	}
+	
 	function initUser(){
 		var u = $cookies.getObject("user");
 		if (angular.isDefined(u)){

@@ -113,7 +113,18 @@
 							<div class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" ng-click="addFavorite(user.id, handbook)">
 								<i class="fav-star" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[handbook.favor == true]"></i> <span>添加到我的收藏</span>
 							</div>
-			                <a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" href="#" ng-click="download()"><i class="fa fa-download "></i> <span>下载PDF</span></a>
+			                <a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" href="#" ng-click="download()"><i class="fa fa-download "></i> <span>下载</span></a>
+						</div>
+					</section>
+					<section class="custom-brands-filter white-block p-l-r margin-bottom-20" ng-show="imageUrl != ''">
+						<div class="row">
+							<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
+				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required/>
+				            <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()"/>
+				            <div ng-show="error.captcha"
+										class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
+										
+				            <button type="button" ng-click="checkSecCode()">下载</button>
 						</div>
 					</section>
 					
