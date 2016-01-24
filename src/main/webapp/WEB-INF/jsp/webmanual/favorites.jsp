@@ -56,7 +56,7 @@
 					<section class="sidebar white-block">
 						<ul class="list-lite">
 							<li ng-repeat="m in favorList" ng-click="changeSubType(m.subType, m.count)">
-								<a ng-class="{on: m.subType == currentSubType}" href="" ng-bind="m.subType"> <span ng-bind="">{{m.count}}</span></a>
+								<a ng-class="{on: m.subType == currentSubType}" href="" ng-bind="m.subType +'('+ m.count+')'"></a>
 							</li>
 						</ul>
 					</section>
