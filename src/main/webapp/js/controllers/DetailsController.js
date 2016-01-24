@@ -4,7 +4,7 @@
  * DetailsController
  * @constructor
  */
-app.controller("DetailsController", function($scope, $http, $location, userService) {
+app.controller("DetailsController", function($scope, $http, $location, $window, userService) {
 	
 	$scope.menu = {};
 	$scope.handbook = {};
@@ -51,6 +51,10 @@ app.controller("DetailsController", function($scope, $http, $location, userServi
     $scope.addFavorite = function(uid, sub){
 		if (uid){
 			if (sub.favor){
+				var ret = $window.confirm('确认取消收藏?');  
+				if (!ret){
+					return;
+				}
 				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
 					sub.favor = false;
 		        });

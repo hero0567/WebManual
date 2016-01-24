@@ -4,7 +4,7 @@
  * ApplianceController
  * @constructor
  */
-app.controller("ApplianceController", function($scope, $http, $location, userService) {
+app.controller("ApplianceController", function($scope, $http, $location, $window, userService) {
 	
 	$scope.menu = {};
 	$scope.subTypes = {};
@@ -144,6 +144,10 @@ app.controller("ApplianceController", function($scope, $http, $location, userSer
     $scope.addFavorite = function(uid, sub){
 		if (uid){
 			if (sub.favor){
+				var ret = $window.confirm('确认取消收藏?');  
+				if (!ret){
+					return;
+				}
 				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
 					sub.favor = false;
 		        });

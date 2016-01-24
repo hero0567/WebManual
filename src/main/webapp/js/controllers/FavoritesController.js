@@ -4,7 +4,7 @@
  * ResultController
  * @constructor
  */
-app.controller("FavoritesController", function($scope, $http, $location, userService) {
+app.controller("FavoritesController", function($scope, $http, $location, $window, userService) {
 	
 	$scope.menu = {};
 	$scope.results = {};
@@ -101,6 +101,10 @@ app.controller("FavoritesController", function($scope, $http, $location, userSer
     
     $scope.addFavorite = function(uid, sub){
 		if (uid){
+			var ret = $window.confirm('确认取消收藏?');  
+			if (!ret){
+				return;
+			}			
 			$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
 				$scope.fetchFavorList($scope.user.id);        
 			    $scope.searchSubType($scope.user.id);
