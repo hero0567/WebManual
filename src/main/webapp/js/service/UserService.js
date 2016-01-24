@@ -1,9 +1,30 @@
 'use strict';
 
-app.factory('userService', ['$http','$cookies', function($http, $cookies) {
+app.factory('userService', ['$http','$cookies', '$window', function($http, $cookies, $window) {
 
 	var user = {};
 	var timeline = ['全部', '2012以前', '2013', '2014', '2015', '2016'];
+	
+	
+	function addFavorite(uid, sub){
+		if (uid){
+			if (sub.favor){
+				var ret = $window.confirm('确认取消收藏?');  
+				if (!ret){
+					return;
+				}
+				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
+					sub.favor = false;
+		        });
+			}else{
+				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
+					sub.favor = true;
+		        });
+			}
+    	}else{
+    		$window.location = "/signin";
+    	}
+	}
 	
 	function initUser(){
 		var u = $cookies.getObject("user");
@@ -24,7 +45,8 @@ app.factory('userService', ['$http','$cookies', function($http, $cookies) {
 	return {
 		initUser : initUser,
 		getUser : getUser,
-		getTimeline : getTimeline
+		getTimeline : getTimeline,
+		addFavorite : addFavorite
 	}
 }]);
  
