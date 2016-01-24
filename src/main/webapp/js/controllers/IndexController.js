@@ -41,23 +41,7 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
   	} 
     
     $scope.addFavorite = function(uid, sub){
-		if (uid){
-			if (sub.favor){
-				var ret = $window.confirm('确认取消收藏?');  
-				if (!ret){
-					return;
-				}
-				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
-					sub.favor = false;
-		        });
-			}else{
-				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
-					sub.favor = true;
-		        });
-			}
-    	}else{
-    		window.location = "/signin";
-    	}
+    	userService.addFavorite(uid, sub);
 	}
     
     $scope.fetchFavorite = function() {
