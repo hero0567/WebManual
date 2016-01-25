@@ -9,6 +9,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
 	$scope.menu = {};
 	$scope.results = {};
 	$scope.topList = {};
+	$scope.brandGroup = {};
     $scope.params = {};
     // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
     $scope.page = {	pn:0, 
@@ -24,9 +25,12 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     $scope.key = "";
     $scope.count = 0;
     $scope.currentSubType = "全部";
+    $scope.brand = "全部";
+    $scope.currentTime = "全部";
     
     userService.initUser();
 	$scope.user = userService.getUser();
+	$scope.timeline = userService.getTimeline();
         
     $scope.parseParams = function(){
     	var paramString = window.location.search;
@@ -126,6 +130,35 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     	}
   	} 
     
+    $scope.fetchBrandGroup = function(ct) {
+    	$http.get('/c/s/brand', {params: {"name": $scope.params.key, "group":true, ct: $scope.currentTime}}).success(function(brandGroup){
+     		$scope.brandGroup = brandGroup
+     		var count = 0;
+     		angular.forEach(brandGroup, function (m) {
+     			count += m.count; 
+        	});
+     		$scope.brandGroup.unshift({"count":count, subType: "全部"});     		
+     		$scope.page.total = count;
+        	$scope.resetPageNavi();
+        });
+  	}
+    
+    $scope.changeBrandGroup = function(brand, count) {
+    	$scope.brand = brand;  
+    	$scope.page.total = count;
+    	$scope.resetPageNavi();
+    	$scope.fetchSubType();
+    	if ($scope.currentTime != "全部"){
+    		$scope.fetchBrandGroup(true);
+    	}
+  	}
+    
+    $scope.changeTime = function(t) {
+    	$scope.currentTime = t;   
+    	$scope.fetchSubType();
+       	$scope.fetchBrandGroup(true);
+  	}
+    
     $scope.changeMenu = function(type, count) {
     	window.location = "/appliance?subtype="+type +"&count="+count;
   	} 
@@ -154,7 +187,8 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     $scope.parseParams();
     $scope.fetchMenu();
-    $scope.fetchTopList($scope.params.key);        
+    $scope.fetchTopList($scope.params.key);     
+    $scope.fetchBrandGroup();
     $scope.searchSubType($scope.params.key); 
     
 });

@@ -65,13 +65,27 @@
 							<section class="custom-brands-filter white-block p-l-r">
 								<div class="custom-section-body">
 									<div id="tab-body-view-most-manual" class="custom-tabs-tab">
-										<table class="">
-											<tr>
+										<table class="filter-table">
+											<tr class="border-gray-dashed">
+												<td class="custom-filter-brand">
+													品牌:
+												</td>
 												<td>
 													<ul class="custom-brands-list">
-												 		<li class="custom-brand-item active">全部品牌</li>
-														<li class="custom-brand-item" ng-repeat="sub in results"> 
-															<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>	
+														<li class="custom-brand-item" ng-repeat="manual in brandGroup" ng-class="{active: brand == manual.subType}" ng-click="changeBrandGroup(manual.subType, manual.count)"> 
+															<a ng-bind="manual.subType +'('+ manual.count+')'"></a>
+														</li>
+													</ul>		
+												</td>
+											</tr>
+											<tr>
+												<td class="custom-filter-brand padding-top-15">
+													时间:
+												</td>
+												<td class="padding-top-15">
+													<ul class="custom-brands-list">
+														<li class="custom-brand-item" ng-repeat="t in timeline" ng-class="{active: currentTime == t}" ng-click="changeTime(t)"> 
+															<a href="" ng-bind="t"></a>	
 														</li>
 													</ul>		
 												</td>

@@ -38,7 +38,7 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 	
 	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndProductDateLessThanEqual(String type, String subType, String brand, long time);
 
-	@Query("from ManualDomain where type = ?1 and subType = ?2  and name like %?3%")
+	@Query("from ManualDomain where type = ?1 and subType = ?2  and (name like %?3% or brand like  %?3%)")
 	public List<ManualDomain> findByTypeAndSubTypeAndNameLike(String type, String subType, String name);
 
 	@Query(value = "select b.count, b.subType, a.sequence from handbook_type a,"
@@ -62,7 +62,7 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 	@Query("from ManualDomain where type = ?1 and name like %?2%")
 	public List<ManualDomain> findByTypeAndNameLikePage(String type, String name, Pageable pageable);
 
-	@Query("from ManualDomain where type = ?1 and subType = ?2  and name like %?3%")
+	@Query("from ManualDomain where type = ?1 and subType = ?2  and (name like %?3% or brand like %?3% )")
 	public List<ManualDomain> findByTypeAndSubTypeAndNameLikePage(String type, String subType, String name,
 			Pageable pageable);
 
@@ -83,36 +83,4 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 
 	@Query("from ManualDomain where type = ? and subType = ? and brand = ? and productDate = ?")
 	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndTimePage(String type, String subType, String brand, long time, Pageable pageable);
-
-	// Count
-	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where name like %?1%")
-	public List<CountBean> countByNameLike(String key);
-	
-	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where subType = ?1")
-	public List<CountBean> countBySubType(String key);
-	
-	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where subType = ?1 and productDate = ?2")
-	public List<CountBean> countBySubTypeAndTime(String key, long time);
-	
-	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where subType = ?1 and productDate <= ?2")
-	public List<CountBean> countBySubTypeAndTimeBefore(String key, long time);
-
-	@Query("select new com.wmanual.beans.CountBean(count(hb), subType) from ManualDomain hb where name like %?1% group by hb.subType  order by count(hb) desc")
-	public List<CountBean> countByNameLikeGroupSubType(String key);
-	
-	@Query("select new com.wmanual.beans.CountBean(count(hb), brand) from ManualDomain hb where subType = ?1 group by hb.brand  order by count(hb) desc")
-	public List<CountBean> countBySubTypeGroupBrand(String key);
-	
-	@Query("select new com.wmanual.beans.CountBean(count(hb), brand) from ManualDomain hb where subType = ?1 and productDate = ?2 group by hb.brand  order by count(hb) desc")
-	public List<CountBean> countBySubTypeAndTimeGroupBrand(String key, long time);
-	
-	@Query("select new com.wmanual.beans.CountBean(count(hb), brand) from ManualDomain hb where subType = ?1 and productDate <= ?2 group by hb.brand  order by count(hb) desc")
-	public List<CountBean> countBySubTypeAndTimeBeforeGroupBrand(String key, long time);
-
-	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where type = ?1 and name like %?2%")
-	public List<CountBean> countByTypeAndNameLike(String type, String name);
-
-	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where type = ?1 and subType = ?2  and name like %?3%")
-	public List<CountBean> countByTypeAndSubTypeAndNameLike(String type, String subType, String name);
-
 }

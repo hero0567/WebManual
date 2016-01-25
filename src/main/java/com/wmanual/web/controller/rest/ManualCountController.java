@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.domain.ManualDomain;
+import com.wmanual.jpa.service.ManualCountRepository;
 import com.wmanual.jpa.service.ManualFavoriteRepository;
 import com.wmanual.jpa.service.ManualRepository;
 
@@ -41,41 +42,45 @@ public class ManualCountController {
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
-	private ManualRepository hbRepository;
+	private ManualRepository manualRepository;
 	
 	@Autowired
-	private ManualFavoriteRepository hbfRepository;
-
-//	@RequestMapping("/{type}")
-//	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
-//			@RequestParam(value = "key", required = false) String key) {
-//		logger.info("Search by keyword " + key);
-//		Pageable page = new PageRequest(0, 10);
-//		return hbRepository.findSize(page).getContent();
-//	}
+	private ManualCountRepository mcRepository;
+	
+	@Autowired
+	private ManualFavoriteRepository mfRepository;
 
 	/**
+	 *  Get subtype group by name
+	 * 
+	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
+	 * 
 	 * @param nm means name condition
 	 * @param key the search key
 	 * @param group if group by subType 
 	 */
 	@RequestMapping("/s/nm")
-	public List<CountBean> searchNameByGroup(@RequestParam(value = "key", required = false) String key,
+	public List<CountBean> searchSubtypeGroupByNameBrand(@RequestParam(value = "key", required = false) String key,
 			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
 		if (group){
-			return hbRepository.countByNameLikeGroupSubType(key);
+			return mcRepository.countByNameLikeGroupSubType(key);
 		}
-		return hbRepository.countByNameLike(key);
+		return mcRepository.countByNameLike(key);
 	}
 	
+	
 	/**
+	 * Get brand group by name
+	 * 
+	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
+	 * 
 	 * @param st means name subtype
-	 * @param key the search key
+	 * @param name the search key
 	 * @param group if group by subType 
 	 * @param ct time user choose
 	 */
-	@RequestMapping("/s/st")
-	public List<CountBean> searchBrandByGroup(@RequestParam(value = "key", required = false) String key,
+	@RequestMapping("/s/brand")
+	public List<CountBean> searchBrandGroupByName(@RequestParam(value = "name") String name,
 			@RequestParam(value = "group", required = false) boolean group,
 			@RequestParam(value = "ct", required = false) String time) throws Exception {	
 		boolean before = false;
@@ -88,56 +93,95 @@ public class ManualCountController {
 		}
 		
 		if (group){
-			return searchByGroup(key, time, before);
+			return searchGroupByName(name, time, before);
 		}else{
-			return search(key, time, before);
+			return searchByName(name, time, before);
 		}
 	}
 	
-	public List<CountBean> search(String key, String time, boolean before){
+	public List<CountBean> searchByName(String name, String time, boolean before){
 		if ( time.length() > 0){
 			if (before){
-				return hbRepository.countBySubTypeAndTimeBefore(key, Long.valueOf(time));
+				return mcRepository.countByNameAndTimeBefore(name, Long.valueOf(time));
 			}else{
-				return hbRepository.countBySubTypeAndTime(key, Long.valueOf(time));
+				return mcRepository.countByNameAndTime(name, Long.valueOf(time));
 			}
 			
 		}
-		return hbRepository.countBySubType(key);
+		return mcRepository.countByName(name);
 	}
 	
-	public List<CountBean> searchByGroup(String key, String time, boolean before){
+	public List<CountBean> searchGroupByName(String name, String time, boolean before){
 		if (time.length() > 0){
 			if (before){
-				return hbRepository.countBySubTypeAndTimeBeforeGroupBrand(key, Long.valueOf(time));
+				return mcRepository.countByNameAndTimeBeforeGroupBrand(name, Long.valueOf(time));
 			}else{
-				return hbRepository.countBySubTypeAndTimeGroupBrand(key, Long.valueOf(time));
+				return mcRepository.countByNameAndTimeGroupBrand(name, Long.valueOf(time));
 			}			
 		}
-		return hbRepository.countBySubTypeGroupBrand(key);
+		return mcRepository.countByNameGroupBrand(name);
 	}
 	
+	/**
+	 * Get brand group by subtype
+	 * 
+	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
+	 * 
+	 * @param st means name subtype
+	 * @param subtype the search key
+	 * @param group if group by subType 
+	 * @param ct time user choose
+	 */
+	@RequestMapping("/s/st")
+	public List<CountBean> searchBrandGroupBySubtype(@RequestParam(value = "subtype") String subtype,
+			@RequestParam(value = "group", required = false) boolean group,
+			@RequestParam(value = "ct", required = false) String time) throws Exception {	
+		boolean before = false;
+		if (time == null || time.endsWith("全部")) {
+			time = "";
+		}
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+			before = true;
+		}
+		
+		if (group){
+			return searchGroupBySubtype(subtype, time, before);
+		}else{
+			return searchBySubtype(subtype, time, before);
+		}
+	}
 	
-//	@RequestMapping("/s/{type}")
-//	public List<CountBean> searchByKeyword(@PathVariable("type") String type,
-//			@RequestParam(value = "key", required = false) String key) {
-//		return hbRepository.countByTypeAndNameLike(type, key);
-//	}
-//
-//	@RequestMapping("/s/{type}/{subType}")
-//	public List<CountBean> allByTyepSubTypeKeyword(@PathVariable("type") String type,
-//			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key)
-//					throws Exception {
-//		return hbRepository.countByTypeAndSubTypeAndNameLike(type, subType, key);
-//	}
+	public List<CountBean> searchBySubtype(String subtype, String time, boolean before){
+		if ( time.length() > 0){
+			if (before){
+				return mcRepository.countBySubTypeAndTimeBefore(subtype, Long.valueOf(time));
+			}else{
+				return mcRepository.countBySubTypeAndTime(subtype, Long.valueOf(time));
+			}
+			
+		}
+		return mcRepository.countBySubType(subtype);
+	}
+	
+	public List<CountBean> searchGroupBySubtype(String subtype, String time, boolean before){
+		if (time.length() > 0){
+			if (before){
+				return mcRepository.countBySubTypeAndTimeBeforeGroupBrand(subtype, Long.valueOf(time));
+			}else{
+				return mcRepository.countBySubTypeAndTimeGroupBrand(subtype, Long.valueOf(time));
+			}			
+		}
+		return mcRepository.countBySubTypeGroupBrand(subtype);
+	}
 	
 	@RequestMapping("/f")
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,
 			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
 		if (group){
-			return hbfRepository.countByUIDGroup(id);
+			return mfRepository.countByUIDGroup(id);
 		}
-		return hbfRepository.countByUID(id);
+		return mfRepository.countByUID(id);
 	}
 
 }
