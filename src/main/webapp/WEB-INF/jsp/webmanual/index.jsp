@@ -56,78 +56,16 @@
 		<!-- Header -->
 		<%@ include file="../common/header.jsp" %>
 		
-		<!-- Banner -->
-		<div class="container white-block margin-bottom-20 padding-0">
-			<a href="" target="_blank">
-				<img class="cutom-banner" src="img/baogao.png">
-			</a>
-		</div>
-		
-		<!-- Section -->
-		<div class="container white-block margin-bottom-20" ng-repeat="book in handbook | orderBy: 'sequence'">
-			<div class="custom-appliance-head row" >
-				<h4><i class="fa fa-th"></i> <span ng-bind="book.name"></span></h4>
-			</div>
-			
-			<div class="row">
-				<div class="col-lg-9 col-md-9 col-sm-9">
-					<section>
-						<div class="custom-section-head">
-							<ul class="custom-tabs f-l">
-								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-fire"></i> 浏览最多说明书</li>
-								<li class="tab-head-view-most-brand-{{book.name}}"><i class="fa fa-globe"></i> 浏览最多品牌</li>
-							</ul>
-							<a class="custom-section-more f-r" href="/appliance?subtype={{book.name}}&count={{book.count}}">查看更多 <i class="fa fa-chevron-right"></i></a>
-						</div>
-						<div class="custom-section-body">
-							<div id="tab-body-view-most-manual" class="custom-tabs-tab">
-								<table class="table custom-appliance-table">
-									<tr>
-										<th class="cell maincell"> <span class="t-small">名称</span> </th> 
-										<th class="cell brand"> 品牌 </th> 
-										<th class="cell version"> 型号 </th> 
-										<th class="cell date"> 上市时间 </th> 
-										<th class="cell action"> 关注 </th>
-									</tr>
-									<tr class="border-gray-lower-dashed" ng-repeat="sub in book.subType">
-							            <td class="cell maincell">
-							            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a>  
-							            </td> 
-								           
-							            <td class="cell brand">
-								           	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a> 
-							            </td> 
-							            <td class="cell version">
-								             <a href="" ng-bind="sub.version"> </a> 
-							            </td> 
-							            <td class="cell date">
-							            	<span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span> 
-						            	</td>
-							            <td class="cell action">
-							            	<a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>
-						            	</td>
-									</tr>
-								</table>
-							</div>
-							<div id="tab-body-view-most-brand" class="custom-tabs-tab">
-								
-							</div>
-						</div>
-					</section>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3">
-					<section>
-						<div class="custom-section-head">
-							<a href="" class="custom-section-title f-l"><i class="fa fa-cog"></i> 维修保养常识</a>
-							<a href="" class="custom-section-more f-r">查看更多 <i class="fa fa-chevron-right"></i></a>
-						</div>
-						<div class="custom-section-body">
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-		
+		<div class="sub-menu"> 
+		 	<div class="container"> 
+				<ul class="nav navbar-nav custom-nav"> 
+					<li ng-repeat="m in menu | orderBy: 'sequence'">
+						<a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span class="sub-type" ng-bind="m.subType"></span> (<span class="subtype-amount" ng-bind="m.count"></span>)</a>
+					</li>
+				</ul> 
+			</div> 
+	 	</div> 
+	 
 		<!-- Footer -->
 		<%@ include file="../common/footer.jsp" %>
 </body>

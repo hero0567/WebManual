@@ -61,16 +61,6 @@ $(document).ready(function(){
         </div>
       </div>
     </nav>
-
-	 <div class="sub-menu"> 
-	 	<div class="container"> 
-			<ul class="nav navbar-nav custom-nav"> 
-				<li ng-repeat="m in menu | orderBy: 'sequence'">
-					<a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span class="sub-type" ng-bind="m.subType"></span><span class="subtype-amount" ng-bind="m.count"></span></a>
-				</li>
-			</ul> 
-		</div> 
-	 </div> 
 </header> 
 <div class="container">
 	<!-- Search Box -->
