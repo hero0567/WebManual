@@ -43,20 +43,15 @@ app.controller("SigninController", function($scope, $http, $location, $cookies) 
 	        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
 	    })
         .success(function(data) {
-        	$http.get('/u?uname=' + $scope.user.username).success(function(user){
-//        		user.password = $scope.user.password;
-//        		if ($scope.user.rememberMe){
-//        			var expireDate = new Date();
-//        			expireDate.setDate(expireDate.getDate() + $scope.expired);
-//        			$cookies.putObject("user", user, {'expires': expireDate});
-//        		}else{
-//        			$cookies.putObject("user", user);   
-//        		}
-        		$cookies.putObject("user", user);   
-        		window.location = "/";
+        	$http.get('/u/user').success(function(user){
+        		if (angular.isDefined(user.username)){
+        			$cookies.putObject("user", user); 
+            		window.location = "/";
+        		}else{
+                	$scope.error.loginfailed = true;
+        		}
             })        	
         }).error(function() {
-        	$scope.user.captcha = "";
         	$scope.error.loginfailed = true;
         });
 	}

@@ -1,5 +1,7 @@
 package com.wmanual.web.controller.rest;
 
+import java.security.Principal;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +37,18 @@ public class ManualUserController {
 		}
 	}
 	
-	@RequestMapping("/{id}")
+	@RequestMapping("/id/{id}")
 	public User add(@PathVariable("id") long id) throws Exception {
 		User user = userRepository.findOne(id);
 		return user;
+	}
+	
+	@RequestMapping("/user")
+	public User user(Principal user) {
+		User u = null;
+		if (user != null){
+			u = userRepository.findByUsername(user.getName());
+		}
+		return u;
 	}
 }

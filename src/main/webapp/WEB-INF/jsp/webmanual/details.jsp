@@ -73,7 +73,7 @@
 											</div>
 											<div class="col-lg-6 col-md-6 col-sm-6">
 												<i class="fa fa-calendar"></i> 上市时间： 
-							                    <span ng-bind="handbook.productDate | date:'yyyy-MM-dd'"></span>
+							                    <span ng-bind="handbook.productDate"></span>
 											</div>
      									</div>
      									
