@@ -5,11 +5,14 @@
 <script src="js/lib/jquery/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	var $menuArrow = $('#user-menu-account-arrow');
 	$('.user-menu').mouseenter( function(){
 		$('#custom-user-menu').show();
+		$menuArrow.removeClass('fa-chevron-down').addClass('fa-chevron-up')
 	})
 	$('.user-menu').mouseleave( function(){
 		$('#custom-user-menu').hide();
+		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
 	})
 });
 </script>
@@ -41,8 +44,8 @@ $(document).ready(function(){
            	</li>
             <li ng-show="user.id">
             	<div class="user-menu">
-                     <a href="" title="进入个人中心" ng-bind="user.username"></a>
-                   	<a><img src="img/user.png"></a>
+                     <a class="user-menu-account" href="" title="进入个人中心" ><span ng-bind="user.username"></span> <i id="user-menu-account-arrow" class="fa fa-chevron-down"></i></a>
+                   	 <!-- <a><img src="img/user.png"></a> -->
                      <div id="custom-user-menu">
                          <ul class="list-dropdown-menu">
                              <li><a href="/favorites">我的收藏</a></li>

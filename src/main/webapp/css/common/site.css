@@ -7,6 +7,7 @@ main{
 	min-height:580px;
 }
 a{
+	text-decoration: none !important;
 	color:#00aeef;
 }
 ul{
@@ -77,6 +78,9 @@ ul{
 	padding-left:15px;
 	padding-right:15px;
 }
+
+
+
 
 /*
 * Favorite
@@ -185,6 +189,7 @@ a.custom-btn:hover{
 	min-height:540px;
 } 
 .custom-filter-brand{
+	font-size:14px !important;
 	color:gray;
 	width:50px;
 	vertical-align: top;
@@ -327,6 +332,7 @@ ul.top{
 */
 .custom-appliance-table{
 	width:100%;
+	font-size:14px !important;
 }
 .custom-appliance-head{
 	padding-left:15px;
