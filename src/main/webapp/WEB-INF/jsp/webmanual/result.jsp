@@ -121,7 +121,7 @@
 					            	<span ng-bind="sub.productDate"></span>
 				            	</td>
 					            <td class="cell action">
-					            	 <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  
+					            	 <a href="" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  
 				            	</td>
 							</tr>
 						</table>
