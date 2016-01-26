@@ -43,8 +43,7 @@ public interface ManualCountRepository extends PagingAndSortingRepository<Manual
 	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where type = ?1 and subType = ?2  and name like %?3%")
 	public List<CountBean> countByTypeAndSubTypeAndNameLike(String type, String subType, String name);
 	
-	// search by name
-	
+	// search by name	
 	@Query("select new com.wmanual.beans.CountBean(count(hb)) from ManualDomain hb where name like %?1% or brand like %?1% and productDate <= ?2")
 	public List<CountBean> countByNameAndTimeBefore(String name, long time);
 	
@@ -63,4 +62,15 @@ public interface ManualCountRepository extends PagingAndSortingRepository<Manual
 	@Query("select new com.wmanual.beans.CountBean(count(hb), brand) from ManualDomain hb where name like %?1% or brand like %?1%  group by hb.brand  order by count(hb) desc")
 	public List<CountBean> countByNameGroupBrand(String name);
 
+	// search by more condition
+	@Query("select new com.wmanual.beans.CountBean(count(hb), brand) "
+			+ "from ManualDomain hb where (name like %?1% or brand like %?1%) and subtype like %?2% and brand like %?3%  and productDate >= ?4 and productDate <= ?5 "
+			+ "group by hb.brand  order by count(hb) desc")
+	public List<CountBean> countGroupByBrand(String name, String subtype, String brand, long atime, long btime);
+	
+	@Query("select new com.wmanual.beans.CountBean(count(hb), brand) "
+			+ "from ManualDomain hb where (name like %?1% or brand like %?1%) and subtype like %?2% and brand like %?3%  and productDate >= ?4 and productDate <= ?5 "
+			+ "group by hb.brand  order by count(hb) desc")
+	public List<CountBean> countGroupBySubtype(String name, String brand, long atime, long btime);
+	
 }

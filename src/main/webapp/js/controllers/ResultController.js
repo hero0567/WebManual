@@ -52,7 +52,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
    	}  
     
     $scope.fetchTopList = function(key) {
-    	$http.get('/c/s/nm', {params: {"key": key, "group":true}}).success(function(topList){
+    	$http.get('/c/g/st', {params: {"key": key}}).success(function(topList){
      		$scope.topList = topList;
      		var count = 0;
      		angular.forEach(topList, function (m) {
@@ -106,7 +106,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
   	} 
     
     $scope.searchSubType = function(key, type) {    	
-    	if (angular.isDefined(type)){
+    	if (angular.isDefined(type) && type != "全部"){
     		$http.get('/s/大家电/'+type, {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
            	 	$scope.fetchFavorite();
@@ -119,19 +119,9 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     	}
  	} 
     
-    $scope.changeSubType = function(type, count) {
-        $scope.page.total = count;    
-        $scope.currentSubType = type;
-    	$scope.resetPageNavi();
-    	if (type == "全部"){
-    		$scope.searchSubType($scope.key);
-    	}else{
-    		$scope.searchSubType($scope.key, type);
-    	}
-  	} 
     
-    $scope.fetchBrandGroup = function(ct) {
-    	$http.get('/c/s/brand', {params: {"name": $scope.params.key, "group":true, ct: $scope.currentTime}}).success(function(brandGroup){
+    $scope.fetchBrandGroup = function() {
+    	$http.get('/c/g/b', {params: {"name": $scope.params.key,"subtype": $scope.currentSubType, "brand": $scope.brand, ct: $scope.currentTime}}).success(function(brandGroup){
      		$scope.brandGroup = brandGroup
      		var count = 0;
      		angular.forEach(brandGroup, function (m) {
@@ -143,20 +133,30 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
         });
   	}
     
+    $scope.changeSubType = function(type, count) {
+        $scope.page.total = count;    
+        $scope.brand = "全部";
+        $scope.currentTime = "全部";
+        $scope.currentSubType = type;
+    	$scope.resetPageNavi();
+    	$scope.searchSubType($scope.key, type);
+    	$scope.fetchBrandGroup();
+  	} 
+    
     $scope.changeBrandGroup = function(brand, count) {
     	$scope.brand = brand;  
     	$scope.page.total = count;
     	$scope.resetPageNavi();
-    	$scope.fetchSubType();
+    	$scope.searchSubType($scope.key, $scope.currentSubType);
     	if ($scope.currentTime != "全部"){
-    		$scope.fetchBrandGroup(true);
+    		$scope.fetchBrandGroup();
     	}
   	}
     
     $scope.changeTime = function(t) {
     	$scope.currentTime = t;   
-    	$scope.fetchSubType();
-       	$scope.fetchBrandGroup(true);
+    	$scope.searchSubType($scope.key, $scope.currentSubType);
+       	$scope.fetchBrandGroup();
   	}
     
     $scope.changeMenu = function(type, count) {

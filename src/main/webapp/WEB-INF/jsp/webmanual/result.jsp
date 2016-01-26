@@ -66,31 +66,31 @@
 								<div class="custom-section-body">
 									<div id="tab-body-view-most-manual" class="custom-tabs-tab">
 										<table class="filter-table">
-											<tr class="border-gray-dashed">
-												<td class="custom-filter-brand">
-													品牌:
-												</td>
-												<td>
-													<ul class="custom-brands-list">
-														<li class="custom-brand-item" ng-repeat="manual in brandGroup" ng-class="{active: brand == manual.subType}" ng-click="changeBrandGroup(manual.subType, manual.count)"> 
-															<a ng-bind="manual.subType +'('+ manual.count+')'"></a>
-														</li>
-													</ul>		
-												</td>
-											</tr>
-											<tr>
-												<td class="custom-filter-brand padding-top-15">
-													时间:
-												</td>
-												<td class="padding-top-15">
-													<ul class="custom-brands-list">
-														<li class="custom-brand-item" ng-repeat="t in timeline" ng-class="{active: currentTime == t}" ng-click="changeTime(t)"> 
-															<a href="" ng-bind="t"></a>	
-														</li>
-													</ul>		
-												</td>
-											</tr>
-										</table>
+										<tr class="border-gray-dashed">
+											<td class="custom-filter-brand">
+												品牌:
+											</td>
+											<td>
+												<ul class="custom-brands-list">
+													<li class="custom-brand-item" ng-repeat="manual in brandGroup" ng-class="{active: brand == manual.subType || manual.count == 0}" ng-click="changeBrandGroup(manual.subType, manual.count)"> 
+														<a ng-bind="manual.subType +'('+ manual.count+')'"></a>
+													</li>
+												</ul>		
+											</td>
+										</tr>
+										<tr>
+											<td class="custom-filter-brand padding-top-15">
+												时间:
+											</td>
+											<td class="padding-top-15">
+												<ul class="custom-brands-list">
+													<li class="custom-brand-item" ng-repeat="t in timeline" ng-class="{active: currentTime == t}" ng-click="changeTime(t)"> 
+														<a href="" ng-bind="t"></a>	
+													</li>
+												</ul>		
+											</td>
+										</tr>
+									</table>
 									</div>
 								</div>
 							</section>
@@ -118,7 +118,7 @@
 						            <span class="tag gray" ng-bind="sub.version"></span>
 					            </td> 
 					            <td class="cell date">
-					            	<span ng-bind="sub.productDate | date:'yyyy-MM-dd'"></span>
+					            	<span ng-bind="sub.productDate"></span>
 				            	</td>
 					            <td class="cell action">
 					            	 <a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  

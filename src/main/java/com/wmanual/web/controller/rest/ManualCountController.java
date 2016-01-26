@@ -49,9 +49,40 @@ public class ManualCountController {
 	
 	@Autowired
 	private ManualFavoriteRepository mfRepository;
+	
+	
+	// group by brand
+	@RequestMapping("/g/b")
+	public List<CountBean> searchGroupByBrand(@RequestParam(value = "name", defaultValue="") String name,
+			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+			@RequestParam(value = "ct", required = false) String time) throws Exception {
+		
+		long btime = 0;
+		long atime = 3000;
+		
+		time = time.endsWith("全部") ? time = "" : time;
+		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
+		brand = brand.endsWith("全部") ? brand = "" : brand;
+		
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+		}else if (time.length() == 4){
+			atime = Long.valueOf(time);
+			btime = Long.valueOf(time);
+		}
+		
+		return mcRepository.countGroupByBrand(name, subtype, brand, btime, atime);
+	}
+	
+	// group by subtype
+	@RequestMapping("/g/st")
+	public List<CountBean> searchGroupBySubtype(@RequestParam(value = "key", defaultValue="") String key) throws Exception {			
+		return mcRepository.countByNameLikeGroupSubType(key);
+	}
 
 	/**
-	 *  Get subtype group by name
+	 *  group by brand
 	 * 
 	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
 	 * 
