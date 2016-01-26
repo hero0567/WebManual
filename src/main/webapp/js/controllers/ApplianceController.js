@@ -137,6 +137,7 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
     
     $scope.changeTime = function(t) {
     	$scope.currentTime = t;   
+    	$scope.brand = "全部";
     	$scope.fetchSubType();
        	$scope.fetchBrandGroup(true);
   	}

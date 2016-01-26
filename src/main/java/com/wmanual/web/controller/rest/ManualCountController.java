@@ -40,9 +40,6 @@ import com.wmanual.jpa.service.ManualRepository;
 public class ManualCountController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
-
-	@Autowired
-	private ManualRepository manualRepository;
 	
 	@Autowired
 	private ManualCountRepository mcRepository;
@@ -78,133 +75,9 @@ public class ManualCountController {
 	// group by subtype
 	@RequestMapping("/g/st")
 	public List<CountBean> searchGroupBySubtype(@RequestParam(value = "key", defaultValue="") String key) throws Exception {	
-		return mcRepository.countByNameLikeGroupSubType(key);
-	}
-
-	/**
-	 *  group by brand
-	 * 
-	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
-	 * 
-	 * @param nm means name condition
-	 * @param key the search key
-	 * @param group if group by subType 
-	 */
-	@RequestMapping("/s/nm")
-	public List<CountBean> searchSubtypeGroupByNameBrand(@RequestParam(value = "key", required = false) String key,
-			@RequestParam(value = "group", required = false) boolean group) throws Exception {	
-		if (group){
-			return mcRepository.countByNameLikeGroupSubType(key);
-		}
-		return mcRepository.countByNameLike(key);
+		return mcRepository.countGroupBySubType(key);
 	}
 	
-	
-	/**
-	 * Get brand group by name
-	 * 
-	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
-	 * 
-	 * @param st means name subtype
-	 * @param name the search key
-	 * @param group if group by subType 
-	 * @param ct time user choose
-	 */
-	@RequestMapping("/s/brand")
-	public List<CountBean> searchBrandGroupByName(@RequestParam(value = "name") String name,
-			@RequestParam(value = "group", required = false) boolean group,
-			@RequestParam(value = "ct", required = false) String time) throws Exception {	
-		boolean before = false;
-		if (time == null || time.endsWith("全部")) {
-			time = "";
-		}
-		if (time.length() > 4 ){
-			time = time.substring(0, 4);
-			before = true;
-		}
-		
-		if (group){
-			return searchGroupByName(name, time, before);
-		}else{
-			return searchByName(name, time, before);
-		}
-	}
-	
-	public List<CountBean> searchByName(String name, String time, boolean before){
-		if ( time.length() > 0){
-			if (before){
-				return mcRepository.countByNameAndTimeBefore(name, Long.valueOf(time));
-			}else{
-				return mcRepository.countByNameAndTime(name, Long.valueOf(time));
-			}
-			
-		}
-		return mcRepository.countByName(name);
-	}
-	
-	public List<CountBean> searchGroupByName(String name, String time, boolean before){
-		if (time.length() > 0){
-			if (before){
-				return mcRepository.countByNameAndTimeBeforeGroupBrand(name, Long.valueOf(time));
-			}else{
-				return mcRepository.countByNameAndTimeGroupBrand(name, Long.valueOf(time));
-			}			
-		}
-		return mcRepository.countByNameGroupBrand(name);
-	}
-	
-	/**
-	 * Get brand group by subtype
-	 * 
-	 * 	[{"count":29,"subType":"海尔","sequence":0},{"count":3,"subType":"美的","sequence":0}]
-	 * 
-	 * @param st means name subtype
-	 * @param subtype the search key
-	 * @param group if group by subType 
-	 * @param ct time user choose
-	 */
-	@RequestMapping("/s/st")
-	public List<CountBean> searchBrandGroupBySubtype(@RequestParam(value = "subtype") String subtype,
-			@RequestParam(value = "group", required = false) boolean group,
-			@RequestParam(value = "ct", required = false) String time) throws Exception {	
-		boolean before = false;
-		if (time == null || time.endsWith("全部")) {
-			time = "";
-		}
-		if (time.length() > 4 ){
-			time = time.substring(0, 4);
-			before = true;
-		}
-		
-		if (group){
-			return searchGroupBySubtype(subtype, time, before);
-		}else{
-			return searchBySubtype(subtype, time, before);
-		}
-	}
-	
-	public List<CountBean> searchBySubtype(String subtype, String time, boolean before){
-		if ( time.length() > 0){
-			if (before){
-				return mcRepository.countBySubTypeAndTimeBefore(subtype, Long.valueOf(time));
-			}else{
-				return mcRepository.countBySubTypeAndTime(subtype, Long.valueOf(time));
-			}
-			
-		}
-		return mcRepository.countBySubType(subtype);
-	}
-	
-	public List<CountBean> searchGroupBySubtype(String subtype, String time, boolean before){
-		if (time.length() > 0){
-			if (before){
-				return mcRepository.countBySubTypeAndTimeBeforeGroupBrand(subtype, Long.valueOf(time));
-			}else{
-				return mcRepository.countBySubTypeAndTimeGroupBrand(subtype, Long.valueOf(time));
-			}			
-		}
-		return mcRepository.countBySubTypeGroupBrand(subtype);
-	}
 	
 	@RequestMapping("/f")
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,
