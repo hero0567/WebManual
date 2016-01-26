@@ -107,12 +107,14 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     $scope.searchSubType = function(key, type) {    	
     	if (angular.isDefined(type) && type != "全部"){
-    		$http.get('/s/大家电/'+type, {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
+    		$http.get('/s/大家电', {params: {"key":key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
+    					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
            	 	$scope.fetchFavorite();
             });  
     	}else{
-    		$http.get('/s', {params: {"key":key, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
+    		$http.get('/s', {params: {"key":key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
+    					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
            	 	$scope.fetchFavorite();
             });  

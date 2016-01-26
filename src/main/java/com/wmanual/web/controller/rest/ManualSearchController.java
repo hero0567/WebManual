@@ -16,6 +16,8 @@
 
 package com.wmanual.web.controller.rest;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wmanual.beans.CountBean;
 import com.wmanual.jpa.domain.ManualDomain;
 import com.wmanual.jpa.service.ManualRepository;
 
@@ -39,38 +42,62 @@ public class ManualSearchController {
 	@Autowired
 	private ManualRepository hbRepository;
 
+//	@RequestMapping("")
+//	public Iterable<ManualDomain> search(@RequestParam(value = "key", required = false) String key,
+//			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+//			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
+//		Pageable page = new PageRequest(pn, size);
+//		return hbRepository.findByNameOrBrandLikePage(key, page);
+//	}
+	
 	@RequestMapping("")
-	public Iterable<ManualDomain> search(@RequestParam(value = "key", required = false) String key,
+	public List<ManualDomain> searchGroupByBrand(@RequestParam(value = "key", defaultValue="") String key,
+			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+			@RequestParam(value = "ct", required = false, defaultValue="") String time,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
-		if (size > 0) {
-			Pageable page = new PageRequest(pn, size);
-			return hbRepository.findByNameOrBrandLikePage(key, page);
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
+		
+		Pageable page = new PageRequest(pn, size);
+		long btime = 0;
+		long atime = 3000;
+		
+		time = time.endsWith("全部") ? time = "" : time;
+		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
+		brand = brand.endsWith("全部") ? brand = "" : brand;
+		
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+		}else if (time.length() == 4){
+			atime = Long.valueOf(time);
+			btime = Long.valueOf(time);
 		}
-		return hbRepository.findByNameOrBrandLike(key);
+		
+		return hbRepository.findByNameSubtypeBrandTime(key, subtype, brand, btime, atime, page);
 	}
 
 	@RequestMapping("/{type}")
 	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
-			@RequestParam(value = "key", required = false) String key,
+			@RequestParam(value = "key", required = false, defaultValue="") String key,
+			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+			@RequestParam(value = "ct", required = false, defaultValue="") String time,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
-		if (size > 0) {
-			Pageable page = new PageRequest(pn, size);
-			return hbRepository.findByTypeAndNameLikePage(type, key, page);
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) {
+		Pageable page = new PageRequest(pn, size);
+		long btime = 0;
+		long atime = 3000;
+		
+		time = time.endsWith("全部") ? time = "" : time;
+		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
+		brand = brand.endsWith("全部") ? brand = "" : brand;
+		
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+		}else if (time.length() == 4){
+			atime = Long.valueOf(time);
+			btime = Long.valueOf(time);
 		}
-		return hbRepository.findByTypeAndNameLike(type, key);
-	}
-
-	@RequestMapping("/{type}/{subType}")
-	public Iterable<ManualDomain> allByTyepSubTypeKeyword(@PathVariable("type") String type,
-			@PathVariable("subType") String subType, @RequestParam(value = "key", required = false) String key,
-			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
-		if (size > 0) {
-			Pageable page = new PageRequest(pn, size);
-			return hbRepository.findByTypeAndSubTypeAndNameLikePage(type, subType, key, page);
-		}
-		return hbRepository.findByTypeAndSubTypeAndNameLike(type, subType, key);
+		return hbRepository.findByNameTypeSubtypeBrandTime(key, type, subtype, brand, btime, atime, page);
 	}
 }

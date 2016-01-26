@@ -15,31 +15,24 @@ import com.wmanual.jpa.domain.ManualDomain;
 @Service
 public interface ManualRepository extends PagingAndSortingRepository<ManualDomain, Long> {
 
-	@Query("from ManualDomain where name like %?1%")
-	public List<ManualDomain> findByNameLike(String name);
-	
 	@Query("from ManualDomain where name like %?1% or brand like %?1%")
 	public List<ManualDomain> findByNameOrBrandLike(String name);
 
 	public List<ManualDomain> findByType(String type);
 
-	@Query("from ManualDomain where type = ?1 and name like %?2%")
-	public List<ManualDomain> findByTypeAndNameLike(String type, String name);
-
 	public List<ManualDomain> findByTypeAndSubType(String type, String subType);
-	
-	public List<ManualDomain> findByTypeAndSubTypeAndProductDate(String type, String subType, long time);
-	
-	public List<ManualDomain> findByTypeAndSubTypeAndProductDateLessThanEqual(String type, String subType, long time);
-	
-	public List<ManualDomain> findByTypeAndSubTypeAndBrand(String type, String subType, String brand);
-	
-	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndProductDate(String type, String subType, String brand, long time);
-	
-	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndProductDateLessThanEqual(String type, String subType, String brand, long time);
 
-	@Query("from ManualDomain where type = ?1 and subType = ?2  and (name like %?3% or brand like  %?3%)")
-	public List<ManualDomain> findByTypeAndSubTypeAndNameLike(String type, String subType, String name);
+	public List<ManualDomain> findByTypeAndSubTypeAndProductDate(String type, String subType, long time);
+
+	public List<ManualDomain> findByTypeAndSubTypeAndProductDateLessThanEqual(String type, String subType, long time);
+
+	public List<ManualDomain> findByTypeAndSubTypeAndBrand(String type, String subType, String brand);
+
+	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndProductDate(String type, String subType, String brand,
+			long time);
+
+	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndProductDateLessThanEqual(String type, String subType,
+			String brand, long time);
 
 	@Query(value = "select b.count, b.subType, a.sequence from handbook_type a,"
 			+ "(select subType,count(1) count from handbook group by subType) b "
@@ -47,40 +40,39 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 	public List<Object[]> findMenu();
 
 	// Pageable
-	@Query("from ManualDomain where name like %?1%")
-	public List<ManualDomain> findByNameLikePage(String name, Pageable pageable);
-	
-	@Query("from ManualDomain where name like %?1% or brand like %?1%")
-	public List<ManualDomain> findByNameOrBrandLikePage(String name, Pageable pageable);
-
-	@Query("from ManualDomain")
-	public Page<ManualDomain> findSize(Pageable pageable);
-
 	@Query("from ManualDomain where type = ?")
 	public List<ManualDomain> findByTypePage(String type, Pageable pageable);
 
-	@Query("from ManualDomain where type = ?1 and name like %?2%")
-	public List<ManualDomain> findByTypeAndNameLikePage(String type, String name, Pageable pageable);
-
-	@Query("from ManualDomain where type = ?1 and subType = ?2  and (name like %?3% or brand like %?3% )")
-	public List<ManualDomain> findByTypeAndSubTypeAndNameLikePage(String type, String subType, String name,
-			Pageable pageable);
-
 	@Query("from ManualDomain where type = ? and subType = ?")
 	public List<ManualDomain> findByTypeAndSubTypePage(String type, String subType, Pageable pageable);
-	
+
 	@Query("from ManualDomain where type = ? and subType = ? and productDate <= ?")
-	public List<ManualDomain> findByTypeAndSubTypeTimeBeforePage(String type, String subType, long time, Pageable pageable);
-	
+	public List<ManualDomain> findByTypeAndSubTypeTimeBeforePage(String type, String subType, long time,
+			Pageable pageable);
+
 	@Query("from ManualDomain where type = ? and subType = ? and productDate = ?")
 	public List<ManualDomain> findByTypeAndSubTypeTimePage(String type, String subType, long time, Pageable pageable);
-	
+
 	@Query("from ManualDomain where type = ? and subType = ? and brand = ?")
-	public List<ManualDomain> findByTypeAndSubTypeAndBrandPage(String type, String subType, String brand, Pageable pageable);
-	
+	public List<ManualDomain> findByTypeAndSubTypeAndBrandPage(String type, String subType, String brand,
+			Pageable pageable);
+
 	@Query("from ManualDomain where type = ? and subType = ? and brand = ? and productDate <= ?")
-	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndTimeBeforePage(String type, String subType, String brand, long time, Pageable pageable);
+	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndTimeBeforePage(String type, String subType, String brand,
+			long time, Pageable pageable);
 
 	@Query("from ManualDomain where type = ? and subType = ? and brand = ? and productDate = ?")
-	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndTimePage(String type, String subType, String brand, long time, Pageable pageable);
+	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndTimePage(String type, String subType, String brand,
+			long time, Pageable pageable);
+	
+	//Refactory 
+	@Query("from ManualDomain hb where (name like %?1% or brand like %?1%) and subtype like %?2% and brand like %?3%  "
+			+ "and productDate >= ?4 and productDate <= ?5 ")
+	public List<ManualDomain> findByNameSubtypeBrandTime(String name, String subtype, String brand, long atime, long btime,
+			Pageable pageable);
+	
+	@Query("from ManualDomain hb where (name like %?1% or brand like %?1%) and type like %?2% and subtype like %?3% and brand like %?4%  "
+			+ "and productDate >= ?5 and productDate <= ?6 ")
+	public List<ManualDomain> findByNameTypeSubtypeBrandTime(String name, String type, String subtype, String brand, long atime, long btime,
+			Pageable pageable);
 }

@@ -71,7 +71,7 @@ public class ManualController {
 	@RequestMapping("/{type}")
 	public Iterable<ManualDomain> allByType(@PathVariable("type") String type,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) {
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) {
 		if (size > 0) {
 			Pageable page = new PageRequest(pn, size);
 			return hbRepository.findByTypePage(type, page);
@@ -84,7 +84,7 @@ public class ManualController {
 			@PathVariable("subType") String subType,
 			@RequestParam(value = "brand", required = false, defaultValue = "") String brand,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size,
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size,
 			@RequestParam(value = "ct", required = false) String time) throws Exception {
 
 		boolean before = false;

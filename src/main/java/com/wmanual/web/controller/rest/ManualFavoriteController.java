@@ -45,7 +45,7 @@ public class ManualFavoriteController {
 	@RequestMapping("/{uid}")
 	public Iterable<ManualFavoriteDomain> allByUser(@PathVariable("uid") Long uid,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
 		if (size > 0) {
 			Pageable page = new PageRequest(pn, size);
 			return hbfRepository.findByUserIdPage(uid, page);
@@ -57,7 +57,7 @@ public class ManualFavoriteController {
 	public Iterable<ManualFavoriteDomain> findByUserIDAndSubType(@PathVariable("uid") Long uid,
 			@PathVariable(value = "subType") String subType,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-			@RequestParam(value = "size", required = false, defaultValue = "0") int size) throws Exception {
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
 		if (size > 0) {
 			Pageable page = new PageRequest(pn, size);
 			return hbfRepository.findByUserIdAndHandBookSubTypePage(uid, subType, page);
