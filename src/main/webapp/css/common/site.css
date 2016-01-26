@@ -3,7 +3,11 @@ body{
 	background-color: #f0f0f0 !important;
 	font-size:14px;
 }
+main{
+	min-height:580px;
+}
 a{
+	text-decoration: none !important;
 	color:#00aeef;
 }
 ul{
@@ -75,6 +79,9 @@ ul{
 	padding-right:15px;
 }
 
+
+
+
 /*
 * Favorite
 */
@@ -93,8 +100,9 @@ ul{
 /*
 * Filter styles
 */
-.filter-table{
+table.filter-table tr{
 	width:100%;
+	font－size:14px !important;
 }
 
 /*
@@ -181,11 +189,15 @@ a.custom-btn:hover{
 	min-height:540px;
 } 
 .custom-filter-brand{
+	font-size:14px !important;
 	color:gray;
 	width:50px;
 	vertical-align: top;
     height: 30px;
     line-height: 30px;
+}
+.custom-filter-result{
+	min-height:200px;
 }
 .custom-brands-list{
 	padding:0px;
@@ -213,6 +225,7 @@ a.custom-btn:hover{
 }
 .custom-brand-item a{
 	color:inherit;
+	font-size: 14px;
 }
 
 
@@ -319,6 +332,7 @@ ul.top{
 */
 .custom-appliance-table{
 	width:100%;
+	font-size:14px !important;
 }
 .custom-appliance-head{
 	padding-left:15px;
@@ -333,8 +347,8 @@ ul.top{
 }
 .custom-section-head{
 	border-bottom:1px #eee solid;
-	height: 50px;
-    line-height: 50px;
+	height: 40px;
+    line-height: 40px;
 }
 .custom-section-title{
 	font-size: 14px;

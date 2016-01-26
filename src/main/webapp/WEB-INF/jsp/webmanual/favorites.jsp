@@ -91,7 +91,7 @@
 						</div>
 					</section>
 					
-					<section class="white-block p-l-r margin-bottom-20 ">	
+					<section class="custom-filter-result white-block p-l-r margin-bottom-20 ">	
 						 <table class="table custom-appliance-table">
 							<tr>
 								<th class="cell maincell"> 名称 </th> 
@@ -101,21 +101,21 @@
 								<th class="cell action"> 关注 </th>
 							</tr>
 							<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
-					            <td class="cell maincell"> &nbsp;
+					            <td class="cell maincell">
 					            	<a ng-href="/details?id={{sub.handBook.id}}" ng-bind="sub.handBook.name"></a>  
 					            </td> 
 						           
-					            <td class="cell brand">&nbsp;
+					            <td class="cell brand">
 					            	<a ng-href="/result?key={{sub.handBook.brand}}" ng-bind="sub.handBook.brand"></a> 
 					            </td> 
-					            <td class="cell version"> &nbsp;
+					            <td class="cell version">
 						             <span class="tag gray" ng-bind="sub.handBook.version"></span> 
 					            </td> 
-					            <td class="cell date"> &nbsp;
+					            <td class="cell date">
 					            	<span class="tags t-small c-gray-aset"> <span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span></span>
 				            	</td>
-					            <td class="cell action"> &nbsp;
-					            	 <a href="" class="fa fa-star" ng-click="addFavorite(user.id, sub.handBook)"></a> 
+					            <td class="cell action">
+					            	 <a href="" class="fa fa-heart" ng-click="addFavorite(user.id, sub.handBook)"></a> 
 				            	</td>
 							</tr>
 						</table>

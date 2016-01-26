@@ -97,7 +97,7 @@
 		<div class="container margin-bottom-20">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
-					<section class="custom-brands-filter white-block p-l-r">
+					<section class="custom-filter-result white-block p-l-r">
 						<table class="table custom-appliance-table">
 							<tr>
 								<th class="cell maincell"> 名称 </th> 
@@ -121,7 +121,7 @@
 					            	<span ng-bind="sub.productDate"></span> 
 				            	</td>
 					            <td class="cell action">
-					            	<a href="" ng-class="{true: 'fa fa-star', false: 'fa fa-star-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>
+					            	<a href="" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>
 				            	</td>
 							</tr>
 						</table>
