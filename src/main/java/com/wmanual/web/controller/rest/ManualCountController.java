@@ -77,7 +77,23 @@ public class ManualCountController {
 	
 	// group by subtype
 	@RequestMapping("/g/st")
-	public List<CountBean> searchGroupBySubtype(@RequestParam(value = "key", defaultValue="") String key) throws Exception {			
+	public List<CountBean> searchGroupBySubtype(@RequestParam(value = "key", defaultValue="") String key,
+			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
+			@RequestParam(value = "ct", required = false) String time) throws Exception {	
+		
+		long btime = 0;
+		long atime = 3000;
+		
+		time = time.endsWith("全部") ? time = "" : time;
+		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
+		
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+		}else if (time.length() == 4){
+			atime = Long.valueOf(time);
+			btime = Long.valueOf(time);
+		}
+		
 		return mcRepository.countByNameLikeGroupSubType(key);
 	}
 

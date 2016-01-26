@@ -113,7 +113,7 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
  	} 
     
     $scope.fetchBrandGroup = function(ct) {
-    	$http.get('/c/s/st', {params: {"subtype": $scope.page.subtype, "group":true, ct: $scope.currentTime}}).success(function(brandGroup){
+    	$http.get('/c/g/b', {params: {"subtype": $scope.page.subtype, ct: $scope.currentTime}}).success(function(brandGroup){
      		$scope.brandGroup = brandGroup
      		var count = 0;
      		angular.forEach(brandGroup, function (m) {
