@@ -13,7 +13,7 @@ $(document).ready(function(){
 	$('.user-menu').mouseleave( function(){
 		$('#custom-user-menu').hide();
 		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
-	})
+	}) 
 });
 </script>
 <header  ng-app="app" ng-controller="HeaderController"> 
@@ -72,4 +72,5 @@ $(document).ready(function(){
     	<button type="submit" class="custom-search-button"><i class="fa fa-search"></i></button> 
     </form>
 </div>
+
 <script src="js/controllers/HeaderController.js"></script>

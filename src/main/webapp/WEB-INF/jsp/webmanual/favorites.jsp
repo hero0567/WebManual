@@ -115,7 +115,7 @@
 					            	<span class="tags t-small c-gray-aset"> <span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span></span>
 				            	</td>
 					            <td class="cell action">
-					            	 <a href="" class="fa fa-heart" ng-click="addFavorite(user.id, sub.handBook)"></a> 
+					            	 <a href="" class="fa fa-heart" data-toggle="modal" data-target="#confirmDialog"></a> 
 				            	</td>
 							</tr>
 						</table>
@@ -136,7 +136,25 @@
 				</div>
 			</div>
 		</div> 
-		
+
+		<!-- Modal -->
+		<div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">请确认</h4>
+		      </div>
+		      <div class="modal-body">
+		        取消该收藏？
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">是</button>
+		        <button type="button" class="btn btn-primary">否</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		<%@ include file="../common/footer.jsp" %> 
 	</div> 
 	<script>

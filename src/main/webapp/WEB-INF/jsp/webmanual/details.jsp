@@ -57,7 +57,7 @@
 							<ul class="custom-tabs f-l">
 								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span></li>
 							</ul>
-							<a class="f-r custom-default-tab-title" href=""><i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]" ng-click="addFavorite(user.id, handbook)"></i> <span>添加到我的收藏</span></a>
+							<a class="f-r custom-default-tab-title" href="" ng-click="addFavorite(user.id, handbook)"><i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]" ></i> <span>添加到我的收藏</span></a>
 						</div>
 						<div class="custom-section-body">
 							<div class="custom-tabs-tab">
