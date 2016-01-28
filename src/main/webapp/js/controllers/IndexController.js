@@ -6,6 +6,35 @@
  */
 
 app.controller("IndexController", function($scope, $http, $location, $window, userService) {
+	$scope.mockData= [{
+							type:"大家电", 
+							subTypes: 
+							[
+								{subType:"电视"},
+								{subType:"冰箱"},
+								{subType:"洗衣机"},
+								{subType:"电视"},
+								{subType:"冰箱"},
+								{subType:"电视"},
+								{subType:"冰箱"},
+								{subType:"电视"},
+								{subType:"冰箱"},
+								{subType:"电视"},
+								{subType:"冰箱"}
+							]
+						},
+						{
+							type:"小家电"	,
+							subTypes:
+					 		[
+							 	{subType:"吸尘器"},
+								{subType:"电熨斗"},
+								{subType:"吸尘器"},
+								{subType:"电熨斗"},
+								{subType:"吸尘器"},
+								{subType:"电熨斗"}
+					 		]
+						}];
 	
 	$scope.menu = {};
     $scope.handbook = [];
@@ -21,6 +50,7 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
     $scope.fetchMenu = function() {
      	 $http.get('/menu').success(function(menu){
               $scope.menu = menu;
+              console.log(menu);
               $scope.fetchSubTypes();
         });
   	}  

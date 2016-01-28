@@ -182,6 +182,19 @@ a.user-menu-account{
 .custom-nav{
 	padding:1%;
 }
+div.border-gray-dashed:last-child{
+	border-bottom:none !important;
+}
+.sub-menu .custom-type{
+	height:50px !important;
+	line-height:50px !important;
+    font-size: 14px !important;
+    color: gray;
+    width: 50px;
+    vertical-align: top;
+    height: 30px;
+    line-height: 30px;
+}
 .sub-menu .custom-nav li{
 	background-color:#fff;
 	box-shadow: 0 1px 2px #ddd;

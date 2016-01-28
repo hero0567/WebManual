@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>数据服务 ｜ 爱尚手册</title>
+	<title>数据服务 ｜ 爱上帮助</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -39,7 +39,7 @@
 			<div> 
 				<div class="navbox"> 
 					 <div class="boxed"> 
-						  <a class="logo fll" href=""> <h1 class="seeo">爱尚手册</h1> </a> 
+						  <a class="logo fll" href=""> <h1 class="seeo">爱上帮助</h1> </a> 
 						  <ul class="mainnav"> 
 						   <li class="tab on"> 
 						       <a href="">首页</a> 
@@ -165,7 +165,7 @@
 		  </div> 
 			<div class="copyright-92"> 
 				<div class="boxed">
-				  爱尚手册 - 个人说明书信息服务 
+				  爱上帮助 - 个人说明书信息服务 
 				  <span class="flr copy"> &copy; 2016-2019 92shuomingshu.com 蜀ICP备14026526号-2</span> 
 				</div> 
 			</div> 

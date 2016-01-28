@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>首页 ｜ 爱尚手册</title>
+	<title>首页 ｜ 爱上帮助</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -57,7 +57,24 @@
 		<%@ include file="../common/header.jsp" %>
 		
 		<main>
-			<div class="sub-menu"> 
+			<section class="sub-menu">
+				<div class="container">
+					<div class="row border-gray-dashed"  ng-repeat="item in mockData">
+						<div class="col-lg-1 col-md-1 col-sm-2">
+							<p class="custom-type"><span ng-bind="item.type"></span></p>
+						</div>
+						<div class="col-lg-11 col-md-11 col-sm-9">
+							<ul class="nav navbar-nav custom-nav">
+								<li ng-repeat="subType in item.subTypes">
+									<a href="" ><span ng-bind="subType.subType"></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="sub-menu"> 
 			 	<div class="container"> 
 					<ul class="nav navbar-nav custom-nav"> 
 						<li ng-repeat="m in menu | orderBy: 'sequence'">
@@ -65,7 +82,7 @@
 						</li>
 					</ul> 
 				</div> 
-		 	</div>
+		 	</section>
 	 	</main> 
 	 
 		<!-- Footer -->
