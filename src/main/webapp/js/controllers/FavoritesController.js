@@ -107,18 +107,6 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
     
     $scope.addFavorite = function(uid, sub){
     	userService.addFavorite(uid, sub);
-//		if (uid){
-//			var ret = $window.confirm('确认取消收藏?');  
-//			if (!ret){
-//				return;
-//			}			
-//			$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
-//				$scope.fetchFavorList($scope.user.id);        
-//			    $scope.searchSubType($scope.user.id);
-//	        });			
-//    	}else{
-//    		window.location = "/signin";
-//    	}
 	}   
     
     $scope.changeSubType = function(type, count) {
