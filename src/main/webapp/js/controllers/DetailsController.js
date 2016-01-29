@@ -89,7 +89,7 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
     
-    $scope.fetchMenu();
+//    $scope.fetchMenu();
     $scope.parseParams();
     $scope.fetchHandbook($scope.id);
 });

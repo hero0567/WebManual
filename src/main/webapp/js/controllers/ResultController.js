@@ -24,6 +24,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     $scope.key = "";
     $scope.count = 0;
+    $scope.currentType = "全部";
     $scope.currentSubType = "全部";
     $scope.brand = "全部";
     $scope.currentTime = "全部";
@@ -78,42 +79,42 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     $scope.goPage = function(pn) {
     	$scope.page.pn = pn - 1;
-    	$scope.searchSubType($scope.key);
+    	$scope.searchSubType();
   	} 
     
     $scope.goPrePage = function(pn) {
     	$scope.page.ppn--;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.searchSubType($scope.key);
+    	$scope.searchSubType();
     	$scope.changePageNavi();
   	} 
     $scope.goFirstPage = function(pn) {
     	$scope.resetPageNavi()
-    	$scope.searchSubType($scope.key);
+    	$scope.searchSubType();
   	}
     
     $scope.goNextPage = function(pn) {
     	$scope.page.ppn++;
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.searchSubType($scope.key);
+    	$scope.searchSubType();
     	$scope.changePageNavi();
   	} 
     $scope.goLastPage = function(pn) {
     	$scope.page.ppn = parseInt($scope.page.total / ($scope.page.size * $scope.page.ps));
     	$scope.page.pn = $scope.page.ppn * $scope.page.ps;
-    	$scope.searchSubType($scope.key);
+    	$scope.searchSubType();
     	$scope.changePageNavi();
   	} 
     
-    $scope.searchSubType = function(key, type) {    	
-    	if (angular.isDefined(type) && type != "全部"){
-    		$http.get('/s/大家电', {params: {"key":key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
+    $scope.searchSubType = function() {    	
+    	if (angular.isDefined($scope.currentType) && $scope.currentType != "全部"){
+    		$http.get('/s/' + $scope.currentType, {params: {"key":$scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
     					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
            	 	$scope.fetchFavorite();
             });  
     	}else{
-    		$http.get('/s', {params: {"key":key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
+    		$http.get('/s', {params: {"key":$scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
     					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
            	 	$scope.results = results;
            	 	$scope.fetchFavorite();
@@ -135,13 +136,14 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
         });
   	}
     
-    $scope.changeSubType = function(type, count) {
+    $scope.changeSubType = function(type, subtype, count) {
         $scope.page.total = count;    
         $scope.brand = "全部";
         $scope.currentTime = "全部";
-        $scope.currentSubType = type;
+        $scope.currentType = type;
+        $scope.currentSubType = subtype;
     	$scope.resetPageNavi();
-    	$scope.searchSubType($scope.key, type);
+    	$scope.searchSubType();
     	$scope.fetchBrandGroup();
   	} 
     
@@ -149,7 +151,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     	$scope.brand = brand;  
     	$scope.page.total = count;
     	$scope.resetPageNavi();
-    	$scope.searchSubType($scope.key, $scope.currentSubType);
+    	$scope.searchSubType();
     	if ($scope.currentTime != "全部"){
     		$scope.fetchBrandGroup();
     	}
@@ -157,7 +159,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     $scope.changeTime = function(t) {
     	$scope.currentTime = t;   
-    	$scope.searchSubType($scope.key, $scope.currentSubType);
+    	$scope.searchSubType();
        	$scope.fetchBrandGroup();
   	}
     
@@ -188,9 +190,9 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
  	}
     
     $scope.parseParams();
-    $scope.fetchMenu();
+//    $scope.fetchMenu();
     $scope.fetchTopList($scope.params.key);     
     $scope.fetchBrandGroup();
-    $scope.searchSubType($scope.params.key); 
+    $scope.searchSubType(); 
     
 });

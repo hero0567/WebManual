@@ -124,7 +124,7 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
     	window.location = "/appliance?subtype="+type +"&count="+count;
   	}
 	
-    $scope.fetchMenu();
+//    $scope.fetchMenu();
     $scope.fetchFavorList($scope.user.id);        
     $scope.searchSubType($scope.user.id); 
 });

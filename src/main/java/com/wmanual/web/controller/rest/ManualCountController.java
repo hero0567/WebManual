@@ -54,7 +54,7 @@ public class ManualCountController {
 		long atime = 3000;
 		
 		time = time.endsWith("全部") ? time = "" : time;
-		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
+		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
 		brand = brand.endsWith("全部") ? brand = "" : brand;
 		
 		if (time.length() > 4 ){

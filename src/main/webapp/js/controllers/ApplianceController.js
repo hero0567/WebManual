@@ -162,7 +162,7 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
     
     $scope.parseParams();
     $scope.changePageNavi();
-    $scope.fetchMenu();
+//    $scope.fetchMenu();
     $scope.fetchBrandGroup();
     $scope.fetchSubType(); 
 });
