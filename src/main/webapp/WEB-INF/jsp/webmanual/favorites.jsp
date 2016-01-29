@@ -41,6 +41,24 @@
     <![endif]-->
 </head>
 <body ng-app="app" ng-controller="FavoritesController" class=""> 
+	<!-- Modal -->
+	<!-- Button trigger modal -->
+	<div id="custom-layer" class="constom-layer hide">
+	</div>
+	<div id="custom-modal" class="custom-modal-dialog hide">
+		<div class="custom-modal-header">
+			<h4 class="modal-title">取消收藏</h4>
+		</div>
+		<div class="custom-modal-body">
+			<p>请确实是否取消该收藏？</p>
+		</div>
+		<div class="custom-modal-footer">
+            <button type="button" class="btn btn-default" ng-click="deleteFavoriteItem">是</button>
+            <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDelete">否</button>
+		</div>
+	</div>
+	
+
 	<div class="d-n">
 	  <img src="./img/favicon.png" />
 	</div> 
@@ -115,7 +133,7 @@
 					            	<span class="tags t-small c-gray-aset"> <span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span></span>
 				            	</td>
 					            <td class="cell action">
-					            	 <a href="" class="fa fa-heart" data-toggle="modal" data-target="#confirmDialog"></a> 
+					            	 <a href="" ng-click="addFavorite(user.id, sub.handBook)"  class="fa fa-heart"></a>
 				            	</td>
 							</tr>
 						</table>
@@ -149,8 +167,8 @@
 		        取消该收藏？
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">是</button>
-		        <button type="button" class="btn btn-primary">否</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelRemove">否</button>
+		        <button type="button" class="btn btn-primary" ng-click="removeFavoriteItem">是</button>
 		      </div>
 		    </div>
 		  </div>

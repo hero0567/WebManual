@@ -79,8 +79,66 @@ ul{
 	padding-right:15px;
 }
 
-
-
+/*
+* Modal
+*/
+.constom-layer{
+    position: fixed;
+    width: 100%;
+	height:100%;
+    display:block;
+    background-color:#000;
+    opacity: 0.5;
+    z-index: 1050;
+ }
+.custom-modal-dialog {
+ 	box-sizing: border-box;
+    position: fixed;
+    z-index: 10000;
+    min-height: 100px;
+    margin-top: 100px;
+    left: 30%; 
+    width: 40%;
+    max-height: 50%;
+    display: block;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+ 	border: 1px solid #999;
+	border-radius: 6px;
+	outline: 0;
+    background-color: #fff;
+}
+	
+.custom-modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.custom-modal-body{
+    position: relative;
+  		padding: 15px;
+}
+.custom-modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.custom-modal-footer .btn{
+	width:100px;
+}
+.cutom-btn-primary{
+	background-color:#00aeef !important;
+	border-color:#00aeef !important;
+	
+}
+	
+@media (min-width: 768px)
+	.modal-dialog {
+	    width: 600px;
+	    margin: 30px auto;
+	}
+	
+}
 
 /*
 * Favorite

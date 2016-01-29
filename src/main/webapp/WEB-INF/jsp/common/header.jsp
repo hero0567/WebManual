@@ -13,7 +13,7 @@ $(document).ready(function(){
 	$('.user-menu').mouseleave( function(){
 		$('#custom-user-menu').hide();
 		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
-	}) 
+	})
 });
 </script>
 <header  ng-app="app" ng-controller="HeaderController"> 

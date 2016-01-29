@@ -60,10 +60,10 @@
 			<section class="sub-menu">
 				<div class="container">
 					<div class="row border-gray-dashed"  ng-repeat="item in mockData">
-						<div class="col-lg-1 col-md-1 col-sm-2">
+						<div class="col-lg-1 col-md-1 col-sm-1">
 							<p class="custom-type"><span ng-bind="item.type"></span></p>
 						</div>
-						<div class="col-lg-11 col-md-11 col-sm-9">
+						<div class="col-lg-11 col-md-11 col-sm-11">
 							<ul class="nav navbar-nav custom-nav">
 								<li ng-repeat="subType in item.subTypes">
 									<a href="" ><span ng-bind="subType.subType"></span></a>
