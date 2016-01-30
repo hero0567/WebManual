@@ -40,38 +40,37 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="app" ng-controller="FavoritesController" class=""> 
+<body id="favorites" ng-app="app" ng-controller="FavoritesController"> 
 	<div class="d-n">
 	  <img src="./img/favicon.png" />
 	</div> 
 	
-	<!-- Modal -->
-	<!-- Button trigger modal -->
-	<div id="custom-layer" class="constom-layer hide">
-	</div>
-	<div id="custom-modal" class="custom-modal-dialog hide">
-		<div class="custom-modal-header">
-			<h4 class="modal-title">取消收藏</h4>
-		</div>
-		<div class="custom-modal-body">
-			<p>请确实是否取消该收藏？</p>
-		</div>
-		<div class="custom-modal-footer">
-            <button type="button" class="btn btn-default" ng-click="deleteFavoriteItem()">是</button>
-            <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDeleteItem()">否</button>
-		</div>
-	</div>
-
 	<!--[if lt IE 10]>
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]--> 
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>
 		
+		<!-- Modal -->
+		<!-- Button trigger modal -->
+		<div id="custom-layer" class="constom-layer hide">
+		</div>
+		<div id="custom-modal" class="custom-modal-dialog hide">
+			<div class="custom-modal-header">
+				<h4 class="modal-title">取消收藏</h4>
+			</div>
+			<div class="custom-modal-body">
+				<p>请确实是否取消该收藏？</p>
+			</div>
+			<div class="custom-modal-footer">
+	            <button type="button" class="btn btn-default" ng-click="deleteFavoriteItem()">是</button>
+	            <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDeleteItem()">否</button>
+			</div>
+		</div>
+		
 		<div class="container">
-			
-	<div id="deleteSuccess" class="alert alert-success hide" role="alert">删除成功！</div>
-	<div id="deleteFail" class="alert alert-danger hide" role="alert">删除失败，请重试！</div>
+			<div id="deleteSuccess" class="alert alert-success hide" role="alert">删除成功！</div>
+			<div id="deleteFail" class="alert alert-danger hide" role="alert">删除失败，请重试！</div>
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 margin-bottom-20">
 					<section class="sidebar white-block">
