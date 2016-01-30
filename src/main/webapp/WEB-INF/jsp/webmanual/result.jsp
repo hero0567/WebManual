@@ -57,7 +57,7 @@
 					<section class="white-block p-l-r margin-bottom-20 ">
 						<div class="custom-section-head">
 							<span class="f-r">
-								您正在搜索 “ <b ng-bind="params.key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
+								您正在搜索 “ <b ng-bind="key"></b> ”，共找到 <span ng-bind="count"></span> 条结果
 							</span>
 						</div>
 					

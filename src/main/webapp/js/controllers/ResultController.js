@@ -34,16 +34,8 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
 	$scope.timeline = userService.getTimeline();
         
     $scope.parseParams = function(){
-    	var paramString = window.location.search;
-    	var params = paramString.substr(1).split('&');  
-
-    	params.forEach(function(param){
-    		var kv = param.split('=');  
-    		if (kv.length = 2){
-    			$scope.params[kv[0]] = decodeURI(kv[1]);
-    		}
-    	});
-    	$scope.key = $scope.params.key;
+    	var paramHash = userService.parseParams(window.location.search)
+    	$scope.key = paramHash.key;
     }    
     
     $scope.fetchMenu = function() {
