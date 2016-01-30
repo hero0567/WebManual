@@ -46,8 +46,8 @@ public class ManualCountController {
 	// group by brand
 	@RequestMapping("/g/b")
 	public List<CountBean> searchGroupByBrand(@RequestParam(value = "name", defaultValue="") String name,
-			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
-			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
 			@RequestParam(value = "ct", required = false) String time) throws Exception {
 		
 		long btime = 0;
@@ -55,7 +55,7 @@ public class ManualCountController {
 		
 		time = time.endsWith("全部") ? time = "" : time;
 		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
-		brand = brand.endsWith("全部") ? brand = "" : brand;
+		brand = brand.endsWith("全部") ? brand = "%%" : brand;
 		
 		if (time.length() > 4 ){
 			time = time.substring(0, 4);

@@ -66,12 +66,12 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 			long time, Pageable pageable);
 	
 	//Refactory 
-	@Query("from ManualDomain hb where (name like %?1% or brand like %?1%) and subtype like %?2% and brand like %?3%  "
+	@Query("from ManualDomain hb where (name like %?1% or brand like %?1%) and subtype like ?2 and brand like ?3  "
 			+ "and productDate >= ?4 and productDate <= ?5 ")
 	public List<ManualDomain> findByNameSubtypeBrandTime(String name, String subtype, String brand, long atime, long btime,
 			Pageable pageable);
 	
-	@Query("from ManualDomain hb where (name like %?1% or brand like %?1%) and type like %?2% and subtype like %?3% and brand like %?4%  "
+	@Query("from ManualDomain hb where (name like %?1% or brand like %?1%) and type = ?2 and subtype like ?3 and brand like ?4  "
 			+ "and productDate >= ?5 and productDate <= ?6 ")
 	public List<ManualDomain> findByNameTypeSubtypeBrandTime(String name, String type, String subtype, String brand, long atime, long btime,
 			Pageable pageable);

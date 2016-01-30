@@ -107,19 +107,11 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
   	} 
     
     $scope.searchSubType = function() {    	
-    	if (angular.isDefined($scope.currentType) && $scope.currentType != "全部"){
-    		$http.get('/s/' + $scope.currentType, {params: {"key":$scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
-    					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
-           	 	$scope.results = results;
-           	 	$scope.fetchFavorite();
-            });  
-    	}else{
-    		$http.get('/s', {params: {"key":$scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
-    					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
-           	 	$scope.results = results;
-           	 	$scope.fetchFavorite();
-            });  
-    	}
+		$http.get('/s', {params: {"key":$scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
+					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
+       	 	$scope.results = results;
+       	 	$scope.fetchFavorite();
+        }); 
  	} 
     
     
