@@ -105,29 +105,47 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
     	}
  	} 
     
-    $scope.delUid;
-    $scope.delSub;
+    $scope.delFromUerId;
+    $scope.delManual;
     
     $scope.deleteFavoriteItem = function(){
+    	userId = $scope.delFromUerId;
+    	delManualId = $scope.delManual.id;
     	
+    	if(userId && delManualId){
+    		$http.delete('/favor/'+userId+'/' + delManualId).success(function() {
+    			delManual.favor = false;
+				$('#custom-layer').addClass("hide");
+				$('#custom-modal').addClass("hide");
+	        });
+    	}
+    }
+    $scope.cancelDelete = function(){
+    	$scope.delFromUerId;
+        $scope.delManual;
     }
     
-    $scope.addFavorite = function(uid, sub){
-    	if (uid){
-			if (sub.favor){
-				$('#custom-layer').show();
-				$('#custom-modal').show();
+    $scope.addFavorite = function(userId, manual){
+    	if (userId){
+			if (manual){
+				$('#custom-layer').removeClass('hide');
+				$('#custom-modal').removeClass('hide');
+
+				$scope.delFromUerId = userId;
+			    $scope.delManual = manual;
+			    console.log(userId);
+			    console.log(manual.id);
 				
-				var ret = $window.confirm('确认取消收藏?');  
+				/*var ret = $window.confirm('确认取消收藏?');  
 				if (!ret){
 					return;
 				}
 				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
 					sub.favor = false;
-		        }); 
+		        });*/ 
 			}else{
-				$http.post('/favor/'+uid+'/' + sub.id, {}).success(function() {
-					sub.favor = true;
+				$http.post('/favor/'+userId+'/' + manual.id, {}).success(function() {
+					manual.favor = true;
 		        });
 			}
     	}else{

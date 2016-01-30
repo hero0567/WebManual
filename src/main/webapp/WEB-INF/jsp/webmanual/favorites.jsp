@@ -53,7 +53,7 @@
 			<p>请确实是否取消该收藏？</p>
 		</div>
 		<div class="custom-modal-footer">
-            <button type="button" class="btn btn-default" ng-click="deleteFavoriteItem">是</button>
+            <button type="button" class="btn btn-default" ng-click="deleteFavoriteItem()">是</button>
             <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDelete">否</button>
 		</div>
 	</div>

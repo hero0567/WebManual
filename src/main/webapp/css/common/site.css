@@ -83,6 +83,7 @@ ul{
 * Modal
 */
 .constom-layer{
+	top:0px;
     position: fixed;
     width: 100%;
 	height:100%;
