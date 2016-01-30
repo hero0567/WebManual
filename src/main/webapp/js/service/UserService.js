@@ -2,7 +2,7 @@
 
 app.factory('userService', ['$http','$cookies', '$window', function($http, $cookies, $window) {
 	var user = {};
-	var timeline = ['全部', '2016', '2015', '2014', '2013', '2012以前'];
+	var timeline = ['全部', '2012以前', '2013', '2014', '2015', '2016'];
 	
 	function addFavorite(uid, sub){
 		if (uid){

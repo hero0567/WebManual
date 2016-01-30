@@ -41,6 +41,10 @@
     <![endif]-->
 </head>
 <body ng-app="app" ng-controller="FavoritesController" class=""> 
+	<div class="d-n">
+	  <img src="./img/favicon.png" />
+	</div> 
+	
 	<!-- Modal -->
 	<!-- Button trigger modal -->
 	<div id="custom-layer" class="constom-layer hide">
@@ -57,18 +61,17 @@
             <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDeleteItem()">否</button>
 		</div>
 	</div>
-	
 
-	<div class="d-n">
-	  <img src="./img/favicon.png" />
-	</div> 
 	<!--[if lt IE 10]>
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	   <![endif]--> 
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>
 		
-		<div class="container margin-bottom-20">
+		<div class="container">
+			
+	<div id="deleteSuccess" class="alert alert-success hide" role="alert">删除成功！</div>
+	<div id="deleteFail" class="alert alert-danger hide" role="alert">删除失败，请重试！</div>
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 margin-bottom-20">
 					<section class="sidebar white-block">
@@ -109,7 +112,7 @@
 						</div>
 					</section>
 					
-					<section class="custom-filter-result white-block p-l-r margin-bottom-20 ">	
+					<section class="custom-manuals white-block p-l-r">	
 						 <table class="table custom-appliance-table">
 							<tr>
 								<th class="cell maincell"> 名称 </th> 
@@ -137,7 +140,6 @@
 				            	</td>
 							</tr>
 						</table>
-						 
 						
 						<!-- block 分页区 -->
 					    <div>

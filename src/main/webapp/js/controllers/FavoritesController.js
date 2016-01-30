@@ -118,8 +118,6 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
 				$('#custom-layer').removeClass('hide');
 				$('#custom-modal').removeClass('hide');
 				
-			    console.log($scope.delFromUserId);
-				
 				/*var ret = $window.confirm('确认取消收藏?');  
 				if (!ret){
 					return;
@@ -159,6 +157,8 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
     		    $scope.searchSubType($scope.user.id); 
 				$('#custom-layer').addClass("hide");
 				$('#custom-modal').addClass("hide");
+				$('#deleteSuccess').removeClass("hide");
+				setTimeout(function(){$('#deleteSuccess').addClass("hide");},2000)
 	        });
     	}
     }
