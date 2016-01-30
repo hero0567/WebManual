@@ -7,11 +7,11 @@ app.factory('userService', ['$http','$cookies', '$window', function($http, $cook
 	function addFavorite(uid, sub){
 		if (uid){
 			if (sub.favor){
-				
+				/*
 				var ret = $window.confirm('确认取消收藏?');  
 				if (!ret){
 					return;
-				}
+				}*/
 				$http.delete('/favor/'+uid+'/' + sub.id).success(function() {
 					sub.favor = false;
 		        }); 
