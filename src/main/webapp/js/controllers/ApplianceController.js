@@ -10,37 +10,29 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
 	$scope.subTypes = {};
 	$scope.brandGroup = {};
     $scope.params = {};    
-    // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
+    // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;
+    // fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
     $scope.page = {	pn:0, 
 		    		ppn:0, 
 		    		size:10, 
 		    		ps:5, 
+		    		psinx : [1,2,3,4,5],
 		    		pre : false, 
 		    		next: false, 
-		    		subtype : "",
 		    		total:0 };
-    $scope.ps = [1,2,3,4,5];
     
-    $scope.brand = "全部";
-    $scope.currentTime = "全部";
-    $scope.key = "";
+	$scope.search = {type:"", subtype:"", brand: "全部", currentTime: "全部"};
     
     userService.initUser();
 	$scope.user = userService.getUser();
 	$scope.timeline = userService.getTimeline();
         
     $scope.parseParams = function(){
-    	var paramString = window.location.search;
-    	var params = paramString.substr(1).split('&');  
-
-    	params.forEach(function(param){
-    		var kv = param.split('=');  
-    		if (kv.length = 2){
-    			$scope.params[kv[0]] = decodeURI(kv[1]);
-    		}
-    	});
-    	$scope.page.subtype = $scope.params.subtype;
-    	$scope.page.total = $scope.params.count;
+    	var paramHash = userService.parseParams(window.location.search)
+    	
+    	$scope.search.type = paramHash.type;
+    	$scope.search.subtype = paramHash.subtype;
+    	$scope.page.total = paramHash.count;
     }    
     
     $scope.fetchMenu = function() {
@@ -49,8 +41,9 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
          });
    	}  
     
-    $scope.changeMenu = function(type, count) {
-    	$scope.page.subtype = type;
+    $scope.changeMenu = function(type, subtype, count) {
+    	$scope.search.type = type;
+    	$scope.search.subtype = subtype;
         $scope.page.total = count;        
     	$scope.resetPageNavi();
     	$scope.fetchSubType();
@@ -99,13 +92,13 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
   	} 
     
     $scope.fetchSubType = function() {        
-        if ($scope.brand == "全部"){
-        	$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, ct: $scope.currentTime}}).success(function(subTypes) {  
+        if ($scope.search.brand == "全部"){
+        	$http.get('/hb/'+ $scope.search.type +'/'+$scope.search.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, ct: $scope.search.currentTime}}).success(function(subTypes) {  
            	 	$scope.subTypes = subTypes;
            	 	$scope.fetchFavorite();
             });  
     	}else{
-    		$http.get('/hb/大家电/'+$scope.page.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, brand: $scope.brand, ct: $scope.currentTime}}).success(function(subTypes) {  
+    		$http.get('/hb/'+ $scope.search.type +'/'+$scope.search.subtype, {params: {pn:$scope.page.pn, size:$scope.page.size, brand: $scope.search.brand, ct: $scope.search.currentTime}}).success(function(subTypes) {  
            	 	$scope.subTypes = subTypes;
            	 	$scope.fetchFavorite();
             });  
@@ -113,7 +106,7 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
  	} 
     
     $scope.fetchBrandGroup = function(ct) {
-    	$http.get('/c/g/b', {params: {"subtype": $scope.page.subtype, ct: $scope.currentTime}}).success(function(brandGroup){
+    	$http.get('/c/g/b', {params: {"subtype": $scope.search.subtype, ct: $scope.search.currentTime}}).success(function(brandGroup){
      		$scope.brandGroup = brandGroup
      		var count = 0;
      		angular.forEach(brandGroup, function (m) {
@@ -126,18 +119,18 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
   	}
     
     $scope.changeBrandGroup = function(brand, count) {
-    	$scope.brand = brand;  
+    	$scope.search.brand = brand;  
     	$scope.page.total = count;
     	$scope.resetPageNavi();
     	$scope.fetchSubType();
-    	if ($scope.currentTime != "全部"){
+    	if ($scope.search.currentTime != "全部"){
     		$scope.fetchBrandGroup(true);
     	}
   	}
     
     $scope.changeTime = function(t) {
-    	$scope.currentTime = t;   
-    	$scope.brand = "全部";
+    	$scope.search.currentTime = t;   
+    	$scope.search.brand = "全部";
     	$scope.fetchSubType();
        	$scope.fetchBrandGroup(true);
   	}
@@ -162,7 +155,7 @@ app.controller("ApplianceController", function($scope, $http, $location, $window
     
     $scope.parseParams();
     $scope.changePageNavi();
-    $scope.fetchMenu();
+//    $scope.fetchMenu();
     $scope.fetchBrandGroup();
     $scope.fetchSubType(); 
 });

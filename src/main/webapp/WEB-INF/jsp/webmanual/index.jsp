@@ -59,30 +59,20 @@
 		<main>
 			<section class="sub-menu">
 				<div class="container">
-					<div class="row border-gray-dashed"  ng-repeat="item in mockData">
+					<div class="row border-gray-dashed"  ng-repeat="item in menu">
 						<div class="col-lg-1 col-md-1 col-sm-1">
 							<p class="custom-type"><span ng-bind="item.type"></span></p>
 						</div>
 						<div class="col-lg-11 col-md-11 col-sm-11">
 							<ul class="nav navbar-nav custom-nav">
-								<li ng-repeat="subType in item.subTypes">
-									<a href="" ><span ng-bind="subType.subType"></span></a>
+								<li ng-repeat="subType in item.subtypes">
+									<a href="" ng-click="changeMenu(subType.type, subType.subtype, subType.count)"><span ng-bind="subType.subtype"></span>(<span class="subtype-amount" ng-bind="subType.count"></span>)</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-			</section>
-			
-			<section class="sub-menu"> 
-			 	<div class="container"> 
-					<ul class="nav navbar-nav custom-nav"> 
-						<li ng-repeat="m in menu | orderBy: 'sequence'">
-							<a href="" ng-click="changeMenu(m.subType, m.count)" ng-class="{on: m.subType == page.subtype}"><span class="sub-type" ng-bind="m.subType"></span> (<span class="subtype-amount" ng-bind="m.count"></span>)</a>
-						</li>
-					</ul> 
-				</div> 
-		 	</section>
+			</section>			
 	 	</main> 
 	 
 		<!-- Footer -->

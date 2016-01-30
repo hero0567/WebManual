@@ -52,8 +52,8 @@ public class ManualSearchController {
 	
 	@RequestMapping("")
 	public List<ManualDomain> searchGroupByBrand(@RequestParam(value = "key", defaultValue="") String key,
-			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
-			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
 			@RequestParam(value = "ct", required = false, defaultValue="") String time,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
@@ -63,8 +63,8 @@ public class ManualSearchController {
 		long atime = 3000;
 		
 		time = time.endsWith("全部") ? time = "" : time;
-		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
-		brand = brand.endsWith("全部") ? brand = "" : brand;
+		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
+		brand = brand.endsWith("全部") ? brand = "%%" : brand;
 		
 		if (time.length() > 4 ){
 			time = time.substring(0, 4);
@@ -79,8 +79,8 @@ public class ManualSearchController {
 	@RequestMapping("/{type}")
 	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
 			@RequestParam(value = "key", required = false, defaultValue="") String key,
-			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
-			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
 			@RequestParam(value = "ct", required = false, defaultValue="") String time,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "10") int size) {
@@ -89,8 +89,8 @@ public class ManualSearchController {
 		long atime = 3000;
 		
 		time = time.endsWith("全部") ? time = "" : time;
-		subtype = subtype.endsWith("全部") ? subtype = "" : subtype;
-		brand = brand.endsWith("全部") ? brand = "" : brand;
+		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
+		brand = brand.endsWith("全部") ? brand = "%%" : brand;
 		
 		if (time.length() > 4 ){
 			time = time.substring(0, 4);

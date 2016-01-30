@@ -85,6 +85,12 @@ public class ManualHomeController {
 		return "webmanual/signup";
 	}
 	
+	@RequestMapping("/pdfonline")
+	public String pdfonline(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "pdfonline");
+		return "webmanual/pdfonline";
+	}
+	
 	@RequestMapping("/favorites")
 	public String favorites(HttpServletRequest request) throws Exception {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "favorites");

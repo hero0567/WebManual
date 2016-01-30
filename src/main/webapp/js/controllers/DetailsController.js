@@ -18,16 +18,8 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 	$scope.user = userService.getUser();
 	
 	$scope.parseParams = function(){
-    	var paramString = window.location.search;
-    	var params = paramString.substr(1).split('&'); 
-
-    	params.forEach(function(param){
-    		var kv = param.split('=');  
-    		if (kv.length = 2){
-    			$scope.params[kv[0]] = decodeURI(kv[1]);
-    		}
-    	});
-    	$scope.id = $scope.params.id;
+		var paramHash = userService.parseParams(window.location.search)
+    	$scope.id = paramHash.id;
     }
 	
     $scope.fetchMenu = function() {
@@ -89,7 +81,7 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
     
-    $scope.fetchMenu();
+//    $scope.fetchMenu();
     $scope.parseParams();
     $scope.fetchHandbook($scope.id);
 });

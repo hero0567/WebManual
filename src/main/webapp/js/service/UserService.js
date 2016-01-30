@@ -2,7 +2,7 @@
 
 app.factory('userService', ['$http','$cookies', '$window', function($http, $cookies, $window) {
 	var user = {};
-	var timeline = ['全部', '2012以前', '2013', '2014', '2015', '2016'];
+	var timeline = ['全部', '2016', '2015', '2014', '2013', '2012以前'];
 	
 	function addFavorite(uid, sub){
 		if (uid){
@@ -25,13 +25,26 @@ app.factory('userService', ['$http','$cookies', '$window', function($http, $cook
     	}
 	}
 	
-	function checkSecCode(){
+	function parseParams(){
 		$http.get('/sec/img/check?code=' + $scope.user.captcha).success(function(){
             $scope.error.captcha = false;
         }).error(function() {
         	$scope.error.captcha = true;
         });
 	}
+	
+	function parseParams(paramString){
+    	var paramAry = paramString.substr(1).split('&');  
+    	var paramHash = {};    
+    	
+    	paramAry.forEach(function(param){
+    		var kv = param.split('=');  
+    		if (kv.length = 2){
+    			paramHash[kv[0]] = decodeURI(kv[1]);
+    		}
+    	});
+    	return paramHash;
+    } 
 	
 	function initUser(){
 		var u = $cookies.getObject("user");
@@ -53,7 +66,8 @@ app.factory('userService', ['$http','$cookies', '$window', function($http, $cook
 		initUser : initUser,
 		getUser : getUser,
 		getTimeline : getTimeline,
-		addFavorite : addFavorite
+		addFavorite : addFavorite,
+		parseParams : parseParams
 	}
 }]);
  
