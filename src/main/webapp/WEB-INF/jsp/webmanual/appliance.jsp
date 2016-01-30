@@ -68,7 +68,7 @@
 										</td>
 										<td>
 											<ul class="custom-brands-list">
-												<li class="custom-brand-item" ng-repeat="manual in brandGroup" ng-class="{active: brand == manual.subType}" ng-click="changeBrandGroup(manual.subType, manual.count)"> 
+												<li class="custom-brand-item" ng-repeat="manual in brandGroup" ng-class="{active: search.brand == manual.subType}" ng-click="changeBrandGroup(manual.subType, manual.count)"> 
 													<a ng-bind="manual.subType +'('+ manual.count+')'"></a>
 												</li>
 											</ul>		
@@ -80,7 +80,7 @@
 										</td>
 										<td class="padding-top-15">
 											<ul class="custom-brands-list">
-												<li class="custom-brand-item" ng-repeat="t in timeline" ng-class="{active: currentTime == t}" ng-click="changeTime(t)"> 
+												<li class="custom-brand-item" ng-repeat="t in timeline" ng-class="{active: search.currentTime == t}" ng-click="changeTime(t)"> 
 													<a href="" ng-bind="t"></a>	
 												</li>
 											</ul>		
@@ -130,7 +130,7 @@
 							<div class="custom-pagination">
 								<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
 								<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
-								<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in ps" 
+								<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in page.psinx" 
 									ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
 								<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
 								<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>

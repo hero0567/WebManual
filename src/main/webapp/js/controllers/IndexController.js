@@ -18,8 +18,8 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
         });
   	}  
     
-    $scope.changeMenu = function(type, count) {
-    	window.location = "/appliance?subtype="+type +"&count="+count;
+    $scope.changeMenu = function(type, subtype, count) {
+    	window.location = "/appliance?type="+type +"&subtype="+subtype +"&count="+count;
   	}  
     
     $scope.fetchMenu();

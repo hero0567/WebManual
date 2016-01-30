@@ -66,7 +66,7 @@
 						<div class="col-lg-11 col-md-11 col-sm-9">
 							<ul class="nav navbar-nav custom-nav">
 								<li ng-repeat="subType in item.subtypes">
-									<a href="" ng-click="changeMenu(subType.subtype, subType.count)"><span ng-bind="subType.subtype"></span>(<span class="subtype-amount" ng-bind="subType.count"></span>)</a>
+									<a href="" ng-click="changeMenu(subType.type, subType.subtype, subType.count)"><span ng-bind="subType.subtype"></span>(<span class="subtype-amount" ng-bind="subType.count"></span>)</a>
 								</li>
 							</ul>
 						</div>
