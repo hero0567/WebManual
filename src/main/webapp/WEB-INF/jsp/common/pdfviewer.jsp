@@ -10,7 +10,7 @@
 <script src="./js/lib/pdf.js/viewer.js"></script>
 
 
-<div id="outerContainer" style="width: 818px; height: 200px; margin-top: 100px;">
+<div id="outerContainer" style="width: 1000px; margin-top: 30px; margin-left: 100px; height: 650px;">
 
   <div id="sidebarContainer">
     <div id="toolbarSidebar">
