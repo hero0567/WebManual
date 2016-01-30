@@ -54,7 +54,7 @@
 		</div>
 		<div class="custom-modal-footer">
             <button type="button" class="btn btn-default" ng-click="deleteFavoriteItem()">是</button>
-            <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDelete">否</button>
+            <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="cancelDeleteItem()">否</button>
 		</div>
 	</div>
 	
@@ -155,24 +155,6 @@
 			</div>
 		</div> 
 
-		<!-- Modal -->
-		<div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">请确认</h4>
-		      </div>
-		      <div class="modal-body">
-		        取消该收藏？
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelRemove">否</button>
-		        <button type="button" class="btn btn-primary" ng-click="removeFavoriteItem">是</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
 		<%@ include file="../common/footer.jsp" %> 
 	</div> 
 	<script>

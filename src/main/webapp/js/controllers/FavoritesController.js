@@ -105,36 +105,20 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
     	}
  	} 
     
-    $scope.delFromUerId;
-    $scope.delManual;
-    
-    $scope.deleteFavoriteItem = function(){
-    	userId = $scope.delFromUerId;
-    	delManualId = $scope.delManual.id;
-    	
-    	if(userId && delManualId){
-    		$http.delete('/favor/'+userId+'/' + delManualId).success(function() {
-    			delManual.favor = false;
-				$('#custom-layer').addClass("hide");
-				$('#custom-modal').addClass("hide");
-	        });
-    	}
-    }
-    $scope.cancelDelete = function(){
-    	$scope.delFromUerId;
-        $scope.delManual;
-    }
+    $scope.delFromUserId = 0;
+    $scope.delManual = {};
+   
     
     $scope.addFavorite = function(userId, manual){
+    	$scope.delFromUserId = userId;
+	    $scope.delManual = manual;
+	    
     	if (userId){
 			if (manual){
 				$('#custom-layer').removeClass('hide');
 				$('#custom-modal').removeClass('hide');
-
-				$scope.delFromUerId = userId;
-			    $scope.delManual = manual;
-			    console.log(userId);
-			    console.log(manual.id);
+				
+			    console.log($scope.delFromUserId);
 				
 				/*var ret = $window.confirm('确认取消收藏?');  
 				if (!ret){
@@ -166,6 +150,24 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
 //    	}
 	}   
     
+    $scope.deleteFavoriteItem = function(){
+    	$scope.delFromUserId;
+    	if($scope.delFromUserId && $scope.delManual.id){
+    		$http.delete('/favor/'+$scope.delFromUserId+'/' + $scope.delManual.id).success(function() {
+    			$scope.delManual.favor = false;
+    			$scope.fetchFavorList($scope.user.id);        
+    		    $scope.searchSubType($scope.user.id); 
+				$('#custom-layer').addClass("hide");
+				$('#custom-modal').addClass("hide");
+	        });
+    	}
+    }
+    
+    $scope.cancelDeleteItem = function(){
+        $('#custom-layer').addClass("hide");
+		$('#custom-modal').addClass("hide");
+    }
+    
     $scope.changeSubType = function(type, count) {
         $scope.page.total = count;    
         $scope.currentSubType = type;
@@ -180,8 +182,7 @@ app.controller("FavoritesController", function($scope, $http, $location, $window
     $scope.changeMenu = function(type, count) {
     	window.location = "/appliance?subtype="+type +"&count="+count;
   	}
-	
-    $scope.fetchMenu();
+
     $scope.fetchFavorList($scope.user.id);        
     $scope.searchSubType($scope.user.id); 
 });
