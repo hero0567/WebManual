@@ -14,6 +14,8 @@
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
 	
+	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
@@ -29,9 +31,9 @@
 	 
 </head>
 
-<body ng-app="app" ng-controller="IndexController" class="">  
-	 
+<body ng-app="app" ng-controller="IndexController" id="page-onlineview">  
 <div id="outerContainer">
+	
   <!-- Sidebar -->
   <div id="sidebarContainer">
      <div id="toolbarSidebar">
@@ -58,7 +60,7 @@
   </div>  <!-- sidebarContainer -->
 
   <div id="mainContainer">
-    <div class="findbar doorHanger hiddenSmallView" id="findbar">
+    <div class="findbar doorHanger hiddenSmallView hidden" id="findbar">
       <label for="findInput" class="toolbarLabel" data-l10n-id="find_label">查找：</label>
       <input id="findInput" class="toolbarField" tabindex="91">
       <div class="splitToolbarButton">
@@ -139,8 +141,8 @@
            <button id="sidebarToggle" class="toolbarButton" title="切换侧栏" tabindex="11" data-l10n-id="toggle_sidebar">
              <span data-l10n-id="toggle_sidebar_label">切换侧栏</span>
            </button>
-           <div class="toolbarButtonSpacer"></div>
-           <button id="viewFind" class="toolbarButton group hiddenSmallView toggled" title="在文档中查找" tabindex="12" data-l10n-id="findbar">
+           
+           <button id="viewFind" class="toolbarButton group hiddenSmallView" title="在文档中查找" tabindex="12" data-l10n-id="findbar">
               <span data-l10n-id="findbar_label">查找</span>
            </button>
            <div class="splitToolbarButton">
@@ -309,7 +311,6 @@
       </div>
     </div>
   </div>  <!-- overlayContainer -->
-
 </div> <!-- outerContainer -->	 		
 	 
 		 
