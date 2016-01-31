@@ -88,27 +88,7 @@
 							<span class="f-r">
 								我收藏的“ <b>说明书</b> ”，共有  <span ng-bind="count"></span> 本
 							</span>
-						</div>
-						<div class="custom-section-body">
-							<section class="custom-brands-filter white-block p-l-r">
-								<div class="custom-section-body">
-									<div id="tab-body-view-most-manual" class="custom-tabs-tab">
-										<table class="">
-											<tr>
-												<td>
-													<ul class="custom-brands-list">
-												 		<li class="custom-brand-item active">全部品牌</li>
-														<li class="custom-brand-item" ng-repeat="sub in results"> 
-															<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.handbook.brand"></a>	
-														</li>
-													</ul>		
-												</td>
-											</tr>
-										</table>
-									</div>
-								</div>
-							</section>
-						</div>
+						</div>						
 					</section>
 					
 					<section class="custom-manuals white-block p-l-r">	
