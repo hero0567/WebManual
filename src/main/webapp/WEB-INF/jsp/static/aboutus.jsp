@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>关于我们 ｜ 爱上帮助</title>
+	<title>关于我们 ｜ 爱尚帮助</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -14,9 +14,8 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	<link rel="stylesheet" type="text/css" href="css/pages/aboutus.css" />
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -46,8 +45,8 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class=""> 
-	<div class="none">
+<body> 
+	<div class="d-n">
 	  <img src="./img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
@@ -56,95 +55,50 @@
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>
 		
-		<div class="main about-us">
-			<div class="about-us-tab">
-				<div>
-					<div class="cont about">
-						<section class="our-about">
-							<h3>关于我们</h3>
-							<p>92说明书是关注IT互联网行业的结构化的公司数据库和商业信息服务提供商,</p>
-							<p>于2013年5月21日上线。</p>
-							<p>致力于通过信息和数据的生产、聚合、挖掘、加工、处理，</p>
-							<p>帮助目标用户和客户节约时间和金钱、提高效率，以辅助其各类商业行为，</p>
-							<p>包括风险投资、收购、竞争情报、细分行业信息、国外公司产品信息数据服务等。</p>
-							<p>产品服务包括但不限于：在线说明书、数据和信息服务等。</p>
-						</section>
-						<section class="our-product">
-							<h3>我们的产品</h3>
-							<div class="boxed">
-								<ul class="list-productcase" style="margin: 0 auto; max-width: 600px;">
-									<li>
-										<div class="left">
-											<div class="pic">
-												<a target="_blank" href="http://92shuomingshu.com"><span class="incicon"><img src="https://www.92shuomingshu.com/assets/front/images/photo/about-prod-juzi.png"></span></a>
-											</div>
-										</div>
-										<div class="right">
-											<p class="title"><a target="_blank" href="https://www.92shuomingshu.com/">IT桔子官网</a></p>
-											<p>更聪明的创业和投资</p>
-										</div>
-									</li>
-									<li>
-										<div class="left">
-											<div class="pic">
-												<a target="_blank" href="http://92shuomingshu.com/special/lieju/"><span class="incicon"><img src="https://www.92shuomingshu.com/assets/front/images/photo/about-prod-lieju.png"></span></a>
-											</div>
-										</div>
-										<div class="right">
-											<p class="title"><a target="_blank" href="https://www.92shuomingshu.com/special/lieju">猎桔融资</a></p>
-											<p>IT桔子股权投资平台</p>
-										</div>
-									</li>
-									<li>
-										<div class="left">
-											<div class="pic">
-												<a target="_blank" href="http://92shuomingshu.com/app"><span class="incicon"><img src="https://www.92shuomingshu.com/assets/front/images/photo/about-prod-app.png"></span></a>
-											</div>
-										</div>
-										<div class="right">
-											<p class="title"><a target="_blank" href="https://www.92shuomingshu.com/app">App</a></p>
-											<p>创业者和投资人都在用</p>
-										</div>
-									</li>
-									<li>
-										<div class="left">
-											<div class="pic">
-												<a target="_blank" href="http://today.92shuomingshu.com"><span class="incicon"><img src="https://www.92shuomingshu.com/assets/front/images/photo/about-prod-today.png"></span></a>
-											</div>
-										</div>
-										<div class="right">
-											<p class="title"><a target="_blank" href="http://today.92shuomingshu.com">Today</a></p>
-											<p>为身边的新产品喝彩</p>
-										</div>
-									</li>
-									<li>
-										<div class="left">
-											<div class="pic">
-												<a target="_blank" href="http://www.juzilab.com/"><span class="incicon"><img src="https://www.92shuomingshu.com/assets/front/images/photo/about-prod-juzilab.png"></span></a>
-											</div>
-										</div>
-										<div class="right">
-											<p class="title"><a target="_blank" href="http://www.juzilab.com/">桔子空间</a></p>
-											<p>创业从这里开始</p>
-										</div>
-									</li>
-									<li>
-										<div class="left">
-											<div class="pic">
-												<a target="_blank" href="http://tobshe.com/"><span class="incicon"><img src="https://www.92shuomingshu.com/assets/front/images/photo/about-prod-tobshe.png"></span></a>
-											</div>
-										</div>
-										<div class="right">
-											<p class="title"><a target="_blank" href="http://tobshe.com/">拓扑社</a></p>
-											<p>专注于ToB领域的垂直媒体</p>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</section>
-		
-					</div>
-				</div>
+		<div class="container about-us">
+			<div class="row">
+				<section class="col-lg-12 col-md-12 col-sm-12 margin-bottom-20">
+					<h3>关于我们</h3>
+					<p>“爱尚帮助”是一个聚焦于产品帮助信息的平台</p>
+					
+					<h4>产品的帮助信息包括：</h4>
+					<ol>
+						<li><b>产品在线说明书。 </b>我们为您收集和整理了来自产品官方的说明书，供您查阅。</li>
+						<li><b>产品官方售后信息。 </b>我们为您收集和整理了官方客服电话，官方在线报修、线下维修服务站点等信息，覆盖您对产品售后的绝大多数需求。</li>
+						<li><b>产品维修保养常识。 </b>我们为您收集和整理了来自官方的、第三方权威机构的产品维修保养常识， 以便于您能更好地使用您购买的产品。</li>
+					</ol> 
+					
+					<h4>平台提供的服务包括：</h4>
+					<ol>
+						<li><b>在线阅读产品说明书。</b> 您不需要下载任何形式的说明书，直接可以在线查阅，这样我们帮您避免了下载木马、病毒的可能性； 于此同时，也避免了下载资源对内存的消耗。</li>
+						<li><b>多平台支持。</b>我们的网站同时支持台式机、平板电脑和手机上的查看，并能针对不同平台进行优化显示，这样方便您在个平台间的切换使用</li>
+						<li><b>扫描二维码打开。</b>我们在每个帮助页面提供了二维码，方便您使用手机通过扫描二维码的方式打开指定的页面，进行移动查阅及快速拨号。</li>
+						<li><b>用户收藏。</b>我们提供收藏夹功能。这就意味着您登录后，可以收藏所有和您的生活息息相关的产品帮助信息，以备不时之需。</li>
+					</ol>
+				</section>
+				
+			</div>
+				
+			<div class="row">
+				<section class="col-lg-12 col-md-12 col-sm-12 margin-bottom-20">
+					<h3>我们的愿景</h3>
+					<ol>
+						<li>为用户提供<b>最直接、最有效、不含广告、不含利益关系的产品帮助信息。</b></li>
+						<li>通过我们的平台，<b>用户可以管理所有和自己生活息息相关的产品帮助信息。</b></li>
+						<li>让所有用户在<b>三步之内寻找到最关切的信息。</b></li>
+					</ol>
+				</section>
+			</div>
+			<div class="row">
+				<section class="col-lg-12 col-md-12 col-sm-12 margin-bottom-20">
+					<h3>帮助信息来源</h3>
+					<p>“爱尚帮助”是一个开放的平台，所有帮助信息均来自以下途径：</p>
+					<ol>
+						<li>产品厂商直接提供。</li>
+						<li>热心用户的整理提供。</li>
+						<li>我们的收集整理。</li>
+					</ol>
+				</section>
 			</div>
 		</div>
 		
