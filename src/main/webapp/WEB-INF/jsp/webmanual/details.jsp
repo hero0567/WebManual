@@ -107,7 +107,7 @@
 					
 					<section class="p-l-r margin-bottom-20">
 						<div class="row">
-							<a href="/pdfonline" class="custom-manual-btn col-lg-4 col-md-4 col-sm-4">
+							<a ng-click="readonline(handbook)" class="custom-manual-btn col-lg-4 col-md-4 col-sm-4">
 				                <i class="fa fa-cloud"></i> <span>在线阅读</span>
 				            </a> 
 							<div class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" ng-click="addFavorite(user.id, handbook)">
