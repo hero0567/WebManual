@@ -15,6 +15,22 @@
  #outerContainer{
  	background-color:#f0f0f0;
  }
+ #page-onlineview .fa-home{
+ 	background:transparent !important;
+ 	font-size:18px;
+ 	color:#fff;
+ 	margin-right:5px;
+ 	border:none;
+ 	height:32px;
+ 	line-height:32px;
+ 	cursor:pointer;
+ }
+ a:-webkit-any-link{
+ 	text-decoration: none !important;
+ }
+ a:hover, a:active{
+ 	outline:none !important;
+ }
  .hide{
  	display:none;
  }
@@ -887,7 +903,6 @@ html[dir='rtl'] .dropdownToolbarButton {
               0 0 1px hsla(0,0%,100%,.15) inset,
               0 1px 0 hsla(0,0%,100%,.05);
 }
-
 .toolbarButton:hover:active,
 .overlayButton:hover:active,
 .dropdownToolbarButton:hover:active,
@@ -2003,6 +2018,20 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
 .visibleMediumView,
 .visibleSmallView {
   display: none;
+}
+
+@media all and (min-width: 1200px){
+	#toolbarViewer{
+	    width: 1180px !important;
+	    margin:auto !important;
+	}
+	html[dir='ltr'] #toolbarViewerLeft{
+		position:relative !important;
+	}
+	html[dir='ltr'] #toolbarViewerRight{
+		position:relative !important;
+		float:right;
+	}
 }
 
 @media all and (max-width: 960px) {
