@@ -131,6 +131,39 @@ ul{
 	border-color:#00aeef !important;
 }
 
+
+/*
+* Declare page
+*/
+#page-declare #main-search-box{
+	display:none !important;
+}
+#page-declare .declare section{
+	padding:10px !important;
+	min-height:450px;
+}
+#page-declare h4{
+	padding-bottom:5px !important;
+	border-bottom:1px solid #eee !important;
+}
+.declare{
+	min-height:450px !important;
+}
+
+/*
+* About us page
+*/
+#page-aboutUs #main-search-box{
+	display:none !important;
+}
+#page-aboutUs section{
+	padding:10px !important;
+}
+#page-aboutUs h4{
+	padding-bottom:5px !important;
+	border-bottom:1px solid #eee !important;
+}
+
 /*
 * Results
 */
@@ -593,6 +626,10 @@ table .fa-star{
 	.sub-menu .custom-nav li a{
 		padding-top:0px !important;
 		padding-bottom:0px !important;
+	}
+	
+	#page-declare .declare, #page-aboutUs .about-us{
+		margin-top: 80px !important;
 	}
 	
 	/*
