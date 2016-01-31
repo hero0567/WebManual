@@ -31,6 +31,7 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
     $scope.fetchHandbook = function(id) {
     	 $http.get('/hb/x/x/' + id).success(function(handbook){
              $scope.handbook = handbook;
+             console.log(handbook);
              $scope.fetchHandbookService(handbook.brand);
              $scope.fetchFavorite();
        });
@@ -57,6 +58,10 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
     		});
     	}
  	}
+    
+    $scope.readonline = function(handbook){
+    	 $window.location="/pdfonline?file="+handbook.url;
+    }
     
     $scope.changeMenu = function(type, count) {
     	window.location = "/appliance?subtype="+type +"&count="+count;
