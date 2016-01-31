@@ -86,7 +86,7 @@
          <span data-l10n-id="presentation_mode_label">演示模式</span>
        </button>
 
-       <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="打开文件" tabindex="52" data-l10n-id="open_file">
+       <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView hidden" title="打开文件" tabindex="52" data-l10n-id="open_file">
          <span data-l10n-id="open_file_label">打开</span>
        </button>
 
@@ -134,6 +134,11 @@
      </div>
    </div>  <!-- secondaryToolbar -->
 
+   <div id="back2home">
+   	<div class="back2home">
+   		<a href="/index"><i class="fa fa-home"></i>返回网站首页</a>
+   	</div>
+   </div>
    <div class="toolbar">
      <div id="toolbarContainer">
        <div id="toolbarViewer">
@@ -163,7 +168,7 @@
              <span data-l10n-id="presentation_mode_label">演示模式</span>
            </button>
 
-           <button id="openFile" class="toolbarButton openFile hiddenLargeView" title="打开文件" tabindex="32" data-l10n-id="open_file">
+           <button id="openFile" class="toolbarButton openFile hiddenLargeView hidden" title="打开文件" tabindex="32" data-l10n-id="open_file">
              <span data-l10n-id="open_file_label">打开</span>
            </button>
 
