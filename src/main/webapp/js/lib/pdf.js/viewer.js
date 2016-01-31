@@ -35,7 +35,7 @@ var PAGE_NUMBER_LOADING_INDICATOR = 'visiblePageIsLoading';
 var DISABLE_AUTO_FETCH_LOADING_BAR_TIMEOUT = 5000;
 
 PDFJS.imageResourcesPath = './pdf.img/';
-  PDFJS.workerSrc = './js/lib/pdf.js/pdf.worker.js';
+PDFJS.workerSrc = './js/lib/pdf.js/pdf.worker.js';
 
 var mozL10n = document.mozL10n || document.webL10n;
 
@@ -6865,11 +6865,11 @@ var PDFViewerApplication = {
       self.metadata = metadata;
 
       // Provides some basic debug information
-      console.log('PDF ' + pdfDocument.fingerprint + ' [' +
-                  info.PDFFormatVersion + ' ' + (info.Producer || '-').trim() +
-                  ' / ' + (info.Creator || '-').trim() + ']' +
-                  ' (PDF.js: ' + (PDFJS.version || '-') +
-                  (!PDFJS.disableWebGL ? ' [WebGL]' : '') + ')');
+		//      console.log('PDF ' + pdfDocument.fingerprint + ' [' +
+		//                  info.PDFFormatVersion + ' ' + (info.Producer || '-').trim() +
+		//                  ' / ' + (info.Creator || '-').trim() + ']' +
+		//                  ' (PDF.js: ' + (PDFJS.version || '-') +
+		//                  (!PDFJS.disableWebGL ? ' [WebGL]' : '') + ')');
 
       var pdfTitle;
       if (metadata && metadata.has('dc:title')) {
@@ -7142,30 +7142,31 @@ window.PDFView = PDFViewerApplication; // obsolete name, using it as an alias
 var HOSTED_VIEWER_ORIGINS = ['null',
   'http://mozilla.github.io', 'https://mozilla.github.io'];
 function validateFileURL(file) {
-  try {
-    var viewerOrigin = new URL(window.location.href).origin || 'null';
-    if (HOSTED_VIEWER_ORIGINS.indexOf(viewerOrigin) >= 0) {
-      // Hosted or local viewer, allow for any file locations
-      return;
-    }
-    var fileOrigin = new URL(file, window.location.href).origin;
-    // Removing of the following line will not guarantee that the viewer will
-    // start accepting URLs from foreign origin -- CORS headers on the remote
-    // server must be properly configured.
-    if (fileOrigin !== viewerOrigin) {
-      throw new Error('file origin does not match viewer\'s');
-    }
-  } catch (e) {
-    var message = e && e.message;
-    var loadingErrorMessage = mozL10n.get('loading_error', null,
-      'An error occurred while loading the PDF.');
-
-    var moreInfo = {
-      message: message
-    };
-    PDFViewerApplication.error(loadingErrorMessage, moreInfo);
-    throw e;
-  }
+	//remove CORS visit check by levy
+	//  try {
+	//    var viewerOrigin = new URL(window.location.href).origin || 'null';
+	//    if (HOSTED_VIEWER_ORIGINS.indexOf(viewerOrigin) >= 0) {
+	//      // Hosted or local viewer, allow for any file locations
+	//      return;
+	//    }
+	//    var fileOrigin = new URL(file, window.location.href).origin;
+	//    // Removing of the following line will not guarantee that the viewer will
+	//    // start accepting URLs from foreign origin -- CORS headers on the remote
+	//    // server must be properly configured.
+	//    if (fileOrigin !== viewerOrigin) {
+	//      throw new Error('file origin does not match viewer\'s');
+	//    }
+	//  } catch (e) {
+	//    var message = e && e.message;
+	//    var loadingErrorMessage = mozL10n.get('loading_error', null,
+	//      'An error occurred while loading the PDF.');
+	//
+	//    var moreInfo = {
+	//      message: message
+	//    };
+	//    PDFViewerApplication.error(loadingErrorMessage, moreInfo);
+	//    throw e;
+	//  }
 }
 
 function webViewerLoad(evt) {

@@ -1,12 +1,9 @@
 <link rel="stylesheet" href="./css/pdf.js/viewer.css"/>
 <script src="./js/lib/pdf.js/compatibility.js"></script>
 
-<!-- This snippet is used in production (included from viewer.html) -->
-<link rel="resource" type="application/l10n" href="locale/locale.properties"/>
 <script src="./js/lib/pdf.js/l10n.js"></script>
 <script src="./js/lib/pdf.js/pdf.js"></script>
 
-<script src="./js/lib/pdf.js/debugger.js"></script>
 <script src="./js/lib/pdf.js/viewer.js"></script>
 
 
