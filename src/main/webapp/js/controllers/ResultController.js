@@ -10,7 +10,6 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
 	$scope.results = {};
 	$scope.topList = {};
 	$scope.brandGroup = {};
-    $scope.params = {};
     // pn = 当前第几页;ppn=往后翻了几个下一页;size = 每页显示的数量 ;ps=显示几个选择页面的按钮;fp = 首页是否显示;pre = 上一页是否显示 ; nex = 下一页是否显示 ; ep = 尾页是否显示 
     $scope.page = {	pn:0, 
 		    		ppn:0, 
@@ -44,8 +43,8 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
          });
    	}  
     
-    $scope.fetchTopList = function(key) {
-    	$http.get('/c/g/st', {params: {"key": key}}).success(function(topList){
+    $scope.fetchTopList = function() {
+    	$http.get('/c/g/st', {params: {"key": $scope.key}}).success(function(topList){
      		$scope.topList = topList;
      		var count = 0;
      		angular.forEach(topList, function (m) {
@@ -108,7 +107,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     
     $scope.fetchBrandGroup = function() {
-    	$http.get('/c/g/b', {params: {"name": $scope.params.key,"subtype": $scope.currentSubType, "brand": $scope.brand, ct: $scope.currentTime}}).success(function(brandGroup){
+    	$http.get('/c/g/b', {params: {"name": $scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, ct: $scope.currentTime}}).success(function(brandGroup){
      		$scope.brandGroup = brandGroup
      		var count = 0;
      		angular.forEach(brandGroup, function (m) {
@@ -175,7 +174,7 @@ app.controller("ResultController", function($scope, $http, $location, $window, u
     
     $scope.parseParams();
 //    $scope.fetchMenu();
-    $scope.fetchTopList($scope.params.key);     
+    $scope.fetchTopList();     
     $scope.fetchBrandGroup();
     $scope.searchSubType(); 
     
