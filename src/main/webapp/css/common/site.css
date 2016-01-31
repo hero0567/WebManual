@@ -142,8 +142,9 @@ ul{
 	padding:10px !important;
 	margin-bottom:20px !important;
 }
-#favorites .custom-search-form input[type="text"]{
-	margin-top:15px;
+#favorites #main-search-box{
+	 height:50px !important;
+	 margin-top:80px !important;
 }
 #favorites #main-search-box .custom-search-button {
     top: -30px !important;
