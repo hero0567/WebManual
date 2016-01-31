@@ -12,6 +12,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ #outerContainer{
+ 	background-color:#f0f0f0;
+ }
+ .hide{
+ 	display:none;
+ }
 
 .textLayer {
   position: absolute;
@@ -470,9 +476,7 @@ html[dir='rtl'] #toolbarSidebar {
 #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
   height: 32px;
-  background-color: #474747; /* fallback */
-  background-image: url(images/texture.png),
-                    linear-gradient(hsla(0,0%,32%,.99), hsla(0,0%,27%,.95));
+  background-color: #00aeef; /* fallback */
 }
 html[dir='ltr'] #toolbarContainer, .findbar, .secondaryToolbar {
   box-shadow: inset 1px 0 0 hsla(0,0%,100%,.08),
@@ -1558,9 +1562,10 @@ html[dir='rtl'] .outlineItemToggler::before {
   color: hsl(0,0%,85%);
   font-size: 12px;
   line-height: 14px;
-  background-color: #474747; /* fallback */
+  background-color:#00aeef;
+  /*background-color: #474747; 
   background-image: url(images/texture.png),
-                    linear-gradient(hsla(0,0%,32%,.99), hsla(0,0%,27%,.95));
+                    linear-gradient(hsla(0,0%,32%,.99), hsla(0,0%,27%,.95));*/
   box-shadow: inset 1px 0 0 hsla(0,0%,100%,.08),
               inset 0 1px 1px hsla(0,0%,0%,.15),
               inset 0 -1px 0 hsla(0,0%,100%,.05),
@@ -1569,6 +1574,10 @@ html[dir='rtl'] .outlineItemToggler::before {
   border: 1px solid hsla(0,0%,0%,.5);
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#scaleSelectContainer{
+	margin-top:6px;
 }
 
 .dialog > .row {

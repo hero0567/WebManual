@@ -7,7 +7,7 @@
 <script src="./js/lib/pdf.js/viewer.js"></script>
 
 
-<div id="outerContainer" style="width: 1000px; margin-top: 30px; margin-left: 100px; height: 650px;">
+<div id="outerContainer">
 
   <div id="sidebarContainer">
     <div id="toolbarSidebar">
@@ -57,32 +57,28 @@
     <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
       <div id="secondaryToolbarButtonContainer">
         <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView" title="Switch to Presentation Mode" tabindex="51" data-l10n-id="presentation_mode">
-          <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
-        </button>
-
-        <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="Open File" tabindex="52" data-l10n-id="open_file">
-          <span data-l10n-id="open_file_label">Open</span>
+          <span data-l10n-id="presentation_mode_label">全屏预览</span>
         </button>
 
         <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="Print" tabindex="53" data-l10n-id="print">
-          <span data-l10n-id="print_label">Print</span>
+          <span data-l10n-id="print_label">打印</span>
         </button>
 
         <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="Download" tabindex="54" data-l10n-id="download">
-          <span data-l10n-id="download_label">Download</span>
+          <span data-l10n-id="download_label">下载</span>
         </button>
 
         <a href="#" id="secondaryViewBookmark" class="secondaryToolbarButton bookmark visibleSmallView" title="Current view (copy or open in new window)" tabindex="55" data-l10n-id="bookmark">
-          <span data-l10n-id="bookmark_label">Current View</span>
+          <span data-l10n-id="bookmark_label">当前位置</span>
         </a>
 
         <div class="horizontalToolbarSeparator visibleLargeView"></div>
 
         <button id="firstPage" class="secondaryToolbarButton firstPage" title="Go to First Page" tabindex="56" data-l10n-id="first_page">
-          <span data-l10n-id="first_page_label">Go to First Page</span>
+          <span data-l10n-id="first_page_label">跳转到第一页</span>
         </button>
         <button id="lastPage" class="secondaryToolbarButton lastPage" title="Go to Last Page" tabindex="57" data-l10n-id="last_page">
-          <span data-l10n-id="last_page_label">Go to Last Page</span>
+          <span data-l10n-id="last_page_label">跳转到最后一页</span>
         </button>
 
         <div class="horizontalToolbarSeparator"></div>
@@ -102,8 +98,8 @@
 
         <div class="horizontalToolbarSeparator"></div>
 
-        <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="Document Properties…" tabindex="61" data-l10n-id="document_properties">
-          <span data-l10n-id="document_properties_label">Document Properties…</span>
+        <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="Document Propertiesâ¦" tabindex="61" data-l10n-id="document_properties">
+          <span data-l10n-id="document_properties_label">Document Propertiesâ¦</span>
         </button>
       </div>
     </div>  <!-- secondaryToolbar -->
@@ -133,7 +129,7 @@
             <span id="numPages" class="toolbarLabel"></span>
           </div>
           <div id="toolbarViewerRight">
-            <button id="presentationMode" class="toolbarButton presentationMode hiddenLargeView" title="Switch to Presentation Mode" tabindex="31" data-l10n-id="presentation_mode">
+            <button id="presentationMode" class="toolbarButton presentationMode hiddenLargeView" title="切换到全屏模式" tabindex="31" data-l10n-id="presentation_mode">
               <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
             </button>
 
