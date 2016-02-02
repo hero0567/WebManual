@@ -13,7 +13,7 @@ import javax.persistence.UniqueConstraint;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "handbook_favor", uniqueConstraints = { @UniqueConstraint(columnNames = { "handBook_id", "user_id" }) })
+@Table(name = "wmanual_favor", uniqueConstraints = { @UniqueConstraint(columnNames = { "handBook_id", "user_id" }) })
 public class ManualFavoriteDomain {
 
 	@Id

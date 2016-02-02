@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="handbook_type")
+@Table(name="wmanual_type")
 public class ManualTypeDomain {
 		  
 	@Id

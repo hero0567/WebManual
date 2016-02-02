@@ -34,8 +34,8 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 	public List<ManualDomain> findByTypeAndSubTypeAndBrandAndProductDateLessThanEqual(String type, String subType,
 			String brand, long time);
 
-	@Query(value = "select a.type, a.typeseq, b.subType, a.sequence, b.count from handbook_type a, "
-			+ "(select subType,count(1) count from handbook group by subType, type) b "
+	@Query(value = "select a.type, a.typeseq, b.subType, a.sequence, b.count from wmanual_type a, "
+			+ "(select subType,count(1) count from wmanual group by subType, type) b "
 			+ "where a.name = b.subType order by a.typeseq, a.sequence ", nativeQuery = true)
 	public List<Object[]> findMenu();
 

@@ -2343,7 +2343,8 @@ var NetworkManager = (function NetworkManagerClosure() {
       var pendingRequest = this.pendingRequests[xhrId] = {
         xhr: xhr
       };
-
+      
+      xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
       xhr.open('GET', this.url);
       xhr.withCredentials = this.withCredentials;
       for (var property in this.httpHeaders) {
