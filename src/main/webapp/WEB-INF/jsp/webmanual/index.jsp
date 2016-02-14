@@ -17,7 +17,6 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	
 	<script src="js/lib/others/modernizr.js"></script>
@@ -29,7 +28,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/lib/jquery/jquery.min.js"></script>
-    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
@@ -59,7 +57,7 @@
 		<main>
 			<!-- Banner -->
 			<div class="ledao-banners">
-				<div class="container">
+				<div class="ledao-container">
 					<%@ include file="../common/manualIndustry.jsp" %>
 				</div>
 			</div>

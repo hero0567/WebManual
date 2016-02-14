@@ -1,7 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
 
 <script src="js/lib/jquery/jquery.min.js"></script>
@@ -23,7 +22,7 @@ $(document).ready(function(){
 
 <div id="ledaobar" class="alibar2013 mod-alibar fd-clr"
 	style="height: 29px;">
-	<div class="container fd-clr">
+	<div class="ledao-container fd-clr">
 		<div class="mobile">
 			<a href="http://92shuomingshu.com">手机乐道</a>
 		</div>
@@ -86,8 +85,8 @@ $(document).ready(function(){
  
 
 
-<div style="background-color:#f6f6f6; height:120px; width:100%;display:inline-block; position:relative;">
-	<div class="container p-r">
+<div id="ledao-submenu" style="">
+	<div class="ledao-container p-r">
 		<a target="_self" title="乐道说明书" data-href="http://wmanual.com/" class="hp-huodongLink f-l">
 	      <div class="hp-huodongLogo">
 	      </div>
@@ -113,7 +112,7 @@ $(document).ready(function(){
 <div id="ledao_new_menu"></div>
 
 <div class="ledao_box">
-	<div class="container"> 
+	<div class="ledao-container"> 
 		<div class="menu">
 	    	<ul>
 	        	<li><a href="">首页</a></li>

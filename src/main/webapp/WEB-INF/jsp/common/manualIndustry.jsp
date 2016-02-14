@@ -1,24 +1,28 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <link rel="stylesheet" type="text/css" href="css/common/site.css" />
 <style type="text/css">
-.cate-box {
+.ledao-container{
+	width:1190px;
+	margin:auto;
+}
+.ledao-box {
     width: 586px;
     border: 1px solid #e5e5e5;
     margin-bottom: 20px;
 }
-.cate-box .bd .list-category {
+.ledao-box .bd .list-category {
     position: relative;
     width: 190px;
     height: 305px;
 }
-.cate-box .bd .list-category .category-pic img {
+.ledao-box .bd .list-category .category-pic img {
     width: 100%;
 }
-.cate-box .bd .list .list-tit {
+.ledao-box .bd .list .list-tit {
     border-bottom: 1px solid #e5e5e5;
     padding: 15px 20px;
     }
-.cate-box .bd .list .list-tit h3 {
+.ledao-box .bd .list .list-tit h3 {
     font-weight: bold;
     font-size: 18px;
     color: #333;
@@ -27,11 +31,11 @@
     display: inline-block;
     margin:0px;
 }
-.cate-box .bd .list .list-tit .des {
+.ledao-box .bd .list .list-tit .des {
     display: inline-block;
     color: #666;
 }
-.cate-box .bd .list .list-tit .des span {
+.ledao-box .bd .list .list-tit .des span {
     display: inline-block;
     width: 3px;
     height: 3px;
@@ -40,10 +44,10 @@
     margin-right: 5px;
     vertical-align: 3px;
 }
-.cate-box .bd .list .list-detail {
+.ledao-box .bd .list .list-detail {
     padding: 25px 20px 8px;
 }
-.cate-box .bd .list .list-detail .list-group dl dd {
+.ledao-box .bd .list .list-detail .list-group dl dd {
     float: left;
     margin-bottom: 4px;
 }
@@ -53,22 +57,22 @@ dd {
 dt, dd {
     line-height: 1.5;
 }
-.cate-box .bd .list .list-detail .list-group {
+.ledao-box .bd .list .list-detail .list-group {
     border-right: 1px solid #e5e5e5;
     width: 210px;
     height: 202px;
     font-family: SimSun;
 }
-.cate-box .bd .list .list-detail .list-group dl {
+.ledao-box .bd .list .list-detail .list-group dl {
     color: #666;
     font-size: 12px;
     margin-bottom: 0;
 }
-.cate-box .bd .list .list-detail .list-group dl dt {
+.ledao-box .bd .list .list-detail .list-group dl dt {
     float: left;
     margin-bottom: 4px;
 }
-.cate-box .bd .list .list-detail .list-group dl dt a {
+.ledao-box .bd .list .list-detail .list-group dl dt a {
     width: 32px;
     text-align: center;
     display: block;
@@ -83,17 +87,17 @@ dt, dd {
 .clearfix:after {
     clear: both;
 }
-.cate-box .bd .list .list-detail .list-group .dl-flag {
+.ledao-box .bd .list .list-detail .list-group .dl-flag {
     margin-bottom: 16px;
 }
 .clearfix:before, .clearfix:after {
     content: " ";
     display: table;
 }
-.cate-box .bd .list .list-detail .list-img {
+.ledao-box .bd .list .list-detail .list-img {
     text-align: center;
 }
-.cate-box .bd .list .list-detail .list-img .img-link {
+.ledao-box .bd .list .list-detail .list-img .img-link {
     border: 1px solid #e5e5e5;
     text-align: center;
     margin-bottom: 18px;
@@ -101,7 +105,7 @@ dt, dd {
     height: 88px;
     width: 111px;
 }
-.cate-box .bd .list .list-detail .list-img .img-link img {
+.ledao-box .bd .list .list-detail .list-img .img-link img {
     width: 100%;
 }
 img {
@@ -111,7 +115,7 @@ img {
 img {
     border: 0;
 }
-.cate-box .bd .list .list-detail .list-img .img-link {
+.ledao-box .bd .list .list-detail .list-img .img-link {
     border: 1px solid #e5e5e5;
     text-align: center;
     margin-bottom: 18px;
@@ -134,19 +138,17 @@ img {
     float: left;
     display: inline;
 }
-.cate-box .bd {
+.ledao-box .bd {
     overflow: hidden;
 }
 </style>
 
-<div class="cate-box fl">
+<div class="ledao-box fl">
 	<div class="bd">
 		<div class="list-category fl">
 			<a class="category-pic" href="" target="_blank"
-				data-linkid="10004447"> <img
-				data-original="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg"
-				src="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg?imageMogr2/format/webp"
-				width="199" height="305" class="" style="display: inline;">
+				data-linkid="10004447"> <img data-original="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg"
+				src="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg" width="199" height="305" class="" style="display: inline;">
 			</a>
 		</div>
 		<div class="list fr">
@@ -306,7 +308,7 @@ img {
 		</div>
 	</div>
 </div>
-<div class="cate-box fr">
+<div class="ledao-box fr">
 	<div class="bd">
 		<div class="list-category fl">
 			<a class="category-pic" href="http://www.zbj.com/wzkf/"
