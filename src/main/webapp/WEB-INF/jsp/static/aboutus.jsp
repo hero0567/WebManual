@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>关于我们 ｜ 爱尚帮助</title>
+	<title>关于我们 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -61,7 +61,7 @@
 					<div class=" white-block">
 						<section class="margin-bottom-20">
 							<h4>关于我们</h4>
-							<p>“爱尚帮助”是一个聚焦于产品帮助信息的平台</p>
+							<p>“乐道说明书”是一个聚焦于产品帮助信息的平台</p>
 							
 							<h5>产品的帮助信息包括：</h5>
 							<ol>
@@ -90,7 +90,7 @@
 				
 						<section class="margin-bottom-20">
 							<h4>帮助信息来源</h4>
-							<p>“爱尚帮助”是一个开放的平台，所有帮助信息均来自以下途径：</p>
+							<p>“乐道说明书”是一个开放的平台，所有帮助信息均来自以下途径：</p>
 							<ol>
 								<li>产品厂商直接提供。</li>
 								<li>热心用户的整理提供。</li>
@@ -100,7 +100,7 @@
 					
 						<section>
 							<h4>联系我们</h4>
-							<p>“爱尚帮助”是一个开放的平台，因此欢迎您发送帮助信息给我们，我们的联系方式是：</p>
+							<p>“乐道说明书”是一个开放的平台，因此欢迎您发送帮助信息给我们，我们的联系方式是：</p>
 							<ol>
 								<li>邮箱：<a href="malto:hello@92shuomingshu.com">hello@92shuomingshu.com</a></li>
 							</ol>

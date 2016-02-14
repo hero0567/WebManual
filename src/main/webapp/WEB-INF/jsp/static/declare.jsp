@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>免责声明 ｜ 爱尚帮助</title>
+	<title>免责声明 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -56,7 +56,7 @@
 					<section class="white-block">
 						<h4>免责声明</h4>
 						<p>
-							“爱尚帮助”平台的创建是源于：<b>对现行网络信息冲刺着虚假、利益关系导致用户对有用信息的索取极为不便的极度不满。</b>
+							“乐道说明书”平台的创建是源于：<b>对现行网络信息冲刺着虚假、利益关系导致用户对有用信息的索取极为不便的极度不满。</b>
 						</p>
 						<p>
 							因此，平台设立之初就秉承着<b>绝不作恶，为用户提供最直接、最有效的、免费帮助信息的愿景。</b>

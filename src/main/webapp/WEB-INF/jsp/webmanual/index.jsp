@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>首页 ｜ 爱尚帮助</title>
+	<title>首页 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -57,6 +57,19 @@
 		<%@ include file="../common/header.jsp" %>
 		
 		<main>
+			<!-- Banner -->
+			<div class="ledao-banners">
+				<div class="container">
+					<%@ include file="../common/manualIndustry.jsp" %>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+		
+			<!-- Original sub-menu -->
 			<section class="sub-menu">
 				<div class="container">
 					<div class="row border-gray-dashed"  ng-repeat="item in menu">
