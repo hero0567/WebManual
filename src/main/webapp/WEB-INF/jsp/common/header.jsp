@@ -337,8 +337,9 @@ $("#ledao_nav").slide({
 		</div>
 	</nav>
 </header>
+<!-- 
 <div class="container">
-	<!-- Search Box -->
+	
 	<form id="main-search-box" class="custom-search-form" role="search"
 		ng-submit="search()">
 		<input type="text" class="custom-search-box" ng-model="$parent.key"
@@ -348,5 +349,5 @@ $("#ledao_nav").slide({
 		</button>
 	</form>
 </div>
-
+ -->
 <script src="js/controllers/HeaderController.js"></script>

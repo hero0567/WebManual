@@ -68,7 +68,7 @@
 			
 		
 			<!-- Original sub-menu -->
-			<section class="sub-menu">
+			<section class="sub-menu hide">
 				<div class="container">
 					<div class="row border-gray-dashed"  ng-repeat="item in menu">
 						<div class="col-lg-1 col-md-1 col-sm-1">

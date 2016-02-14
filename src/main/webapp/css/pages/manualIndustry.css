@@ -96,6 +96,18 @@ dt, dd {
     height: 20px;
     overflow: hidden;
 }
+.list-tit{
+	width:100%;
+	display:inline-block;
+}
+main{
+	width:100% !important;
+	display:inline-block !important;
+}
+.ledao-banners{
+	width:1190px;
+	margin:auto;
+}
 .clearfix:after {
     clear: both;
 }
