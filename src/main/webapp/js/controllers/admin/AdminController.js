@@ -31,6 +31,8 @@ app.controller("AdminController", function($scope, $http, $location, $window, us
     userService.initUser();
 	$scope.user = userService.getUser();
 	$scope.timeline = userService.getTimeline();
+	
+	$scope.img = "";
         
     $scope.parseParams = function(){
     	var paramHash = userService.parseParams(window.location.search)
@@ -101,7 +103,6 @@ app.controller("AdminController", function($scope, $http, $location, $window, us
 		$http.get('/s', {params: {"key":$scope.key,"subtype": $scope.currentSubType, "brand": $scope.brand, 
 					ct: $scope.currentTime, pn:$scope.page.pn, size:$scope.page.size}}).success(function(results) {  
        	 	$scope.results = results;
-       	 	$scope.fetchFavorite();
         }); 
  	} 
     
@@ -154,30 +155,29 @@ app.controller("AdminController", function($scope, $http, $location, $window, us
       	window.location = "/admin?key=" + $scope.key;
    	}
     
-    $scope.addFavorite = function(uid, sub){
-    	userService.addFavorite(uid, sub);
+    
+    $scope.save = function(sub) {
+    	$http.post('/admin/m', sub).success(function() {
+    		
+        });
+ 	}
+    
+    $scope.remove = function(sub) {
+    	$http.delete('/admin/m/' + sub.id).success(function() {
+    		sub.show = true;
+        });
 	}
     
-    $scope.fetchFavorite = function() {
-    	if ($scope.user.id){
-    		$http.get('/favor/' + $scope.user.id).success(function(favor){
-    			angular.forEach(favor, function (f) {
-                	angular.forEach($scope.results, function (type) {
-            			if (type.id == f.handBook.id){
-            				type.favor = true;
-            			}
-                    });
-                });
-    		});
-    	}
- 	}
+    $scope.chooseImg = function(sub, img) {
+    	sub.imgUrl = img;
+	}
+    
     
     $scope.mySplit = function(string) {
         return string.split(',');
     }
     
     $scope.parseParams();
-//    $scope.fetchMenu();
     $scope.fetchTopList();     
     $scope.fetchBrandGroup();
     $scope.searchSubType(); 

@@ -24,13 +24,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ManualAdminController {
+public class ManualAdminHomeController {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass()); 
 		
 	@RequestMapping("/admin")
 	public String home(HttpServletRequest request) throws Exception {
-		return "webmanual/admin";
+		return "admin/admin";
 	}
 
 }

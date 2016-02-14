@@ -23,7 +23,7 @@
 	<script src="js/lib/angular/angular.js"></script>
 	<script src="js/lib/angular/angular-cookies.min.js"></script>
 	<script src="js/app.js"></script>
-	<script src="js/controllers/AdminController.js"></script>
+	<script src="js/controllers/admin/AdminController.js"></script>
 	<script src="js/service/UserService.js"></script>	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -105,9 +105,9 @@
 								<th class="cell version">型号 </th> 
 								<th class="cell action">图片</th>
 								<th class="cell date">上市时间 </th> 
-								<th class="cell action">关注 </th>
+								<th class="cell action">保存 </th>
 							</tr>
-							<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
+							<tr class="border-gray-lower-dashed" ng-repeat="sub in results" ng-hide="sub.show">
 					            <td class="cell maincell">
 					            	<a ng-href="/details?id={{sub.id}}" ng-bind="sub.name"></a> 
 					            </td> 
@@ -116,16 +116,17 @@
 					            	<a ng-href="/result?key={{sub.brand}}" ng-bind="sub.brand"></a>
 					            </td> 
 					            <td class="cell version">
-						            <span class="tag gray" ng-bind="sub.version"></span>
+						            <input type="text" ng-model="sub.version"/>
 					            </td> 
 					            <td class="cell date">
-					            	<span  ng-repeat="img in mySplit(sub.imgUrl)"><img ng-src="{{img}}" width="50px" height="50px"><input type="checkbox" ng-model={{}} /></span>
+					            	<span  ng-repeat="img in mySplit(sub.imgUrl)"><img ng-src="{{img}}" ng-click="chooseImg(sub, img)" width="50px" height="50px"></span>
 				            	</td>
 					            <td class="cell date">
-					            	<span ng-bind="sub.productDate"></span>
+					            	<input type="text" ng-model="sub.productDate"/>
 				            	</td>
 					            <td class="cell action">
-					            	 <a href="" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  
+					            	<input type="button" value="保存" ng-click="save(sub)"/>
+					            	<input type="button" value="删除" ng-click="remove(sub)"/>
 				            	</td>
 							</tr>
 						</table>
