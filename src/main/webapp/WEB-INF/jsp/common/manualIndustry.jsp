@@ -15,6 +15,17 @@
     width: 190px;
     height: 305px;
 }
+#ledao-category-mark{
+	color:#fff;
+	text-align:center;
+	width:40px;
+	position: absolute;
+	background-color:#ff7300;
+    -webkit-box-shadow: 0px 1px 1px rgba(255, 115, 0, 0.9); 
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
 .ledao-box .bd .list-category .category-pic img {
     width: 100%;
 }
@@ -146,6 +157,7 @@ img {
 <div class="ledao-box fl">
 	<div class="bd">
 		<div class="list-category fl">
+			<div id="ledao-category-mark">热门关注</div>
 			<a class="category-pic" href="" target="_blank"
 				data-linkid="10004447"> <img data-original="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg"
 				src="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg" width="199" height="305" class="" style="display: inline;">
@@ -311,6 +323,7 @@ img {
 <div class="ledao-box fr">
 	<div class="bd">
 		<div class="list-category fl">
+			<div id="ledao-category-mark">热门关注</div>
 			<a class="category-pic" href="http://www.zbj.com/wzkf/"
 				target="_blank" data-linkid="10004475"> <img
 				data-original="http://cms.zbjimg.com/hpp/xin14/E7BD91E7AB99E5BBBAE8AEBE2.jpg"
