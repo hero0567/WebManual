@@ -31,9 +31,7 @@ app.controller("AdminController", function($scope, $http, $location, $window, us
     userService.initUser();
 	$scope.user = userService.getUser();
 	$scope.timeline = userService.getTimeline();
-	
-	$scope.img = "";
-        
+	        
     $scope.parseParams = function(){
     	var paramHash = userService.parseParams(window.location.search)
     	$scope.key = paramHash.key;
@@ -174,7 +172,10 @@ app.controller("AdminController", function($scope, $http, $location, $window, us
     
     
     $scope.mySplit = function(string) {
-        return string.split(',');
+    	if (angular.isString(string)){
+    		return string.split(',');
+    	}
+    	return string;        
     }
     
     $scope.parseParams();

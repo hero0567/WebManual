@@ -120,6 +120,7 @@
 					            </td> 
 					            <td class="cell date">
 					            	<span  ng-repeat="img in mySplit(sub.imgUrl)"><img ng-src="{{img}}" ng-click="chooseImg(sub, img)" width="50px" height="50px"></span>
+					            	 <input ng-if="true" type="text" ng-model="sub.imgUrl"/>
 				            	</td>
 					            <td class="cell date">
 					            	<input type="text" ng-model="sub.productDate"/>
