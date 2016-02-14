@@ -131,31 +131,31 @@ $(document).ready(function(){
 	                <li class="">
 	                    <div class="cat_6_nav">
 	                        <s class="cat-nav-icon fp-iconfont">R</s>
-	                        热门搜索
+	                        <a href="">热门搜索</a>
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_1_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">D</s>
-	                        大家电
+	                        <a href="">大家电</a>
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_2_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">S</s>
-	                        <a href="http://www.17sucai.com/">生活电器</a> 
+	                        <a href="">生活电器</a> 
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_3_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">C</s>
-	                        <a href="http://www.17sucai.com/">厨房电器</a> 
+	                        <a href="">厨房电器</a> 
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_4_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">R</s>
-	                        <a href="http://www.17sucai.com/">日常护理</a>
+	                        <a href="">日常护理</a>
 	                    </div>
 	                </li>
 	            </ul>
