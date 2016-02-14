@@ -142,7 +142,7 @@ img {
 <div class="cate-box fl">
 	<div class="bd">
 		<div class="list-category fl">
-			<a class="category-pic" href="http://www.zbj.com/vi/" target="_blank"
+			<a class="category-pic" href="" target="_blank"
 				data-linkid="10004447"> <img
 				data-original="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg"
 				src="http://cms.zbjimg.com/hpp/7B62858B3F-7878-4CD0-BE20-BA066270BC417D.jpg?imageMogr2/format/webp"
