@@ -272,7 +272,36 @@ $(document).ready(function(){
 	        </div>
 	        <!--右侧内容结束-->
 	    </div>
+	    
+	    
     </div>
+	
+	
+	
+</div>
+<!-- 保障说明 -->
+<div class="ledao-container">
+		<div id="ledao-declare">
+			
+	        <dl class="step-tips">
+	            <dt><i class="fa fa-send"></i> <span>如何使用？</span></dt>
+	            <dd>
+	                <em class="num">1.</em>
+	                <span class="txt">通过分类菜单拦或搜索框查找说明书</span>
+	                <i class="arr"></i>
+	            </dd>
+	            <dd>
+	                <em class="num">2.</em>
+	                <span class="txt">点击找到的说明书，进入说明书详细页</span>
+	                <i class="arr"></i>
+	            </dd>
+	            <dd>
+	                <em class="num">3.</em>
+	                <span class="txt">选择在线阅读或下载到本地阅读</span>
+	            </dd>
+	             
+	        </dl>
+	    </div>   
 </div>
 <script type="text/javascript">
 

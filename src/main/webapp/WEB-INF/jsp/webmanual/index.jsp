@@ -55,10 +55,12 @@
 		<%@ include file="../common/header.jsp" %>
 		
 		<main>
-			<!-- Banner -->
+			<!-- Category and Brands -->
 			<div class="ledao-banners">
 				<div class="ledao-container">
+					<%@ include file="../common/brands.jsp" %>
 					<%@ include file="../common/manualIndustry.jsp" %>
+					
 				</div>
 			</div>
 			

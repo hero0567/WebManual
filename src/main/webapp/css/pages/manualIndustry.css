@@ -1,3 +1,11 @@
+#ledao-manual-category h3.section-title{
+	font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    display: block;
+    margin-right: 116px;
+    color: #222;
+}
 .ledao-container{
 	width:1190px;
 	margin:auto;
@@ -57,6 +65,7 @@
 }
 .ledao-box .bd .list .list-detail {
     padding: 25px 20px 8px;
+    width:100%;
 }
 .ledao-box .bd .list .list-detail .list-group dl dd {
     float: left;
@@ -165,4 +174,5 @@ img {
 }
 .ledao-box .bd {
     overflow: hidden;
+    background-color: #fff;
 }
