@@ -33,6 +33,8 @@ public class ManualDomain {
 	private int status;
 	@Column(length = 500)
 	private String url;
+	@Column(length = 500)
+	private String lurl;	
 	private String imgUrl;
 	private String owner;
 	@Column(columnDefinition="INT default 0")
@@ -127,6 +129,12 @@ public class ManualDomain {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public String getLurl() {
+		return lurl;
+	}
+	public void setLurl(String lurl) {
+		this.lurl = lurl;
 	}
 	public String getOwner() {
 		return owner;
