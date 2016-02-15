@@ -1,0 +1,92 @@
+#ledao-service-promise{
+	display:inline-block;
+	width:100%;
+}
+.service-promise {
+    background-color: #f9f9f9;
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+
+
+
+.tit {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: normal;
+    font-family: Microsoft Yahei;
+    color: #404144;
+    text-align:center;
+}
+
+.promise .tit i {
+    display: block;
+    width: 77px;
+    height: 0;
+    border: 1px solid #f60;
+    margin: auto;
+    margin-top: 3px;
+}
+.promise .tit i {
+    display: block;
+    width: 77px;
+    height: 0;
+    border: 1px solid #f60;
+    margin: auto;
+    margin-top: 3px;
+}
+
+.promise dl {
+    float: left;
+    width: 33%;
+    color: #818181;
+    font-size: 14px;
+    font-family: Microsoft Yahei;
+    height: 90px;
+    border-right: 1px solid #ddd;
+}
+.promise dl dt {
+    float: left;
+    height: 84px;
+    width: 80px;
+    margin-right: 20px;
+    margin-left: 55px;
+    margin-top: -8px;
+}
+img {
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+.promise dl dd {
+    line-height: 23px;
+}
+.grid:after {
+    clear: both;
+}
+.grid:before, .grid:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
