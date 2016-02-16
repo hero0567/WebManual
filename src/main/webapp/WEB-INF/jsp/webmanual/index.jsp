@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>首页 ｜ 爱尚帮助</title>
+	<title>首页 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -17,7 +17,6 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	
 	<script src="js/lib/others/modernizr.js"></script>
@@ -29,7 +28,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/lib/jquery/jquery.min.js"></script>
-    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
@@ -57,7 +55,24 @@
 		<%@ include file="../common/header.jsp" %>
 		
 		<main>
-			<section class="sub-menu">
+			<!-- Category and Brands -->
+			<div class="ledao-banners">
+				<div class="ledao-container">
+					<%@ include file="../common/manualIndustry.jsp" %>
+					<%@ include file="../common/servicepromise.jsp" %>
+					<%@ include file="../common/brands.jsp" %>
+					
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			
+		
+			<!-- Original sub-menu -->
+			<section class="sub-menu hide">
 				<div class="container">
 					<div class="row border-gray-dashed"  ng-repeat="item in menu">
 						<div class="col-lg-1 col-md-1 col-sm-1">

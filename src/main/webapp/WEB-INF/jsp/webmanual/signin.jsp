@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8; IE=edge">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>用户登录 | 爱尚帮助</title>
+	<title>用户登录 | 乐道说明书</title>
 	<link rel="icon" href="/images/favicon.ico" />
 	<link rel="shortcut icon" href="./img/favicon.png">
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png">

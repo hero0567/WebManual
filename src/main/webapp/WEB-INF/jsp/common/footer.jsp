@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="css/common/footer.css" />	
 
 <footer class="main-footer">
-    <div class="container">
+    <div class="ledao-container">
         <div class="row">
             <div class="col-sm-4 col-xs-4">
                 <div class="widget">
