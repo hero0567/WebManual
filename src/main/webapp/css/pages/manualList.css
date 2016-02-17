@@ -1,0 +1,159 @@
+
+
+/*说明书分类－头*/
+
+#manual-category_head {
+    position: relative;
+    z-index: 100;
+    overflow: visible!important;
+}
+#manual-category_head h3.section-title{
+	font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    display: block;
+    margin-right: 116px;
+    color: #222;
+}
+#manual-category_head_activity_ctn {
+    position: absolute;
+    left: 110px;
+    top: 7px;
+}
+
+#manual-category_head_activity_ctn .title {
+    margin-right: 10px;
+}
+#manual-category_head_activity_ctn span {
+    color: #888;
+}
+#manual-category_head_activity_ctn a.belong {
+    margin-right: 8px !important;
+}
+#manual-category_head_activity_ctn a {
+    color: #555;
+    margin-right: 30px;
+}
+
+#manual-category_set_btn {
+    height: 28px;
+    line-height: 28px;
+    color: #555;
+    font-size: 12px;
+    padding-right: 38px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 'Hiragino Sans GB','microsoft yahei',arial,sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ledao-category-manual-tab */
+.ledao-category-manual-tab {
+	
+	position:relative;
+	margin-bottom:20px;
+}
+#ledao-manual-list-1{
+	background-color:#fff;
+	margin-bottom:0px !important;
+	border-left:1px solid #e5e5e5;
+	border-right:1px solid #e5e5e5;
+    -webkit-box-shadow: 4px 6px 6px -6px #e2e2e2!important;
+    box-shadow: 4px 6px 6px -6px #e2e2e2!important;
+}
+.ledao-category-manual-tab h2 {
+	font-size:16px;
+	height:44px;
+	color:#3366cc;
+	margin-top:20px;
+}
+.ledao-category-manual-tab dl dt {
+	font-size:14px;
+	color:#ff6600;
+	margin-top:30px;
+	font-weight:800;
+}
+.ledao-category-manual-tab dl dt, .ledao-category-manual-tab dl dd {
+	line-height:22px;
+}
+ 
+.tabbtn {
+	height:30px;
+	background:url(../images/tabbg.gif) repeat-x;
+	border-left:solid 1px #ddd;
+	border-right:solid 1px #ddd;
+}
+.tabbtn li {
+	float:left;
+	position:relative;
+	margin:0 0 0 0px;
+}
+.tabbtn li a {
+	display:block;
+	float:left;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	width:80px;
+	text-align:center;
+	cursor:pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+.tabbtn li.current {
+	 
+}
+.tabbtn li.current a {
+	border-top:solid 2px #ff7300;
+	height:30px;
+	line-height:30px;
+	background:#fff;
+	color:#3366cc;
+	font-weight:800;
+} 
+.tabcon {
+	background-color:#f9f9f9;
+	position:relative; 
+	height:180px;
+	overflow:hidden;
+	border-left:1px solid #e5e5e5;
+	border-right:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+}
+.tabcon .subbox {
+	position:absolute; 
+	width:100%;
+	left:0;
+	top:0;
+}
+.tabcon .sublist {
+	padding:5px 10px;
+	height:170px;
+}
+ 
+#leftcon .subbox {
+	width:9999em;
+}
+#leftcon .subbox .sublist {
+	float:left;
+	width:664px;
+}
+ 
+.sublist {
+	padding:10px;
+}
+.sublist li {
+	height:28px;
+	line-height:28px;
+	font-size:12px;
+}
+.sublist li span {
+	margin:0 5px 0 0;
+	font-family:"宋体";
+	font-size:12px;
+	font-weight:400;
+	color:#ddd;
+}

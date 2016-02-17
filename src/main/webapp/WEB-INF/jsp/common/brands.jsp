@@ -7,40 +7,40 @@
    <ul class="ledao-service">
 	   <li class="ledao-service current">
 		   <div class="title">
-			   <h3>产品分类</h3>
-			   <a href="">****系列</a>
-		   </div>
-		   <div class="con fl" id="con11">
-			   <ul>
-				   <li><a href="">产品分类名称</a></li>
-				   <li><a href="">产品分类名称</a></li>
-				   <li><a href="">产品分类名称</a></li>
-			   </ul>
-		   </div>
-	   </li>
-	   <li class="ledao-service">
-		   <div class="title">
-			   <h3>产品分类</h3>
-			   <a href="">****系列</a>
+			   <h3>如何查找说明书</h3>
+			   <a href="javascript:void(0)">如何查找说明书</a>
 		   </div>
 		   <div class="con fl" id="con22">
 			   <ul>
-				   <li><a href="">产品分类名称</a></li>
-				   <li><a href="">产品分类名称</a></li>
-				   <li><a href="">产品分类名称</a></li>
+				   <li><a href="">通过分类菜单栏进行定位</a></li>
+				   <li><a href="">通过搜索进行定位</a></li>
+				   <li><a href="">通过品牌黄页品牌名定位</a></li>
 			   </ul>
 		   </div>
 	   </li>
 	   <li class="ledao-service">
 		   <div class="title">
-			   <h3>产品分类</h3>
-			   <a href="">*****系列</a>
+			   <h3>如何查找说明书</h3>
+			   <a href="javascript:void(0)">如何查找说明书</a>
 		   </div>
-		   <div class="con fl" id="con33">
+		   <div class="con fl" id="con22">
 			   <ul>
-				   <li><a href="">产品分类名称</a></li>
-				   <li><a href="">产品分类名称</a></li>
-				   <li><a href="">产品分类名称</a></li>
+				   <li><a href="">通过分类菜单栏进行定位</a></li>
+				   <li><a href="">通过搜索进行定位</a></li>
+				   <li><a href="">通过品牌黄页品牌名定位</a></li>
+			   </ul>
+		   </div>
+	   </li>
+	   <li class="ledao-service">
+		   <div class="title">
+			   <h3>如何查找说明书</h3>
+			   <a href="javascript:void(0)">如何查找说明书</a>
+		   </div>
+		   <div class="con fl" id="con22">
+			   <ul>
+				   <li><a href="">通过分类菜单栏进行定位</a></li>
+				   <li><a href="">通过搜索进行定位</a></li>
+				   <li><a href="">通过品牌黄页品牌名定位</a></li>
 			   </ul>
 		   </div>
 	   </li>
@@ -51,14 +51,14 @@
 $(document).ready(function(e) {
 
 	var currentLi =  $(".indexTypes ul li");
-	$(currentLi.eq(0)).stop().animate({"width":"510px"},600);
-	$(currentLi.eq(0)).children(".con").animate({"left":"193px"},600);
+	$(currentLi.eq(0)).stop().animate({"width":"540px"},600);
+	$(currentLi.eq(0)).children(".con").animate({"left":"180px"},600);
 	
 	$(currentLi).hover(function(e){
-		$(this).siblings("li").stop().animate({"width":"193px"},600);
+		$(this).siblings("li").stop().animate({"width":"180px"},600);
 		$(this).siblings("li").removeClass("current");
 		$(this).addClass("current");
-		$(this).stop().animate({"width":"510px"},600);  
+		$(this).stop().animate({"width":"540px"},600);  
 	});
 	
 });

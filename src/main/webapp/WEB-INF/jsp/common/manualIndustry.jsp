@@ -4,12 +4,14 @@
 
 <section id="ledao-manual-category">
 	<div id="manual-category_head" class="layout">
-	   <h3 class="section-title">说明书分类</h3> 
+	    <h3 class="section-title">说明书分类</h3> 
 	     
 		<div id="manual-category_head_activity_ctn">
 		  <span class="title">今日热搜：</span><a href="" class="belong">[空气净化器]</a><a href="">夏普K100-N3</a>   
-		</div>  <a id="manual-category_set_btn" href="#">查看更多</a>
+		</div>  
+		<a id="manual-category_set_btn" href="#">查看更多</a>
 	</div>  
+	
 	<!-- <h3 class="section-title">说明书分类</h3> -->
 	<div class="ledao-box fl">
 		<div class="bd">
