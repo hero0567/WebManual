@@ -58,10 +58,10 @@
 			<!-- Category and Brands -->
 			<div class="ledao-banners">
 				<div class="ledao-container">
+				<%@ include file="../common/brands.jsp" %>
 					<%@ include file="../common/manualIndustry.jsp" %>
 					<%@ include file="../common/servicepromise.jsp" %>
-					<%@ include file="../common/brands.jsp" %>
-					
+					<%@ include file="../common/manualList.jsp" %>
 					
 				</div>
 			</div>

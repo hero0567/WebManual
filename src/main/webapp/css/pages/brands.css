@@ -153,7 +153,7 @@ h4, h5, h6 {
     display: inline-block;
     margin: 0px;}
 
-.indexTypes ul li .title{width:143px;padding-top:30px;padding-left:50px;font-size:18px;height:83px; float:left;}
+.indexTypes ul li .title{width:140px;padding-top:30px;padding-left:50px;font-size:18px;height:83px; float:left;}
 .indexTypes > ul li.ledao-service.current { border-bottom: 3px solid #ff7300;}
 .indexTypes ul li .con{position:absolute;top:0; width:317px; left:193px;overflow:hidden;height:113px;overflow:hidden; }
 .indexTypes ul li .con ul{padding-top:12px;}
