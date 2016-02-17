@@ -17,7 +17,7 @@
 }
 #manual-category_head_activity_ctn {
     position: absolute;
-    left: 110px;
+    left: 130px;
     top: 7px;
 }
 
@@ -49,6 +49,22 @@ body, button, input, select, textarea {
     font: 12px/1.5 'Hiragino Sans GB','microsoft yahei',arial,sans-serif !important;
     -webkit-font-smoothing: antialiased;
 }
+.sublist li.tabth, .sublist li.tabtr{
+	width:100%;
+}
+.sublist li.tabth span{
+	display:inline-block;
+	color:#333 !important;
+	text-align:center;
+	font-weight: bold;
+    border-bottom: 1px solid #e5e5e5;
+}
+.sublist li.tabtr span{
+	display:inline-block;
+	color:#222 !important;
+	text-align:center;
+	font-weight:blod;
+}
 
 /* ledao-category-manual-tab */
 .ledao-category-manual-tab {
@@ -56,13 +72,14 @@ body, button, input, select, textarea {
 	position:relative;
 	margin-bottom:20px;
 }
-#ledao-manual-list-1{
-	background-color:#fff;
+#ledao-manual-list-1, #ledao-manual-list-2{
 	margin-bottom:0px !important;
-	border-left:1px solid #e5e5e5;
-	border-right:1px solid #e5e5e5;
+	border:1px solid #e5e5e5;
+	border-bottom:none !important;
     -webkit-box-shadow: 4px 6px 6px -6px #e2e2e2!important;
     box-shadow: 4px 6px 6px -6px #e2e2e2!important;
+    height:40px;
+    line-height:40px;
 }
 .ledao-category-manual-tab h2 {
 	font-size:16px;
@@ -82,9 +99,6 @@ body, button, input, select, textarea {
  
 .tabbtn {
 	height:30px;
-	background:url(../images/tabbg.gif) repeat-x;
-	border-left:solid 1px #ddd;
-	border-right:solid 1px #ddd;
 }
 .tabbtn li {
 	float:left;
@@ -94,8 +108,8 @@ body, button, input, select, textarea {
 .tabbtn li a {
 	display:block;
 	float:left;
-	height:30px;
-	line-height:30px;
+	height:40px;
+    line-height:40px;
 	overflow:hidden;
 	width:80px;
 	text-align:center;
@@ -106,22 +120,23 @@ body, button, input, select, textarea {
 .tabbtn li.current {
 	 
 }
-.tabbtn li.current a {
-	border-top:solid 2px #ff7300;
-	height:30px;
-	line-height:30px;
-	background:#fff;
-	color:#3366cc;
+.tabbtn li.current a, .tabbtn li.current a:hover {
+	height:40px;
+    line-height:40px;
+    font-size:14px;
+	background:#ff7300;
+	color:#fff !important;
 	font-weight:800;
 } 
 .tabcon {
 	background-color:#f9f9f9;
 	position:relative; 
-	height:180px;
+	height:300px;
 	overflow:hidden;
 	border-left:1px solid #e5e5e5;
 	border-right:1px solid #e5e5e5;
 	border-bottom:1px solid #e5e5e5;
+	width:100%;
 }
 .tabcon .subbox {
 	position:absolute; 
@@ -131,7 +146,7 @@ body, button, input, select, textarea {
 }
 .tabcon .sublist {
 	padding:5px 10px;
-	height:170px;
+	height:290px;
 }
  
 #leftcon .subbox {

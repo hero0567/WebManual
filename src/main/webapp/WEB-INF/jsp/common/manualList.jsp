@@ -5,7 +5,7 @@
 
 <section class="ledao-category-manual-tab">	
 	<div id="manual-category_head" class="layout">
-	    <h3 class="section-title">最热说明书</h3> 
+	    <h3 class="section-title">大家电说明书</h3> 
 	     
 		<div id="manual-category_head_activity_ctn">
 		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
@@ -24,58 +24,2044 @@
 	<div class="tabcon" id="topcon">
 		<div class="subbox">
 			<div class="sublist">
-				<ul>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery表格变色隔行变色鼠标滑过竖直表格内容变色效果</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jQuery浮动层点击图标按钮关闭或展开</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery浮动定位层导航描点上下滚动的浮动导航</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">div css3样式表制作jquery返回顶部特效</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 表格插件控制表格表格内容拖动标题固定在顶部</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery表格可编辑修改表格里面的数值</a></li>
-				</ul>
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
 			</div> 
 			<div class="sublist">
-				<ul>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">js lazyload实现网页图片延迟加载特效</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">js图片切换插件带滤镜百叶窗图片js幻灯片切换特效</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">js图片特效制作js焦点图上下滚动slider切换效果</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">javascript图片特效 网站banner制作焦点图片切换带按钮和固定图标控制图片左右滚动</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">js文字切换特效制作焦点文字带滤镜切换效果</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">js文字特效制作js文字闪烁与文字变色效果</a></li>
-				</ul>
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
 			</div> 
 			<div class="sublist">
-				<ul>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">div+css制作在IE6 上用absolute模拟fixed IE6浏览器定位层框不闪动</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">CSS如何定位工程</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">div+css导航菜单用CSS样式表处理斜角导航条</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">用div+css3美化制作动画导航特效鼠标滑过动画显示</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">css3垂直滑动手风琴导航菜单多种手风琴演示</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">css3教程应用css3 transform属性 图片旋转与盒投影+鼠标悬停效果</a></li>
-				</ul>
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
 			</div> 
 			<div class="sublist">
-				<ul>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 幻灯片切换应用一个HTML5的幻灯片</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 图片滚动特效应用旋转幻灯片使用jQuery和CSS3</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery html5 canvas 图表插件获取表格数据值生成走势图</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery select框应用jquery ui滑块slider制作日期时间进度条</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery progress bar进度条插件，投票进度条系统</a></li>
-				</ul>
-			</div>
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
 			<div class="sublist">
-				<ul>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 图片特效用CSS3和HTML5制作仿动画头条报纸缩小到放大翻转图片展示</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 幻灯片切换应用一个HTML5的幻灯片</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery 图片滚动特效应用旋转幻灯片使用jQuery和CSS3</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery html5 canvas 图表插件获取表格数据值生成走势图</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery select框应用jquery ui滑块slider制作日期时间进度条</a></li>
-					<li><span>▪</span><a href="http://www.lanrenzhijia.com.com/" target="_blank">jquery progress bar进度条插件，投票进度条系统</a></li>
-				</ul>
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
 			</div>  
 		</div> 
 	</div>
 </section>
+
+
+<section class="ledao-category-manual-tab">	
+	<div id="manual-category_head" class="layout">
+	    <h3 class="section-title">生活电器说明书</h3> 
+	     
+		<div id="manual-category_head_activity_ctn">
+		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
+		</div>  
+		<a id="manual-category_set_btn" href="#">查看更多</a>
+	</div>  
+	
+	 
+	<ul id="ledao-manual-list-2" class="tabbtn">
+		<li class="current"><a href="">电视</a></li>
+		<li><a href="">冰箱</a></li>
+		<li><a href="">空调</a></li>
+		<li><a href="">洗衣机</a></li>
+		<li><a href="">热水器</a></li>
+	</ul><!--tabbtn end-->
+	<div class="tabcon" id="topcon">
+		<div class="subbox">
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div>  
+		</div> 
+	</div>
+</section>
+
+
+<section class="ledao-category-manual-tab">	
+	<div id="manual-category_head" class="layout">
+	    <h3 class="section-title">厨房电器说明书</h3> 
+	     
+		<div id="manual-category_head_activity_ctn">
+		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
+		</div>  
+		<a id="manual-category_set_btn" href="#">查看更多</a>
+	</div>  
+	
+	 
+	<ul id="ledao-manual-list-3" class="tabbtn">
+		<li class="current"><a href="">电视</a></li>
+		<li><a href="">冰箱</a></li>
+		<li><a href="">空调</a></li>
+		<li><a href="">洗衣机</a></li>
+		<li><a href="">热水器</a></li>
+	</ul><!--tabbtn end-->
+	<div class="tabcon" id="topcon">
+		<div class="subbox">
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div>  
+		</div> 
+	</div>
+</section>
+
+<section class="ledao-category-manual-tab">	
+	<div id="manual-category_head" class="layout">
+	    <h3 class="section-title">日常护理电器说明书</h3> 
+	     
+		<div id="manual-category_head_activity_ctn">
+		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
+		</div>  
+		<a id="manual-category_set_btn" href="#">查看更多</a>
+	</div>  
+	
+	 
+	<ul id="ledao-manual-list-4" class="tabbtn">
+		<li class="current"><a href="">电视</a></li>
+		<li><a href="">冰箱</a></li>
+		<li><a href="">空调</a></li>
+		<li><a href="">洗衣机</a></li>
+		<li><a href="">热水器</a></li>
+	</ul><!--tabbtn end-->
+	<div class="tabcon" id="topcon">
+		<div class="subbox">
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div> 
+			<div class="sublist">
+		        <ul>
+		            <li class="tabth clearfix">
+		                <span style="width: 20%">名称</span>
+		                <span style="width: 10%">品牌</span>
+		                <span style="width: 15%">型号</span>
+		                <span style="width: 10%">类型</span>
+		                <span style="width: 10%">详细信息</span>
+		                <span style="width: 8%">在线阅读</span>
+		                <span style="width: 8%">收藏</span>
+		                <span style="width: 8%">下载</span>
+		            </li>
+		        </ul>
+		        <div id="s3">
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    </div>
+			</div>  
+		</div> 
+	</div>
+</section>
+
+
 <script type="text/javascript">
 $(document).ready(function($){
 	
@@ -88,7 +2074,7 @@ $(document).ready(function($){
 	});
 	
 	//左右滑动选项卡切换
-	$("#move-animate-left").tabso({
+	$("#ledao-manual-list-2").tabso({
 		cntSelect:"#leftcon",
 		tabEvent:"mouseover",
 		tabStyle:"move-animate",
@@ -96,7 +2082,7 @@ $(document).ready(function($){
 	});
 	
 	//淡隐淡现选项卡切换
-	$("#fadetab").tabso({
+	$("#ledao-manual-list-3").tabso({
 		cntSelect:"#fadecon",
 		tabEvent:"mouseover",
 		tabStyle:"fade"

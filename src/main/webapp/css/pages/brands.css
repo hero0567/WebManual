@@ -146,14 +146,18 @@ h4, h5, h6 {
 
 .indexTypes .title h3{    
 	font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     color: #333;
     border-left: 3px solid #ff9000;
     padding-left: 6px;
     display: inline-block;
-    margin: 0px;}
+    margin: 0px;
+ }
+ .indexTypes .title a{
+ 	font-size:12px;
+ }
 
-.indexTypes ul li .title{width:140px;padding-top:30px;padding-left:50px;font-size:18px;height:83px; float:left;}
+.indexTypes ul li .title{width:160px;padding-top:30px;padding-left:50px;font-size:18px;height:83px; float:left;}
 .indexTypes > ul li.ledao-service.current { border-bottom: 3px solid #ff7300;}
 .indexTypes ul li .con{position:absolute;top:0; width:317px; left:193px;overflow:hidden;height:113px;overflow:hidden; }
 .indexTypes ul li .con ul{padding-top:12px;}

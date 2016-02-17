@@ -118,7 +118,7 @@ $(document).ready(function(){
 	        	<li><a href="">首页</a></li>
 	            <li><a href="">说明书</a></li>
 	            <li><a href="">品牌黄页</a></li>
-	            <li><a href="">知识分享</a></li>
+	            <li><a href="">常识分享</a></li>
 	        </ul>
 	    </div>
 		
