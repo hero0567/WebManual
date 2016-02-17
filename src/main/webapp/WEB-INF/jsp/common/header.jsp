@@ -23,8 +23,8 @@ $(document).ready(function(){
 <div id="ledaobar" class="alibar2013 mod-alibar fd-clr"
 	style="height: 29px;">
 	<div class="ledao-container fd-clr">
-		<div class="mobile">
-			<a href="http://92shuomingshu.com">手机乐道</a>
+		<div class="mobile"> 
+			<a href="http://92shuomingshu.com"><i class="fa fa-mobile ledao-mobile"></i> <span>手机乐道</span></a>
 		</div>
 		<div class="account-sign-status">
 			<ul>
@@ -36,10 +36,10 @@ $(document).ready(function(){
 				</li>
 				<li class="account-signin"><a rel="nofollow"
 					href="/singin"
-					title="请登录" data-trace="cn_alibar_login" target="_self">请登录</a></li>
+					title="请登录" data-trace="cn_alibar_login" target="_self">请<span class="c-ff7300">登录</span></a></li>
 				<li class="account-signup"><a rel="nofollow"
 					href="singup"
-					title="免费注册" data-trace="cn_alibar_reg" target="_blank">免费注册</a></li>
+					title="免费注册" data-trace="cn_alibar_reg" target="_blank">免费<span class="c-ff7300">注册</span></a></li>
 			</ul>
 		</div>
 		<div class="topnav">
@@ -117,7 +117,7 @@ $(document).ready(function(){
 	    	<ul>
 	        	<li><a href="">首页</a></li>
 	            <li><a href="">说明书</a></li>
-	            <li><a href="">品牌街</a></li>
+	            <li><a href="">品牌黄页</a></li>
 	            <li><a href="">知识分享</a></li>
 	        </ul>
 	    </div>

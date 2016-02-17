@@ -176,3 +176,44 @@ img {
     overflow: hidden;
     background-color: #fff;
 }
+
+/*说明书分类－头*/
+#manual-category_head {
+    position: relative;
+    z-index: 100;
+    overflow: visible!important;
+}
+#manual-category_head_activity_ctn {
+    position: absolute;
+    left: 110px;
+    top: 7px;
+}
+
+#manual-category_head_activity_ctn .title {
+    margin-right: 10px;
+}
+#manual-category_head_activity_ctn span {
+    color: #888;
+}
+#manual-category_head_activity_ctn a.belong {
+    margin-right: 8px !important;
+}
+#manual-category_head_activity_ctn a {
+    color: #555;
+    margin-right: 30px;
+}
+
+#manual-category_set_btn {
+    height: 28px;
+    line-height: 28px;
+    color: #555;
+    font-size: 12px;
+    padding-right: 38px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 'Hiragino Sans GB','microsoft yahei',arial,sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}

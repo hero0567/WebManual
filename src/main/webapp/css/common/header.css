@@ -5,9 +5,8 @@
 body {
 	min-width:1200px !important;
 }
-.container{
-	min-width:1190px !important;
-	display:inline-block;
+header{
+	display:none !important;
 }
 #ledao-submenu{
 	margin-top: -5px;
@@ -24,7 +23,16 @@ body {
 .p-r {
 	position: relative;
 }
-
+.ledao-mobile{
+	font-size:18px;
+	color:#ff7300;
+}
+.c-ff7300{
+	color:	#ff7300;
+}
+.mobile .c-ff7300:hover{
+	font-weight:bold;
+}
 #ledao-declare{
     overflow: hidden;
     margin-top: 20px;
@@ -43,7 +51,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-#ledaobar .mobile, #ledaobar .nav-arrow, #ledaobar .account-sign-status .account-welcome .nav-title, #ledaobar .topnav .nav-title, #ledaobar .alibar-container .sayHello, #ledaobar .topnav-purchaselist .nav-title .purchaselist-value, #ledaobar .topnav-favorite .nav-content a.news, #ledaobar .topnav .nav-shili {
+#ledaobar .nav-arrow, #ledaobar .account-sign-status .account-welcome .nav-title, #ledaobar .topnav .nav-title, #ledaobar .alibar-container .sayHello, #ledaobar .topnav-purchaselist .nav-title .purchaselist-value, #ledaobar .topnav-favorite .nav-content a.news, #ledaobar .topnav .nav-shili {
 	background: url(../../img/alibar.png) no-repeat;
 }
 
@@ -75,9 +83,7 @@ a:hover {
 
 #ledaobar .mobile {
 	float: left;
-	padding-left: 16px;
 	padding-right: 10px;
-	background-position: 0 -112px;
 }
 
 #ledaobar .account-sign-status {
@@ -288,11 +294,10 @@ a {
     height: 35px;
     padding: 0 13px;
     text-align: right;
-    margin-bottom: 20px;
 }
 dl {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px !important;
 }
 .step-tips dt {
     float: left;
@@ -348,7 +353,7 @@ i, em {
 	width: 100%;
 	margin: 0px auto;
 	display: inline-block;
-	margin-top: -45px !important;
+	margin-top: -44px !important;
 }
 
 .ledao_box .menu ul {
