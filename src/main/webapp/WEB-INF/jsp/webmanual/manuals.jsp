@@ -18,7 +18,8 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-	
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
+
 	<script src="js/lib/others/modernizr.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
@@ -52,15 +53,12 @@
     <![endif]--> 
 	
 		<!-- Header -->
-		<%@ include file="../common/header.jsp" %>
+		<%@ include file="../common/secheader.jsp" %>
 		
 		<main>
 			<!-- Category and Brands -->
 			<div class="ledao-banners">
 				<div class="ledao-container">
-					<%@ include file="../common/manualList.jsp" %>
-					<%@ include file="../common/servicepromise.jsp" %>
-					<%@ include file="../common/manualIndustry.jsp" %>
 				</div>
 			</div>
 			

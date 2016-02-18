@@ -60,6 +60,11 @@ public class ManualHomeController {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
 		return "webmanual/index";
 	}
+	@RequestMapping("/manuals")
+	public String manuals(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
+		return "webmanual/manuals";
+	}
 	
 	@RequestMapping("/appliance")
 	public String fridge(HttpServletRequest request) throws Exception {
