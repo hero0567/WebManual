@@ -279,7 +279,7 @@ $(document).ready(function(){
 	
 	
 </div>
-<!-- 保障说明 -->
+<!-- 保障说明 
 <div class="ledao-container">
 		<div id="ledao-declare">
 			
@@ -302,7 +302,7 @@ $(document).ready(function(){
 	             
 	        </dl>
 	    </div>   
-</div>
+</div>-->
 <script type="text/javascript">
 
 $("#ledao_nav").slide({ 

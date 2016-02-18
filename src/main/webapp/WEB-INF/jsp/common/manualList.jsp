@@ -748,14 +748,14 @@
 		</div>  
 		<a class="manual-category_set_btn" href="#">查看更多</a>
 	</div>  
-	
 	 
 	<ul id="ledao-manual-list-2" class="tabbtn">
-		<li class="current"><a href="">电视</a></li>
-		<li><a href="">冰箱</a></li>
-		<li><a href="">空调</a></li>
-		<li><a href="">洗衣机</a></li>
-		<li><a href="">热水器</a></li>
+		<li class="current"><a href="">空气净化器</a></li>
+		<li><a href="">净水器</a></li>
+		<li><a href="">饮水机</a></li>
+		<li><a href="">加湿器</a></li>
+		<li><a href="">电暖器</a></li>
+		<li><a href="">挂烫机</a></li>
 	</ul>
 	<div class="tabcon" id="leftcon">
 		<div class="subbox">
@@ -901,6 +901,147 @@
 					</div>
 			</div> 
 			
+			<div class="sublist">
+				<div class="f-l">
+			        <ul>
+			            <li class="tabth clearfix">
+			                <span style="width: 20%">名称</span>
+			                <span style="width: 10%">品牌</span>
+			                <span style="width: 15%">型号</span>
+			                <span style="width: 10%">类型</span>
+			                <span style="width: 10%">详细信息</span>
+			                <span style="width: 8%">在线阅读</span>
+			                <span style="width: 8%">收藏</span>
+			                <span style="width: 8%">下载</span>
+			            </li>
+			        </ul>
+		            <ul class="tabUl">
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		                <li class="tabtr clearfix">
+		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
+			                <span style="width: 10%">海尔</span>
+			                <span style="width: 15%">HXXGD</span>
+			                <span style="width: 10%">液晶电视</span>
+			                <span style="width: 10%"><a href="">详细信息</a></span>
+			                <span style="width: 8%"><a href="">在线阅读</a></span>
+			                <span style="width: 8%"><a href="">收藏</a></span>
+			                <span style="width: 8%"><a href="">下载</a></span>
+		                </li>
+		            </ul>
+			    	<div class="f-r ledao-static"> <b>品牌：</b><span class="f-ff7300">23</span>  <b>说明书：</b><span class="f-ff7300">4003</span> </div>
+		    	</div>
+		    	<div class="references f-r">
+		    		<div>
+						<div class="bcon">
+							<div class="references-title"><h4><b>维护保养常识</b> </h4><a class="fr more" href="" target="_blank"><span class="spot"></span>查看更多</a></div>
+							<div class="list_lh">
+								<ul style="margin-top: -8px;">
+									<li >
+										<p><a href="" target="_blank">1</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li>
+									<li>
+										<p><a href="" target="_blank">2</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li>
+									<li>
+										<p><a href="" target="_blank">3</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li>
+									<li>
+										<p><a href="" target="_blank">4</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li>
+									<li>
+										<p><a href="" target="_blank">5</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li><li>
+										<p><a href="" target="_blank">6</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li><li >
+										<p><a href="" target="_blank">7</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li>
+									<li >
+										<p><a href="" target="_blank">8</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li><li >
+										<p><a href="" target="_blank">9</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li><li>
+										<p><a href="" target="_blank">10</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li><li>
+										<p><a href="" target="_blank">11</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li><li>
+										<p><a href="" target="_blank">12</a><a href="" target="_blank" class="btn_lh">查看<em></em></a></p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="f-r ledao-static"> <b>共有：</b><span class="f-ff7300">403</span> </div>
+						</div>
+					</div>
+			</div> 
 
 			<div class="sublist">
 				<div class="f-l">
@@ -1485,11 +1626,11 @@
 	</div>  
 	
 	<ul id="ledao-manual-list-3" class="tabbtn">
-		<li class="current"><a href="">电视</a></li>
-		<li><a href="">冰箱</a></li>
-		<li><a href="">空调</a></li>
-		<li><a href="">洗衣机</a></li>
-		<li><a href="">热水器</a></li>
+		<li class="current"><a href="">电饭煲</a></li>
+		<li><a href="">微波炉</a></li>
+		<li><a href="">豆浆机</a></li>
+		<li><a href="">榨汁机</a></li>
+		<li><a href="">电水壶</a></li>
 	</ul>
 	<div class="tabcon" id="leftcon1">
 		<div class="subbox">
@@ -2220,11 +2361,11 @@
 	
 	 
 	<ul id="ledao-manual-list-4" class="tabbtn">
-		<li class="current"><a href="">电视</a></li>
-		<li><a href="">冰箱</a></li>
-		<li><a href="">空调</a></li>
-		<li><a href="">洗衣机</a></li>
-		<li><a href="">热水器</a></li>
+		<li class="current"><a href="">剃须刀</a></li>
+		<li><a href="">剃毛器</a></li>
+		<li><a href="">电吹风</a></li>
+		<li><a href="">理发器</a></li>
+		<li><a href="">电动牙刷</a></li>
 	</ul><!--tabbtn end-->
 	<div class="tabcon" id="normalcon">
 		<div class="subbox">
@@ -2970,7 +3111,7 @@ $(document).ready(function($){
 	
 	//淡隐淡现选项卡切换
 	$("#ledao-manual-list-3").tabso({
-		cntSelect:"#lefton1",
+		cntSelect:"#leftcon1",
 		tabEvent:"mouseover",
 		tabStyle:"move-animate",
 		direction : "top"

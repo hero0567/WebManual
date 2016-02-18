@@ -120,7 +120,7 @@
 			<div class="list fr ledao-life">
 				<div class="list-tit">
 					<h3>
-						<a href="" target="_blank" data-linkid="">生活电器</a>
+						<a href="" target="_blank" data-linkid="">生活家电</a>
 					</h3>
 					<a class="fr des" href="" target="_blank"><span class="spot"></span>查看更多</a>
 				</div>
@@ -231,7 +231,7 @@
 			<div class="list fr">
 				<div class="list-tit">
 					<h3>
-						<a href="" target="_blank" data-linkid="">厨房电器</a>
+						<a href="" target="_blank" data-linkid="">厨卫家电</a>
 					</h3>
 					<a class="fr des" href="" target="_blank"><span class="spot"></span>查看更多</a>
 				</div>
@@ -337,7 +337,7 @@
 			<div class="list fr ledao-life">
 				<div class="list-tit">
 					<h3>
-						<a href="" target="_blank" data-linkid="">日常护理</a>
+						<a href="" target="_blank" data-linkid="">个人护理</a>
 					</h3>
 					<a class="fr des" href="" target="_blank"><span class="spot"></span>查看更多</a>
 				</div>

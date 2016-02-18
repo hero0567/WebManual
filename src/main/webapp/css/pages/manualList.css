@@ -134,12 +134,17 @@ body, button, input, select, textarea {
 }
 
 .tabbtn li.current a, .tabbtn li.current a:hover {
+	
 	height: 40px;
 	line-height: 40px;
 	font-size: 14px;
 	background: #ff7300;
 	color: #fff !important;
 	font-weight: 800;
+}
+.tabbtn li a
+{
+	width:120px;
 }
 
 .tabcon {
