@@ -44,7 +44,17 @@
     font-size: 14px;
     font-family: Microsoft Yahei;
     height: 90px;
-    border-right: 1px solid #ddd;
+}
+.border-left-ddd{
+	border-left: 1px solid #ddd;
+}
+.promise dl:first-child {
+    float: left;
+    width: 33%;
+    color: #818181;
+    font-size: 14px;
+    font-family: Microsoft Yahei;
+    height: 90px;
 }
 .promise dl dt {
     float: left;

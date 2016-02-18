@@ -9,23 +9,23 @@
 	    <h3 class="tit">服务承诺<i></i></h3>
         <a class="link" href="" target="_blank" data-linkid="10002239">
 	        <dl>
-	            <dt><img src="http://p6.zbjimg.com//cms/2015-09/16/cmER37rd2h1129/55f9099d0cf41.png"></dt>
+	            <dt><img src="../../img/index/promise.png"></dt>
 	            <dd><span style="color:#ff7900;">官方说明书</span></dd>
                 <dd>说明书来自产品官方</dd>
 	            <dd>内容为最新版本</dd>
              </dl>
 	    </a>
         <a class="link" href="" target="_blank" data-linkid="10002239">
-	        <dl>
-	            <dt><img src="http://p6.zbjimg.com//cms/2015-09/16/cmER37rd2h1129/55f909bad55ae.png"></dt>
+	        <dl class="border-left-ddd">
+	            <dt><img src="../../img/index/safe.png"></dt>
 	            <dd><span style="color:#ff7900;">无病毒木马</span></dd>
                 <dd>所有说明书均为PDF形式</dd>
 	            <dd>所有说明书均支持在线阅读，更安全</dd>
             </dl>
 	    </a>
         <a class="link" href="" target="_blank" data-linkid="10002239">
-	        <dl class="last">
-	            <dt><img src="http://p6.zbjimg.com//cms/2015-09/16/cmER37rd2h1129/55f909d225016.png"></dt>
+	        <dl class="last border-left-ddd">
+	            <dt><img src="../../img/index/heart.png"></dt>
 	            <dd><span style="color:#ff7900;">质量保障</span></dd>
                 <dd>保证说明书内容的有效性</dd>
 	            <dd>每个都经过严格的在线测试</dd>
