@@ -4,13 +4,13 @@
 <script src="js/lib/others/ldt_abs.js"></script>
 
 <section class="ledao-category-manual-tab">	
-	<div id="manual-category_head" class="layout">
+	<div class="manual-category_head" class="layout">
 	    <h3 class="section-title">大家电说明书</h3> 
 	     
-		<div id="manual-category_head_activity_ctn">
+		<div class="manual-category_head_activity_ctn">
 		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
 		</div>  
-		<a id="manual-category_set_btn" href="#">查看更多</a>
+		<a class="manual-category_set_btn" href="#">查看更多</a>
 	</div>  
 	
 	 
@@ -24,19 +24,19 @@
 	<div class="tabcon" id="topcon">
 		<div class="subbox">
 			<div class="sublist">
-		        <ul>
-		            <li class="tabth clearfix">
-		                <span style="width: 20%">名称</span>
-		                <span style="width: 10%">品牌</span>
-		                <span style="width: 15%">型号</span>
-		                <span style="width: 10%">类型</span>
-		                <span style="width: 10%">详细信息</span>
-		                <span style="width: 8%">在线阅读</span>
-		                <span style="width: 8%">收藏</span>
-		                <span style="width: 8%">下载</span>
-		            </li>
-		        </ul>
-		        <div id="s3">
+				<div class="f-l">
+			        <ul>
+			            <li class="tabth clearfix">
+			                <span style="width: 20%">名称</span>
+			                <span style="width: 10%">品牌</span>
+			                <span style="width: 15%">型号</span>
+			                <span style="width: 10%">类型</span>
+			                <span style="width: 10%">详细信息</span>
+			                <span style="width: 8%">在线阅读</span>
+			                <span style="width: 8%">收藏</span>
+			                <span style="width: 8%">下载</span>
+			            </li>
+			        </ul>
 		            <ul class="tabUl">
 		                <li class="tabtr clearfix">
 		                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
@@ -119,7 +119,39 @@
 			                <span style="width: 8%"><a href="">下载</a></span>
 		                </li>
 		            </ul>
-			    </div>
+			    	<div class="f-r"> <b>品牌：</b><span class="f-ff7300">23</span>  <b>说明书：</b><span class="f-ff7300">4003</span> </div>
+		    	</div>
+		    	<div class="references f-r">
+		    		<section class="p-l-r">
+						<div class="custom-section-head">
+							<a href="" class="custom-section-title f-l"><i class="fa fa-cog"></i> 使用保养常识 </span></a>
+							<a href="" class="custom-section-more f-r">查看所有</a>
+						</div> 
+						<div class="custom-section-body">
+							<ul class="list-link-lite top ">
+					           <li>
+						          <a href="" target="_blank">海尔智能电视如何投屏 <span class="flr">6250</span></a>
+						       </li>
+					           <li>
+						          <a href="" target="_blank">TCL液晶电视屏幕清洗 <span class="flr">5771</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">海尔液晶电视联入智能家具 <span class="flr">6250</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">TCL液晶电视屏幕清洗<span class="flr">5771</span></a>
+						       </li>       
+						       <li>
+						          <a href="" target="_blank">海尔智能电视如何投屏 <span class="flr">6250</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">海尔液晶电视联入智能家具 <span class="flr">5771</span></a>
+						       </li>       
+							</ul>
+							<div class="f-r"> <b>使用保养常识：</b> <span class="f-ff7300">102</span></div>
+						</div>
+					</section>
+		    	</div>
 			</div> 
 			<div class="sublist">
 		        <ul>
@@ -519,13 +551,13 @@
 
 
 <section class="ledao-category-manual-tab">	
-	<div id="manual-category_head" class="layout">
+	<div class="manual-category_head" class="layout">
 	    <h3 class="section-title">生活电器说明书</h3> 
 	     
-		<div id="manual-category_head_activity_ctn">
+		<div class="manual-category_head_activity_ctn">
 		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
 		</div>  
-		<a id="manual-category_set_btn" href="#">查看更多</a>
+		<a class="manual-category_set_btn" href="#">查看更多</a>
 	</div>  
 	
 	 
@@ -535,8 +567,8 @@
 		<li><a href="">空调</a></li>
 		<li><a href="">洗衣机</a></li>
 		<li><a href="">热水器</a></li>
-	</ul><!--tabbtn end-->
-	<div class="tabcon" id="topcon">
+	</ul>
+	<div class="tabcon" id="leftcon">
 		<div class="subbox">
 			<div class="sublist">
 		        <ul>
@@ -1034,13 +1066,13 @@
 
 
 <section class="ledao-category-manual-tab">	
-	<div id="manual-category_head" class="layout">
+	<div class="manual-category_head" class="layout">
 	    <h3 class="section-title">厨房电器说明书</h3> 
 	     
-		<div id="manual-category_head_activity_ctn">
+		<div class="manual-category_head_activity_ctn">
 		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
 		</div>  
-		<a id="manual-category_set_btn" href="#">查看更多</a>
+		<a class="manual-category_set_btn" href="#">查看更多</a>
 	</div>  
 	
 	 
@@ -1050,8 +1082,8 @@
 		<li><a href="">空调</a></li>
 		<li><a href="">洗衣机</a></li>
 		<li><a href="">热水器</a></li>
-	</ul><!--tabbtn end-->
-	<div class="tabcon" id="topcon">
+	</ul>
+	<div class="tabcon" id="fadecon">
 		<div class="subbox">
 			<div class="sublist">
 		        <ul>
@@ -1548,13 +1580,13 @@
 </section>
 
 <section class="ledao-category-manual-tab">	
-	<div id="manual-category_head" class="layout">
+	<div class="manual-category_head" class="layout">
 	    <h3 class="section-title">日常护理电器说明书</h3> 
 	     
-		<div id="manual-category_head_activity_ctn">
+		<div class="manual-category_head_activity_ctn">
 		  <span class="title">今日热搜：</span><a href="" class="belong">[电视]</a><a href="">夏普K100-N3</a>   <a href="" class="belong">[冰箱]</a><a href="">海尔K100-N3</a> 
 		</div>  
-		<a id="manual-category_set_btn" href="#">查看更多</a>
+		<a class="manual-category_set_btn" href="#">查看更多</a>
 	</div>  
 	
 	 
@@ -1565,7 +1597,7 @@
 		<li><a href="">洗衣机</a></li>
 		<li><a href="">热水器</a></li>
 	</ul><!--tabbtn end-->
-	<div class="tabcon" id="topcon">
+	<div class="tabcon" id="normalcon">
 		<div class="subbox">
 			<div class="sublist">
 		        <ul>
@@ -2089,7 +2121,7 @@ $(document).ready(function($){
 	});
 	
 	//默认选项卡切换
-	$("#normaltab").tabso({
+	$("#ledao-manual-list-4").tabso({
 		cntSelect:"#normalcon",
 		tabEvent:"mouseover",
 		tabStyle:"normal"

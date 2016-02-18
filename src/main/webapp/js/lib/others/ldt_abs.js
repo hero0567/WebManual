@@ -71,5 +71,4 @@ $.fn.tabso.defaults={
 };
 
 })(jQuery);
-
-/* 代码整理：懒人之家 lanrenzhijia.com */
+ 

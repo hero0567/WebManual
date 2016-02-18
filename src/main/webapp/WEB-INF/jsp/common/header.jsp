@@ -142,19 +142,19 @@ $(document).ready(function(){
 	            	<li class="">
 	                	<div class="cat_2_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">S</s>
-	                        <a href="">生活电器</a> 
+	                        <a href="">生活家电</a> 
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_3_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">C</s>
-	                        <a href="">厨房电器</a> 
+	                        <a href="">厨卫家电</a> 
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_4_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">R</s>
-	                        <a href="">日常护理</a>
+	                        <a href="">个人护理</a>
 	                    </div>
 	                </li>
 	            </ul>
@@ -207,7 +207,7 @@ $(document).ready(function(){
 	
 	            <div class="cat_pannel clearfix" style="display: none;">
 	            	<div class="fl cat_detail grid_col_2">
-	                    <h3 class="cat_title">生活电器品类</h3>
+	                    <h3 class="cat_title">生活家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
 	                        <li><a href="">电视</a></li>
 	                        <li><a href="">冰箱</a></li>
@@ -217,7 +217,7 @@ $(document).ready(function(){
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
-	                    <h3 class="cat_title">生活电器品牌</h3>
+	                    <h3 class="cat_title">生活家电品牌</h3>
 	                    <ul class="cat_label_list clearfix">
 	                        <li><a href="">空气净化器</a></li>
 	                        <li><a href="">净水器</a></li>
@@ -229,7 +229,7 @@ $(document).ready(function(){
 	
 	            <div class="cat_pannel clearfix" style="display: none;">
 	            	<div class="fl cat_detail grid_col_2">
-	                    <h3 class="cat_title">厨房电器品类</h3>
+	                    <h3 class="cat_title">厨卫家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
 	                        <li><a href="">电视</a></li>
 	                        <li><a href="">冰箱</a></li>
@@ -239,7 +239,7 @@ $(document).ready(function(){
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
-	                    <h3 class="cat_title">厨房电器品牌</h3>
+	                    <h3 class="cat_title">厨卫家电品牌</h3>
 	                    <ul class="cat_label_list clearfix">
 	                        <li><a href="">空气净化器</a></li>
 	                        <li><a href="">净水器</a></li>
@@ -250,7 +250,7 @@ $(document).ready(function(){
 	            </div>
 	            <div class="cat_pannel clearfix" style="display: none;">
 	            	<div class="fl cat_detail grid_col_2">
-	                    <h3 class="cat_title">日常护理电器品类</h3>
+	                    <h3 class="cat_title">个人护理品类</h3>
 	                    <ul class="cat_label_list clearfix">
 	                        <li><a href="">电视</a></li>
 	                        <li><a href="">冰箱</a></li>
@@ -260,7 +260,7 @@ $(document).ready(function(){
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
-	                    <h3 class="cat_title">日常护理电器品牌</h3>
+	                    <h3 class="cat_title">个人护理品牌</h3>
 	                    <ul class="cat_label_list clearfix">
 	                        <li><a href="">空气净化器</a></li>
 	                        <li><a href="">净水器</a></li>

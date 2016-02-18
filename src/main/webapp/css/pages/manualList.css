@@ -2,12 +2,12 @@
 
 /*说明书分类－头*/
 
-#manual-category_head {
+.manual-category_head {
     position: relative;
     z-index: 100;
     overflow: visible!important;
 }
-#manual-category_head h3.section-title{
+.manual-category_head h3.section-title{
 	font-size: 18px;
     height: 34px;
     line-height: 34px;
@@ -15,27 +15,27 @@
     margin-right: 116px;
     color: #222;
 }
-#manual-category_head_activity_ctn {
+.manual-category_head_activity_ctn {
     position: absolute;
     left: 130px;
     top: 7px;
 }
 
-#manual-category_head_activity_ctn .title {
+.manual-category_head_activity_ctn .title {
     margin-right: 10px;
 }
-#manual-category_head_activity_ctn span {
+.manual-category_head_activity_ctn span {
     color: #888;
 }
-#manual-category_head_activity_ctn a.belong {
+.manual-category_head_activity_ctn a.belong {
     margin-right: 8px !important;
 }
-#manual-category_head_activity_ctn a {
+.manual-category_head_activity_ctn a {
     color: #555;
     margin-right: 30px;
 }
 
-#manual-category_set_btn {
+.manual-category_set_btn {
     height: 28px;
     line-height: 28px;
     color: #555;
@@ -145,18 +145,18 @@ body, button, input, select, textarea {
 	top:0;
 }
 .tabcon .sublist {
-	padding:5px 10px;
+	padding:0px 10px;
 	height:290px;
 }
- 
+
 #leftcon .subbox {
 	width:9999em;
 }
-#leftcon .subbox .sublist {
-	float:left;
-	width:664px;
-}
  
+
+.sublist ul {
+	width:900px;
+}
 .sublist {
 	padding:10px;
 }
@@ -172,3 +172,22 @@ body, button, input, select, textarea {
 	font-weight:400;
 	color:#ddd;
 }
+.references{
+	width: 260px;
+    display: inline-block;
+    height: 100%;
+    border-left:1px solid #e5e5e5;
+}
+.references ul li{
+	height:35px !important;
+}
+.references .list-link-lite.top li>a:before, .references .list-link-lite.top li>a:before, .references .list-link-lite.top10 li>a:before{
+	top:15px !important;
+}
+.references  ul.top{
+	margin-top:0px !important;
+}
+.f-ff7300{
+	color:#ff7300;
+}
+
