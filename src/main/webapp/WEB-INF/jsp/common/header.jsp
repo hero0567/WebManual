@@ -50,9 +50,7 @@ $(document).ready(function(){
 					<div class="nav-content">
 						<dl>
 							<dd>
-								<a rel="nofollow" class="favorite-offer"
-									href=""
-									title="个人信息">个人信息</a>
+								<a rel="nofollow" class="favorite-offer" href="" title="个人信息">个人信息</a>
 							</dd>
 						</dl>
 					</div>
@@ -68,9 +66,7 @@ $(document).ready(function(){
 					<div class="nav-content">
 						<dl>
 							<dd>
-								<a rel="nofollow" class="favorite-offer"
-									href=""
-									title="收藏的货品"><i class="alibar-iconfont"></i> <span>收藏的说明书</span></a>
+								<a rel="nofollow" class="favorite-offer" href="" title="收藏的货品"><i class="alibar-iconfont"></i> <span>收藏的说明书</span></a>
 							</dd>
 						</dl>
 					</div>
@@ -168,11 +164,42 @@ $(document).ready(function(){
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">品牌搜索热度排行</h3>
-	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                    <ul class="brand_list clearfix">
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
+								</a>
+							</li>
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/philips.jpg" src="../../img/brands/philips.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/samsung.jpg" src="../../img/brands/samsung.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/tcl.jpg" src="../../img/brands/tcl.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/sharp.jpg" src="../../img/brands/sharp.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/skyworth.jpg" src="../../img/brands/skyworth.jpg">
+								</a>
+							</li>
 	                    </ul>
 	                </div>
 	            </div>
@@ -190,11 +217,42 @@ $(document).ready(function(){
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">大家电品牌</h3>
-	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                    <ul class="brand_list clearfix">
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
+								</a>
+							</li>
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/philips.jpg" src="../../img/brands/philips.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/samsung.jpg" src="../../img/brands/samsung.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/tcl.jpg" src="../../img/brands/tcl.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/sharp.jpg" src="../../img/brands/sharp.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/skyworth.jpg" src="../../img/brands/skyworth.jpg">
+								</a>
+							</li>
 	                    </ul>
 	                </div> 
 	            </div>
@@ -203,20 +261,52 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">生活家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                        <li><a href="">空气净化器</a></li>
+	                        <li><a href="">净水器</a></li>
+	                        <li><a href="">饮水机</a></li>
+	                        <li><a href="">加湿器机</a></li>
+	                        <li><a href="">电暖器</a></li>
+	                        <li><a href="">挂烫机</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">生活家电品牌</h3>
-	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                    <ul class="brand_list clearfix">
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
+								</a>
+							</li>
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/philips.jpg" src="../../img/brands/philips.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/samsung.jpg" src="../../img/brands/samsung.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/tcl.jpg" src="../../img/brands/tcl.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/sharp.jpg" src="../../img/brands/sharp.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/skyworth.jpg" src="../../img/brands/skyworth.jpg">
+								</a>
+							</li>
 	                    </ul>
 	                </div> 
 	            </div>
@@ -225,20 +315,51 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">厨卫家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                        <li><a href="">电饭煲</a></li>
+	                        <li><a href="">微波炉</a></li>
+	                        <li><a href="">豆浆机</a></li>
+	                        <li><a href="">榨汁机</a></li>
+	                        <li><a href="">电水壶</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">厨卫家电品牌</h3>
-	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                    <ul class="brand_list clearfix">
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
+								</a>
+							</li>
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/philips.jpg" src="../../img/brands/philips.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/samsung.jpg" src="../../img/brands/samsung.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/tcl.jpg" src="../../img/brands/tcl.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/sharp.jpg" src="../../img/brands/sharp.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/skyworth.jpg" src="../../img/brands/skyworth.jpg">
+								</a>
+							</li>
 	                    </ul>
 	                </div> 
 	            </div>
@@ -246,20 +367,51 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">个人护理品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                        <li><a href="">剃须刀</a></li>
+	                        <li><a href="">剃毛器</a></li>
+	                        <li><a href="">电吹风</a></li>
+	                        <li><a href="">理发器</a></li>
+	                        <li><a href="">电动牙刷</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">个人护理品牌</h3>
-	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                    <ul class="brand_list clearfix">
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
+								</a>
+							</li>
+	                        <li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/philips.jpg" src="../../img/brands/philips.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/samsung.jpg" src="../../img/brands/samsung.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/tcl.jpg" src="../../img/brands/tcl.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/sharp.jpg" src="../../img/brands/sharp.jpg">
+								</a>
+							</li>
+							<li>
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+									<img data-original="../../img/brands/skyworth.jpg" src="../../img/brands/skyworth.jpg">
+								</a>
+							</li>
 	                    </ul>
 	                </div> 
 	            </div>

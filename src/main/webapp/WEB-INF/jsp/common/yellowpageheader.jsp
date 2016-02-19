@@ -153,10 +153,10 @@
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">品牌搜索热度排行</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                        <li><a href="">美的（Midea）</a></li>
+	                        <li><a href="">海尔（Haier）</a></li>
+	                        <li><a href="">飞利浦（Philips）</a></li>
+	                        <li><a href="">三星（SAMSUNG）</a></li>
 	                    </ul>
 	                </div>
 	            </div>
@@ -175,10 +175,10 @@
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">大家电品牌</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                        <li><a href="">海尔（Haier）</a></li>
+	                        <li><a href="">美的（Midea）</a></li>
+	                        <li><a href="">海信（Hisense）</a></li>
+	                        <li><a href="">夏普（Sharp）</a></li>
 	                    </ul>
 	                </div> 
 	            </div>
@@ -187,20 +187,20 @@
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">生活家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                        <li><a href="">空气净化器</a></li>
+	                        <li><a href="">净水器</a></li>
+	                        <li><a href="">饮水机</a></li>
+	                        <li><a href="">加湿器机</a></li>
+	                        <li><a href="">电暖器</a></li>
+	                        <li><a href="">挂烫机</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">生活家电品牌</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                        <li><a href="">美的（Midea）</a></li>
+	                        <li><a href="">海尔（Haier）</a></li>
+	                        <li><a href="">夏普（Sharp）</a></li>
 	                    </ul>
 	                </div> 
 	            </div>
@@ -209,20 +209,17 @@
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">厨卫家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                        <li><a href="">电饭煲</a></li>
+	                        <li><a href="">微波炉</a></li>
+	                        <li><a href="">豆浆机</a></li>
+	                        <li><a href="">榨汁机</a></li>
+	                        <li><a href="">电水壶</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">厨卫家电品牌</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                        <li><a href="">飞利浦（Philip）</a></li>
 	                    </ul>
 	                </div> 
 	            </div>
@@ -230,20 +227,17 @@
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">个人护理品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                        <li><a href="">剃须刀</a></li>
+	                        <li><a href="">剃毛器</a></li>
+	                        <li><a href="">电吹风</a></li>
+	                        <li><a href="">理发器</a></li>
+	                        <li><a href="">电动牙刷</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
 	                    <h3 class="cat_title">个人护理品牌</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                        <li><a href="">飞利浦（PHILIPS）</a></li>
 	                    </ul>
 	                </div> 
 	            </div>
