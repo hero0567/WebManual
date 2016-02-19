@@ -1,0 +1,203 @@
+.server-slider-wrap {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.server-slider-wrap .server-slider {
+    width: 1190px;
+    height: 220px;
+    overflow: hidden;
+    background-color: #fbfbfb;
+}
+.server-slider-wrap .server-slider .item-slide {
+    height: 100%;
+}
+.server-slider-wrap .slider-slice {
+    float: left;
+    overflow: hidden;
+    color: #666;
+}
+.server-slider-wrap .slider-slice .slice-left {
+    display: block;
+    float: left;
+    margin-left: 36px;
+    margin-top: 35px;
+    max-width: 106px;
+    cursor: pointer;
+}
+.server-slider-wrap .slider-slice .slice-left .cyry-img {
+    background: url(http://cms.zbjimg.com/index_server_img/cyry.png) no-repeat;
+}
+.server-slider-wrap .slider-slice .slice-left .img {
+    display: block;
+    height: 107px;
+    width: 106px;
+    vertical-align: middle;
+}
+.server-slider-wrap .slider-slice .slice-left .tit {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.server-slider-wrap .slider-slice .slice-right {
+    float: left;
+    width: 220px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+h4, .h4 {
+    font-size: 18px;
+}
+h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.server-slider-wrap .slider-slice .slice-right h4 .title {
+    display: inline-block;
+    padding-left: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border-left: 3px solid #fe9200;
+}
+.list-link-more {
+    color: #ff7900;
+    font-size: 14px;
+    
+}
+.server-slider-wrap .slider-slice .slice-right .server-list {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.server-slider-wrap .slider-slice .slice-right .server-list li {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 13px;
+    font-family: simsun, serif;
+    color: #666;
+}
+.server-slider-wrap .server-slider .item-slide {
+    height: 100%;
+}
+.ui-switchable-nav {
+    position: absolute;
+    padding-left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+}
+.server-slider-wrap .ui-switchable-active {
+    background: #ff9000;
+}
+.server-slider-wrap .ui-switchable-trigger {
+    box-shadow: none;
+    margin: 0 5px;
+    background-color: #dadada;
+}
+.ui-switchable-trigger {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    line-height: 99px;
+    margin-left: 5px;
+    background: #fff;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+ #ledao-manual-services{
+ 	display:inline-block;
+ 	width:100%;
+ 	margin-bottom:20px;
+ } 
+ .ledao-service{
+ 	background-color:#fff;
+ 	width:100%;
+  	display:inline-block;
+ }
+ .indexTypes{
+  	display:inline-block;
+  	width:100%;
+ }
+.clear{ clear:both; }
+.clearfix{ display:inline-block; }
+.fr{ float:right; display:inline; }
+.vm{ vertical-align:middle; }
+.none{ display:none; }
+.block{ display:block; }
+.inline{ display:inline; }
+.indexTypes ul li{position:relative;float:left;width:320px;overflow:hidden;height:113px;overflow:hidden;}
+.indexTypes ul li:hover{cursor:pointer;}
+.indexTypes ul li.currnet{width:510px;}
+
+.indexTypes .title h3{    
+	font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    border-left: 3px solid #ff9000;
+    padding-left: 6px;
+    display: inline-block;
+    margin: 0px;
+ }
+ .indexTypes .title a{
+ 	font-size:12px;
+ }
+
+.indexTypes ul li .title{width:160px;padding-top:30px;padding-left:50px;font-size:18px;height:83px; float:left;}
+.indexTypes > ul li.ledao-service.current { border-bottom: 3px solid #ff7300;}
+.indexTypes ul li .con{position:absolute;top:0; width:317px; left:193px;overflow:hidden;height:113px;overflow:hidden; }
+.indexTypes ul li .con ul{padding-top:12px;}
+.indexTypes ul li .con ul li{float:none;height:auto;width:auto;}
+.indexTypes ul li .con ul li a{line-height:28px;width:195px;display:block;text-indent:3em;border-bottom:1px dashed #d1d1d1;}
+.indexTypes ul li .con ul li a:hover{color:#F87C02;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

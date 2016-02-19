@@ -57,17 +57,148 @@ public class ManualHomeController {
 	
 	@RequestMapping("/index")
 	public String index(HttpServletRequest request) throws Exception {
-		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "index");
 		return "webmanual/index";
 	}
+	
+	@RequestMapping("/brands")
+	public String brands(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "brands");
+		return "webmanual/brands";
+	}
+	
+	/*
+	 * Pages for electric manuals
+	 */
+	//电视
+	@RequestMapping("/tv")
+	public String tv(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "tv");
+		return "manuals/tv";
+	}
+	//冰箱
+	@RequestMapping("/fridge")
+	public String fridge(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "fridge");
+		return "manuals/fridge";
+	}
+	//空调
+	@RequestMapping("/aircondition")
+	public String aircondition(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "aircondition");
+		return "manuals/aircondition";
+	}
+	//洗衣机
+	@RequestMapping("/washer")
+	public String washer(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "washer");
+		return "manuals/washer";
+	}
+	//热水器
+	@RequestMapping("/waterheating")
+	public String waterheating(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "waterheating");
+		return "manuals/waterheating";
+	}
+	//空气净化器
+	@RequestMapping("/airpurifier")
+	public String airpurifier(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "airpurifier");
+		return "manuals/airpurifier";
+	}
+	//净水器
+	@RequestMapping("/waterpurifier")
+	public String waterpurifier(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "waterpurifier");
+		return "manuals/waterheating";
+	}
+	//饮水器
+	@RequestMapping("/waterdispenser")
+	public String waterdispenser(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "waterdispenser");
+		return "manuals/waterdispenser";
+	}
+	//加湿器
+	@RequestMapping("/humidifier")
+	public String humidifier(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "humidifier");
+		return "manuals/humidifier";
+	}
+	//电暖器
+	@RequestMapping("/electricheater")
+	public String electricheater(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "electricheater");
+		return "manuals/electricheater";
+	}
+	//挂烫机
+	@RequestMapping("/garmentsteamer")
+	public String garmentsteamer(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "garmentsteamer");
+		return "manuals/garmentsteamer";
+	}
+	//电饭煲
+	@RequestMapping("/electriccooker")
+	public String electriccooker(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "electriccooker");
+		return "manuals/electriccooker";
+	}
+	//微波炉
+	@RequestMapping("/microwaveoven")
+	public String microwaveoven(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "microwaveoven");
+		return "manuals/microwaveoven";
+	}
+	//豆浆机
+	@RequestMapping("/beanjuicemaker")
+	public String beanjuicemaker(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "beanjuicemaker");
+		return "manuals/beanjuicemaker";
+	}
+	//电水壶
+	@RequestMapping("/electrickettle")
+	public String electrickettle(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "electrickettle");
+		return "manuals/electrickettle";
+	}
+	//剃须刀
+	@RequestMapping("/razor")
+	public String razor(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "razor");
+		return "manuals/razor";
+	}
+	//剃毛器
+	@RequestMapping("/shaver")
+	public String shaver(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "shaver");
+		return "manuals/shaver";
+	}
+	//电吹风
+	@RequestMapping("/hairdryer")
+	public String hairdryer(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "hairdryer");
+		return "manuals/hairdryer";
+	}
+	//理发器
+	@RequestMapping("/haircut")
+	public String haircut(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "haircut");
+		return "manuals/haircut";
+	}
+	//电动牙刷
+	@RequestMapping("/electrictoothbrush")
+	public String electrictoothbrush(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "electrictoothbrush");
+		return "manuals/electrictoothbrush";
+	}
+	
 	@RequestMapping("/manuals")
 	public String manuals(HttpServletRequest request) throws Exception {
-		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "home");
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "manuals");
 		return "webmanual/manuals";
 	}
 	
 	@RequestMapping("/appliance")
-	public String fridge(HttpServletRequest request) throws Exception {
+	public String appliance(HttpServletRequest request) throws Exception {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "appliance");
 		return "webmanual/appliance";
 	}
