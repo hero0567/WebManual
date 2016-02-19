@@ -1,13 +1,6 @@
 /*
 *New header
 */
-
-body {
-	min-width:1200px !important;
-}
-header{
-	display:none !important;
-}
 #ledao-submenu{
 	margin-top: -5px;
     -webkit-box-shadow: inset 0 -12px 5px -10px #e7e7e7;
@@ -19,7 +12,6 @@ header{
 	position:relative;
 	text-align:center;
 }
-
 .p-r {
 	position: relative;
 }
@@ -266,19 +258,18 @@ a {
 	color: #fff !important;
 }
 
-.ledao-box .menu, .ledao-box .menu ul {
+.ledao_box .menu , .ledao_box .menu ul {
 	height: 40px;
 	line-height: 40px;
 }
 
-.ledao-hide{
-	display:none;
-}
-.ledao-show{
-	display:inline-block;
-}
 #ledao_nav {
+	display: inline-block;
+	border-bottom: 1px solid #e2e2e2;
 	height: 280px;
+	background-color: #f8f8f8;
+    -webkit-box-shadow: 4px 6px 6px -6px #e2e2e2!important;
+    box-shadow: 4px 6px 6px -6px #e2e2e2!important;
 }
 
 #ledao_new_menu {
@@ -350,21 +341,22 @@ i, em {
 	font-size: 16px;
 }
 
-.ledao-box {
+.ledao_box {
 	width: 100%;
 	margin: 0px auto;
 	display: inline-block;
+	margin-top: -44px !important;
 }
 
-.ledao-box .menu ul {
+.ledao_box .menu ul {
 	padding-left: 190px;
 }
 
-.ledao-box .menu ul li {
+.ledao_box .menu ul li {
 	float: left;
 }
 
-.ledao-box .menu ul li a {
+.ledao_box .menu ul li a {
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
@@ -380,8 +372,6 @@ i, em {
 }
 
 .ledao_cat_nav .ledao_mod_title {
-    box-shadow: 0 1px 2px #ff7300;
-	cursor:pointer;
 	width: 190px;
 	height: 40px;
 	line-height: 40px;

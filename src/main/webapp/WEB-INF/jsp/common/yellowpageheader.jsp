@@ -1,23 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-<link rel="stylesheet" type="text/css" href="css/common/header.css" />
-
-<script src="js/lib/others/jquery.SuperSlide.2.1.1.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-	var $menuArrow = $('#user-menu-account-arrow');
-	$('.user-menu').mouseenter( function(){
-		$('#custom-user-menu').show();
-		$menuArrow.removeClass('fa-chevron-down').addClass('fa-chevron-up')
-	})
-	$('.user-menu').mouseleave( function(){
-		$('#custom-user-menu').hide();
-		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
-	})
-});
-</script>
+<link rel="stylesheet" type="text/css" href="css/common/yellowpageheader.css" />
 
 <div id="ledaobar" class="alibar2013 mod-alibar fd-clr" style="height: 29px;">
 	<div class="ledao-container fd-clr">
@@ -356,4 +340,19 @@ $(document).ready(function(){
 		</div>
 	</nav>
 </header>
+
 <script src="js/controllers/HeaderController.js"></script>
+<script src="js/lib/others/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var $menuArrow = $('#user-menu-account-arrow');
+	$('.user-menu').mouseenter( function(){
+		$('#custom-user-menu').show();
+		$menuArrow.removeClass('fa-chevron-down').addClass('fa-chevron-up')
+	})
+	$('.user-menu').mouseleave( function(){
+		$('#custom-user-menu').hide();
+		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
+	})
+});
+</script>

@@ -190,6 +190,12 @@ public class ManualHomeController {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "electrictoothbrush");
 		return "manuals/electrictoothbrush";
 	}
+	//品牌黄页
+	@RequestMapping("/yellowpage")
+	public String yellowpage(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "yellowpage");
+		return "yellowpage/yellowpage";
+	}
 	
 	@RequestMapping("/manuals")
 	public String manuals(HttpServletRequest request) throws Exception {

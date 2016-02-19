@@ -82,9 +82,6 @@ $(document).ready(function(){
 	</div>
 </div>
 
- 
-
-
 <div id="ledao-submenu" style="">
 	<div class="ledao-container p-r">
 		<a target="_self" title="乐道说明书" data-href="http://wmanual.com/" class="hp-huodongLink f-l">
