@@ -30,6 +30,7 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.charfirst.pinyin.js" type="text/javascript"></script>
 <script src="js/lib/others/jquery-listnav.js"></script>
 <script src="js/lib/others/vendor.js"></script>
 
@@ -59,14 +60,13 @@
 	<%@ include file="../common/header.jsp" %>
 		
 	<main> 
-		<div class="ledao-banners">
 			<div class="ledao-container">
 				<div id="main_content_wrap" class="outer">
 					<section id="main_content" class="inner">
-						<div id="tabpage_3" class="tabContainer">
-							<ol id="ledao-brands" class="indented demo">
+						<div class="tabContainer">
+							<ul id="ledaobrands-nav" class="indented demo">
 								<li><a href="#">411 Services</a></li>
-								<li><a href="#">Accountants</a></li>
+								<li><a href="#"> 爱尚Accountants</a></li>
 								<li><a href="#">Accounting &amp; Bookkeeping - General Service</a></li>
 								<li><a href="#">Acupuncture</a></li>
 								<li><a href="#">Advertising</a></li>
@@ -79,7 +79,7 @@
 								<li><a href="#">Audio Visual Production Service</a></li>
 								<li><a href="#">Automobile - Renting</a></li>
 								<li><a href="#">Automobile - Repair &amp; Service</a></li>
-								<li><a href="#">Cabinet Makers</a></li>
+								<li><a href="#">吃饭abinet Makers</a></li>
 								<li><a href="#">Cabinets</a></li>
 								<li><a href="#">Cafeterias</a></li>
 								<li><a href="#">Calligraphers</a></li>
@@ -146,19 +146,25 @@
 								<li><a href="#">Wines - Consultants</a></li>
 								<li><a href="#">Wines - Retail</a></li>
 								<li><a href="#">Woodworkers</a></li>
-							</ol>
+							</ul>
 						</div>
 					</section>
 				</div>
 			</div>
-		</div>
 	</main>
+	
+	
+	
+	
+	
 	
 	
 	<script>
 		$(function(){
-			$('#ledao-brands').listnav({
-				initLetter: 'c'
+			$('#ledaobrands-nav').listnav({
+				includeOther:true,
+				noMatchText:'没有匹配内容',
+				initLetter: ['the', 'a']
 			}); 
 			$('.demo a').click(function(e) {
 				e.preventDefault();
