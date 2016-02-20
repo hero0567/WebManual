@@ -1,16 +1,111 @@
 @charset "utf-8";
-main{
-	margin-top:20px;
-	margin-bottom:20px;
+
+main {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-#main_content{overflow:hidden;}
-#main_content ol{list-type:none;}
-.listNav, .ln-letters {overflow:hidden;}
-.listNavHide {display:none;}
-.listNavShow {display:list-item;}
-.letterCountShow {display:block;}
-.ln-letters a {font-size:0.9em;display:block;float:left;padding:2px 6px;border:1px solid silver;border-right:none;text-decoration:none;}
-.ln-letters .ln-last {border-right:1px solid silver;}
-.ln-letters a:hover, .ln-letters .ln-selected {background-color:#eaeaea;}
-.ln-letters .ln-disabled {color:#ccc;}
-.ln-letter-count {position:absolute;top:0;left:0;width:20px;text-align:center;font-size:0.8em;line-height:1.35;color:#336699;}
+
+#main_content {
+	overflow: hidden;
+}
+
+#main_content ol {
+	list-type: none;
+}
+#ledaobrands-nav{
+	padding:10px;
+	background:#fff;
+}
+#ledaobrands-nav a{
+    text-decoration: none;
+    color: #555;
+}
+#ledaobrands-nav a:hover{
+    color: #ff7300;
+}
+
+#ledaobrands-nav a.highlight, #ledaobrands-nav span.highlight{
+	color:#ff7300;
+}
+.ledao-brand-th{
+	display:inline-block;
+}
+.ledao-brand-th li{
+	width:20%;
+	float:left;
+}
+.ledao-brand-item li{
+	width: 20%;
+	float:left;
+	height:40px;
+	line-height:40px;
+	background:#fff;
+}
+.ledao-brand-item img{
+	box-shadow: 4px 6px 6px -6px #e2e2e2!important;
+}
+
+.d-n{
+	display:none;
+}
+.listNav, .ln-letters {
+	overflow: hidden;
+}
+
+.listNavHide {
+	display: none;
+}
+
+.listNavShow {
+	display: list-item;
+}
+
+.letterCountShow {
+	display: block;
+}
+
+.ln-letters a {
+	width: 41px;
+	text-align: center;
+	font-size: 0.9em;
+	display: block;
+	float: left;
+	padding: 2px 6px;
+	border: 1px solid silver;
+	border-right: none;
+	text-decoration: none;
+}
+
+.ln-letters .ln-last {
+	border-right: 1px solid silver;
+}
+
+.ln-letters a:hover, .ln-letters .ln-selected {
+	background-color: #eaeaea;
+}
+
+.ln-letters .ln-disabled {
+	color: #ccc;
+}
+
+.ln-letter-count {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.35;
+	color: #336699;
+}
+#ledaobrands-nav-nav .ln-letters a {
+    border: none;
+    border-top: 2px solid pink;
+    color: red;
+}
+img:hover {
+	background-color:#eff1f9;
+	cursor:pointer;
+	-webkit-box-shadow:0px 0px 2px 0px #bababa;
+	box-shadow:0px 0px 5px 0px #BBB;
+}

@@ -64,8 +64,37 @@
 				<div id="main_content_wrap" class="outer">
 					<section id="main_content" class="inner">
 						<div class="tabContainer">
+							<ul class="ledao-brand-th">
+								<li>品牌</li>
+								<li>LOGO</li>
+								<li>官方客服</li>
+								<li>官方支持</li>
+								<li>更多联系方式</li>
+							</ul>
 							<ul id="ledaobrands-nav" class="indented demo">
-								<li><a href="#">411 Services</a></li>
+								<li>
+									<ul class="ledao-brand-item">
+										<li>
+											<a href="#"><span class="d-n">M</span> <span>Midea</span></a>
+										</li>
+										<li>
+											<a class="img-link" href="" target="_blank" data-linkid=""> 
+												<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+											</a>	
+										</li>
+										<li>
+											<a href="tel:4008899135">
+												<span class="highlight">400-889-9315</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://mall.midea.com/service/index?mtag=40005.1.4" class="highlight">官网支持</a>
+										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+										</li>
+									</ul>
+								</li>
 								<li><a href="#"> 爱尚Accountants</a></li>
 								<li><a href="#">Accounting &amp; Bookkeeping - General Service</a></li>
 								<li><a href="#">Acupuncture</a></li>
@@ -152,12 +181,6 @@
 				</div>
 			</div>
 	</main>
-	
-	
-	
-	
-	
-	
 	
 	<script>
 		$(function(){
