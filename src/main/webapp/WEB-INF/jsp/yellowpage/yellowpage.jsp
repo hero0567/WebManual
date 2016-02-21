@@ -95,6 +95,9 @@
 										<li>
 											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
 										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+										</li>
 									</ul>
 								</li>
 								<li>
