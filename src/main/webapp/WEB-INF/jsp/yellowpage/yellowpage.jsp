@@ -65,23 +65,25 @@
 					<section id="main_content" class="inner">
 						<div class="tabContainer">
 							<ul class="ledao-brand-th">
-								<li>品牌</li>
-								<li>LOGO</li>
-								<li>官方客服</li>
-								<li>官方支持</li>
-								<li>更多联系方式</li>
+									<li>LOGO</li>
+									<li>品牌</li>
+									<li>官方客服</li>
+									<li>官方支持</li>
+									<li>更多联系方式</li>
+									<li>添加到我的收藏夹</li>
 							</ul>
 							<ul id="ledaobrands-nav" class="indented demo">
 								<li>
 									<ul class="ledao-brand-item">
 										<li>
-											<a href="#"><span class="d-n">M</span> <span>Midea</span></a>
-										</li>
-										<li>
 											<a class="img-link" href="" target="_blank" data-linkid=""> 
-												<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+												<span class="d-n">M</span> <img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
 											</a>	
 										</li>
+										<li>
+											<a href="#"><span>Midea</span></a>
+										</li>
+										
 										<li>
 											<a href="tel:4008899135">
 												<span class="highlight">400-889-9315</span>
@@ -95,86 +97,60 @@
 										</li>
 									</ul>
 								</li>
-								<li><a href="#"> 爱尚Accountants</a></li>
-								<li><a href="#">Accounting &amp; Bookkeeping - General Service</a></li>
-								<li><a href="#">Acupuncture</a></li>
-								<li><a href="#">Advertising</a></li>
-								<li><a href="#">Advertising - Agencies &amp; Counselors</a></li>
-								<li><a href="#">Advertising - Computer</a></li>
-								<li><a href="#">Advertising - Promotional</a></li>
-								<li><a href="#">Attorneys - Service Bureaus</a></li>
-								<li><a href="#">Auctioneers</a></li>
-								<li><a href="#">Audio Visual Consultants</a></li>
-								<li><a href="#">Audio Visual Production Service</a></li>
-								<li><a href="#">Automobile - Renting</a></li>
-								<li><a href="#">Automobile - Repair &amp; Service</a></li>
-								<li><a href="#">吃饭abinet Makers</a></li>
-								<li><a href="#">Cabinets</a></li>
-								<li><a href="#">Cafeterias</a></li>
-								<li><a href="#">Calligraphers</a></li>
-								<li><a href="#">Campgrounds</a></li>
-								<li><a href="#">Dancing Instruction</a></li>
-								<li><a href="#">Data Communications Equipment &amp;
-										Systems - Networks</a></li>
-								<li><a href="#">Deck Builders</a></li>
-								<li><a href="#">Drywall &amp; Insulation Contractors</a></li>
-								<li><a href="#">Earthquake Products &amp; Services</a></li>
-								<li><a href="#">E-Commerce</a></li>
-								<li><a href="#">Education Centers</a></li>
-								<li><a href="#">Educational Consultants</a></li>
-								<li><a href="#">Educational Service - Business</a></li>
-								<li><a href="#">Electric Contractors</a></li>
-								<li><a href="#">Electric Transmission Equipment
-										(Manufacturers)</a></li>
-								<li><a href="#">Electrolysis</a></li>
-								<li><a href="#">Erosion Control</a></li>
-								<li><a href="#">Gas - Liquefied Petroleum - Bottled
-										&amp; Bulk (Wholesale)</a></li>
-								<li><a href="#">Guide Service</a></li>
-								<li><a href="#">Gymnastic Instruction</a></li>
-								<li><a href="#">Halls &amp; Auditoriums</a></li>
-								<li><a href="#">Handyman Services</a></li>
-								<li><a href="#">Hardware - Retail</a></li>
-								<li><a href="#">Hardwood</a></li>
-								<li><a href="#">Jewelers - Retail</a></li>
-								<li><a href="#">Jewelry - Designers</a></li>
-								<li><a href="#">Laboratories</a></li>
-								<li><a href="#">Laboratories - Research &amp;
-										Development</a></li>
-								<li><a href="#">Land Companies</a></li>
-								<li><a href="#">Landfills - Sanitary</a></li>
-								<li><a href="#">Lumber (Manufacturers)</a></li>
-								<li><a href="#">Lumber - Retail</a></li>
-								<li><a href="#">Machine Shops</a></li>
-								<li><a href="#">Parking Area &amp; Lots Maintenance
-										&amp; Marking</a></li>
-								<li><a href="#">Parks</a></li>
-								<li><a href="#">Party Supplies</a></li>
-								<li><a href="#">Patio &amp; Deck Cleaning &amp;
-										Restoration</a></li>
-								<li><a href="#">Paving Contractors</a></li>
-								<li><a href="#">Pumps (Wholesale)</a></li>
-								<li><a href="#">Roofing - Service Consultants</a></li>
-								<li><a href="#">Sand &amp; Gravel (Wholesale)</a></li>
-								<li><a href="#">School Supplies (Wholesale)</a></li>
-								<li><a href="#">Schools &amp; Educational Services</a></li>
-								<li><a href="#">Schools - Nursery &amp; Kindergarten
-										Academic</a></li>
-								<li><a href="#">Schools - Universities &amp; Colleges
-										Academic</a></li>
-								<li><a href="#">Shoe &amp; Boot Repairing</a></li>
-								<li><a href="#">Shoes - Retail</a></li>
-								<li><a href="#">Shopping Centers &amp; Malls</a></li>
-								<li><a href="#">Shower Doors &amp; Enclosures</a></li>
-								<li><a href="#">Tutoring</a></li>
-								<li><a href="#">Ultrasonic Equipment &amp; Supplies
-										(Wholesale)</a></li>
-								<li><a href="#">Upholsterers</a></li>
-								<li><a href="#">Windows - Repairing</a></li>
-								<li><a href="#">Wineries</a></li>
-								<li><a href="#">Wines - Consultants</a></li>
-								<li><a href="#">Wines - Retail</a></li>
-								<li><a href="#">Woodworkers</a></li>
+								<li>
+									<ul class="ledao-brand-item">
+										<li>
+											<a class="img-link" href="" target="_blank" data-linkid=""> 
+												<span class="d-n">M</span> <img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+											</a>	
+										</li>
+										<li>
+											<a href="#"><span>Midea</span></a>
+										</li>
+										
+										<li>
+											<a href="tel:4008899135">
+												<span class="highlight">400-889-9315</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://mall.midea.com/service/index?mtag=40005.1.4" class="highlight">官网支持</a>
+										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+										</li>
+										<li>
+											<a href="">添加到收藏夹</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="ledao-brand-item">
+										<li>
+											<a class="img-link" href="" target="_blank" data-linkid=""> 
+												<span class="d-n">M</span> <img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
+											</a>	
+										</li>
+										<li>
+											<a href="#"><span>Midea</span></a>
+										</li>
+										
+										<li>
+											<a href="tel:4008899135">
+												<span class="highlight">400-889-9315</span>
+											</a>
+										</li>
+										<li>
+											<a href="http://mall.midea.com/service/index?mtag=40005.1.4" class="highlight">官网支持</a>
+										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">添加到我的收藏夹</a>
+										</li>
+									</ul>
+								</li> 
 							</ul>
 						</div>
 					</section>

@@ -98,14 +98,24 @@ main {
 	line-height: 1.35;
 	color: #336699;
 }
+.ln-letters{
+	margin-bottom:40px;
+}
 #ledaobrands-nav-nav .ln-letters a {
     border: none;
     border-top: 2px solid pink;
     color: red;
 }
-img:hover {
+#ledaobrands-nav img:hover {
 	background-color:#eff1f9;
 	cursor:pointer;
 	-webkit-box-shadow:0px 0px 2px 0px #bababa;
 	box-shadow:0px 0px 5px 0px #BBB;
+}
+.tabContainer{
+	position:relative;
+}
+.ledao-brand-th{ 
+    top: 20px;
+    width: 100%;
 }
