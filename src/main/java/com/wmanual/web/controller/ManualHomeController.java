@@ -154,6 +154,12 @@ public class ManualHomeController {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "beanjuicemaker");
 		return "manuals/beanjuicemaker";
 	}
+	//豆浆机
+	@RequestMapping("/Juicer")
+	public String Juicer(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "Juicer");
+		return "manuals/Juicer";
+	}
 	//电水壶
 	@RequestMapping("/electrickettle")
 	public String electrickettle(HttpServletRequest request) throws Exception {

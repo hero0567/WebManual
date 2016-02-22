@@ -134,14 +134,46 @@ a:hover {
 }
 
 .ali-search form {
-	width: 630px;
+	width: 680px;
 	height: 120px;
 	position: relative;
 }
+.ledao-dropdown-hd{
+    position: absolute;
+    padding: 0px 10px;
+    width: 100px;
+    top: 40px;
+    z-index: 1000;
+    left: 32px;
+ 	color: #ff7300;
+    height: 40px;
+    line-height: 40px;
+    cursor:pointer;
+    text-align:left;
+}
+
+#ledao-dropdown-menu{
+	width: 100px;
+    position: absolute;
+    z-index: 100000;
+    top: 78px;
+    left: 30px;
+    text-align: left;
+    background: #fff;
+    border: 2px solid #ff7300;
+    border-top: none;
+    padding-left: 10px;
+    padding-bottom:10px;
+}
+#ledao-dropdown-menu li{
+	height:24px;
+	line-height:24px;
+}
 
 #ledaosearch-keywords {
-	width: 600px;
+	width: 650px;
 	outline: #ff500b;
+	padding-left:110px
 }
 
 .ali-search #ledaosearch-submit {
@@ -178,6 +210,7 @@ a:hover {
 	height: 40px;
 	line-height: 40px;
 	padding: 0px 6px;
+	padding-left: 110px;
 }
 
 .hp-huodongLogo {

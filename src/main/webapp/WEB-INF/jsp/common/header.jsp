@@ -16,6 +16,16 @@ $(document).ready(function(){
 		$('#custom-user-menu').hide();
 		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
 	})
+	
+	$('.ledao-dropdown').on("mouseover mouseout",function(event){
+	 if(event.type == "mouseover"){
+	  //鼠标悬浮
+	  $('#ledao-dropdown-menu').removeClass('d-n');
+	 }else if(event.type == "mouseout"){
+	  //鼠标离开
+		 $('#ledao-dropdown-menu').addClass('d-n');
+	 }
+	})
 });
 </script>
 
@@ -33,10 +43,10 @@ $(document).ready(function(){
 					<div class="nav-content"></div>
 				</li>
 				<li class="account-signin"><a rel="nofollow"
-					href="/singin"
+					href="/signin"
 					title="请登录" data-trace="cn_alibar_login" target="_self">请<span class="c-ff7300">登录</span></a></li>
 				<li class="account-signup"><a rel="nofollow"
-					href="singup"
+					href="/signup"
 					title="免费注册" data-trace="cn_alibar_reg" target="_blank">免费<span class="c-ff7300">注册</span></a></li>
 			</ul>
 		</div>
@@ -84,6 +94,18 @@ $(document).ready(function(){
 	    <div id="main-search" class="f-l ali-search">
 	    	<!-- Search Box -->
 			<form role="search" ng-submit="search()">
+				<div class="ledao-dropdown">
+					<span id="ledao-dropdown-hd" class="ledao-dropdown-hd">
+						<span>全部类型</span> <i class="fa fa-chevron-down"></i>
+					</span>
+					<ul id="ledao-dropdown-menu" class="ledao-dropdown-menu d-n">
+						<li data-type="service"><a href="javascript:;" data-linkid="search-type-switch-service">大家电</a></li>
+						<li data-type="witkey"><a href="javascript:;" data-linkid="search-type-switch-witkey">生活电器</a></li>
+						<li data-type="task"><a href="javascript:;" data-linkid="search-type-switch-task">厨卫电器</a></li>
+						<li data-type="comprehensive"><a href="javascript:;" data-linkid="search-type-switch-comprehensive">个人护理</a></li>
+					</ul>
+				</div>
+				
 		      <input id="ledaosearch-keywords" class="empty active" accesskey="s" maxlength="50" name="keywords" ng-model="$parent.key"
 						spellcheck="false" autocomplete="off" placeholder="请输入查询关键字">
 		      <button type="button" id="ledaosearch-submit" ><i class="fa fa-search"></i> <span>搜 索</span></button>
@@ -156,10 +178,10 @@ $(document).ready(function(){
 	                <div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">品类搜索热度排行</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">电视机</a></li>
-	                        <li><a href="">空调</a></li>
+	                        <li><a href="/airpurifier">空气净化器</a></li>
+	                        <li><a href="/waterpurifier">净水器</a></li>
+	                        <li><a href="/tv">电视机</a></li>
+	                        <li><a href="/aircondition">空调</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
@@ -208,11 +230,11 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">大家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                    	<li><a href="">电视</a></li>
-	                        <li><a href="">冰箱</a></li>
-	                        <li><a href="">空调</a></li>
-	                        <li><a href="">洗衣机</a></li>
-	                        <li><a href="">热水器</a></li>
+	                    	<li><a href="/tv">电视</a></li>
+	                        <li><a href="/fridge">冰箱</a></li>
+	                        <li><a href="/aircondition">空调</a></li>
+	                        <li><a href="/washer">洗衣机</a></li>
+	                        <li><a href="/waterheating">热水器</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
@@ -261,12 +283,12 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">生活家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">空气净化器</a></li>
-	                        <li><a href="">净水器</a></li>
-	                        <li><a href="">饮水机</a></li>
-	                        <li><a href="">加湿器机</a></li>
-	                        <li><a href="">电暖器</a></li>
-	                        <li><a href="">挂烫机</a></li>
+	                        <li><a href="/airpurifier">空气净化器</a></li>
+	                        <li><a href="/waterpurifier">净水器</a></li>
+	                        <li><a href="/waterdispenser">饮水机</a></li>
+	                        <li><a href="/humidifier">加湿器机</a></li>
+	                        <li><a href="/electricheater">电暖器</a></li>
+	                        <li><a href="/garmentsteamer">挂烫机</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
@@ -315,11 +337,11 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">厨卫家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">电饭煲</a></li>
-	                        <li><a href="">微波炉</a></li>
-	                        <li><a href="">豆浆机</a></li>
-	                        <li><a href="">榨汁机</a></li>
-	                        <li><a href="">电水壶</a></li>
+	                        <li><a href="/electriccooker">电饭煲</a></li>
+	                        <li><a href="/microwaveoven">微波炉</a></li>
+	                        <li><a href="/beanjuicemaker">豆浆机</a></li>
+	                        <li><a href="/Juicer">榨汁机</a></li>
+	                        <li><a href="/electrickettle">电水壶</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">
@@ -367,11 +389,11 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">个人护理品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="">剃须刀</a></li>
-	                        <li><a href="">剃毛器</a></li>
-	                        <li><a href="">电吹风</a></li>
-	                        <li><a href="">理发器</a></li>
-	                        <li><a href="">电动牙刷</a></li>
+	                        <li><a href="/razor">剃须刀</a></li>
+	                        <li><a href="/shaver">剃毛器</a></li>
+	                        <li><a href="/hairdryer">电吹风</a></li>
+	                        <li><a href="/haircut">理发器</a></li>
+	                        <li><a href="/electrictoothbrush">电动牙刷</a></li>
 	                    </ul>
 	                </div>
 	                <div class="fl cat_banner">

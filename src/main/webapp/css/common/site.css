@@ -139,8 +139,8 @@ h3.section-title {
 	width:100px;
 }
 .cutom-btn-primary{
-	background-color:#00aeef !important;
-	border-color:#00aeef !important;
+	background-color:#ff7300 !important;
+	border-color:#ff7300 !important;
 }
 
 
@@ -248,8 +248,8 @@ ul.list-lite {
     -moz-transition: color .2s 0s;
 }
 .list-lite li>a.on, .list-lite li>a:hover {
-    box-shadow: 3px 0 0 0 #00aeef inset;
-    color: #00aeef;
+    box-shadow: 3px 0 0 0 #ff7300 inset;
+    color: #ff7300;
 }
 .list-lite span.subtype-amount{
 	float:right;
@@ -260,7 +260,7 @@ ul.list-lite {
 * Button styles
 */
 .custom-manual-btn{
-	background-color:#00aeef;
+	background-color:#ff7300;
 	height:40px;
 	line-height:40px;
 	text-align:center;
@@ -293,8 +293,8 @@ a.custom-btn{
     text-align: center;
 }
 a.custom-btn:hover{
-	color:#00aeef;
-	border: 1px solid #00aeef;
+	color:#ff7300;
+	border: 1px solid #ff7300;
 }
 
 
@@ -339,7 +339,7 @@ a.custom-btn:hover{
 	margin-bottom:10px;
 }
 .custom-brand-item:hover, .custom-brand-item a:hover, .custom-brands-list .active{
-	background-color:#00aeef;
+	background-color:#ff7300;
 	color:#fff !important;
 	cursor:pointer;
 }
@@ -456,7 +456,7 @@ ul.top{
 }
 .custom-appliance-head{
 	padding-left:15px;
-	background-color:#00aeef;
+	background-color:#ff7300;
 	color:#fff;
 	font-size:16px;
 }
@@ -480,7 +480,7 @@ ul.top{
 }
 .custom-section-more:hover{
 	font-size:12px;
-	color:#00aeef !important;
+	color:#ff7300 !important;
 }
 
 ul.custom-tabs{
@@ -502,19 +502,19 @@ ul.custom-tabs{
     line-height:30px;
 }
 .custom-tabs li:hover, .custom-tabs li.on{
-	color:#00aeef;
-	border-bottom:1px solid #00aeef;
+	color:#ff7300;
+	border-bottom:1px solid #ff7300;
 	margin-bottom:-1px;
 	font-weight:bold;
 }
 .custom-subtype-head a{
-	color: #00aeef !important;
+	color: #ff7300 !important;
 	padding:0px 10px 0px 0px !important;
 	font-size:14px;
 	font-weight:bold;
 	text-decoration: none !important;
 	border-bottom:none !important;
-	border-right:1px solid #00aeef !important;
+	border-right:1px solid #ff7300 !important;
 }
 .custom-subtype-head:hover{
 	border-bottom:none !important;
@@ -558,7 +558,7 @@ table .fa-star{
 	font-size:14px;
 }
 .custom-appliance-table a{
-	color:#00aeef;
+	color:#ff7300;
 }
 .custom-nav{
 	float:none !important;
@@ -698,8 +698,8 @@ table .fa-star{
 	text-align:center;
 }
 .custom-pagination .on {
-    color: #00aeef;
-    border-color: #00aeef;
+    color: #ff7300;
+    border-color: #ff7300;
     cursor: default;
 }
 .custom-pagination a {
@@ -784,8 +784,8 @@ input[type=date],input[type=datetime-local],input[type=datetime],input[type=emai
 }
 
 .wmanualbtn:hover {
-	border-color: #00aeef;
-	color: #00aeef
+	border-color: #ff7300;
+	color: #ff7300
 }
 
 .wmanualbtn:active {
@@ -794,14 +794,14 @@ input[type=date],input[type=datetime-local],input[type=datetime],input[type=emai
 }
 
 .wmanualbtn.c {
-	border-color: #00aeef;
-	background-color: #00aeef;
+	border-color: #ff7300;
+	background-color: #ff7300;
 	color: #fff!important
 }
 
 .wmanualbtn.c-lined {
-	border-color: #00aeef;
-	color: #00aeef
+	border-color: #ff7300;
+	color: #ff7300
 }
 
 .wmanualbtn.bg-green {
@@ -843,7 +843,7 @@ input[type=date],input[type=datetime-local],input[type=datetime],input[type=emai
 .wmanualbtn.bg-c {
 	color: #fff!important;
 	border-color: rgba(0,0,0,.1);
-	background-color: #00aeef
+	background-color: #ff7300
 }
 
 .wmanualbtn.row {
@@ -857,8 +857,8 @@ a .wmanualbtn {
 }
 
 a .wmanualbtn:hover {
-	color: #00aeef;
-	border-color: #00aeef
+	color: #ff7300;
+	border-color: #ff7300
 }
 
 .loginbox {
@@ -901,12 +901,12 @@ a .wmanualbtn:hover {
 }
 
 .loginbox .tip a {
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox .tiptop {
 	text-align: center;
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox .tipcenter {
@@ -931,7 +931,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox .snslogin a:hover {
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox-thin {
@@ -994,7 +994,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-thin .tip a {
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox-thin .tiptop {
@@ -1023,7 +1023,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-thin .tiptop>a.on,.loginbox-thin .tiptop>a:only-child,.loginbox-thin .tiptop>span.on,.loginbox-thin .tiptop>span:only-child {
-	border-bottom-color: #00aeef;
+	border-bottom-color: #ff7300;
 	color: #4d4d4d
 }
 
@@ -1068,8 +1068,8 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-thin .snslogin a:hover {
-	color: #00aeef;
-	border-color: #00aeef
+	color: #ff7300;
+	border-color: #ff7300
 }
 
 .loginbox-thin .ui-info {
@@ -1151,7 +1151,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-complete .tip a {
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox-complete .tiptop {
@@ -1180,7 +1180,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-complete .tiptop>span.on {
-	border-bottom-color: #00aeef;
+	border-bottom-color: #ff7300;
 	color: #4d4d4d
 }
 
@@ -1216,8 +1216,8 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-complete .snslogin a:hover {
-	color: #00aeef;
-	border-color: #00aeef
+	color: #ff7300;
+	border-color: #ff7300
 }
 
 .loginbox-mail {
@@ -1232,7 +1232,7 @@ a .wmanualbtn:hover {
 .loginbox-mail .envelope {
 	font-size: 2.5em;
 	margin-bottom: 10px;
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox-mail .row {
@@ -1260,7 +1260,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-mail .tip a {
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox-sns {
@@ -1325,7 +1325,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-sns .tip a {
-	color: #00aeef
+	color: #ff7300
 }
 
 .loginbox-sns .tiptop {
@@ -1354,7 +1354,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-sns .tiptop>span.on {
-	border-bottom-color: #00aeef;
+	border-bottom-color: #ff7300;
 	color: #4d4d4d
 }
 
@@ -1390,7 +1390,7 @@ a .wmanualbtn:hover {
 }
 
 .loginbox-sns .snslogin a:hover {
-	color: #00aeef;
-	border-color: #00aeef
+	color: #ff7300;
+	border-color: #ff7300
 }
 
