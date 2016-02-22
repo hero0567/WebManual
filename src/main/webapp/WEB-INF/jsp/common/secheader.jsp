@@ -110,9 +110,9 @@ $(document).ready(function(){
 	<div class="ledao-container"> 
 		<div class="menu">
 	    	<ul>
-	        	<li><a href="">首页</a></li>
+	        	<li><a href="/index">首页</a></li>
 	            <li><a href="">说明书</a></li>
-	            <li><a href="">品牌黄页</a></li>
+	            <li><a href="/yellowpage">品牌黄页</a></li>
 	            <li><a href="">常识分享</a></li>
 	        </ul>
 	    </div>
