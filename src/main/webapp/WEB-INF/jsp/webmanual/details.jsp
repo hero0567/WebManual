@@ -47,7 +47,8 @@
 		<main>
 			<!-- Category and Brands -->
 			<div class="ledao-container">
-				<section class="custom-brands-filter white-block p-l-r margin-bottom-20 ">
+				<div class="ledao-leftcol">
+					<section class="manual-details custom-brands-filter white-block p-l-r margin-bottom-20 ">
 						<div class="custom-section-head">
 							<ul class="custom-tabs f-l">
 								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span></li>
@@ -111,6 +112,7 @@
 			                <a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" href="#" ng-click="download()"><i class="fa fa-download "></i> <span>下载</span></a>
 						</div>
 					</section>
+					
 					<section class="custom-brands-filter white-block p-l-r margin-bottom-20" ng-show="imageUrl != ''">
 						<div class="row">
 							<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
@@ -119,11 +121,11 @@
 				            <div ng-show="error.captcha"
 										class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
 										
-				            <button type="button" ng-click="checkSecCode()">下载</button>
+				            <button type="button" class="" ng-click="checkSecCode()">下载</button>
 						</div>
 					</section>
 					
-					<section class="custom-brands-filter white-block p-l-r margin-bottom-20">
+					<section class="official-services custom-brands-filter white-block p-l-r margin-bottom-20">
 						<div class="custom-section-head">
 							<ul class="custom-tabs f-l">
 								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span>产品官方资源</span></li>
@@ -139,8 +141,8 @@
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						                <div>
-						                    <i class="fa fa-envelope"></i> 官方邮箱： 
-						                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services " ng-bind="s.email"> </a>
+						                    <i class="fa fa-envelope"></i> 官方支持： 
+						                    <a href="" ng-repeat="s in services " ng-bind="s.email"> </a>
 						                </div>
 									</div>
 								</div>
@@ -153,7 +155,7 @@
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						                <div>
-						                    <i class="fa fa-cog"></i> 维修站点： 
+						                    <i class="fa fa-cog"></i> 更多联系方式： 
 						                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
 						                </div>
 									</div>
@@ -163,7 +165,7 @@
 					</section>
 				</div>
 				
-				<div class="col-lg-3 col-md-3 col-sm-12">
+				<div class="ledao-rightcol">
 					<section class="custom-brands-filter white-block p-l-r">
 						<div class="custom-section-head">
 							<a href="" class="custom-section-title f-l"><i class="fa fa-cog"></i> 维修保养常识 </span></a>
@@ -192,6 +194,8 @@
 							</ul>
 						</div>
 					</section>
+				
+				</div>
 			</div>
 		</main>
 		<%@ include file="../common/footer.jsp" %>

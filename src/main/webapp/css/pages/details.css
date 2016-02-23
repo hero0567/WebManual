@@ -10,3 +10,23 @@
 #ledao_new_menu{
 	margin-top:0px !important;
 }
+main{
+	margin-top: 20px;
+}
+.ledao-leftcol{
+	width:910px;
+	float:left;
+}
+.ledao-rightcol{
+	width:260px;
+	float:right;
+}
+.official-services {
+	min-height:280px;
+}
+.manual-details {
+	min-height: 200px;
+}
+
+
+ 
