@@ -72,87 +72,6 @@
 									<li>添加到我的收藏夹</li>
 							</ul>
 							<ul id="ledaobrands-nav" class="indented demo" listnav>
-								<li>
-									<ul class="ledao-brand-item">
-										<li>
-											<a class="img-link" href="" target="_blank" data-linkid=""> 
-												<span class="d-n">M</span> <img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
-											</a>	
-										</li>
-										<li>
-											<a href="#"><span>Midea</span></a>
-										</li>
-										
-										<li>
-											<a href="tel:4008899135">
-												<span class="highlight">400-889-9315</span>
-											</a>
-										</li>
-										<li>
-											<a href="http://mall.midea.com/service/index?mtag=40005.1.4" class="highlight">官网支持</a>
-										</li>
-										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
-										</li>
-										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<ul class="ledao-brand-item">
-										<li>
-											<a class="img-link" href="" target="_blank" data-linkid=""> 
-												<span class="d-n">M</span> <img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
-											</a>	
-										</li>
-										<li>
-											<a href="#"><span>Midea</span></a>
-										</li>
-										
-										<li>
-											<a href="tel:4008899135">
-												<span class="highlight">400-889-9315</span>
-											</a>
-										</li>
-										<li>
-											<a href="http://mall.midea.com/service/index?mtag=40005.1.4" class="highlight">官网支持</a>
-										</li>
-										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
-										</li>
-										<li>
-											<a href="">添加到收藏夹</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<ul class="ledao-brand-item">
-										<li>
-											<a class="img-link" href="" target="_blank" data-linkid=""> 
-												<span class="d-n">M</span> <img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
-											</a>	
-										</li>
-										<li>
-											<a href="#"><span>Midea</span></a>
-										</li>
-										
-										<li>
-											<a href="tel:4008899135">
-												<span class="highlight">400-889-9315</span>
-											</a>
-										</li>
-										<li>
-											<a href="http://mall.midea.com/service/index?mtag=40005.1.4" class="highlight">官网支持</a>
-										</li>
-										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
-										</li>
-										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">添加到我的收藏夹</a>
-										</li>
-									</ul>
-								</li> 
 								<li ng-repeat="brand in brands">
 									<ul class="ledao-brand-item">
 										<li>
@@ -170,13 +89,13 @@
 											</a>
 										</li>
 										<li>
-											<a ng-href="{{brand.home}}" class="highlight">官网支持</a>
+											<a ng-href="{{brand.supportLink}}" class="highlight">官网支持</a>
 										</li>
 										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+											<a ng-href="{{brand.contactLink}}">更多联系方式</a>
 										</li>
 										<li>
-											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">收藏</a>
 										</li>
 									</ul>
 								</li>

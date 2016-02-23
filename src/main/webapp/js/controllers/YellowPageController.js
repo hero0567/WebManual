@@ -1,4 +1,9 @@
+'use strict';
 
+/**
+ * YellowPageController
+ * @constructor
+ */
 
 app.controller("YellowPageController", function($scope, $http, $location, $window) {
     

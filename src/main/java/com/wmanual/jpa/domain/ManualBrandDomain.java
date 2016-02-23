@@ -20,7 +20,8 @@ public class ManualBrandDomain {
 	private String img;
 	private String link;
 	private String tel;
-	private String home;
+	private String supportLink;
+	private String contactLink;
 	private char fletter;
 	private int seq;
 	public Long getId() {
@@ -52,12 +53,18 @@ public class ManualBrandDomain {
 	}
 	public void setTel(String tel) {
 		this.tel = tel;
+	}	
+	public String getSupportLink() {
+		return supportLink;
 	}
-	public String getHome() {
-		return home;
+	public void setSupportLink(String supportLink) {
+		this.supportLink = supportLink;
 	}
-	public void setHome(String home) {
-		this.home = home;
+	public String getContactLink() {
+		return contactLink;
+	}
+	public void setContactLink(String contactLink) {
+		this.contactLink = contactLink;
 	}
 	public char getFletter() {
 		return fletter;
