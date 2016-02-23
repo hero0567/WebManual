@@ -211,6 +211,7 @@ a:hover {
 	line-height: 40px;
 	padding: 0px 6px;
 	padding-left: 110px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .hp-huodongLogo {
@@ -294,6 +295,7 @@ a {
 .ledao_box .menu , .ledao_box .menu ul {
 	height: 40px;
 	line-height: 40px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
 }
 
 #ledao_nav {

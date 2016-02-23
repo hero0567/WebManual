@@ -95,7 +95,7 @@ main {
 }
 
 .ln-letters .ln-disabled {
-	color: #ccc;
+	color: #ccc !important;
 }
 
 .ln-letter-count {

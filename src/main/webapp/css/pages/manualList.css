@@ -134,7 +134,7 @@ body, button, input, select, textarea {
 }
 
 .tabbtn li.current a, .tabbtn li.current a:hover {
-	
+	    box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
 	height: 40px;
 	line-height: 40px;
 	font-size: 14px;
