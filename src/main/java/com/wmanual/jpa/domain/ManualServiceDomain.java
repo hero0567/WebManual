@@ -1,5 +1,6 @@
 package com.wmanual.jpa.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +21,29 @@ public class ManualServiceDomain {
 	private String email;
 	private String site;
 	private String address;
+	private String type;
+	private String subType;
+	@Column(columnDefinition="INT default 0")
+	private int viewCount;
 	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getSubType() {
+		return subType;
+	}
+	public void setSubType(String subType) {
+		this.subType = subType;
+	}
+	public int getViewCount() {
+		return viewCount;
+	}
+	public void setViewCount(int viewCount) {
+		this.viewCount = viewCount;
+	}
 	public Long getId() {
 		return id;
 	}

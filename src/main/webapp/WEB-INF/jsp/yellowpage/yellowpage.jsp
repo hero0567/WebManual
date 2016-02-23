@@ -39,8 +39,7 @@
 <script src="js/lib/angular/angular.js"></script>
 <script src="js/lib/angular/angular-cookies.min.js"></script>
 <script src="js/app.js"></script>
-<script src="js/controllers/IndexController.js"></script>
-<script src="js/service/UserService.js"></script>
+<script src="js/controllers/YellowPageController.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -48,7 +47,7 @@
     <![endif]-->
 </head>
 
-<body >
+<body ng-app="app" ng-controller="YellowPageController" class="">
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div>
@@ -72,7 +71,7 @@
 									<li>更多联系方式</li>
 									<li>添加到我的收藏夹</li>
 							</ul>
-							<ul id="ledaobrands-nav" class="indented demo">
+							<ul id="ledaobrands-nav" class="indented demo" listnav>
 								<li>
 									<ul class="ledao-brand-item">
 										<li>
@@ -154,25 +153,39 @@
 										</li>
 									</ul>
 								</li> 
+								<li ng-repeat="brand in brands">
+									<ul class="ledao-brand-item">
+										<li>
+											<a class="img-link" href="" target="_blank" data-linkid=""> 
+												<span class="d-n" ng-bind="brand.fletter"></span> <img data-original="{{brand.img}}" ng-src="{{brand.img}}">
+											</a>	
+										</li>
+										<li>
+											<a href="#"><span ng-bind="brand.name"></span></a>
+										</li>
+										
+										<li>
+											<a href="tel:{{brand.tel}}">
+												<span class="highlight" ng-bind="brand.tel"></span>
+											</a>
+										</li>
+										<li>
+											<a ng-href="{{brand.home}}" class="highlight">官网支持</a>
+										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+										</li>
+										<li>
+											<a href="http://www.midea.com/cn/infomation/contact_us/">更多联系方式</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</div>
 					</section>
 				</div>
 			</div>
 	</main>
-	
-	<script>
-		$(function(){
-			$('#ledaobrands-nav').listnav({
-				includeOther:true,
-				noMatchText:'没有匹配内容',
-				initLetter: ['the', 'a']
-			}); 
-			$('.demo a').click(function(e) {
-				e.preventDefault();
-			});
-		});
-	</script>
 
 	<!-- Footer -->
 	<%@ include file="../common/footer.jsp"%>
