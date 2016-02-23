@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
-
+<script src="js/lib/others/jquery-1.5.1.js"></script>
 <script src="js/lib/others/jquery.SuperSlide.2.1.1.js"></script>
 
 <script type="text/javascript">
@@ -128,7 +128,7 @@ $(document).ready(function(){
 		<div class="menu">
 	    	<ul>
 	        	<li><a href="/index">首页</a></li>
-	            <li><a href="">说明书</a></li>
+	            <li><a href="">说明书大全</a></li>
 	            <li><a href="/yellowpage">品牌黄页</a></li>
 	            <li><a href="">常识分享</a></li>
 	        </ul>
@@ -340,7 +340,7 @@ $(document).ready(function(){
 	                        <li><a href="/electriccooker">电饭煲</a></li>
 	                        <li><a href="/microwaveoven">微波炉</a></li>
 	                        <li><a href="/beanjuicemaker">豆浆机</a></li>
-	                        <li><a href="/Juicer">榨汁机</a></li>
+	                        <li><a href="/juicermaker">榨汁机</a></li>
 	                        <li><a href="/electrickettle">电水壶</a></li>
 	                    </ul>
 	                </div>
