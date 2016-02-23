@@ -9,13 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>首页 ｜ 乐道说明书</title>
+	<title>空气净化器说明书 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
 	
-	<meta name="Keywords" content=" " />
-	<meta name="Description" content=" " />
+	<meta name="Keywords" content="空气净化器说明书" />
+	<meta name="Description" content="空气净化器说明书大全，空气净化器使用保养常识，空气净化器官方客服电话" />
 	
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
@@ -53,37 +53,37 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> 
 	
-		<!-- Header -->
-		<%@ include file="../common/secheader.jsp" %>
-		
-		<main>
-			<!-- Category and Brands -->
-			<div class="ledao-banners">
-				<div class="ledao-container">
-				</div>
+	<!-- Header -->
+	<%@ include file="../common/secheader.jsp" %>
+	
+	<main>
+		<!-- Category and Brands -->
+		<div class="ledao-banners">
+			<div class="ledao-container">
 			</div>
-			
+		</div>
 		
-			<!-- Original sub-menu -->
-			<section class="sub-menu hide">
-				<div class="container">
-					<div class="row border-gray-dashed"  ng-repeat="item in menu">
-						<div class="col-lg-1 col-md-1 col-sm-1">
-							<p class="custom-type"><span ng-bind="item.type"></span></p>
-						</div>
-						<div class="col-lg-11 col-md-11 col-sm-11">
-							<ul class="nav navbar-nav custom-nav">
-								<li ng-repeat="subType in item.subtypes">
-									<a href="" ng-click="changeMenu(subType.type, subType.subtype, subType.count)"><span ng-bind="subType.subtype"></span>(<span class="subtype-amount" ng-bind="subType.count"></span>)</a>
-								</li>
-							</ul>
-						</div>
+	
+		<!-- Original sub-menu -->
+		<section class="sub-menu hide">
+			<div class="container">
+				<div class="row border-gray-dashed"  ng-repeat="item in menu">
+					<div class="col-lg-1 col-md-1 col-sm-1">
+						<p class="custom-type"><span ng-bind="item.type"></span></p>
+					</div>
+					<div class="col-lg-11 col-md-11 col-sm-11">
+						<ul class="nav navbar-nav custom-nav">
+							<li ng-repeat="subType in item.subtypes">
+								<a href="" ng-click="changeMenu(subType.type, subType.subtype, subType.count)"><span ng-bind="subType.subtype"></span>(<span class="subtype-amount" ng-bind="subType.count"></span>)</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</section>			
-	 	</main> 
-	 
-		<!-- Footer -->
-		<%@ include file="../common/footer.jsp" %>
+			</div>
+		</section>			
+ 	</main> 
+ 
+	<!-- Footer -->
+	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>
