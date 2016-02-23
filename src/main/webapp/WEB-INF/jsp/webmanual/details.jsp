@@ -44,8 +44,156 @@
 	   <![endif]--> 
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>	
-		 
-		
+		<main>
+			<!-- Category and Brands -->
+			<div class="ledao-container">
+				<section class="custom-brands-filter white-block p-l-r margin-bottom-20 ">
+						<div class="custom-section-head">
+							<ul class="custom-tabs f-l">
+								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span></li>
+							</ul>
+							<a class="f-r custom-default-tab-title" href="" ng-click="addFavorite(user.id, handbook)"><i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]" ></i> <span>添加到我的收藏</span></a>
+						</div>
+						<div class="custom-section-body">
+							<div class="custom-tabs-tab">
+								<div class="row">
+									<div class="col-lg-4 col-md-4 col-sm-4">
+     									<img src="" alt="" style="height:120px; width:100px;">
+     								</div>
+     								<div class="col-lg-8 col-md-8 col-sm-8">
+     									<div class="row h-lh-40">
+     										<div class="col-lg-6 col-md-6 col-sm-6">
+												<i class="fa fa-home"></i> 厂商： 
+							                    <a ng-href="/result?key={{handbook.brand}}" ng-bind="handbook.brand"></a>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6">
+												<i class="fa fa-calendar"></i> 上市时间： 
+							                    <span ng-bind="handbook.productDate"></span>
+											</div>
+     									</div>
+     									
+     									<div class="row h-lh-40">
+     										<div class="col-lg-6 col-md-6 col-sm-6">
+     											<i class="fa fa-eye"></i> 浏览次数： 
+					                    		<span  ng-bind="handbook.viewCount"> </span>
+     										</div>
+     										
+     										<div class="col-lg-6 col-md-6 col-sm-6">
+     											<i class="fa fa-inbox"></i> 说明书大小： 
+					                    		<span ng-bind="handbook.downloadCount"> </span>
+     										</div>
+    									</div>
+    									
+    									<div class="row h-lh-40">
+     										<div class="col-lg-6 col-md-6 col-sm-6">
+     											<i class="fa fa-save"></i> 下载次数： 
+					                    		<span ng-bind="handbook.downloadCount"> </span>
+     										</div>
+     										<div class="col-lg-6 col-md-6 col-sm-6">
+     											<i class="fa fa-star"></i> 收藏次数： 
+					                    		<span ng-bind="handbook.favorCount"> </span>
+     										</div>
+    									</div>
+     								</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+					<section class="p-l-r margin-bottom-20">
+						<div class="row">
+							<a ng-click="readonline(handbook)" class="custom-manual-btn col-lg-4 col-md-4 col-sm-4">
+				                <i class="fa fa-cloud"></i> <span>在线阅读</span>
+				            </a> 
+							<div class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" ng-click="addFavorite(user.id, handbook)">
+								<i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]"></i> <span>添加到我的收藏</span>
+							</div>
+			                <a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" href="#" ng-click="download()"><i class="fa fa-download "></i> <span>下载</span></a>
+						</div>
+					</section>
+					<section class="custom-brands-filter white-block p-l-r margin-bottom-20" ng-show="imageUrl != ''">
+						<div class="row">
+							<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
+				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required/>
+				            <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()"/>
+				            <div ng-show="error.captcha"
+										class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
+										
+				            <button type="button" ng-click="checkSecCode()">下载</button>
+						</div>
+					</section>
+					
+					<section class="custom-brands-filter white-block p-l-r margin-bottom-20">
+						<div class="custom-section-head">
+							<ul class="custom-tabs f-l">
+								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span>产品官方资源</span></li>
+							</ul>
+						</div>
+						<div class="custom-section-body">
+							<div class="custom-tabs-tab">
+								<div class="row h-lh-40">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xs-12">
+										<div>
+											<i class="fa fa-phone"></i> 客服电话： <a href="tel:02885303320" ng-repeat="s in services " ng-bind="s.tel"> </a>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						                <div>
+						                    <i class="fa fa-envelope"></i> 官方邮箱： 
+						                    <a href="mailto:jack@92shuomingshu.com" ng-repeat="s in services " ng-bind="s.email"> </a>
+						                </div>
+									</div>
+								</div>
+								<div class="row h-lh-40">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						                <div>
+						                    <i class="fa fa-globe"></i> 官方网站： 
+						                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
+						                </div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						                <div>
+						                    <i class="fa fa-cog"></i> 维修站点： 
+						                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
+						                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<section class="custom-brands-filter white-block p-l-r">
+						<div class="custom-section-head">
+							<a href="" class="custom-section-title f-l"><i class="fa fa-cog"></i> 维修保养常识 </span></a>
+							<a href="" class="custom-section-more f-r">查看所有</a>
+						</div> 
+						<div class="custom-section-body">
+							<ul class="list-link-lite top ">
+					           <li>
+						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
+						       </li>
+					           <li>
+						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
+						       </li>       
+						       <li>
+						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
+						       </li>
+						       <li>
+						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
+						       </li>       
+							</ul>
+						</div>
+					</section>
+			</div>
+		</main>
 		<%@ include file="../common/footer.jsp" %>
 	</div>
 </body>
