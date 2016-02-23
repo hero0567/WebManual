@@ -94,7 +94,7 @@
 											</dd> 
 										</dl>
 										<dl class="listIndex">
-										<dt>上架时间</dt>
+										<dt>上市时间</dt>
 										<dd>
 											<label><a href="javascript:;" attrval="不限">不限</a></label>
 											<form action="" method="get"> 

@@ -164,7 +164,9 @@ h4, h5, h6 {
 .indexTypes ul li .con ul li{float:none;height:auto;width:auto;}
 .indexTypes ul li .con ul li a{line-height:28px;width:195px;display:block;text-indent:3em;border-bottom:1px dashed #d1d1d1;}
 .indexTypes ul li .con ul li a:hover{color:#F87C02;}
-
+label a{
+	font-weight:normal !important;
+}
 
 
 

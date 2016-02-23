@@ -804,7 +804,14 @@ a:hover {
     text-align:center;
 }
 
-
+label a{
+	font-weight:normal !important;
+	color:#333;
+}
+label a:hover{
+	color:#ff7300;
+	background:transparent !important;
+}
 
 
 

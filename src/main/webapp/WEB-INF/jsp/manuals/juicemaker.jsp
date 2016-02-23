@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>微波炉说明书 ｜ 乐道说明书</title>
+	<title>榨汁机说明书 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -63,7 +63,7 @@
 			<div class="ledao-container">
 				<div class="ledao-manual-filter-title">
 				    <h3>
-				      <b>微波炉</b><em>说明书筛选</em>
+				      <b>榨汁机</b><em>说明书筛选</em>
 				    </h3>
 				    <div class="st-ext">
 				      共&nbsp;<span>1225</span>个商品
