@@ -27,6 +27,29 @@ main{
 .manual-details {
 	min-height: 200px;
 }
+.modal-dialog{
+	background: #fff;
+    text-align: center;
+    position: absolute !important;
+    z-index: 100000;
+    padding: 20px;
+    margin-left: -10px;
+    height: 160px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    margin-left: 400px !important;
+    width: 330px !important;
+        border-radius: 5px;
+}
+.modal-dialog img{
+	height: 30px;
+    vertical-align: middle;
+}
+.modal-dialog div.alert{
+	text-align: center;
+}
 
+.modal-dialog .btn{
+	margin-top:20px;
+}
 
  

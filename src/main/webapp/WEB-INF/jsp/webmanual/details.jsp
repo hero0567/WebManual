@@ -113,16 +113,17 @@
 						</div>
 					</section>
 					
-					<section class="custom-brands-filter white-block p-l-r margin-bottom-20" ng-show="imageUrl != ''">
-						<div class="row">
+					
+					<section class="modal-dialog custom-brands-filter white-block p-l-r margin-bottom-20" ng-show="imageUrl != ''">
 							<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
 				                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required/>
 				            <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()"/>
 				            <div ng-show="error.captcha"
 										class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
+									 <br>
 										
-				            <button type="button" class="" ng-click="checkSecCode()">下载</button>
-						</div>
+				            <button type="button" class="btn btn-primary cutom-btn-primary" ng-click="checkSecCode()">下载</button>
+				            <button type="button" class="btn btn-default" ng-click="cancel()">取消</button>
 					</section>
 					
 					<section class="official-services custom-brands-filter white-block p-l-r margin-bottom-20">
@@ -200,5 +201,7 @@
 		</main>
 		<%@ include file="../common/footer.jsp" %>
 	</div>
+	<div id="custom-layer" class="constom-layer hide">
+					</div>
 </body>
 </html>

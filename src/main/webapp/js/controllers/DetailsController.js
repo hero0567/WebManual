@@ -80,7 +80,12 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
     
     $scope.download = function() {    	
     	$scope.imageUrl = "/sec/img";
+    	$('#custom-layer').removeClass('hide');
   	}
+    $scope.cancel = function(){
+    	$('#custom-layer').addClass('hide');
+    	$scope.imageUrl = "";
+    }
     
     $scope.changeCaptcha = function(){
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 

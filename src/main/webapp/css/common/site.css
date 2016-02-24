@@ -98,7 +98,7 @@ ul{
  }
 .custom-modal-dialog {
  	box-sizing: border-box;
-    position: fixed;
+    position: absolute;
     z-index: 10000;
     min-height: 100px;
     margin-top: 100px;
