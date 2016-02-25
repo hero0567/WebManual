@@ -62,26 +62,7 @@
 					<%@ include file="../common/servicepromise.jsp" %>
 					<%@ include file="../common/manualIndustry.jsp" %>
 				</div>
-			</div>
-			
-		
-			<!-- Original sub-menu -->
-			<section class="sub-menu hide">
-				<div class="container">
-					<div class="row border-gray-dashed"  ng-repeat="item in menu">
-						<div class="col-lg-1 col-md-1 col-sm-1">
-							<p class="custom-type"><span ng-bind="item.type"></span></p>
-						</div>
-						<div class="col-lg-11 col-md-11 col-sm-11">
-							<ul class="nav navbar-nav custom-nav">
-								<li ng-repeat="subType in item.subtypes">
-									<a href="" ng-click="changeMenu(subType.type, subType.subtype, subType.count)"><span ng-bind="subType.subtype"></span>(<span class="subtype-amount" ng-bind="subType.count"></span>)</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>			
+			</div>				
 	 	</main> 
 	 
 		<!-- Footer -->

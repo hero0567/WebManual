@@ -13,8 +13,15 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
 	$scope.user = userService.getUser();
     
     $scope.fetchMenu = function() {
-     	 $http.get('/menu').success(function(menu){
+     	 $http.get('/menu/header').success(function(menu){
               $scope.menu = menu;
+              $("#ledao_nav").slide({ 
+          		titCell:".cate_nav li",
+          		mainCell:".ledao_cat_content",
+          		autoPlay:false,
+          		interTime:7400,
+          		delayTime:100 
+          	});
         });
   	}  
     

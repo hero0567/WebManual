@@ -29,6 +29,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wmanual.beans.CountBean;
 import com.wmanual.beans.HomeMenuBean;
 import com.wmanual.beans.SubTypeBean;
+import com.wmanual.jpa.domain.ManualMenuDomain;
+import com.wmanual.jpa.service.ManualMenuRepository;
 import com.wmanual.jpa.service.ManualRepository;
 
 @RestController
@@ -37,6 +39,9 @@ public class MenuController {
 
 	@Autowired
 	private ManualRepository menuRepository;
+	
+	@Autowired
+	private ManualMenuRepository manualMenuRepository;
 
 	@RequestMapping("")
 	public Iterable<HomeMenuBean> allMenu() throws Exception {
@@ -62,5 +67,10 @@ public class MenuController {
 			hmb.addE(stb);
 		}
 		return menu;
-	}	
+	}
+	
+	@RequestMapping("/header")
+	public Iterable<ManualMenuDomain> header() throws Exception {
+		return manualMenuRepository.findAll();
+	}
 }
