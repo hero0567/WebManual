@@ -139,12 +139,6 @@ $(document).ready(function(){
 	    	<div class="ledao_cat_nav fl">
 	        	<div class="ledao_mod_title"><i class="fa fa-th-list"></i> <span>说明书分类</span></div>
 	            <ul class="cate_nav">
-	                <li class="" ng-repeat="item in menu">
-	                    <div class="cat_6_nav">
-	                        <s class="cat-nav-icon fp-iconfont">R</s>
-	                        <a href="" ng-bind="item.type"></a>
-	                    </div>
-	                </li>
 	            	<li class="">
 	                	<div class="cat_1_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">D</s>
