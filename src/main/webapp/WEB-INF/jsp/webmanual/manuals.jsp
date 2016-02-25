@@ -63,7 +63,7 @@
 			<div class="ledao-container">
 				<div class="ledao-manual-filter-title">
 				    <h3>
-				      <b>空气净化器</b><em>说明书筛选</em>
+				      <b>说明书条件</b><em>筛选</em>
 				    </h3>
 				    <div class="st-ext">
 				      共&nbsp;<span>1225</span>个商品
@@ -78,18 +78,13 @@
 								<div class="selectNumberScreen">
 									<div id="selectList" class="screenBox screenBackground">
 										<dl class="listIndex">
-										<dt>品牌</dt>
+										<dt>类型</dt>
 											<dd>
 												<label><a href="javascript:;" attrval="不限">不限</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">海尔</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">长虹</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">海信</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">LG</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">三星</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
+												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">大家电</a></label>
+												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">生活电器</a> </label>
+												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">厨卫电器</a> </label>
+												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">个人护理</a></label>
 												<span class="more" style="float:right;"><em class="open"></em>更多</span>
 											</dd> 
 										</dl>

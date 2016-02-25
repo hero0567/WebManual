@@ -76,7 +76,7 @@ $(document).ready(function(){
 					<div class="nav-content">
 						<dl>
 							<dd>
-								<a rel="nofollow" class="favorite-offer" href="" title="收藏的货品"><i class="alibar-iconfont"></i> <span>收藏的说明书</span></a>
+								<a rel="nofollow" class="favorite-offer" href="" title="收藏的说明书"><i class="alibar-iconfont"></i> <span>收藏的说明书</span></a>
 							</dd>
 						</dl>
 					</div>
@@ -128,7 +128,7 @@ $(document).ready(function(){
 		<div class="menu">
 	    	<ul>
 	        	<li><a href="/index">首页</a></li>
-	            <li><a href="">说明书大全</a></li>
+	            <li><a href="/manuals">说明书大全</a></li>
 	            <li><a href="/yellowpage">品牌黄页</a></li>
 	            <li><a href="">常识分享</a></li>
 	        </ul>
