@@ -33,12 +33,15 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/lib/others/ui.tab.js"></script>
+    <!-- use angularjs instead of it
     <script src="js/lib/others/filter.js"></script>
+     -->
+    
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/controllers/TvController.js"></script>
 	<script src="js/service/UserService.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,7 +50,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="app" ng-controller="IndexController" class="">  
+<body ng-app="app" ng-controller="TvController" class="">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -80,28 +83,17 @@
 										<dl class="listIndex">
 										<dt>品牌</dt>
 											<dd>
-												<label><a href="javascript:;" attrval="不限">不限</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">海尔</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">长虹</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">海信</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">LG</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">三星</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
+												<label><a href="#" attrval="不限" ng-click="clearBrand()">不限</a></label>
+												<label ng-repeat="brand in brands"><input type="checkbox" ng-click="check(brand)" ng-checked="brand.checked" ><a href="#" ng-click="check(brand)" ng-bind="brand.name"></a></label>
 												<span class="more" style="float:right;"><em class="open"></em>更多</span>
 											</dd> 
 										</dl>
 										<dl class="listIndex">
 										<dt>上市时间</dt>
 										<dd>
-											<label><a href="javascript:;" attrval="不限">不限</a></label>
+											<label><a href="#" attrval="不限" ng-click="clearTimeline()">不限</a></label>
 											<form action="" method="get"> 
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2012年之前</a></label>
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2013</a> </label> 
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2014</a> </label>
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2015</a> </label>    
+												<label ng-repeat="time in timeline"><input type="checkbox" value="" ng-click="check(time)" ng-checked="time.checked" ><a href="#" ng-click="check(time)" ng-bind="time.name"></a></label>
 											</form> 
 										</dd></dl>
 									</div>
@@ -111,11 +103,14 @@
 					
 						<div class="hasBeenSelected clearfix">
 							<span id="time-num"><font>208</font>篇说明书</span>
-							<div class="eliminateCriteria">【清空全部】</div>
+							<div class="eliminateCriteria" ng-click="clearAll()">【清空全部】</div>
 							<dl>
 								<dt>已选条件：</dt>
 								<dd style="" class="clearDd">
-									<div class="clearList"></div>
+									<div class="clearList">
+										<div class="selectedInfor selectedShow" ng-repeat="brand in brands" ng-show="brand.checked"><span>品牌</span><label ng-bind="brand.name"></label><em></em></div>
+										<div class="selectedInfor selectedShow" ng-repeat="time in timeline" ng-show="time.checked"><span>上市时间</span><label ng-bind="time.name"></label><em></em></div>
+									</div>
 								</dd>
 							</dl>
 						</div>
