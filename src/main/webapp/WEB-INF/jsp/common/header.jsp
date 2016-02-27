@@ -3,6 +3,11 @@
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
 <script src="js/lib/jquery/jquery.js"></script>
+<script src="js/lib/angularjs_bootstrap/angular.js"></script>
+<script src="js/lib/angularjs_bootstrap/angular-animate.js"></script>
+<script src="js/lib/angularjs_bootstrap/ui-bootstrap-tpls-1.2.0.js"></script>  
+
+<script src="js/lib/angular/angular-cookies.min.js"></script>
 <script src="js/lib/others/jquery.SuperSlide.2.1.1.js"></script>
 
 <script type="text/javascript">
@@ -168,57 +173,7 @@ $(document).ready(function(){
 	        <!--左侧栏目结束-->
 	        <!--右侧内容开始-->
 	        <div class="ledao_cat_content fr">
-	            <div class="cat_pannel clearfix" style="display: none;">
-	                <div class="fl cat_detail grid_col_2">
-	                    <h3 class="cat_title">品类搜索热度排行</h3>
-	                    <ul class="cat_label_list clearfix">
-	                        <li><a href="/airpurifier">空气净化器</a></li>
-	                        <li><a href="/waterpurifier">净水器</a></li>
-	                        <li><a href="/tv">电视机</a></li>
-	                        <li><a href="/aircondition">空调</a></li>
-	                    </ul>
-	                </div>
-	                <div class="fl cat_banner">
-	                    <h3 class="cat_title">品牌搜索热度排行</h3>
-	                    <ul class="brand_list clearfix">
-	                        <li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
-								</a>
-							</li>
-	                        <li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/midea.jpg" src="../../img/brands/midea.jpg">
-								</a>
-							</li>
-							<li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/philips.jpg" src="../../img/brands/philips.jpg">
-								</a>
-							</li>
-							<li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/samsung.jpg" src="../../img/brands/samsung.jpg">
-								</a>
-							</li>
-							<li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/tcl.jpg" src="../../img/brands/tcl.jpg">
-								</a>
-							</li>
-							<li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/sharp.jpg" src="../../img/brands/sharp.jpg">
-								</a>
-							</li>
-							<li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
-									<img data-original="../../img/brands/skyworth.jpg" src="../../img/brands/skyworth.jpg">
-								</a>
-							</li>
-	                    </ul>
-	                </div>
-	            </div>
+	             
 	
 	        	<div class="cat_pannel clearfix" style="display: none;">
 	            	<div class="fl cat_detail grid_col_2">
@@ -280,7 +235,7 @@ $(document).ready(function(){
 	                        <li><a href="/airpurifier">空气净化器</a></li>
 	                        <li><a href="/waterpurifier">净水器</a></li>
 	                        <li><a href="/waterdispenser">饮水机</a></li>
-	                        <li><a href="/humidifier">加湿器机</a></li>
+	                        <li><a href="/humidifier">加湿器</a></li>
 	                        <li><a href="/electricheater">电暖器</a></li>
 	                        <li><a href="/garmentsteamer">挂烫机</a></li>
 	                    </ul>
