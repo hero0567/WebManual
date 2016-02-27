@@ -1399,3 +1399,15 @@ a .wmanualbtn:hover {
 	border-color: #ff7300
 }
 
+
+/*
+* Page - about us
+*/
+#page-aboutUs .about-us ol{
+	padding-left: 40px;
+}
+#page-declare .declare ol{
+	padding-left:40px;
+}
+
+
