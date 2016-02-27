@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html class=" juzi js flexbox no-touch opacity csstransforms3d svg" lang="">
+<html >
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,6 @@
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
 	<script src="js/service/UserService.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
