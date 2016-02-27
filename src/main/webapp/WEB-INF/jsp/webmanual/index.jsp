@@ -33,6 +33,9 @@
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
+	<script src="js/lib/angularjs_bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="js/lib/angularjs_bootstrap/angular-animate.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/controllers/IndexController.js"></script>
 	<script src="js/service/UserService.js"></script>
@@ -43,7 +46,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="app" ng-controller="IndexController" class="">  
+<body class="">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -53,11 +56,12 @@
 	
 		<!-- Header -->
 		<%@ include file="../common/header.jsp" %>
+		<%@ include file="../common/headermenu.jsp" %>
 		
 		<main>
 			<!-- Category and Brands -->
 			<div class="ledao-banners">
-				<div class="ledao-container">
+				<div class="ledao-container">		
 					<%@ include file="../common/manualList.jsp" %>
 					<%@ include file="../common/servicepromise.jsp" %>
 					<%@ include file="../common/manualIndustry.jsp" %>

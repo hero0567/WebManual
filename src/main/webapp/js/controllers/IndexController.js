@@ -5,29 +5,12 @@
  * @constructor
  */
 
-app.controller("IndexController", function($scope, $http, $location, $window, userService) {
-		
-	$scope.menu = {};    
-    
-    userService.initUser();
-	$scope.user = userService.getUser();
-    
-    $scope.fetchMenu = function() {
-     	 $http.get('/menu/header').success(function(menu){
-              $scope.menu = menu;
-              $("#ledao_nav").slide({ 
-          		titCell:".cate_nav li",
-          		mainCell:".ledao_cat_content",
-          		autoPlay:false,
-          		interTime:7400,
-          		delayTime:100 
-          	});
-        });
-  	}  
-    
-    $scope.changeMenu = function(type, subtype, count) {
-    	window.location = "/appliance?type="+type +"&subtype="+subtype +"&count="+count;
-  	}  
-    
-    $scope.fetchMenu();
-});
+angular.module('myApp',['ui.bootstrap']).controller('tabDemo',function($scope,$window){
+	$scope.tabs = [
+		{title : 'jquery' ,content : '我是jquery内容'},
+		{title : 'angular' ,content : '我是angular内容'}
+	];
+	$scope.alertMe = function(){
+		$window.alert('html5jq-FE学习平台欢迎您!')
+	}
+})

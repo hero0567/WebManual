@@ -32,6 +32,6 @@
 // 
 //var App = angular.module('UploadModule', ['UploadModule.directives']);
 //var App = angular.module('SettingModule', []);
-var app = angular.module('app', ['ngCookies', 'ngAnimate', 'ui.bootstrap']);
+var app = angular.module('app', ['ngCookies']);
 
 

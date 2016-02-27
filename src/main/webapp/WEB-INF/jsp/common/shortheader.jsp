@@ -6,7 +6,7 @@
 <div id="ledaobar" class="alibar2013 mod-alibar fd-clr" style="height: 29px;">
 	<div class="ledao-container fd-clr">
 		<div class="mobile"> 
-			<a href="http://92shuomingshu.com"><i class="fa fa-mobile ledao-mobile"></i> <span>手机乐道</span></a>
+			<a href="/index"><i class="fa fa-mobile ledao-mobile"></i> <span>手机乐道</span></a>
 		</div>
 		<div class="account-sign-status">
 			<ul>

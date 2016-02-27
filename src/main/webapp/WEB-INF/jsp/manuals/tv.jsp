@@ -32,8 +32,9 @@
     <script src="js/lib/others/jquery-1.5.1.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/lib/others/ui.tab.js"></script>
+    
     <!-- use angularjs instead of it
+    <script src="js/lib/others/ui.tab.js"></script>
     <script src="js/lib/others/filter.js"></script>
      -->
     

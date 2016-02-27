@@ -1,4 +1,4 @@
-/*说明书分类－头*/
+/*璇存槑涔﹀垎绫伙紞澶�*/
 
 .manual-category_head {
 	position: relative;
@@ -186,14 +186,14 @@ body, button, input, select, textarea {
 
 .sublist li span {
 	margin: 0 5px 0 0;
-	font-family: "宋体";
+	font-family: "瀹嬩綋";
 	font-size: 12px;
 	font-weight: 400;
 	color: #ddd;
 }
 
 .references {
-	width: 298px;
+	width: 290px;
 	display: inline-block;
 	height: 100%;
 	border-left: 1px solid #e5e5e5;
