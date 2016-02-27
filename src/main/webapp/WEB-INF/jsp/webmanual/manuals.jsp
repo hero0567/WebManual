@@ -19,7 +19,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/manuals.css" />
+	<link rel="stylesheet" type="text/css" href="css/pages/manuals.css" />
 
 	<script src="js/lib/others/modernizr.js"></script>
 	<script>
@@ -32,13 +32,16 @@
     <script src="js/lib/others/jquery-1.5.1.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/lib/others/ui.tab.js"></script>
-    <script src="js/lib/others/filter.js"></script>
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/lib/angular/angular.js"></script>
+     
+    <script src="js/lib/angularjs_bootstrap/angular.js"></script>
+    <script src="js/lib/angularjs_bootstrap/angular-animate.js"></script>
+    <script src="js/lib/angularjs_bootstrap/ui-bootstrap-tpls-1.2.0.js"></script>  
+    
     <script src="js/lib/angular/angular-cookies.min.js"></script>
+    
     <script src="js/app.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/controllers/ManualsController.js"></script>
 	<script src="js/service/UserService.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,7 +50,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="app" ng-controller="IndexController" class="">  
+<body id="manuals" ng-app="app" ng-controller="ManualsController">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -56,186 +59,86 @@
     <![endif]--> 
 	
 		<!-- Header -->
-		<%@ include file="../common/header.jsp" %>
-		
-		<main>
-			<!-- Category and Brands -->
+		<%@ include file="../common/header.jsp" %>	
+		<main>	  
 			<div class="ledao-container">
-				<div class="ledao-manual-filter-title">
-				    <h3>
-				      <b>说明书条件</b><em>筛选</em>
-				    </h3>
-				    <div class="st-ext">
-				      共&nbsp;<span>1225</span>个商品
-				    </div>
-				</div>
-				
-				<div class="ledao-filter">
-					<div class="list-screen">
-						<div style="padding:10px 30px 10px 10px;">
-							
-							<div class="screen-term">
-								<div class="selectNumberScreen">
-									<div id="selectList" class="screenBox screenBackground">
-										<dl class="listIndex">
-										<dt>类型</dt>
-											<dd>
-												<label><a href="javascript:;" attrval="不限">不限</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">大家电</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">生活电器</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">厨卫电器</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">个人护理</a></label>
-												<span class="more" style="float:right;"><em class="open"></em>更多</span>
-											</dd> 
-										</dl>
-										<dl class="listIndex">
-										<dt>上市时间</dt>
-										<dd>
-											<label><a href="javascript:;" attrval="不限">不限</a></label>
-											<form action="" method="get"> 
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2012年之前</a></label>
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2013</a> </label> 
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2014</a> </label>
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2015</a> </label>    
-											</form> 
-										</dd></dl>
-									</div>
-								</div>   
-							</div>
+				<!-- 类别 -->
+				<section id="ledao-manualtypes">
+					<div class="row">
+						<h3>品类细分</h3>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-12 splide">
+							<h4>大家电</h4>
+							<ul>
+								<li><a href="/tv">电视</a></li>
+		                        <li><a href="/fridge">冰箱</a></li>
+		                        <li><a href="/aircondition">空调</a></li>
+		                        <li><a href="/washer">洗衣机</a></li>
+		                        <li><a href="/waterheating">热水器</a></li>
+							</ul>
 						</div>
-					
-						<div class="hasBeenSelected clearfix">
-							<span id="time-num"><font>208</font>篇说明书</span>
-							<div class="eliminateCriteria">【清空全部】</div>
-							<dl>
-								<dt>已选条件：</dt>
-								<dd style="" class="clearDd">
-									<div class="clearList"></div>
-								</dd>
-							</dl>
+						<div class="col-lg-3 col-md-3 col-sm-12 splide">
+							<h4>生活家电</h4>
+							<ul>
+								<li><a href="/airpurifier">空气净化器</a></li>
+		                        <li><a href="/waterpurifier">净水器</a></li>
+		                        <li><a href="/waterdispenser">饮水机</a></li>
+		                        <li><a href="/humidifier">加湿器</a></li>
+		                        <li><a href="/electricheater">电暖器</a></li>
+		                        <li><a href="/garmentsteamer">挂烫机</a></li>
+							</ul>
 						</div>
-				
-						<div class="screen-top" >
-							<span>产品型号</span><input type="text" class="product-name">
-							<a href="" id="submit-btn">搜索</a>
+						<div class="col-lg-3 col-md-3 col-sm-12 splide">
+							<h4>厨卫家电</h4>
+							<ul>
+								<li><a href="/electriccooker">电饭煲</a></li>
+		                        <li><a href="/microwaveoven">微波炉</a></li>
+		                        <li><a href="/beanjuicemaker">豆浆机</a></li>
+		                        <li><a href="/juicermaker">榨汁机</a></li>
+		                        <li><a href="/electrickettle">电水壶</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 ">
+							<h4>个人护理</h4>
+							<ul>
+								<li><a href="/razor">剃须刀</a></li>
+		                        <li><a href="/shaver">剃毛器</a></li>
+		                        <li><a href="/hairdryer">电吹风</a></li>
+		                        <li><a href="/haircut">理发器</a></li>
+		                        <li><a href="/electrictoothbrush">电动牙刷</a></li>
+							</ul>
 						</div>
 					</div>
+				</section>
 				
-				</div>
-				
-				<!-- manuals -->
-				<div class="tabcon" id="topcon">
-					<div class="subbox">
-						<div class="sublist">
-						        <ul class="sublist-th">
-						            <li class="tabth clearfix">
-						                <span style="width: 20%">名称</span>
-						                <span style="width: 10%">品牌</span>
-						                <span style="width: 15%">型号</span>
-						                <span style="width: 10%">类型</span>
-						                <span style="width: 10%">详细信息</span>
-						                <span style="width: 10%">在线阅读</span>
-						                <span style="width: 10%">收藏</span>
-						                <span style="width: 9%">下载</span>
-						            </li>
-						        </ul>
-					            <ul class="tabUl">
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					            </ul>
-						</div> 
-						
-					</div> 
-					<!-- block 分页区 -->
-					<div class="custom-pagination">
-						<a href="#" ng-hide="page.pre" ng-click="goFirstPage()">首页</a> 
-						<a href="#" ng-hide="page.pre" ng-click="goPrePage()">上一页</a> 
-						<a href="#" ng-class="{on:  pageindex + page.ppn * page.ps == page.pn + 1}" ng-repeat="pageindex in page.psinx" 
-							ng-click="goPage(pageindex + page.ppn * page.ps)" ng-show="page.total > (pageindex - 1 + page.ppn * page.ps) * page.size && page.total > page.size">{{pageindex + page.ppn * page.ps}}</a> 
-						<a href="#" ng-show="page.next" ng-click="goNextPage()">下一页</a> 
-						<a href="#" ng-show="page.next" ng-click="goLastPage()">尾页 </a>
+				<!-- 品牌 -->
+				<section id="ledao-brands">
+					<div class="row">
+						<h3>品牌细分</h3>
 					</div>
-				</div>
-				
+					<div class="row">
+						<div class="brands-nation col-lg-6 col-md-6 col-sm-12" ng-repeat="tab in tabs" >
+							<h4 ng-bind="tab.title"></h4>
+							<ul class="brands">
+								<li ng-repeat="brand in tab.content"><a href="{{brand.manualUrl}}" ><img src="{{brand.logo}}"/></a></li>
+							</ul>
+						</div>
+						 
+						<!-- 注视掉的部分为可正常工作的Angularjs 和 bootstrap的tab -->
+						<!--  
+						 <uib-tabset active="active">
+						    <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+						      <ul class="brands">
+						      	<li ng-repeat="brand in tab.content"><a href="{{brand.manualUrl}}" ><img src="{{brand.logo}}"/></a></li>
+						      </ul>
+						    </uib-tab>
+						     
+						  </uib-tabset> -->
+					</div>			
+				</section>
 			</div>
+			  
 	 	</main> 
 	 
 		<!-- Footer -->
