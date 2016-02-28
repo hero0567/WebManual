@@ -35,24 +35,17 @@ $(document).ready(function(){
 	<div class="ledao-container"> 
 		<div class="menu">
 	    	<ul>
-	        	<li><a href="/index">首页</a></li>
-	            <li><a href="/manuals">说明书大全</a></li>
+	        	<li><a href="/index">说明书大全</a></li>
 	            <li><a href="/yellowpage">品牌黄页</a></li>
-	            <li><a href="">常识分享</a></li>
+	            <!-- <li><a href="">常识分享</a></li> -->
 	        </ul>
 	    </div>
 		
 	    <div id="ledao_nav">
 	    	<!--左侧栏目开始-->
 	    	<div class="ledao_cat_nav fl">
-	        	<div class="ledao_mod_title"><i class="fa fa-th-list"></i> <span>说明书分类</span></div>
+	        	<div class="ledao_mod_title"><i class="fa fa-th-list"></i> <span>说明书分类筛选</span></div>
 	            <ul class="cate_nav">
-	            	<li class="">
-	                    <div class="cat_6_nav">
-	                        <s class="cat-nav-icon fp-iconfont">R</s>
-	                        <a href="">热门搜索</a>
-	                    </div>
-	                </li>
 	            	<li class="">
 	                	<div class="cat_1_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">D</s>
@@ -62,13 +55,13 @@ $(document).ready(function(){
 	            	<li class="">
 	                	<div class="cat_2_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">S</s>
-	                        <a href="">生活家电</a> 
+	                        <a href="">生活电器</a> 
 	                    </div>
 	                </li>
 	            	<li class="">
 	                	<div class="cat_3_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">C</s>
-	                        <a href="">厨卫家电</a> 
+	                        <a href="">厨卫电器</a> 
 	                    </div>
 	                </li>
 	            	<li class="">
@@ -88,7 +81,7 @@ $(document).ready(function(){
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">大家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
-	                    	<li><a href="/tv">电视</a></li>
+	                    	<li><a href="/tv">电视(1221)</a></li>
 	                        <li><a href="/fridge">冰箱</a></li>
 	                        <li><a href="/aircondition">空调</a></li>
 	                        <li><a href="/washer">洗衣机</a></li>
@@ -302,30 +295,7 @@ $(document).ready(function(){
 </div>
 
 
-<!-- 保障说明 
-<div class="ledao-container">
-		<div id="ledao-declare">
-			
-	        <dl class="step-tips">
-	            <dt><i class="fa fa-send"></i> <span>如何使用？</span></dt>
-	            <dd>
-	                <em class="num">1.</em>
-	                <span class="txt">通过分类菜单拦或搜索框查找说明书</span>
-	                <i class="arr"></i>
-	            </dd>
-	            <dd>
-	                <em class="num">2.</em>
-	                <span class="txt">点击找到的说明书，进入说明书详细页</span>
-	                <i class="arr"></i>
-	            </dd>
-	            <dd>
-	                <em class="num">3.</em>
-	                <span class="txt">选择在线阅读或下载到本地阅读</span>
-	            </dd>
-	             
-	        </dl>
-	    </div>   
-</div>-->
+
 <script type="text/javascript">
 	$("#ledao_nav").slide({ 
 		titCell:".cate_nav li",

@@ -17,7 +17,9 @@
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
+	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
 	
 	<script src="js/lib/others/modernizr.js"></script>
 	<script>
@@ -33,12 +35,10 @@
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
-	<script src="js/lib/angularjs_bootstrap/ui-bootstrap-tpls.js"></script>
-	<script src="js/lib/angularjs_bootstrap/angular-animate.js"></script>
     <script src="js/app.js"></script>
 	<script src="js/controllers/IndexController.js"></script>
 	<script src="js/service/UserService.js"></script>
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -46,7 +46,7 @@
     <![endif]-->
 </head>
 
-<body class="">  
+<body ng-app="app">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -54,22 +54,79 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> 
 	
-		<!-- Header -->
-		<%@ include file="../common/header.jsp" %>
-		<%@ include file="../common/headermenu.jsp" %>
-		
-		<main>
-			<!-- Category and Brands -->
-			<div class="ledao-banners">
-				<div class="ledao-container">		
-					<%@ include file="../common/manualList.jsp" %>
-					<%@ include file="../common/servicepromise.jsp" %>
-					<%@ include file="../common/manualIndustry.jsp" %>
+	<!-- Header -->
+	<%@ include file="../common/header.jsp" %>
+	
+	<main ng-controller="IndexController">
+		<!-- Category and Brands -->
+		<div class="ledao-banners">
+			<div class="container">		
+				<div class="row">
+					<section id="ledao-manualtypes" class="col-lg-12 col-md-12 col-sm-12" >
+						<div class="section_head" >
+						    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>品类细分</span></h3> 
+						     
+							<div class="section-des f-r">
+							  <span>收录品类：123</span>  <!-- 换成动态的 -->
+							</div>  
+						</div>
+						<div class="section_body row">
+							<div class="col-lg-3 col-md-3 col-sm-12 splide" ng-repeat="type in productTypes">
+								<div class="body-title">
+									<h4 ng-bind="type.name" class="f-l"> </h4><div class="f-l section-des"><span ng-bind="type.subTypesAmount"></span>个品类</div>
+								</div>
+								
+								<ul>
+									<li ng-repeat="subType in type.subTypes">
+										<a href="{{subType.url}}" title="{{subType.subname}}" alert="{{subType.subname}}"><span ng-bind="subType.subname"></span> （<span title="{{'品类共计：'+ subType.amount}}" ng-bind="subType.amount"></span>）</a>
+									</li>
+								</ul>
+							</div>
+						</div>  
+					</section>
+					
+					<section id="ledao-manualtypes" class="col-lg-12 col-md-12 col-sm-12" >
+						<div class="section_head" >
+						    <h3 class="section-title f-l"><i class="fa fa-list"></i> <span>品牌细分</span></h3> 
+						     
+							<div class="section-des f-r">
+							  <span>收录品牌：123</span>  <!-- 换成动态的 -->
+							</div>  
+						</div>
+						<div class="section_body row">
+							<div class="col-lg-6 col-md-6 col-sm-12 splide" ng-repeat="brand in brands">
+								<div class="body-title">
+									<h4 ng-bind="brand.name" class="f-l"> </h4><div class="f-l section-des"><span ng-bind="brand.subBrandsAmount"></span>个品牌</div>
+								</div>
+								<ul>
+									<li ng-repeat="subBrand in brand.subBrands">
+										<table class="brand">
+											<tr>
+												<td>
+													<a href="{{subBrand.url}}" title="{{subBrand.brandname}}" alert="{{subBrand.brandname}}">
+														<img src="{{subBrand.logo}}"/>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="{{subBrand.url}}" title="{{subBrand.brandname}}" alert="{{subBrand.brandname}}">
+														<span ng-bind="subBrand.brandname"></span> （<span title="{{'品牌共计：'+ subBrand.amount}}" ng-bind="subBrand.amount"></span>）
+													</a>
+												</td>
+											</tr>
+										</table>
+									</li>
+								</ul>
+							</div>
+						</div>  
+					</section>
 				</div>
-			</div>				
-	 	</main> 
-	 
-		<!-- Footer -->
-		<%@ include file="../common/footer.jsp" %>
+			</div>
+		</div>				
+ 	</main> 
+ 
+	<!-- Footer -->
+	<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

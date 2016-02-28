@@ -54,7 +54,7 @@
     <![endif]--> 
 	
 		<!-- Header -->
-		<%@ include file="../common/secheader.jsp" %>
+		<%@ include file="../common/header.jsp" %>
 		
 		<main>
 			<!-- Category and Brands -->
