@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>空调说明书 ｜ 乐道说明书</title>
+	<title>电视机说明书 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -24,6 +24,7 @@
 	<script src="js/lib/others/modernizr.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
+	  window.subtype = '空调';
 	</script>  
 	 
     <!-- Bootstrap core JavaScript
@@ -32,14 +33,19 @@
     <script src="js/lib/others/jquery-1.5.1.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    
+    <!-- use angularjs instead of it
     <script src="js/lib/others/ui.tab.js"></script>
     <script src="js/lib/others/filter.js"></script>
+     -->
+    
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
-	<script src="js/controllers/IndexController.js"></script>
+	<script src="js/controllers/TvController.js"></script>
 	<script src="js/service/UserService.js"></script>
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -47,7 +53,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="app" ng-controller="IndexController" class="">  
+<body ng-app="app" ng-controller="TvController" class="">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -63,10 +69,10 @@
 			<div class="ledao-container">
 				<div class="ledao-manual-filter-title">
 				    <h3>
-				      <b>空调</b><em>说明书筛选</em>
+				      <b>电视</b><em>说明书筛选</em>
 				    </h3>
 				    <div class="st-ext">
-				      共&nbsp;<span>1225</span>个商品
+				      共&nbsp;<span ng-bind="total"></span>个商品
 				    </div>
 				</div>
 				
@@ -80,28 +86,17 @@
 										<dl class="listIndex">
 										<dt>品牌</dt>
 											<dd>
-												<label><a href="javascript:;" attrval="不限">不限</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">海尔</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">长虹</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">海信</a> </label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">LG</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">三星</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
-												<label><input name="checkbox2" type="checkbox" value=""><a href="javascript:;">TCL</a></label>
+												<label><a href="#" attrval="不限" ng-click="clearBrand()">不限</a></label>
+												<label ng-repeat="brand in brands"><input type="checkbox" ng-click="check(brand)" ng-checked="brand.checked" ><a href="#" ng-click="check(brand)" ng-bind="brand.name"></a></label>
 												<span class="more" style="float:right;"><em class="open"></em>更多</span>
 											</dd> 
 										</dl>
 										<dl class="listIndex">
 										<dt>上市时间</dt>
 										<dd>
-											<label><a href="javascript:;" attrval="不限">不限</a></label>
+											<label><a href="#" attrval="不限" ng-click="clearTimeline()">不限</a></label>
 											<form action="" method="get"> 
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2012年之前</a></label>
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2013</a> </label> 
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2014</a> </label>
-												<label><input name="checkbox3" type="checkbox" value=""><a href="javascript:;">2015</a> </label>    
+												<label ng-repeat="time in timeline"><input type="checkbox" value="" ng-click="check(time)" ng-checked="time.checked" ><a href="#" ng-click="check(time)" ng-bind="time.name"></a></label>
 											</form> 
 										</dd></dl>
 									</div>
@@ -110,19 +105,22 @@
 						</div>
 					
 						<div class="hasBeenSelected clearfix">
-							<span id="time-num"><font>208</font>篇说明书</span>
-							<div class="eliminateCriteria">【清空全部】</div>
+							<span id="time-num"><font ng-bind="page.total"></font>篇说明书</span>
+							<div class="eliminateCriteria" ng-click="clearAll()">【清空全部】</div>
 							<dl>
 								<dt>已选条件：</dt>
 								<dd style="" class="clearDd">
-									<div class="clearList"></div>
+									<div class="clearList">
+										<div class="selectedInfor selectedShow" ng-repeat="brand in brands" ng-show="brand.checked"><span>品牌</span><label ng-bind="brand.name"></label><em></em></div>
+										<div class="selectedInfor selectedShow" ng-repeat="time in timeline" ng-show="time.checked"><span>上市时间</span><label ng-bind="time.name"></label><em></em></div>
+									</div>
 								</dd>
 							</dl>
 						</div>
 				
 						<div class="screen-top" >
-							<span>产品型号</span><input type="text" class="product-name">
-							<a href="" id="submit-btn">搜索</a>
+							<span>产品型号</span><input type="text" ng-model="version" class="product-name">
+							<a href="" id="submit-btn" ng-click="search()">搜索</a>
 						</div>
 					</div>
 				
@@ -145,82 +143,12 @@
 						            </li>
 						        </ul>
 					            <ul class="tabUl">
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
+					                <li class="tabtr clearfix" ng-repeat="manual in manuals">
+					                    <span style="width: 20%" ng-bind="manual.name | limitTo: 18"></span>
+						                <span style="width: 10%" ng-bind="manual.brand  | limitTo: 8"></span>
+						                <span style="width: 15%" ng-bind="manual.version | limitTo: 15"></span>
+						                <span style="width: 10%" ng-bind="manual.subType"></span>
+						                <span style="width: 10%"><a ng-href="/details?id={{manual.id}}">详细信息</a></span>
 						                <span style="width: 10%"><a href="">在线阅读</a></span>
 						                <span style="width: 10%"><a href="">收藏</a></span>
 						                <span style="width: 9%"><a href="">下载</a></span>
