@@ -62,7 +62,7 @@
 		<div class="ledao-banners">
 			<div class="container">		
 				<div class="row">
-					<section id="ledao-manualtypes" class="col-lg-12 col-md-12 col-sm-12" >
+					<section id="ledao-manualtypes" class="col-lg-12 col-md-12 col-sm-12 splide" >
 						<div class="section_head" >
 						    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>品类细分</span></h3> 
 						     
@@ -85,7 +85,7 @@
 						</div>  
 					</section>
 					
-					<section id="ledao-manualtypes" class="col-lg-12 col-md-12 col-sm-12" >
+					<section id="ledao-manualbrands" class="col-lg-12 col-md-12 col-sm-12" >
 						<div class="section_head" >
 						    <h3 class="section-title f-l"><i class="fa fa-list"></i> <span>品牌细分</span></h3> 
 						     
