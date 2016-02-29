@@ -5,6 +5,7 @@ import java.util.List;
 
 public class HomeMenuBean {
 	private String type;
+	private int typecount;
 	private int typeseq;
 	private List<SubTypeBean> subtypes = new ArrayList<SubTypeBean>();
 
@@ -42,8 +43,16 @@ public class HomeMenuBean {
 		this.subtypes = subtypes;
 	}
 
+	public int getTypecount() {
+		return subtypes.size();
+	}
+
+	public void setTypecount(int typecount) {
+		this.typecount = typecount;
+	}
+
 	public boolean addE(SubTypeBean stb) {
-		if (type != null && type != null && type.equals(stb.getType())){
+		if (type != null && type.equals(stb.getType())){
 			subtypes.add(stb);
 			return true;
 		}

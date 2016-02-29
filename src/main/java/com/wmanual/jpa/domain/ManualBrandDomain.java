@@ -22,8 +22,10 @@ public class ManualBrandDomain {
 	private String tel;
 	private String supportLink;
 	private String contactLink;
+	private String origin;
 	private char fletter;
 	private int seq;
+	private int count;
 	public Long getId() {
 		return id;
 	}
@@ -77,5 +79,17 @@ public class ManualBrandDomain {
 	}
 	public void setSeq(int seq) {
 		this.seq = seq;
+	}
+	public String getOrigin() {
+		return origin;
+	}
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
 	}
 }
