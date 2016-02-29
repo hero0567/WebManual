@@ -5,12 +5,17 @@ main {
 	margin-bottom: 20px;
 }
 
-#main_content {
+#all-brands {
+	background:#fff;
 	overflow: hidden;
+	padding:10px
 }
 
-#main_content ol {
+#all-brands ol {
 	list-type: none;
+}
+#all-brands .section_body{
+	margin-top:20px;
 }
 #ledaobrands-nav{
 	display: inline-block;
@@ -109,7 +114,7 @@ main {
 	color: #336699;
 }
 .ln-letters{
-	margin-bottom:50px;
+	margin-bottom:10px;
 }
 #ledaobrands-nav-nav .ln-letters a {
     border: none;
@@ -151,3 +156,28 @@ main {
 	display: inline-block;
     width: 100%;
 }
+#brands-list{
+	padding:10px;
+}
+table.brand tr td {
+    vertical-align: middle;
+    text-align: left;
+}
+#brands-list li{
+	width:50%;
+	float:left;
+}
+#brands-list li img{
+	width:102px;
+	height:36;
+}
+
+.listNav, .ln-letters {overflow:hidden;}
+.listNavHide {display:none;}
+.listNavShow {display:list-item;}
+.letterCountShow {display:block;}
+.ln-letters a {font-size:0.9em;display:block;float:left;padding:2px 6px;border:1px solid silver;border-right:none;text-decoration:none;}
+.ln-letters .ln-last {border-right:1px solid silver;}
+.ln-letters a:hover, .ln-letters .ln-selected {background-color:#eaeaea;}
+.ln-letters .ln-disabled {color:#ccc;}
+.ln-letter-count {position:absolute;top:0;left:0;width:20px;text-align:center;font-size:0.8em;line-height:1.35;color:#336699;}

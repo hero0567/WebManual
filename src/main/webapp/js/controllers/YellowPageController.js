@@ -6,18 +6,20 @@
  */
 
 app.controller("YellowPageController", function($scope, $http, $location, $window) {
-    /*
+     
     $scope.brands = {};
     
     $scope.send = function(){	
 		$http.get('/b').success(function(results) {  
 			$scope.brands = results;
-	        $(".listNav").remove();
-	        $scope.loadNav();
-        });    
+        }); 
+		setTimeout(function(){$('#brands-list').listnav({
+			initLetter: 'all'
+		});},2000)
+		
     }; 
     
-    $scope.send();*/
+    $scope.send();
 });
 /*
 app.directive('listnav', function($timeout){

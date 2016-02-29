@@ -17,6 +17,7 @@
 <meta name="Keywords" content=" " />
 <meta name="Description" content=" " />
 
+<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />	
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/site.css" />
 <link rel="stylesheet" type="text/css" href="css/pages/yellowpage.css" /> 
@@ -35,19 +36,9 @@
 <script src="js/lib/angular/angular-cookies.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers/YellowPageController.js"></script>
+
 <script src="js/lib/others/jquery-listnav.js"></script>
-<script>
-$(function(){
-	$('#demoThree').listnav({
-		initLetter: 'all',
-        includeNums: false,
-	});
-	 
-	$('.demo a').click(function(e) {
-		e.preventDefault();
-	});
-});
-</script>
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -55,7 +46,7 @@ $(function(){
     <![endif]-->
 </head>
 
-<body ng-app="app" ng-controller="YellowPageController" class="">
+<body ng-app="app" ng-controller="YellowPageController">
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div>
@@ -67,33 +58,48 @@ $(function(){
 	<%@ include file="../common/header.jsp" %>
 		
 	<main> 
-		<div calls="container">
+		<div class="container">
 			<div class="row">
-				<section id="main_content" class="inner">
-				    <div id="tabpage_3" class="tabContainer">
-				      <ol id="demoThree" class="indented demo">
-				        <li><a href="#">411 Services</a></li>
-				        <li><a href="#">Audio Visual Consultants</a></li>
-				        <li><a href="#">Audio Visual Production Service</a></li>
-				        <li><a href="#">Automobile - Renting</a></li>
-				        <li><a href="#">Automobile - Repair &amp; Service</a></li>
-				        <li><a href="#">Cabinet Makers</a></li>
-				        <li><a href="#">Cabinets</a></li>
-				        <li><a href="#">Cafeterias</a></li>
-				        <li><a href="#">Earthquake Products &amp; Services</a></li>
-				        <li><a href="#">E-Commerce</a></li>
-				        <li><a href="#">Education Centers</a></li>
-				        <li><a href="#">Educational Consultants</a></li>
-				        <li><a href="#">Educational Service - Business</a></li>
-				        <li><a href="#">Electric Contractors</a></li>
-				        <li><a href="#">Electric Transmission Equipment (Manufacturers)</a></li>
-				        <li><a href="#">Electrolysis</a></li>
-				        <li><a href="#">Erosion Control</a></li>
-				        <li><a href="#">Gas - Liquefied Petroleum - Bottled &amp; Bulk (Wholesale)</a></li>
-				        <li><a href="#">Guide Service</a></li>
-				      </ol>
-				    </div>
-			    </section>
+				<section id="all-brands" >
+					<div class="section_head" >
+					    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>品牌筛选</span></h3> 
+					     
+						<div class="section-des f-r">
+						  <span>收录品牌：1223</span> <!-- 需要换成动态的 -->
+						</div>  
+					</div>
+					<div class="section_body">
+						<div class="inner">
+						      <ul id="brands-list" class="indented">
+					        	<li ng-repeat="subBrand in brands">
+					        		<a href="#" class="d-n" ng-bind="subBrand.name"></a>
+									<table class="brand">
+										<tr>
+											<td rowspan="2">
+												<a href="{{subBrand.url}}" title="{{subBrand.name}}" >
+													<img src="{{subBrand.img}}" alt="{{subBrand.name}}"/>
+												</a>
+											</td>
+											<td>
+												<a href="tel:{{subBrand.tel}}" title="{{'官方客服电话：'+subBrand.tel}}" >
+													官方客服电话：<span ng-bind="subBrand.tel"></span>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="{{subBrand.supportLink}}" title="{{'官方售后网站：' + subBrand.name}}">
+													官方售后网站：<span ng-bind="subBrand.supportLink"></span>
+												</a>
+											</td>
+											 
+										</tr>
+									</table>
+								</li>
+						      </ul>
+					    </div>
+					</div>
+				</section>
 			</div>
 		</div>
 	
