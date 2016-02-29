@@ -17,6 +17,7 @@ public class ManualTypeDomain {
 	@Column(unique = true)
 	private String name;
 	private int sequence;
+	private String url;
 	
 	public Long getId() {
 		return id;
@@ -35,5 +36,11 @@ public class ManualTypeDomain {
 	}
 	public void setSequence(int sequence) {
 		this.sequence = sequence;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
 	}	
 }
