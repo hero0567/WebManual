@@ -59,6 +59,3 @@
 		</div>
 	</div>
 </div>
-
-     
-<script src="js/controllers/HeaderController.js"></script>

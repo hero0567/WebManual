@@ -24,7 +24,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +31,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wmanual.beans.CountBean;
+import com.wmanual.beans.ManualPage;
 import com.wmanual.jdbc.service.ManualJDBCService;
 import com.wmanual.jpa.domain.ManualDomain;
 import com.wmanual.jpa.service.ManualRepository;
@@ -49,96 +48,169 @@ public class ManualSearchController {
 	@Autowired
 	private ManualJDBCService jdbcService;
 
-//	@RequestMapping("")
-//	public Iterable<ManualDomain> search(@RequestParam(value = "key", required = false) String key,
-//			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-//			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
-//		Pageable page = new PageRequest(pn, size);
-//		return hbRepository.findByNameOrBrandLikePage(key, page);
-//	}
-//	
-//	@RequestMapping("")
-//	public List<ManualDomain> searchGroupByBrand(@RequestParam(value = "key", defaultValue="") String key,
-//			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
-//			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
-//			@RequestParam(value = "ct", required = false, defaultValue="") String time,
-//			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-//			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
-//		
-//		Pageable page = new PageRequest(pn, size);
-//		long btime = 0;
-//		long atime = 3000;
-//		
-//		time = time.endsWith("全部") ? time = "" : time;
-//		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
-//		brand = brand.endsWith("全部") ? brand = "%%" : brand;
-//		
-//		if (time.length() > 4 ){
-//			time = time.substring(0, 4);
-//		}else if (time.length() == 4){
-//			atime = Long.valueOf(time);
-//			btime = Long.valueOf(time);
-//		}
-//		
-//		return hbRepository.findByNameSubtypeBrandTime(key, subtype, brand, btime, atime, page);
-//	}
-//
-//	@RequestMapping("/{type}")
-//	public Iterable<ManualDomain> allByKeyword(@PathVariable("type") String type,
-//			@RequestParam(value = "key", required = false, defaultValue="") String key,
-//			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
-//			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
-//			@RequestParam(value = "ct", required = false, defaultValue="") String time,
-//			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
-//			@RequestParam(value = "size", required = false, defaultValue = "10") int size) {
-//		Pageable page = new PageRequest(pn, size);
-//		long btime = 0;
-//		long atime = 3000;
-//		
-//		time = time.endsWith("全部") ? time = "" : time;
-//		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
-//		brand = brand.endsWith("全部") ? brand = "%%" : brand;
-//		
-//		if (time.length() > 4 ){
-//			time = time.substring(0, 4);
-//		}else if (time.length() == 4){
-//			atime = Long.valueOf(time);
-//			btime = Long.valueOf(time);
-//		}
-//		return hbRepository.findByNameTypeSubtypeBrandTime(key, type, subtype, brand, btime, atime, page);
-//	}
 	
 	@RequestMapping("")
-	public Iterable<ManualDomain> condition(
+	public List<ManualDomain> searchGroupByBrand(@RequestParam(value = "key", defaultValue="") String key,
+			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
+			@RequestParam(value = "ct", required = false, defaultValue="") String time,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) throws Exception {
+		
+		Pageable page = new PageRequest(pn, size);
+		long btime = 0;
+		long atime = 3000;
+		
+		time = time.endsWith("全部") ? time = "" : time;
+		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
+		brand = brand.endsWith("全部") ? brand = "%%" : brand;
+		
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+		}else if (time.length() == 4){
+			atime = Long.valueOf(time);
+			btime = Long.valueOf(time);
+		}
+		
+		return hbRepository.findByNameSubtypeBrandTime(key, subtype, brand, btime, atime, page);
+	}
+	
+	@RequestMapping("/b")
+	public List<Object[]> findSearchBrand(@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype) throws Exception {
+		return hbRepository.findBrandBySubtype(subtype);
+	}
+
+	@RequestMapping("/t")
+	public Iterable<ManualDomain> allByKeyword(@RequestParam(value = "type", required = false, defaultValue="") String type,
+			@RequestParam(value = "key", required = false, defaultValue="") String key,
+			@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype,
+			@RequestParam(value = "brand", required = false, defaultValue="%%") String brand,
+			@RequestParam(value = "ct", required = false, defaultValue="") String time,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "10") int size) {
+		Pageable page = new PageRequest(pn, size);
+		long btime = 0;
+		long atime = 3000;
+		
+		time = time.endsWith("全部") ? time = "" : time;
+		subtype = subtype.endsWith("全部") ? subtype = "%%" : subtype;
+		brand = brand.endsWith("全部") ? brand = "%%" : brand;
+		
+		if (time.length() > 4 ){
+			time = time.substring(0, 4);
+		}else if (time.length() == 4){
+			atime = Long.valueOf(time);
+			btime = Long.valueOf(time);
+		}
+		return hbRepository.findByNameTypeSubtypeBrandTime(key, type, subtype, brand, btime, atime, page);
+	}
+	
+	@RequestMapping("/s")
+	public ManualPage condition(
 			@RequestParam(value = "type", required = false, defaultValue="") String type,
 			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
 			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
-			@RequestParam(value = "time", required = false, defaultValue="") String time,
-			@RequestParam(value = "version", required = false, defaultValue="") String version) throws SQLException {
+			@RequestParam(value = "ct", required = false, defaultValue="") String time,
+			@RequestParam(value = "version", required = false, defaultValue="") String version,
+			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
+			@RequestParam(value = "size", required = false, defaultValue = "20") int size) throws SQLException {
+				
+		ManualPage page = new ManualPage(pn, size);
 		
-		int pageSize = 10;
-		int pageNumber = 1;
-		long btime = 0;
-		long atime = 3000;
 		List<ManualDomain> manuals = new ArrayList<ManualDomain>();
-		StringBuffer sql = new StringBuffer();
-		sql.append("select * from wmanual where ");
+		StringBuffer condition = new StringBuffer();
 		
-		if (type != "") sql.append(" and type = ").append(type);
-		if (subtype != "") sql.append(" and subtype = ").append(type);
-		if (brand != "") {
-			sql.append(" and brand in (").append(type).append(")");
+		if (type.length() > 0)
+			addSearchCondition(condition, " type = '" + type.trim() + "'");
+		if (subtype.length() > 0) 
+			addSearchCondition(condition, " subtype = '" + subtype.trim() + "'");
+		if (brand.length() > 0) {
+			String brandCondition = spiltStringConditionIn(brand);	
+			addSearchCondition(condition, " brand in (" + brandCondition.trim() + ")");
 		}
-		if (version != "") sql.append(" and version like %").append(type).append("%");
+		if (version.length() > 0) 
+			addSearchCondition(condition, " version like '%" + version.trim() + "%'");
+		if (time.length() > 0) {
+			addSearchCondition(condition, spiltTimeConditionIn(time));
+		}
+			
 		
-		ResultSet rs = jdbcService.executeQueryPage(sql.toString(), pageSize, pageNumber);
-		while(rs.next()){
-//			rs.getInt("id");
+		ResultSet rs = jdbcService.executeQueryPage("select * from wmanual " + condition.toString(), size, pn);
+		while (rs != null && rs.next()) {
 			ManualDomain manual = new ManualDomain();
 			manual.setId(rs.getLong("id"));
+			manual.setBrand(rs.getString("brand"));
+			manual.setVersion(rs.getString("version"));
+			manual.setSubType(rs.getString("subtype"));
+			manual.setType(rs.getString("type"));
+			manual.setName(rs.getString("name"));
 			manuals.add(manual);
 		}
 		
-		return manuals;
+		ResultSet count = jdbcService.countQuery("select count(1) from wmanual " + condition.toString());
+		int total = 0;
+		while (count != null && count.next()) {
+			total = count.getInt(1);
+		}
+		
+		page.setItem(manuals);
+		page.setTotal(total);
+		
+		return page;
+	}
+	
+	public void addSearchCondition(StringBuffer sql, String condition){
+		if (sql.indexOf("where") > -1){
+			sql.append(" and ");
+			sql.append(condition);
+		}else{
+			sql.append(" where ");
+			sql.append(condition);
+		}
+	}
+	
+	public String spiltStringConditionIn( String brand){
+		String brandCondition = null;
+		String[] brands = brand.split(",");
+		for (String b : brands){
+			if (!b.trim().equals(",")){
+				if (brandCondition == null){
+					brandCondition = "'" + b + "'";
+				} else{
+					brandCondition = brandCondition + ",'" + b + "'";
+				}
+			}
+		}	
+		return brandCondition;
+	}
+	
+	public String spiltTimeConditionIn( String time){
+		String timecondition = null;
+		String timeIn = null;
+		String timeBefore = null;
+		String[] brands = time.split(",");
+		for (String b : brands){
+			if (b.trim().equals(",")){
+				continue;
+			}
+			
+			if (b.indexOf("2012") > -1){
+				timeBefore = "productDate <= 2012";
+			}else{
+				if (timeIn == null){
+					timeIn = b;
+				} else{
+					timeIn = timeIn + "," + b ;
+				}
+			}
+		}		
+				
+		if (timeIn == null || timeBefore == null){
+			timecondition = timeIn == null ? timeBefore : "productDate in (" + timeIn + ")" ;	
+		}else{
+			timeIn = "productDate in (" + timeIn + ")";
+			timecondition = "(" + timeIn + " or " + timeBefore + ")";
+		}
+		return timecondition;
 	}
 }

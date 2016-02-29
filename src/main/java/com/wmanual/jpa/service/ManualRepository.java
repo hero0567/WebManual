@@ -38,6 +38,9 @@ public interface ManualRepository extends PagingAndSortingRepository<ManualDomai
 			+ "(select subType,count(1) count from wmanual group by subType, type) b "
 			+ "where a.name = b.subType order by a.typeseq, a.sequence ", nativeQuery = true)
 	public List<Object[]> findMenu();
+	
+	@Query(value = "select distinct brand from wmanual where subtype = ?", nativeQuery = true)
+	public List<Object[]> findBrandBySubtype(String subtype);
 
 	// Pageable
 	@Query("from ManualDomain where type = ?")

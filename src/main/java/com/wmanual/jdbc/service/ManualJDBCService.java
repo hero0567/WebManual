@@ -45,6 +45,22 @@ public class ManualJDBCService{
 		return resultSet;
 	}
 	
+	public ResultSet countQuery(String sql) {
+		ResultSet resultSet = null;
+		log.info("Run SQL:" + sql);
+		try {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			resultSet = pstmt.executeQuery();
+			conn.close();
+		} catch (SQLException e) {
+			log.error("SQL failed:", e);
+		} finally {
+			log.info("excute sql: {}", "");
+		}
+		return resultSet;
+	}
+	
 	
 	public ResultSet executeQueryPage(String sql, int pageSize, int pageNumber) {
 		ResultSet resultSet = null;
@@ -62,7 +78,6 @@ public class ManualJDBCService{
 			log.info("excute sql: {}", "");
 		}
 		return resultSet;
-	}
-
+	}	
 	
 }

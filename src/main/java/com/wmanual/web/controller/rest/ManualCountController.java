@@ -73,6 +73,12 @@ public class ManualCountController {
 		return mcRepository.countGroupBySubType(key);
 	}
 	
+	// group by subtype
+	@RequestMapping("/st")
+	public int countBySubtype(@RequestParam(value = "subtype", defaultValue="") String subtype) throws Exception {	
+		return mcRepository.countBySubtype(subtype);
+	}
+	
 	
 	@RequestMapping("/f")
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,

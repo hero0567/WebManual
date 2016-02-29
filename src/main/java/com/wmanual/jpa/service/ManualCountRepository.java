@@ -21,4 +21,8 @@ public interface ManualCountRepository extends PagingAndSortingRepository<Manual
 	@Query("select new com.wmanual.beans.CountBean(count(hb), subType, type) from ManualDomain hb where name like %?1% or brand like %?1% group by hb.subType  order by count(hb) desc")
 	public List<CountBean> countGroupBySubType(String key);
 	
+	
+	@Query("select count(hb) from ManualDomain hb where hb.subType = ?1")
+	public int countBySubtype(String subtype);
+	
 }

@@ -67,7 +67,7 @@
 						    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>品类细分</span></h3> 
 						     
 							<div class="section-des f-r">
-							  <span>收录品类：123</span>  <!-- 换成动态的 -->
+							  <span ng-bind="'收录品牌：' + typenu "></span>  <!-- 换成动态的 -->
 							</div>  
 						</div>
 						<div class="section_body row">
@@ -90,7 +90,7 @@
 						    <h3 class="section-title f-l"><i class="fa fa-list"></i> <span>品牌细分</span></h3> 
 						     
 							<div class="section-des f-r">
-							  <span>收录品牌：123</span>  <!-- 换成动态的 -->
+							  <span ng-bind="'收录品牌：' + brandnu "></span>  <!-- 换成动态的 -->
 							</div>  
 						</div>
 						<div class="section_body row">

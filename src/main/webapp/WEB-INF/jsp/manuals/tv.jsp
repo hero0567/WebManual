@@ -49,6 +49,9 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+       window.subtype = '电视机';
+   	</script>
 </head>
 
 <body ng-app="app" ng-controller="TvController" class="">  
@@ -70,7 +73,7 @@
 				      <b>电视</b><em>说明书筛选</em>
 				    </h3>
 				    <div class="st-ext">
-				      共&nbsp;<span>1225</span>个商品
+				      共&nbsp;<span ng-bind="total"></span>个商品
 				    </div>
 				</div>
 				
@@ -103,7 +106,7 @@
 						</div>
 					
 						<div class="hasBeenSelected clearfix">
-							<span id="time-num"><font>208</font>篇说明书</span>
+							<span id="time-num"><font ng-bind="page.total"></font>篇说明书</span>
 							<div class="eliminateCriteria" ng-click="clearAll()">【清空全部】</div>
 							<dl>
 								<dt>已选条件：</dt>
@@ -117,8 +120,8 @@
 						</div>
 				
 						<div class="screen-top" >
-							<span>产品型号</span><input type="text" class="product-name">
-							<a href="" id="submit-btn">搜索</a>
+							<span>产品型号</span><input type="text" ng-model="version" class="product-name">
+							<a href="" id="submit-btn" ng-click="search()">搜索</a>
 						</div>
 					</div>
 				
@@ -141,82 +144,12 @@
 						            </li>
 						        </ul>
 					            <ul class="tabUl">
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
-					                </li>
-					                <li class="tabtr clearfix">
-					                    <span style="width: 20%">海尔液晶电视HXXGD说明书</span>
-						                <span style="width: 10%">海尔</span>
-						                <span style="width: 15%">HXXGD</span>
-						                <span style="width: 10%">液晶电视</span>
-						                <span style="width: 10%"><a href="">详细信息</a></span>
+					                <li class="tabtr clearfix" ng-repeat="manual in manuals">
+					                    <span style="width: 20%" ng-bind="manual.name | limitTo: 18"></span>
+						                <span style="width: 10%" ng-bind="manual.brand  | limitTo: 8"></span>
+						                <span style="width: 15%" ng-bind="manual.version | limitTo: 15"></span>
+						                <span style="width: 10%" ng-bind="manual.subType"></span>
+						                <span style="width: 10%"><a ng-href="/details?id={{manual.id}}">详细信息</a></span>
 						                <span style="width: 10%"><a href="">在线阅读</a></span>
 						                <span style="width: 10%"><a href="">收藏</a></span>
 						                <span style="width: 9%"><a href="">下载</a></span>
