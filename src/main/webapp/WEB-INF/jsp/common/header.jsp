@@ -3,7 +3,6 @@
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
 
-
 <div id="ledaobar" class="alibar2013 mod-alibar fd-clr" style="height: 29px;">
 	<div class="ledao-container fd-clr">
 		<div class="mobile"> 
