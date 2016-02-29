@@ -4,6 +4,21 @@
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
 
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.topnav-myaledao').on("mouseover mouseout",function(event){
+		 if(event.type == "mouseover"){
+			  //鼠标悬浮
+			 	$('.topnav-myaledao-content').removeClass("d-n");
+			 }else if(event.type == "mouseout"){
+			  //鼠标离开
+				 $('.topnav-myaledao-content').addClass("d-n");
+			 }
+			})
+	 
+});
+</script>
+
 <div id="ledaobar" class="alibar2013 mod-alibar fd-clr" style="height: 29px;">
 	<div class="ledao-container fd-clr">
 		<div class="mobile"> 
@@ -27,12 +42,12 @@
 		</div>
 		<div class="topnav">
 			<ul>
-				<li class="topnav-myali extra">
+				<li class="topnav-myaledao extra">
 					<div class="nav-title">
 						<a rel="nofollow" class="nav-arrow" href=""
 							title="我的乐道" data-trace="cn_alibar_myali" target="_blank">我的乐道</a>
 					</div>
-					<div class="nav-content">
+					<div class="topnav-myaledao-content d-n">
 						<dl>
 							<dd>
 								<a rel="nofollow" class="favorite-offer" href="" title="个人信息">个人信息</a>
@@ -42,13 +57,18 @@
 				</li>
 				<li class="topnav-favorite extra">
 					<div class="nav-title">
-						<a class="nav-arrow"
-							href=""
-							title="收藏夹" data-trace="cn_alibar_myali_fav" target="_blank">
-							<i class="fa fa-heart"></i> <span>收藏夹</span>
+						<a class=""
+							href="/favorites"
+							title="我的收藏夹" data-trace="cn_alibar_myali_fav" target="_blank">
+							<i class="fa fa-heart"></i> <span>我的收藏夹</span>
 						</a>
 					</div>
 					<div class="nav-content">
+						<dl>
+							<dd>
+								<a rel="nofollow" class="favorite-offer" href="" title="收藏的企业"><i class="alibar-iconfont"></i> <span>收藏的企业</span></a>
+							</dd>
+						</dl>
 						<dl>
 							<dd>
 								<a rel="nofollow" class="favorite-offer" href="" title="收藏的说明书"><i class="alibar-iconfont"></i> <span>收藏的说明书</span></a>

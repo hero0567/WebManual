@@ -761,9 +761,17 @@ ul.brand_list li img{
 	box-shadow: 4px 6px 6px -6px #e2e2e2!important;
 }
 
-
-
-
+.topnav-myaledao-content{
+	position: absolute;
+    background: #fff;
+    width: 68px;
+    height: 30px;
+    left: 4px;
+    top: 28px;
+    border: 1px solid #f1f1f1;
+    line-height: 30px;
+    padding-top: 5px;
+}
 
 
 
