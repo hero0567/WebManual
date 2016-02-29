@@ -71,14 +71,14 @@
 							</div>  
 						</div>
 						<div class="section_body row">
-							<div class="col-lg-3 col-md-3 col-sm-12 splide" ng-repeat="type in productTypes">
+							<div class="col-lg-3 col-md-3 col-sm-12 splide" ng-repeat="type in typemenu">
 								<div class="body-title">
-									<h4 ng-bind="type.name" class="f-l"> </h4><div class="f-l section-des"><span ng-bind="type.subTypesAmount"></span>个品类</div>
+									<h4 ng-bind="type.type" class="f-l"> </h4><div class="f-l section-des"><span ng-bind="type.typecount"></span>个品类</div>
 								</div>
 								
 								<ul>
-									<li ng-repeat="subType in type.subTypes">
-										<a href="{{subType.url}}" title="{{subType.subname}}" alert="{{subType.subname}}"><span ng-bind="subType.subname"></span> （<span title="{{'品类共计：'+ subType.amount}}" ng-bind="subType.amount"></span>）</a>
+									<li ng-repeat="subType in type.subtypes">
+										<a href="{{subType.url}}" title="{{subType.subtype}}" alert="{{subType.subtype}}"><span ng-bind="subType.subtype"></span> （<span title="{{'品类共计：'+ subType.count}}" ng-bind="subType.count"></span>）</a>
 									</li>
 								</ul>
 							</div>
@@ -94,24 +94,24 @@
 							</div>  
 						</div>
 						<div class="section_body row">
-							<div class="col-lg-6 col-md-6 col-sm-12 splide" ng-repeat="brand in brands">
+							<div class="col-lg-6 col-md-6 col-sm-12 splide" ng-repeat="brand in brandmenu">
 								<div class="body-title">
-									<h4 ng-bind="brand.name" class="f-l"> </h4><div class="f-l section-des"><span ng-bind="brand.subBrandsAmount"></span>个品牌</div>
+									<h4 ng-bind="brand.origin" class="f-l"> </h4><div class="f-l section-des"><span ng-bind="brand.origincount"></span>个品牌</div>
 								</div>
 								<ul>
-									<li ng-repeat="subBrand in brand.subBrands">
+									<li ng-repeat="subBrand in brand.subtypes">
 										<table class="brand">
 											<tr>
 												<td>
-													<a href="{{subBrand.url}}" title="{{subBrand.brandname}}" alert="{{subBrand.brandname}}">
-														<img src="{{subBrand.logo}}"/>
+													<a href="{{subBrand.url}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
+														<img src="{{subBrand.img}}"/>
 													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<a href="{{subBrand.url}}" title="{{subBrand.brandname}}" alert="{{subBrand.brandname}}">
-														<span ng-bind="subBrand.brandname"></span> （<span title="{{'品牌共计：'+ subBrand.amount}}" ng-bind="subBrand.amount"></span>）
+													<a href="{{subBrand.url}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
+														<span ng-bind="subBrand.name"></span> （<span title="{{'品牌共计：'+ subBrand.count}}" ng-bind="subBrand.count"></span>）
 													</a>
 												</td>
 											</tr>

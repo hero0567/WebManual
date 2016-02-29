@@ -27,9 +27,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wmanual.beans.CountBean;
+import com.wmanual.beans.HomeBrandBean;
 import com.wmanual.beans.HomeMenuBean;
 import com.wmanual.beans.SubTypeBean;
+import com.wmanual.jpa.domain.ManualBrandDomain;
 import com.wmanual.jpa.domain.ManualMenuDomain;
+import com.wmanual.jpa.service.ManualBrandRepository;
 import com.wmanual.jpa.service.ManualMenuRepository;
 import com.wmanual.jpa.service.ManualRepository;
 
@@ -42,9 +45,12 @@ public class MenuController {
 	
 	@Autowired
 	private ManualMenuRepository manualMenuRepository;
+	
+	@Autowired
+	private ManualBrandRepository mbRepository;
 
-	@RequestMapping("")
-	public Iterable<HomeMenuBean> allMenu() throws Exception {
+	@RequestMapping("/type")
+	public Iterable<HomeMenuBean> allTypeMenu() throws Exception {
 		List<HomeMenuBean> menu = new ArrayList<HomeMenuBean>();
 		Set<String> menuSize = new HashSet();
 		List<Object[]> list = menuRepository.findMenu();
@@ -66,6 +72,34 @@ public class MenuController {
 			SubTypeBean stb = new SubTypeBean(type, subType, subTypeSeq, count.longValue());
 			hmb.addE(stb);
 		}
+		return menu;
+	}
+	
+	@RequestMapping("/brand")
+	public Iterable<HomeBrandBean> allBrandMenu() throws Exception {
+		
+		Set<String> originSize = new HashSet();
+		List<HomeBrandBean> menu = new ArrayList<HomeBrandBean>();
+		Iterable<ManualBrandDomain>  brands = mbRepository.findAll();
+		
+		for (ManualBrandDomain brand : brands){
+			originSize.add(brand.getOrigin());
+			if (originSize.size() > menu.size() ){
+				HomeBrandBean hbb = new HomeBrandBean();
+				hbb.setOrigin(brand.getOrigin());
+				
+				hbb.addE(brand);				
+				menu.add(hbb);
+				continue;
+			}
+			
+			for (HomeBrandBean m : menu){
+				if (m.addE(brand)){
+					break;
+				}
+			}
+		}
+		
 		return menu;
 	}
 	

@@ -5,7 +5,9 @@
  * @constructor
  */
 
-app.controller("HeaderController", function($scope, $http, $cookieStore) {			
+app.controller("HeaderController", function($scope, $http, $cookieStore) {	
+	
+	$scope.codition = ['全部类型', '大家电', '生活电器', '厨卫电器', '个人护理']
 		
 	$scope.addBookMark = function() {
 		if (document.all){

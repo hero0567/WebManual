@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
+<script src="js/controllers/HeaderController.js"></script>
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
 
