@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-	<title>电视说明书 ｜ 乐道说明书</title>
+	<title>搜索｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="./img/favicon.png" />
 	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
@@ -42,7 +42,7 @@
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
-	<script src="js/controllers/TypesController.js"></script>
+	<script src="js/controllers/SearchController.js"></script>
 	<script src="js/service/UserService.js"></script>
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -50,9 +50,7 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-       window.subtype = '电视';
-       
+    <script>       
        $(document).ready(function(){
     		$('#show-more').on("click",function(event){
     		  if($('.brands-filter').hasClass('height-110')){
@@ -66,7 +64,7 @@
    	</script>
 </head>
 
-<body ng-app="app" ng-controller="TypesController" class="">  
+<body ng-app="app" ng-controller="SearchController" class="">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -82,7 +80,7 @@
 			<div class="ledao-container">
 				<div class="ledao-manual-filter-title">
 				    <h3>
-				      <b ng-bind="subtype"></b><em>说明书筛选</em>
+				      <b ng-bind="key"></b><em>说明书筛选</em>
 				    </h3>
 				    <div class="st-ext f-r">
 				      共&nbsp;<span ng-bind="total"></span>个商品
@@ -96,11 +94,19 @@
 							<div class="screen-term">
 								<div class="selectNumberScreen">
 									<div id="selectList" class="screenBox screenBackground">
-										<dl class="listIndex brands-filter height-110">
+										<dl class="listIndex brands-filter">
 										<dt>品牌</dt>
 											<dd>
 												<label><a href="#" attrval="不限" ng-click="clearBrand()">不限</a></label>
 												<label ng-repeat="brand in brands"><input type="checkbox" ng-click="check(brand)" ng-checked="brand.checked" ><a href="#" ng-click="check(brand)" ng-bind="brand.name"></a></label>
+												<span id="show-more" class="more" style="float:right;"><em class="open"></em>更多</span>
+											</dd> 
+										</dl>
+										<dl class="listIndex brands-filter">
+										<dt>产品类型</dt>
+											<dd>
+												<label><a href="#" attrval="不限" ng-click="clearSubType()">不限</a></label>
+												<label ng-repeat="sub in subtypes"><input type="checkbox" ng-click="check(sub)" ng-checked="sub.checked" ><a href="#" ng-click="check(sub)" ng-bind="sub.name"></a></label>
 												<span id="show-more" class="more" style="float:right;"><em class="open"></em>更多</span>
 											</dd> 
 										</dl>
@@ -125,6 +131,7 @@
 								<dd style="" class="clearDd">
 									<div class="clearList">
 										<div class="selectedInfor selectedShow" ng-repeat="brand in brands" ng-show="brand.checked"><span>品牌</span><label ng-bind="brand.name"></label><em></em></div>
+										<div class="selectedInfor selectedShow" ng-repeat="sub in subtypes" ng-show="sub.checked"><span>类别</span><label ng-bind="sub.name"></label><em></em></div>
 										<div class="selectedInfor selectedShow" ng-repeat="time in timeline" ng-show="time.checked"><span>上市时间</span><label ng-bind="time.name"></label><em></em></div>
 									</div>
 								</dd>

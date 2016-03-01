@@ -84,6 +84,11 @@ public class ManualCountController {
 		return mcRepository.countByBrand(brand);
 	}
 	
+	@RequestMapping("/k")
+	public int countBySearchKey(@RequestParam(value = "key", defaultValue="") String key) throws Exception {	
+		return mcRepository.countBySearchKey(key).intValue();
+	}
+	
 	
 	@RequestMapping("/f")
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,

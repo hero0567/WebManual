@@ -103,7 +103,7 @@ $(document).ready(function(){
 				
 		      <input id="ledaosearch-keywords" class="empty active" accesskey="s" maxlength="50" name="keywords" ng-model="$parent.key"
 						spellcheck="false" autocomplete="off" placeholder="请输入查询关键字">
-		      <button type="button" id="ledaosearch-submit" ><i class="fa fa-search"></i> <span>搜 索</span></button>
+		      <button type="submit" id="ledaosearch-submit" ><i class="fa fa-search"></i> <span>搜 索</span></button>
 		      <div class="fd-hide" id="hidden_propoty"></div>
 		      <input type="hidden" id="" name="n" value="y">
 		      <input type="hidden" name="spm" value="a260k.635.1998096057.d1">

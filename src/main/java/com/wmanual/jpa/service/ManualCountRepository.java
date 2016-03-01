@@ -1,5 +1,6 @@
 package com.wmanual.jpa.service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
@@ -27,5 +28,8 @@ public interface ManualCountRepository extends PagingAndSortingRepository<Manual
 	
 	@Query("select count(hb) from ManualDomain hb where hb.brand = ?1")
 	public int countByBrand(String brand);
+	
+	@Query(value = "select count(*) from wmanual hb where hb.brand like %?1% or hb.subtype like %?1% or hb.name like %?1%", nativeQuery = true)
+	public BigInteger countBySearchKey(String key);
 	
 }

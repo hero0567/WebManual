@@ -76,13 +76,29 @@ public class ManualSearchController {
 	}
 	
 	@RequestMapping("/b")
-	public List<Object[]> findSearchBrand(@RequestParam(value = "subtype", required = false, defaultValue="") String subtype) throws Exception {
-		return hbRepository.findBrandBySubtype(subtype);
+	public List<Object[]> findSearchBrand(@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
+				@RequestParam(value = "key", required = false, defaultValue="") String key) throws Exception {
+		if (key.length()  == 0){
+			return hbRepository.findBrandBySubtype(subtype);
+		}
+		if (subtype.length()  == 0){
+			return hbRepository.findBrandBySearchKey(key);
+		}	
+		
+		return hbRepository.findBrandByBrandAndSearchKey(subtype, key);
 	}
 	
 	@RequestMapping("/st")
-	public List<Object[]> findSubTypeByBrand(@RequestParam(value = "brand", required = false, defaultValue="") String brand) throws Exception {
-		return hbRepository.findSubTypeByBrand(brand);
+	public List<Object[]> findSubTypeByBrand(@RequestParam(value = "brand", required = false, defaultValue="") String brand,
+				@RequestParam(value = "key", required = false, defaultValue="") String key) throws Exception {
+		
+		if (key.length()  == 0){
+			return hbRepository.findSubTypeByBrand(brand);
+		}
+		if (brand.length()  == 0){
+			return hbRepository.findSubTypeBySearchKey(key);
+		}		
+		return hbRepository.findSubTypeByBrandAndSearchKey(brand, key);
 	}
 
 	@RequestMapping("/t")
@@ -116,6 +132,7 @@ public class ManualSearchController {
 			@RequestParam(value = "subtype", required = false, defaultValue="") String subtype,
 			@RequestParam(value = "brand", required = false, defaultValue="") String brand,
 			@RequestParam(value = "ct", required = false, defaultValue="") String time,
+			@RequestParam(value = "key", required = false, defaultValue="") String key,
 			@RequestParam(value = "version", required = false, defaultValue="") String version,
 			@RequestParam(value = "pn", required = false, defaultValue = "0") int pn,
 			@RequestParam(value = "size", required = false, defaultValue = "20") int size) throws SQLException {
@@ -127,6 +144,9 @@ public class ManualSearchController {
 		
 		if (type.length() > 0)
 			addSearchCondition(condition, " type = '" + type.trim() + "'");
+		if (key.length() > 0)
+			addSearchCondition(condition, addSearchKey(subtype, brand,  key));
+		
 		if (subtype.length() > 0) {
 			String subtypeCondition = spiltStringConditionIn(subtype);	
 			addSearchCondition(condition, " subtype in (" + subtypeCondition.trim() + ")");
@@ -174,6 +194,26 @@ public class ManualSearchController {
 			sql.append(" where ");
 			sql.append(condition);
 		}
+	}
+	
+	public String addSearchKey(String subtype, String brand, String key){
+		StringBuffer keySql = new StringBuffer();
+		boolean orCoditon = false;
+		keySql.append("(");
+		if (subtype.length() == 0) {
+			keySql.append(" subtype like '%").append(key.trim()).append("%'");
+			orCoditon = true;
+		}
+		if (brand.length() == 0) {
+			if (orCoditon) keySql.append(" or ");
+			keySql.append(" brand like '%").append(key.trim()).append("%'");
+			orCoditon = true;
+		}
+		if (orCoditon) keySql.append(" or ");
+		keySql.append(" name like '%").append(key.trim()).append("%'");
+		keySql.append(")");
+		return keySql.toString();
+		
 	}
 	
 	public String spiltStringConditionIn( String brand){

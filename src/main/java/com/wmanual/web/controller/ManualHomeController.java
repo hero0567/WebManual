@@ -60,7 +60,13 @@ public class ManualHomeController {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "index");
 		return "webmanual/index";
 	}
-			
+	
+	@RequestMapping("/search")
+	public String search(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "search");
+		return "webmanual/search";
+	}
+	
 	//品牌黄页
 	@RequestMapping("/yellowpage")
 	public String yellowpage(HttpServletRequest request) throws Exception {

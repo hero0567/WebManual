@@ -19,7 +19,7 @@ app.controller("HeaderController", function($scope, $http, $cookieStore) {
 	}
 	
 	$scope.search = function() {
-      	window.location = "/result?key=" + $scope.key;
+      	window.location = "/search?key=" + $scope.key;
    	} 
 	
 	$scope.logout = function() {
