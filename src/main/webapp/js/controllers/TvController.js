@@ -30,6 +30,9 @@ app.controller("TvController", function($scope, $http, $location, $window, userS
 		    		next: false, 
 		    		total:0 };
     
+    userService.initUser();
+	$scope.user = userService.getUser();
+	
     $scope.changePageNavi = function() {
     	$scope.page.pre = $scope.page.ppn == 0;
     	$scope.page.next = ($scope.page.total / ($scope.page.size * $scope.page.ps) > $scope.page.ppn + 1);
@@ -139,6 +142,10 @@ app.controller("TvController", function($scope, $http, $location, $window, userS
         });
     	
     }; 
+    
+    $scope.addFavorite = function(uid, sub){
+    	userService.addFavorite(uid, sub);
+	}
     
     $scope.fetchBrand();
     $scope.fetchBrandCount();
