@@ -52,6 +52,17 @@
     <![endif]-->
     <script>
        window.subtype = '电视机';
+       
+       $(document).ready(function(){
+    		$('#show-more').on("click",function(event){
+    		  if($('.brands-filter').hasClass('height-110')){
+    			  $('.brands-filter').removeClass('height-110');
+    		  }else{
+    			  $('.brands-filter').addClass('height-110');
+    		  }
+    		  
+    		})
+    	});
    	</script>
 </head>
 
@@ -85,12 +96,12 @@
 							<div class="screen-term">
 								<div class="selectNumberScreen">
 									<div id="selectList" class="screenBox screenBackground">
-										<dl class="listIndex">
+										<dl class="listIndex brands-filter height-110">
 										<dt>品牌</dt>
 											<dd>
 												<label><a href="#" attrval="不限" ng-click="clearBrand()">不限</a></label>
 												<label ng-repeat="brand in brands"><input type="checkbox" ng-click="check(brand)" ng-checked="brand.checked" ><a href="#" ng-click="check(brand)" ng-bind="brand.name"></a></label>
-												<span class="more" style="float:right;"><em class="open"></em>更多</span>
+												<span id="show-more" class="more" style="float:right;"><em class="open"></em>更多</span>
 											</dd> 
 										</dl>
 										<dl class="listIndex">
@@ -139,9 +150,9 @@
 						                <span style="width: 15%">型号</span>
 						                <span style="width: 10%">类型</span>
 						                <span style="width: 10%">详细信息</span>
-						                <span style="width: 10%">在线阅读</span>
-						                <span style="width: 10%">收藏</span>
-						                <span style="width: 9%">下载</span>
+						                <span style="width: 10%; text-align:center;">在线阅读</span>
+						                <span style="width: 10%; text-align:center;">收藏</span>
+						                <span style="width: 9%; text-align:center;">下载</span>
 						            </li>
 						        </ul>
 					            <ul class="tabUl">
@@ -151,9 +162,9 @@
 						                <span style="width: 15%" ng-bind="manual.version | limitTo: 15"></span>
 						                <span style="width: 10%" ng-bind="manual.subType"></span>
 						                <span style="width: 10%"><a ng-href="/details?id={{manual.id}}">详细信息</a></span>
-						                <span style="width: 10%"><a href="">在线阅读</a></span>
-						                <span style="width: 10%"><a href="">收藏</a></span>
-						                <span style="width: 9%"><a href="">下载</a></span>
+						                <span style="width: 10%; text-align:center;"><a href="" title="在线阅读" ><i class="fa fa-eye"></i></a></span>
+						                <span style="width: 10%; text-align:center;"><a href="" title="收藏" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  </span>
+						                <span style="width: 9%; text-align:center;"><a href="" title="下载" ><i class="fa fa-save"></i></a></span>
 					                </li>
 					            </ul>
 						</div> 

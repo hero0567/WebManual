@@ -373,6 +373,7 @@ a:hover {
 }
 
 .screenBox dl dd {
+	width: 1160px;
 	position: relative;
 	padding-left: 0px;
 	width: 1060px;
@@ -391,6 +392,7 @@ a:hover {
 	float: left;
 	display: block;
 	vertical-align: middle;
+	width:100px;
 }
 
 .custom {
@@ -607,7 +609,7 @@ a:hover {
 	margin-top:20px;
 	background-color: #fff;
 	position: relative;
-	height: 600px;
+	height: 800px;
 	overflow: hidden;
 	border-left: 1px solid #e5e5e5;
 	border-right: 1px solid #e5e5e5;
@@ -652,9 +654,11 @@ a:hover {
 
 .sublist li span {
 	margin: 0 5px 0 0;
-	font-size: 14px;
+	font-size: 12px;
+	height:28px;
+	line-height:28px;
 	font-weight: 400;
-	    display: inline-block;
+	display: inline-block;
 }
 
 .references {
@@ -812,6 +816,12 @@ label a:hover{
 	background:transparent !important;
 }
 
+.height-110{
+	height:60px; 
+}
+.height-auto{
+	height:auto;
+}
 
 
 
