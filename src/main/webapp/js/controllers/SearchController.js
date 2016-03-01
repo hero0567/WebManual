@@ -14,7 +14,7 @@ app.controller("SearchController", function($scope, $http, $location, $window, u
 	$scope.subtypes = [];
 	$scope.manuals = {};
 	$scope.version = "";
-	$scope.key = "";
+	$scope.key = "111";
 	
 	$scope.timeline = [{name: '2012年之前', checked : false},
 	                 {name: '2013', checked : false},
@@ -175,6 +175,7 @@ app.controller("SearchController", function($scope, $http, $location, $window, u
     	userService.addFavorite(uid, sub);
 	}
     
+    $scope.parseParams();
     $scope.fetchBrand();
     $scope.fetchSubType();
     $scope.fetchBrandCount();
