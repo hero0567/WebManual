@@ -163,7 +163,7 @@
 						                <span style="width: 10%" ng-bind="manual.subType"></span>
 						                <span style="width: 10%"><a ng-href="/details?id={{manual.id}}">详细信息</a></span>
 						                <span style="width: 10%; text-align:center;"><a href="" title="在线阅读" ><i class="fa fa-eye"></i></a></span>
-						                <span style="width: 10%; text-align:center;"><a href="" title="收藏" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[sub.favor == true]" ng-click="addFavorite(user.id, sub)"></a>  </span>
+						                <span style="width: 10%; text-align:center;"><a href="" title="收藏" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[manual.favor == true]" ng-click="addFavorite(user.id, manual)"></a>  </span>
 						                <span style="width: 9%; text-align:center;"><a href="" title="下载" ><i class="fa fa-save"></i></a></span>
 					                </li>
 					            </ul>
