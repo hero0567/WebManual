@@ -76,8 +76,13 @@ public class ManualSearchController {
 	}
 	
 	@RequestMapping("/b")
-	public List<Object[]> findSearchBrand(@RequestParam(value = "subtype", required = false, defaultValue="%%") String subtype) throws Exception {
+	public List<Object[]> findSearchBrand(@RequestParam(value = "subtype", required = false, defaultValue="") String subtype) throws Exception {
 		return hbRepository.findBrandBySubtype(subtype);
+	}
+	
+	@RequestMapping("/st")
+	public List<Object[]> findSubTypeByBrand(@RequestParam(value = "brand", required = false, defaultValue="") String brand) throws Exception {
+		return hbRepository.findSubTypeByBrand(brand);
 	}
 
 	@RequestMapping("/t")
@@ -122,8 +127,10 @@ public class ManualSearchController {
 		
 		if (type.length() > 0)
 			addSearchCondition(condition, " type = '" + type.trim() + "'");
-		if (subtype.length() > 0) 
-			addSearchCondition(condition, " subtype = '" + subtype.trim() + "'");
+		if (subtype.length() > 0) {
+			String subtypeCondition = spiltStringConditionIn(subtype);	
+			addSearchCondition(condition, " subtype in (" + subtypeCondition.trim() + ")");
+		}
 		if (brand.length() > 0) {
 			String brandCondition = spiltStringConditionIn(brand);	
 			addSearchCondition(condition, " brand in (" + brandCondition.trim() + ")");

@@ -25,4 +25,7 @@ public interface ManualCountRepository extends PagingAndSortingRepository<Manual
 	@Query("select count(hb) from ManualDomain hb where hb.subType = ?1")
 	public int countBySubtype(String subtype);
 	
+	@Query("select count(hb) from ManualDomain hb where hb.brand = ?1")
+	public int countByBrand(String brand);
+	
 }

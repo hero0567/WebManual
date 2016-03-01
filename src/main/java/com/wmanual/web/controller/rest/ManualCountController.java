@@ -79,6 +79,11 @@ public class ManualCountController {
 		return mcRepository.countBySubtype(subtype);
 	}
 	
+	@RequestMapping("/b")
+	public int countByBrand(@RequestParam(value = "brand", defaultValue="") String brand) throws Exception {	
+		return mcRepository.countByBrand(brand);
+	}
+	
 	
 	@RequestMapping("/f")
 	public List<CountBean> countByFavor(@RequestParam(value = "id", required = false) long id,

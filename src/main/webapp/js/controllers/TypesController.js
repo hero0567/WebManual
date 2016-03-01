@@ -1,19 +1,19 @@
 'use strict';
 
 /**
- * BrandsController
+ * TypesController
  * @constructor
  */
 
-app.controller("BrandsController", function($scope, $http, $location, $window, userService) {
+app.controller("TypesController", function($scope, $http, $location, $window, userService) {
 		
     
 	$scope.total = 0;
 	$scope.count = 0;
-	$scope.subtypes = [];
+	$scope.brands = [];
 	$scope.manuals = {};
 	$scope.version = "";
-	$scope.brand = $window.brand;
+	$scope.subtype = $window.subtype;
 	
 	$scope.timeline = [{name: '2012年之前', checked : false},
 	                 {name: '2013', checked : false},
@@ -81,7 +81,7 @@ app.controller("BrandsController", function($scope, $http, $location, $window, u
     
     
     $scope.clearBrand = function() {
-    	angular.forEach($scope.subtypes, function (brand) {
+    	angular.forEach($scope.brands, function (brand) {
     		brand.checked = false; 
     	});
   	} 
@@ -98,16 +98,16 @@ app.controller("BrandsController", function($scope, $http, $location, $window, u
     	$scope.version = "";
   	} 
         
-    $scope.fetchSubType = function(){	
-		$http.get('/s/st?brand=' + $window.brand).success(function(subtypes) {  
-			angular.forEach(subtypes, function (sub) {
-				$scope.subtypes.push({name : sub, checked : false});
+    $scope.fetchBrand = function(){	
+		$http.get('/s/b?subtype=' + $window.subtype).success(function(brands) {  
+			angular.forEach(brands, function (b) {
+				$scope.brands.push({name : b, checked : false});
 	    	});
         });    
     }; 
     
     $scope.fetchBrandCount = function(){	
-		$http.get('/c/b?brand=' + $window.brand).success(function(total) {  
+		$http.get('/c/st?subtype=' + $window.subtype).success(function(total) {  
 			$scope.total = total;
 			$scope.page.total = total;
         });    
@@ -120,11 +120,11 @@ app.controller("BrandsController", function($scope, $http, $location, $window, u
     }; 
     
     $scope.fetchManual = function(){	
-    	var subtypes = "";
+    	var brands = "";
     	var time = "";
-    	angular.forEach($scope.subtypes, function (b) {
+    	angular.forEach($scope.brands, function (b) {
 			if (b.checked == true){
-				subtypes = b.name +"," + subtypes;
+				brands = b.name +"," + brands;
 			}
     	});
     	angular.forEach($scope.timeline, function (t) {
@@ -134,7 +134,7 @@ app.controller("BrandsController", function($scope, $http, $location, $window, u
     	});
     	
     	   	
-    	$http.get('/s/s', {params: {"brand": $window.brand, subtype: subtypes, ct: time, version : $scope.version,
+    	$http.get('/s/s', {params: {"subtype": $window.subtype, brand: brands, ct: time, version : $scope.version,
     									pn:$scope.page.pn, size:$scope.page.size}}).success(function(result){
     										
 			$scope.manuals = result.item;	
@@ -148,7 +148,7 @@ app.controller("BrandsController", function($scope, $http, $location, $window, u
     	userService.addFavorite(uid, sub);
 	}
     
-    $scope.fetchSubType();
+    $scope.fetchBrand();
     $scope.fetchBrandCount();
     $scope.fetchManual();
     

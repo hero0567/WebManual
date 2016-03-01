@@ -42,7 +42,7 @@
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
     <script src="js/app.js"></script>
-	<script src="js/controllers/TvController.js"></script>
+	<script src="js/controllers/TypesController.js"></script>
 	<script src="js/service/UserService.js"></script>
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -51,7 +51,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-       window.subtype = '电视机';
+       window.subtype = '电视';
        
        $(document).ready(function(){
     		$('#show-more').on("click",function(event){
@@ -66,7 +66,7 @@
    	</script>
 </head>
 
-<body ng-app="app" ng-controller="TvController" class="">  
+<body ng-app="app" ng-controller="TypesController" class="">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
@@ -82,7 +82,7 @@
 			<div class="ledao-container">
 				<div class="ledao-manual-filter-title">
 				    <h3>
-				      <b>电视</b><em>说明书筛选</em>
+				      <b ng-bind="subtype"></b><em>说明书筛选</em>
 				    </h3>
 				    <div class="st-ext f-r">
 				      共&nbsp;<span ng-bind="total"></span>个商品

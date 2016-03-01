@@ -93,7 +93,7 @@ $(document).ready(function(){
 	                    <h3 class="cat_title">大家电品牌</h3>
 	                    <ul class="brand_list clearfix">
 	                        <li>
-	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
+	                        	<a class="img-link" href="/haier" target="_blank" data-linkid=""> 
 									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
 								</a>
 							</li>
