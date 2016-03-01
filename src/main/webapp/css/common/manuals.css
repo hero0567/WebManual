@@ -268,7 +268,6 @@ h4, h5, h6 {
 
 .ledao-manual-filter-title h3 {
 	float: left;
-	padding-left: 10px;
 }
 
 .ledao-manual-filter-title h3 b {
@@ -660,7 +659,9 @@ a:hover {
 	font-weight: 400;
 	display: inline-block;
 }
-
+.border-bottom-none{
+	border-bottom:none !important;
+}
 .references {
 	width: 298px;
 	display: inline-block;

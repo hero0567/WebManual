@@ -84,7 +84,7 @@
 				    <h3>
 				      <b>电视</b><em>说明书筛选</em>
 				    </h3>
-				    <div class="st-ext">
+				    <div class="st-ext f-r">
 				      共&nbsp;<span ng-bind="total"></span>个商品
 				    </div>
 				</div>
@@ -104,7 +104,7 @@
 												<span id="show-more" class="more" style="float:right;"><em class="open"></em>更多</span>
 											</dd> 
 										</dl>
-										<dl class="listIndex">
+										<dl class="listIndex border-bottom-none">
 										<dt>上市时间</dt>
 										<dd>
 											<label><a href="#" attrval="不限" ng-click="clearTimeline()">不限</a></label>
