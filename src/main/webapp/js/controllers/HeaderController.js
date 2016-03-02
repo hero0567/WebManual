@@ -19,9 +19,10 @@ app.controller("HeaderController", function($scope, $http, $cookieStore) {
 	}
 	
 	$scope.search = function() {
+		console.log("search");
       	window.location = "/search?key=" + $scope.key;
    	} 
-	
+		
 	$scope.logout = function() {
 		$cookieStore.remove("user");
 		window.location = "/logout";
