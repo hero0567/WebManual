@@ -8,6 +8,7 @@
 app.controller("HeaderController", function($scope, $http, $cookieStore) {	
 	
 	$scope.codition = ['全部类型', '大家电', '生活电器', '厨卫电器', '个人护理']
+	$scope.sc = "全部类型";
 		
 	$scope.addBookMark = function() {
 		if (document.all){
@@ -18,8 +19,11 @@ app.controller("HeaderController", function($scope, $http, $cookieStore) {
 		}
 	}
 	
+	$scope.changeCondition = function(sc) {
+		$scope.sc = sc;
+   	} 
+	
 	$scope.search = function() {
-		console.log("search");
       	window.location = "/search?key=" + $scope.key;
    	} 
 		

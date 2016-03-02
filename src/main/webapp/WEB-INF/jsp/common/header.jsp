@@ -92,13 +92,10 @@ $(document).ready(function(){
 				<form ng-submit="search()">
 					<div class="ledao-dropdown">
 						<span id="ledao-dropdown-hd" class="ledao-dropdown-hd">
-							<span>全部类型</span> <i class="fa fa-chevron-down"></i>
+							<span>{{sc}}</span><i class="fa fa-chevron-down"></i>
 						</span>
 						<ul id="ledao-dropdown-menu" class="ledao-dropdown-menu d-n">
-							<li data-type="service"><a href="javascript:;" data-linkid="search-type-switch-service">大家电</a></li>
-							<li data-type="witkey"><a href="javascript:;" data-linkid="search-type-switch-witkey">生活电器</a></li>
-							<li data-type="task"><a href="javascript:;" data-linkid="search-type-switch-task">厨卫电器</a></li>
-							<li data-type="comprehensive"><a href="javascript:;" data-linkid="search-type-switch-comprehensive">个人护理</a></li>
+							<li ng-repeat="c in codition"><a href="javascript:;" ng-bind="c" ng-click="changeCondition(c)">全部类型</a></li>
 						</ul>
 					</div>
 					

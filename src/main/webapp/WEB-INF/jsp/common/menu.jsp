@@ -18,11 +18,11 @@ $(document).ready(function(){
 		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
 	})
 	
-	$('.ledao-dropdown').on("mouseover mouseout",function(event){
+	$('.ledao-dropdown').on("mouseover click",function(event){
 	 if(event.type == "mouseover"){
 	  //鼠标悬浮
 	  $('#ledao-dropdown-menu').removeClass('d-n');
-	 }else if(event.type == "mouseout"){
+	 }else if(event.type == "click"){
 	  //鼠标离开
 		 $('#ledao-dropdown-menu').addClass('d-n');
 	 }
