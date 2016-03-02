@@ -210,7 +210,7 @@ a:hover {
 	height: 40px;
 	line-height: 40px;
 	padding: 0px 6px;
-	padding-left: 110px;
+	padding-left: 10px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -299,7 +299,7 @@ a {
 }
 
 #ledao_nav {
-	display: inline-block;
+	margin-top:-15px;
 	border-bottom: 1px solid #e2e2e2;
 	height: 280px;
 	background-color: #f8f8f8;
@@ -400,7 +400,6 @@ i, em {
 }
 
 .ledao_cat_nav {
-	top: -40px;
 	width: 190px;
 	height: 320px;
 	position: relative;

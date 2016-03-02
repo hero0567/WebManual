@@ -89,20 +89,9 @@ $(document).ready(function(){
 	    <div id="main-search" class="f-l ali-search">
 	    	<!-- Search Box -->
 			<form role="search" ng-submit="search()">
-				<div class="ledao-dropdown">
-					<span id="ledao-dropdown-hd" class="ledao-dropdown-hd">
-						<span>全部类型</span> <i class="fa fa-chevron-down"></i>
-					</span>
-					<ul id="ledao-dropdown-menu" class="ledao-dropdown-menu d-n">
-						<li data-type="service"><a href="javascript:;" data-linkid="search-type-switch-service">大家电</a></li>
-						<li data-type="witkey"><a href="javascript:;" data-linkid="search-type-switch-witkey">生活电器</a></li>
-						<li data-type="task"><a href="javascript:;" data-linkid="search-type-switch-task">厨卫电器</a></li>
-						<li data-type="comprehensive"><a href="javascript:;" data-linkid="search-type-switch-comprehensive">个人护理</a></li>
-					</ul>
-				</div>
 				
 		      <input id="ledaosearch-keywords" class="empty active" accesskey="s" maxlength="50" name="keywords" ng-model="$parent.key"
-						spellcheck="false" autocomplete="off" placeholder="请输入查询关键字">
+						spellcheck="false" autocomplete="off" placeholder="请输入产品型号">
 		      <button type="submit" id="ledaosearch-submit" ><i class="fa fa-search"></i> <span>搜 索</span></button>
 		      <div class="fd-hide" id="hidden_propoty"></div>
 		      <input type="hidden" id="" name="n" value="y">

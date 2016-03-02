@@ -8,46 +8,37 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	var $menuArrow = $('#user-menu-account-arrow');
-	$('.user-menu').mouseenter( function(){
-		$('#custom-user-menu').show();
-		$menuArrow.removeClass('fa-chevron-down').addClass('fa-chevron-up')
-	})
-	$('.user-menu').mouseleave( function(){
-		$('#custom-user-menu').hide();
-		$menuArrow.addClass('fa-chevron-down').removeClass('fa-chevron-up')
-	})
-	
-	$('.ledao-dropdown').on("mouseover mouseout",function(event){
-	 if(event.type == "mouseover"){
-	  //鼠标悬浮
-	  $('#ledao-dropdown-menu').removeClass('d-n');
-	 }else if(event.type == "mouseout"){
-	  //鼠标离开
-		 $('#ledao-dropdown-menu').addClass('d-n');
-	 }
-	})
+	$('.ledao_mod_title').on("mouseover",function(event){
+		  //鼠标悬浮
+		  $('#ledao_nav').removeClass('d-n').addClass('d-b');
+	});
+	$('#ledao_nav').on("mouseover",function(event){
+		  //鼠标悬浮
+		  $('#ledao_nav').removeClass('d-n').addClass('d-b');
+	});
+	$('#ledao_new_menu').on("mouseout",function(event){
+		  //鼠标悬浮
+		  $('#ledao_nav').removeClass('d-b').addClass('d-n');
+	});
 });
 </script>
 
-<div id="ledao_new_menu"></div>
-
-<div class="ledao_box">
-	<div class="ledao-container"> 
-		<div class="menu">
-	    	<ul>
+<div id="ledao_new_menu">
+	<div class="ledao-container">
+	    	<ul class="menu">
+	    		<li class="ledao_mod_title"><a href="/"><i class="fa fa-th-list"></i> <span>说明书分类筛选</span></a></li>
 	        	<li><a href="/index">说明书大全</a></li>
 	            <li><a href="/yellowpage">品牌黄页</a></li>
 	            <!-- <li><a href="">常识分享</a></li> -->
 	        </ul>
-	    </div>
-		
-	    <div id="ledao_nav">
+	        
+	        
+	        
+	        <div id="ledao_nav" class="d-n">
 	    	<!--左侧栏目开始-->
 	    	<div class="ledao_cat_nav fl">
-	        	<div class="ledao_mod_title"><i class="fa fa-th-list"></i> <span>说明书分类筛选</span></div>
 	            <ul class="cate_nav">
-	            	<li class="">
+	            	<li class="on">
 	                	<div class="cat_1_nav">
 	                    	<s class="cat-nav-icon fp-iconfont">D</s>
 	                        <a href="">大家电</a>
@@ -78,7 +69,7 @@ $(document).ready(function(){
 	        <div class="ledao_cat_content fr">
 	             
 	
-	        	<div class="cat_pannel clearfix" style="display: none;">
+	        	<div class="cat_pannel clearfix" style="display: block;">
 	            	<div class="fl cat_detail grid_col_2">
 	                    <h3 class="cat_title">大家电品类</h3>
 	                    <ul class="cat_label_list clearfix">
@@ -93,7 +84,7 @@ $(document).ready(function(){
 	                    <h3 class="cat_title">大家电品牌</h3>
 	                    <ul class="brand_list clearfix">
 	                        <li>
-	                        	<a class="img-link" href="/haier" target="_blank" data-linkid=""> 
+	                        	<a class="img-link" href="" target="_blank" data-linkid=""> 
 									<img data-original="../../img/brands/haier.jpg" src="../../img/brands/haier.jpg">
 								</a>
 							</li>
@@ -292,9 +283,42 @@ $(document).ready(function(){
 	        </div>
 	        <!--右侧内容结束-->
 	    </div>
-    </div>
+	        
+	        
+	        
+	</div>
 </div>
 
+<style type="text/css">
+	ul.menu li.ledao_mod_title{
+	    width: 160px;
+	    text-align:left !important;
+	    height: 40px;
+	    line-height: 40px;
+	    color: #fff;
+	    padding-left: 20px;
+	    font-weight: bold;
+	    background: #ff500b;
+	    box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+	}
+	ul.menu {
+		display:inline-block;
+		margin:0px !important;
+	}
+	ul.menu  li{
+		width:120px; 
+		float:left;
+		text-align:center;
+		
+	}
+	ul.menu  li a{
+		color:#fff;
+		height:40px;
+		line-height:40px;
+		font-size:14px;
+	}
+	
+</style>
 
 
 <script type="text/javascript">
