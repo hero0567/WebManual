@@ -11,10 +11,7 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
 	$scope.typenu = 0;
 	$scope.brandnu = 0;
 	$scope.typemenu = {};
-	$scope.brandmenu = {};
-    
-    userService.initUser();
-	$scope.user = userService.getUser();
+	$scope.brandmenu = {};    
     
     $scope.fetchTypeMenu = function() {
     	$http.get('/menu/type').success(function(menu){

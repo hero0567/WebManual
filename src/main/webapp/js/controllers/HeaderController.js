@@ -5,11 +5,14 @@
  * @constructor
  */
 
-app.controller("HeaderController", function($scope, $http, $cookieStore) {	
+app.controller("HeaderController", function($scope, $http, $cookieStore, userService) {	
 	
 	$scope.codition = ['全部类型', '大家电', '生活电器', '厨卫电器', '个人护理']
 	$scope.sc = "全部类型";
 		
+	userService.initUser();
+	$scope.user = userService.getUser();
+	
 	$scope.addBookMark = function() {
 		if (document.all){
 			window.external.addFavorite('http://www.92shuomingshu.com','92shuomingshu');

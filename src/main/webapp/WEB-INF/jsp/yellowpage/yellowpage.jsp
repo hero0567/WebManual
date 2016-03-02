@@ -35,8 +35,8 @@
 <script src="js/lib/angular/angular.js"></script>
 <script src="js/lib/angular/angular-cookies.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/service/UserService.js"></script>
 <script src="js/controllers/YellowPageController.js"></script>
-
 <script src="js/lib/others/jquery-listnav.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
