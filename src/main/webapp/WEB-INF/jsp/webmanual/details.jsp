@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -18,6 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="/css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="/css/common/manuals.css" />
 	<link rel="stylesheet" type="text/css" href="css/pages/details.css" />
+	
+	<script src="js/lib/others/modernizr.js"></script>
+	<script src="js/lib/others/jquery-1.5.1.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -44,15 +47,14 @@
 	   <![endif]--> 
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>	
+		
 		<main>
 			<!-- Category and Brands -->
-			<div class="ledao-container">
+			<div class="container">
 				<div class="ledao-leftcol">
 					<section class="manual-details custom-brands-filter white-block p-l-r margin-bottom-20 ">
 						<div class="custom-section-head">
-							<ul class="custom-tabs f-l">
-								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span></li>
-							</ul>
+							<h3 class="section-title f-l"> <i class="fa fa-globe"></i> <span ng-bind="handbook.name"> </span> </h3>
 							<a class="f-r custom-default-tab-title" href="" ng-click="addFavorite(user.id, handbook)"><i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]" ></i> <span>添加到我的收藏</span></a>
 						</div>
 						<div class="custom-section-body">
@@ -101,14 +103,14 @@
 						</div>
 					</section>
 					
-					<section class="p-l-r margin-bottom-20">
+					<section class="margin-bottom-20 opertations">
 						<div class="row">
 							<a ng-click="readonline(handbook)" class="custom-manual-btn col-lg-4 col-md-4 col-sm-4">
 				                <i class="fa fa-cloud"></i> <span>在线阅读</span>
 				            </a> 
-							<div class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" ng-click="addFavorite(user.id, handbook)">
+							<a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" ng-click="addFavorite(user.id, handbook)">
 								<i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]"></i> <span>添加到我的收藏</span>
-							</div>
+							</a>
 			                <a class="custom-manual-btn col-lg-4 col-md-4 col-sm-4" href="#" ng-click="download()"><i class="fa fa-download "></i> <span>下载</span></a>
 						</div>
 					</section>
@@ -128,9 +130,9 @@
 					
 					<section class="official-services custom-brands-filter white-block p-l-r margin-bottom-20">
 						<div class="custom-section-head">
-							<ul class="custom-tabs f-l">
-								<li class="tab-head-view-most-manual-{{book.name}} on"><i class="fa fa-globe"></i> <span>产品官方资源</span></li>
-							</ul>
+							<h3 class="section-title f-l">
+								 <i class="fa fa-globe"></i> <span>产品官方资源</span> 
+							</h3>
 						</div>
 						<div class="custom-section-body">
 							<div class="custom-tabs-tab">

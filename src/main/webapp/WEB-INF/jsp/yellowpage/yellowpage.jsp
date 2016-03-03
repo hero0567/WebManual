@@ -81,15 +81,15 @@
 												</a>
 											</td>
 											<td>
-												<a href="tel:{{subBrand.tel}}" title="{{'官方客服电话：'+subBrand.tel}}" >
-													官方客服电话：<span ng-bind="subBrand.tel"></span>
+												官方客服电话：<a href="tel:{{subBrand.tel}}" title="{{'官方客服电话：'+subBrand.tel}}" >
+													<span ng-bind="subBrand.tel"></span>
 												</a>
 											</td>
 										</tr>
 										<tr>
 											<td>
-												<a href="{{subBrand.supportLink}}" title="{{'官方售后网站：' + subBrand.name}}">
-													官方售后网站：<span ng-bind="subBrand.supportLink"></span>
+												官方售后网站：<a href="{{subBrand.supportLink}}" title="{{'官方售后网站：' + subBrand.name}}">
+													<span ng-bind="subBrand.supportLink"></span>
 												</a>
 											</td>
 											 

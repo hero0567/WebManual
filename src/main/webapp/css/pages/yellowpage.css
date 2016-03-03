@@ -158,7 +158,9 @@ main {
 }
 #brands-list{
 	padding:10px;
+	color:#333;
 }
+
 table.brand tr td {
     vertical-align: middle;
     text-align: left;
