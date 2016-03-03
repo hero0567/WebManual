@@ -46,9 +46,6 @@ public class HomeBrandBean {
 
 	public boolean addE(ManualBrandDomain stb) {
 		
-		logger.info(origin);
-		logger.info(stb.getOrigin());
-		
 		if (origin.equalsIgnoreCase(stb.getOrigin())){
 			subtypes.add(stb);	
 			return true;

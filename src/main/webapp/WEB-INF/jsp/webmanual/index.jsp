@@ -103,14 +103,14 @@
 										<table class="brand">
 											<tr>
 												<td>
-													<a href="{{subBrand.url}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
+													<a ng-href="/brands/{{subBrand.link}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
 														<img src="{{subBrand.img}}"/>
 													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													<a href="{{subBrand.url}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
+													<a ng-href="/brands/{{subBrand.link}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
 														<span ng-bind="subBrand.name"></span> （<span title="{{'品牌共计：'+ subBrand.count}}" ng-bind="subBrand.count"></span>）
 													</a>
 												</td>
