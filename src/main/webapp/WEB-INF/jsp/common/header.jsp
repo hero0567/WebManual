@@ -23,7 +23,7 @@ $(document).ready(function(){
 	<div id="ledaobar" class="alibar2013 mod-alibar fd-clr" style="height: 29px;">
 		<div class="ledao-container fd-clr">
 			<div class="mobile"> 
-				<a href="/index"><i class="fa fa-mobile ledao-mobile"></i> <span>手机乐道</span></a>
+				<a href="/index"><i class="fa fa-home ledao-mobile"></i> <span>乐道首页</span></a>
 			</div>
 			<div class="account-sign-status">
 				<ul>
@@ -52,6 +52,11 @@ $(document).ready(function(){
 							<dl>
 								<dd>
 									<a rel="nofollow" class="favorite-offer" href="" title="个人信息">个人信息</a>
+								</dd>
+							</dl>
+							<dl>
+								<dd>
+									<a rel="nofollow" class="favorite-offer" href="/logout" title="退出登录">退出登录</a>
 								</dd>
 							</dl>
 						</div>
