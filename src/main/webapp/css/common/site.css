@@ -105,6 +105,9 @@ h4{
 .border-gray-lower-dashed{
 	border-bottom: 1px #f7f7f7 solid;
 }
+.margin-top20{
+	margin-top:20px;
+}
 
 /*
 * Modal
@@ -203,7 +206,7 @@ h3.section-title {
 * Results
 */
 .custom-manuals{
-	min-height:290px;
+	min-height:500px;
 } 
 
 #deleteSuccess, #deleteFail{
@@ -477,6 +480,9 @@ ul.top{
 	width:100%;
 	font-size:14px !important;
 }
+.custom-appliance-table .read{
+	text-align:center;
+}
 .custom-appliance-head{
 	padding-left:15px;
 	background-color:#ff7300;
@@ -489,7 +495,7 @@ ul.top{
 	margin-bottom:5px;
 }
 .custom-section-head{
-	border-bottom:1px #eee solid;
+/*	border-bottom:1px #eee solid;*/
 	height: 40px;
     line-height: 40px;
 }
