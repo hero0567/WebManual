@@ -1568,6 +1568,9 @@ table.brand tr td{
 	color:#ff7300 !important;
 }
 
-#aboutus ol, #aboutus ul{
+#aboutus ol, #aboutus ul, #declare ol, #declare ul{
 	margin-left:20px;
+}
+#declare{
+	min-height:580px;
 }
