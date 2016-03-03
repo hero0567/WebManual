@@ -764,14 +764,27 @@ ul.brand_list li img{
 	position: absolute;
     background: #fff;
     width: 68px;
-    height: 30px;
+    height: 60px;
     left: 4px;
     top: 28px;
     border: 1px solid #f1f1f1;
     line-height: 30px;
     padding-top: 5px;
 }
-
+.topnav-myaledao-content dl dd{
+	height:24px;
+	line-height:24px;
+}
+.topnav-myaledao-content dl:first-child{
+	border-bottom:1px solid #f9f9f9;
+}
+#ledaobar .nav-arrow-hover {
+    padding-right: 9px;
+    display: inline-block;
+    height: 29px;
+    background-position: right -18px;
+    cursor: pointer;
+}
 
 
 
