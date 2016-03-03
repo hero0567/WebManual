@@ -1537,3 +1537,12 @@ table.brand:hover{
 table.brand tr td{ 
 	padding: 0px 5px 4px 8px !important;
 }
+
+#ledao-manualtypes a, #ledao-manualbrands a{
+	color:#333 !important;
+}
+#ledao-manualtypes a:active, #ledao-manualtypes a:hover, ledao-manualbrands a:active, #ledao-manualbrands a:hover{
+	color:#ff7300 !important;
+}
+
+
