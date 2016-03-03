@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="css/common/site.css" />
+<link rel="stylesheet" type="text/css" href="/css/common/site.css" />
 <link rel="stylesheet" type="text/css" href="css/pages/manualIndustry.css" />
 
 <section id="ledao-manual-category">

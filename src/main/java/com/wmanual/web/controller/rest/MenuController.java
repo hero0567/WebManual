@@ -62,6 +62,7 @@ public class MenuController {
 			String subType = (String) objs[2];
 			int subTypeSeq = (Integer ) objs[3];
 			BigInteger count = (BigInteger) objs[4];
+			String url = (String) objs[5];
 			
 			menuSize.add(type);
 			if (menuSize.size() > menu.size() ){
@@ -69,7 +70,7 @@ public class MenuController {
 				menu.add(hmb);
 			}			
 			
-			SubTypeBean stb = new SubTypeBean(type, subType, subTypeSeq, count.longValue());
+			SubTypeBean stb = new SubTypeBean(type, subType, subTypeSeq, count.longValue(), url);
 			hmb.addE(stb);
 		}
 		return menu;

@@ -11,10 +11,10 @@
     <link rel="icon" href="../../favicon.ico">
 	<title>在线阅读｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="./img/favicon.png" />
-	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
+	<link rel="shortcut icon" href="/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon.png" />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
 	
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
@@ -25,6 +25,7 @@
 	<script src="./js/lib/pdf.js/l10n.js"></script>
 	<script src="./js/lib/pdf.js/pdf.js"></script>
 	<script src="./js/lib/pdf.js/viewer.js"></script>
+<<<<<<< HEAD
 	<script src="js/lib/others/modernizr.js"></script>
 	 <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
@@ -32,6 +33,9 @@
     <script src="js/app.js"></script>
     <script src="js/controllers/PdfOnlineController.js"></script>
 	<script src="js/service/UserService.js"></script>	
+=======
+	<script src="/js/lib/others/modernizr.js"></script>
+>>>>>>> 0a15e237b1fb31f6af8ef4b4cd9b804f3cca0bb6
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  

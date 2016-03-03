@@ -9,27 +9,27 @@
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>注册新用户 ｜ 乐道说明书</title>
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<link rel="shortcut icon" href="./img/favicon.png" />
-<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
+<link rel="shortcut icon" href="/img/favicon.png" />
+<link rel="apple-touch-icon-precomposed" href="/img/favicon.png" />
 
 <meta name="Keywords" content=" " />
 <meta name="Description" content=" " />
 
-<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
-<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+<link rel="stylesheet" type="text/css" href="/css/common/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/site.css" />
+<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
 
-<script src="js/lib/others/modernizr.js"></script>
+<script src="/js/lib/others/modernizr.js"></script>
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/lib/jquery/jquery.min.js"></script>
-<script src="js/lib/bootstrap/bootstrap.min.js"></script>
+<script src="/js/lib/jquery/jquery.min.js"></script>
+<script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-<script src="js/lib/angular/angular.js"></script>
-<script src="js/lib/angular/angular-cookies.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/controllers/SignupController.js"></script>
+<script src="/js/lib/others/ie10-viewport-bug-workaround.js"></script>
+<script src="/js/lib/angular/angular.js"></script>
+<script src="/js/lib/angular/angular-cookies.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controllers/SignupController.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
 </head>
 <body ng-app="app" ng-controller="SignupController" class="">
 	<div class="d-n">
-		<img src="./img/favicon.png">
+		<img src="/img/favicon.png">
 	</div>
 	<!--[if lt IE 10]>
       	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
