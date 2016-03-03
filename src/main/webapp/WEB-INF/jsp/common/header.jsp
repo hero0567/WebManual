@@ -1,9 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
-<script src="js/controllers/HeaderController.js"></script>
-<script src="js/lib/angular/angular-cookies.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-<link rel="stylesheet" type="text/css" href="css/common/header.css" />
+<script src="/js/controllers/HeaderController.js"></script>
+<script src="/js/lib/angular/angular-cookies.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
+<link rel="stylesheet" type="text/css" href="/css/common/header.css" />
 
 <script type="text/javascript">
 $(document).ready(function(){

@@ -1,10 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
-<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
-<link rel="stylesheet" type="text/css" href="css/common/header.css" />
-<script src="js/lib/jquery/jquery.js"></script>
-<script src="js/lib/others/jquery.SuperSlide.2.1.1.js"></script>
-<script src="js/lib/others/jquery-listnav.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
+<link rel="stylesheet" type="text/css" href="/css/common/header.css" />
+<script src="/js/lib/jquery/jquery.js"></script>
+<script src="/js/lib/others/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/js/lib/others/jquery-listnav.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){

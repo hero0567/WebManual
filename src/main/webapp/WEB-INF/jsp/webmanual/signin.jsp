@@ -7,13 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>用户登录 | 乐道说明书</title>
 	<link rel="icon" href="/images/favicon.ico" />
-	<link rel="shortcut icon" href="./img/favicon.png">
-	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png">
+	<link rel="shortcut icon" href="/img/favicon.png">
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="stylesheet" type="text/css" href="css/common/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/site.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,22 +21,22 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<script src="js/lib/others/modernizr.js"></script>
+	<script src="/js/lib/others/modernizr.js"></script>
 	<!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/lib/jquery/jquery.min.js"></script>
-    <script src="js/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/lib/jquery/jquery.min.js"></script>
+    <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/lib/angular/angular.js"></script>
-    <script src="js/lib/angular/angular-cookies.min.js"></script>
-    <script src="js/app.js"></script>
-	<script src="js/controllers/SigninController.js"></script>	  
+    <script src="/js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/lib/angular/angular.js"></script>
+    <script src="/js/lib/angular/angular-cookies.min.js"></script>
+    <script src="/js/app.js"></script>
+	<script src="/js/controllers/SigninController.js"></script>	  
 
 </head>
 <body ng-cloak ng-app="app" ng-controller="SigninController" class="">
 	<div class="d-n">
-		<img src="./img/favicon.png">
+		<img src="/img/favicon.png">
 	</div>
 	<!--[if lt IE 10]>
       	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

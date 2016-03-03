@@ -8,16 +8,16 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 	<title>使用条款 ｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="./img/favicon.png" />
-	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
+	<link rel="shortcut icon" href="/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon.png" />
 	
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/common.css" />
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
 	
-	<script src="js/lib/others/modernizr.js"></script>
+	<script src="/js/lib/others/modernizr.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script> 
@@ -29,7 +29,7 @@
 </head>
 <body class=""> 
 	<div class="none">
-	  <img src="./img/favicon.png" />
+	  <img src="/img/favicon.png" />
 	</div> 
 	<!--[if lt IE 10]>
 	       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -205,7 +205,7 @@
 				</div> 
 		
 				<div class="column-custom" > 
-					<img src="./img/qrcode-juzi.png" style="height:130px; float:left; margin-right:10px; margin-top:5px"/> 
+					<img src="/img/qrcode-juzi.png" style="height:130px; float:left; margin-right:10px; margin-top:5px"/> 
 					<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="" style="float:right;"> 
 						<ul> 
 							<li><b>发说明书给我们</b></li> 
@@ -219,7 +219,7 @@
 							  		<i class="fa fa-weibo"></i>
 						  		</a> 
 						  		<a class="hoversub"> 
-						  			<i class="fa fa-weixin"></i> <span class="subblock iconblock"> <img src="./img/qrcode-juzi.png" /> </span> 
+						  			<i class="fa fa-weixin"></i> <span class="subblock iconblock"> <img src="/img/qrcode-juzi.png" /> </span> 
 					  			</a> 
 							  	<a href="http://shang.qq.com/wpa/qunwpa?idkey=92942d"> 
 							    	<i class="fa fa-qq"></i> 

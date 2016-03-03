@@ -8,17 +8,26 @@ public class SubTypeBean {
 	private String subtype;
 	private int seq;
 	private long count;
+	private String url;
 	
 	public SubTypeBean() {
 		super();
 	}
 
 	public SubTypeBean(String type, String subtype, int seq, long count) {
-		super();
 		this.type = type;
 		this.subtype = subtype;
 		this.seq = seq;
 		this.count = count;
+	}
+	
+	public SubTypeBean(String type, String subtype, int seq, long count,
+			String url) {
+		this.type = type;
+		this.subtype = subtype;
+		this.seq = seq;
+		this.count = count;
+		this.url = url;
 	}
 
 	public long getCount() {
@@ -53,8 +62,11 @@ public class SubTypeBean {
 		this.seq = seq;
 	}
 
-	
-	
-	
-	
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 }

@@ -11,10 +11,10 @@
     <link rel="icon" href="../../favicon.ico">
 	<title>在线阅读｜ 乐道说明书</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="./img/favicon.png" />
-	<link rel="apple-touch-icon-precomposed" href="./img/favicon.png" />
+	<link rel="shortcut icon" href="/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon.png" />
 	
-	<link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
+	<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
 	
 	<meta name="Keywords" content=" " />
 	<meta name="Description" content=" " />
@@ -24,7 +24,7 @@
 	<script src="./js/lib/pdf.js/l10n.js"></script>
 	<script src="./js/lib/pdf.js/pdf.js"></script>
 	<script src="./js/lib/pdf.js/viewer.js"></script>
-	<script src="js/lib/others/modernizr.js"></script>
+	<script src="/js/lib/others/modernizr.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
