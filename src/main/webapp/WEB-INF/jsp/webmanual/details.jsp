@@ -18,6 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="css/common/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/common/manuals.css" />
 	<link rel="stylesheet" type="text/css" href="css/pages/details.css" />
+	
+	<script src="js/lib/others/modernizr.js"></script>
+	<script src="js/lib/others/jquery-1.5.1.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
@@ -44,6 +47,7 @@
 	   <![endif]--> 
 	<div class="contentwrap"> 
 		<%@ include file="../common/header.jsp" %>	
+		
 		<main>
 			<!-- Category and Brands -->
 			<div class="container">

@@ -510,7 +510,7 @@ ul.top{
     border-bottom: 1px solid #f8f8f8;
 }
 .custom-section-title{
-	font-size: 16px;
+	font-size: 14px;
 	color:#383838 !important;
 }
 .custom-section-more{
@@ -1473,7 +1473,7 @@ a .wmanualbtn:hover {
 }
 
 h3.section-title {
-	font-size: 16px !important;
+	font-size: 14px !important;
 	height: 40px;
 	line-height: 40px;
 	display: block;
