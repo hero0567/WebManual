@@ -12,6 +12,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ .f-l{
+ 	float:left;
+ }
+ .f-r{
+ 	float:right;
+ }
+ #back2home a{
+ 	cursor:pointer;
+ }
  #outerContainer{
  	background-color:#f0f0f0;
  }

@@ -20,18 +20,25 @@
 	<meta name="Description" content=" " />
 	
 	<link rel="stylesheet" href="./css/pdf.js/viewer.css"/>
+	
 	<script src="./js/lib/pdf.js/compatibility.js"></script>
 	<script src="./js/lib/pdf.js/l10n.js"></script>
 	<script src="./js/lib/pdf.js/pdf.js"></script>
 	<script src="./js/lib/pdf.js/viewer.js"></script>
 	<script src="js/lib/others/modernizr.js"></script>
+	 <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/angular/angular-cookies.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/PdfOnlineController.js"></script>
+	<script src="js/service/UserService.js"></script>	
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
 	</script>  
 	 
 </head>
 
-<body ng-app="app" ng-controller="IndexController" id="page-onlineview">  
+<body ng-app="app" ng-controller="PdfOnlineController" id="page-onlineview">  
 <div id="outerContainer">
 	
   <!-- Sidebar -->
@@ -136,7 +143,10 @@
 
    <div id="back2home">
    	<div class="back2home">
-   		<a href="javascript:history.go(-1);" ><i class="fa fa-home"></i>返回网站首页</a>
+   		<a href="javascript:history.go(-1);" class="f-l"><i class="fa fa-chevron-left"></i> <span>返回</span></a>
+   		<a class="f-r" ng-click="addFavorite(user.id, handbook)">
+			<i class="fav-heart" ng-class="{true: 'fa fa-heart', false: 'fa fa-heart-o'}[handbook.favor == true]"></i> <span>添加到我的收藏</span>
+		</a>
    	</div>
    </div>
    <div class="toolbar">
