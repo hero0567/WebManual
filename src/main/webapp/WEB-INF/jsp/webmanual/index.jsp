@@ -78,7 +78,7 @@
 								
 								<ul>
 									<li ng-repeat="subType in type.subtypes">
-										<a href="{{subType.url}}" title="{{subType.subtype}}" alert="{{subType.subtype}}"><span ng-bind="subType.subtype"></span> （<span title="{{'品类共计：'+ subType.count}}" ng-bind="subType.count"></span>）</a>
+										<a ng-href="/types/{{subType.url}}" title="{{subType.subtype}}" alert="{{subType.subtype}}"><span ng-bind="subType.subtype"></span> （<span title="{{'品类共计：'+ subType.count}}" ng-bind="subType.count"></span>）</a>
 									</li>
 								</ul>
 							</div>
@@ -103,7 +103,7 @@
 										<table class="brand">
 											<tr>
 												<td>
-													<a ng-href="" title="{{subBrand.name}}" alert="{{subBrand.name}}">
+													<a href="{{subBrand.url}}" title="{{subBrand.name}}" alert="{{subBrand.name}}">
 														<img src="{{subBrand.img}}"/>
 													</a>
 												</td>
