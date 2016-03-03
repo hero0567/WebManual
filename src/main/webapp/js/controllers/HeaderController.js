@@ -5,7 +5,7 @@
  * @constructor
  */
 
-app.controller("HeaderController", function($scope, $http, $cookieStore, userService) {	
+app.controller("HeaderController", function($scope, $http, $cookies, userService) {	
 	
 	$scope.codition = ['全部类型', '大家电', '生活电器', '厨卫电器', '个人护理']
 	$scope.sc = "全部类型";
@@ -31,7 +31,8 @@ app.controller("HeaderController", function($scope, $http, $cookieStore, userSer
    	} 
 		
 	$scope.logout = function() {
-		$cookieStore.remove("user");
+		$cookies.remove('JSESSIONID');
+		$cookies.remove('user');
 		window.location = "/logout";
 	}	
 });

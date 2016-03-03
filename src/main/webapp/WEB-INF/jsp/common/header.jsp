@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <script src="js/controllers/HeaderController.js"></script>
+<script src="js/lib/angular/angular-cookies.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/common/fontawesome.css" />
 <link rel="stylesheet" type="text/css" href="css/common/header.css" />
 
@@ -56,7 +57,7 @@ $(document).ready(function(){
 							</dl>
 							<dl>
 								<dd>
-									<a rel="nofollow" class="favorite-offer" href="/logout" title="退出登录">退出登录</a>
+									<a rel="nofollow" class="favorite-offer" href="#" ng-click="logout()" title="退出登录">退出登录</a>
 								</dd>
 							</dl>
 						</div>
