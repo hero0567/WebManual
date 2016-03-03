@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html id="signup-page" class="page-signup page-signup--standard">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,22 +22,8 @@
 	<link rel="stylesheet" type="text/css" href="css/common/manuals.css" />
 
 	<script src="js/lib/others/modernizr.js"></script>
-	<script>
-	  window.site_url = 'https://92shuomingshu.com/';
-	</script>  
-	 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/lib/others/jquery-1.5.1.js"></script>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    
-    <!-- use angularjs instead of it
-    <script src="js/lib/others/ui.tab.js"></script>
-    <script src="js/lib/others/filter.js"></script>
-     -->
-    
     <script src="js/lib/others/ie10-viewport-bug-workaround.js"></script>
     <script src="js/lib/angular/angular.js"></script>
     <script src="js/lib/angular/angular-cookies.min.js"></script>
@@ -66,7 +52,7 @@
    	</script>
 </head>
 
-<body ng-app="app" ng-controller="TypesController" class="">  
+<body ng-app="app" ng-controller="TypesController">  
 	<div class="d-n">
 		<img src="./img/favicon.png" />
 	</div> 
