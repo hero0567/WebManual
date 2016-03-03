@@ -97,7 +97,7 @@
 							<th class="cell maincell">名称</th>
 							<th class="cell brand">品牌</th>
 							<th class="cell version">型号</th>
-							<th class="cell date">上市时间</th>
+							<th class="cell read">在线阅读</th>
 							<th class="cell action">关注</th>
 						</tr>
 						<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
@@ -110,9 +110,9 @@
 								ng-bind="sub.handBook.brand"></a></td>
 							<td class="cell version"><span class="tag gray"
 								ng-bind="sub.handBook.version"></span></td>
-							<td class="cell date"><span class="tags t-small c-gray-aset">
-									<span ng-bind=" sub.handBook.productDate | date:'yyyy-MM-dd' "></span>
-							</span></td>
+							<td class="cell read"> 
+								<a href=""><i class="fa fa-eye"></i> </a>
+							</td>
 							<td class="cell action"><a href=""
 								ng-click="addFavorite(user.id, sub.handBook)"
 								class="fa fa-heart"></a></td>

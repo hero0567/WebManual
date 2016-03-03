@@ -480,6 +480,9 @@ ul.top{
 	width:100%;
 	font-size:14px !important;
 }
+.custom-appliance-table .read{
+	text-align:center;
+}
 .custom-appliance-head{
 	padding-left:15px;
 	background-color:#ff7300;

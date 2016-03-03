@@ -136,7 +136,7 @@
 
    <div id="back2home">
    	<div class="back2home">
-   		<a href="/index"><i class="fa fa-home"></i>返回网站首页</a>
+   		<a href="javascript:history.go(-1);" ><i class="fa fa-home"></i>返回网站首页</a>
    	</div>
    </div>
    <div class="toolbar">
