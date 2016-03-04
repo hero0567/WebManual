@@ -37,7 +37,7 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
  	}  
     
     $scope.fetchHandbookService = function(brand) {
-   	 $http.get('/b/' + brand).success(function(brandInfo){
+   	 $http.get('/b/name?name=' + brand).success(function(brandInfo){
             $scope.brandInfo = brandInfo;
       });
 	}

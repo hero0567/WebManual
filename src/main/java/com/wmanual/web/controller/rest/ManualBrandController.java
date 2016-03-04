@@ -45,14 +45,21 @@ public class ManualBrandController {
 	// group by brand
 	@RequestMapping("")
 	public Iterable<ManualBrandDomain> findAll() throws Exception {
-
+		
 		return mbRepository.findAll();
 	}
 
 	// group by brand
-	@RequestMapping("/{name}")
-	public ManualBrandDomain findByName(@PathVariable("name") String name) throws Exception {
+	@RequestMapping("/name")
+	public ManualBrandDomain findByName(@RequestParam(value = "name", required = false, defaultValue = "") String name) throws Exception {
 		return mbRepository.findByName(name);
 	}
+	
+	@RequestMapping("/count")
+	public long count() throws Exception {
+		return mbRepository.count();
+	}
+	
+	
 
 }

@@ -66,7 +66,7 @@
 					    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>品牌筛选</span></h3> 
 					     
 						<div class="section-des f-r">
-						  <span>收录品牌：1223</span> <!-- 需要换成动态的 -->
+						  <span>收录品牌：{{count}}</span> <!-- 需要换成动态的 -->
 						</div>  
 					</div>
 					<div class="section_body">
@@ -75,7 +75,7 @@
 						<img id="brandsData-loading" class="d-n loading" src="../img/loading.gif">
 						      <ul id="brands-list" class="indented">
 					        	<li ng-repeat="subBrand in brands">
-					        		<a href="#" class="d-n" ng-bind="subBrand.name"></a>
+					        		<a href="#" class="d-n" ng-bind="subBrand.ename"></a>
 									<table class="brand">
 										<tr>
 											<td rowspan="2">

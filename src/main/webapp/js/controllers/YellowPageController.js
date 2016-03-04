@@ -10,6 +10,7 @@ app.controller("YellowPageController", function($scope, $http, $location, $windo
 	$('#brands-list').addClass('d-n');
 	
     $scope.brands = {};
+    $scope.count = 0;
     
     $scope.send = function(){	
 		$http.get('/b').success(function(results) {  
@@ -23,21 +24,12 @@ app.controller("YellowPageController", function($scope, $http, $location, $windo
 		});},2000)
     }; 
     
+    $scope.count = function(){	
+		$http.get('/b/count').success(function(count) {  
+			$scope.count = count;
+        }); 
+    }; 
+    
     $scope.send();
+    $scope.count();
 });
-/*
-app.directive('listnav', function($timeout){
-    return {
-        restrict: 'A',
-        replace: false,
-        link: function($scope, elem, attrs){            
-            
-            $scope.loadNav = function(){
-                $timeout(function(){
-                    $(elem).listnav();
-                });
-            };
-            $scope.loadNav();
-        }
-    };
-});*/
