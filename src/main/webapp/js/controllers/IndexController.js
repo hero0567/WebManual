@@ -29,6 +29,7 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
     
     $scope.fetchBrandMenu = function() {
     	 $('#brandsData-loading').removeClass('d-n');
+    	 
     	 $http.get('/menu/brand').success(function(menu){
     		 $('#brandsData-loading').addClass('d-n');
     		 $scope.brandmenu = menu;

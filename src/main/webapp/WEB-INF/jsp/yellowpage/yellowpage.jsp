@@ -61,6 +61,7 @@
 		<div class="container">
 			<div class="row">
 				<section id="all-brands" >
+					
 					<div class="section_head" >
 					    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>品牌筛选</span></h3> 
 					     
@@ -69,7 +70,9 @@
 						</div>  
 					</div>
 					<div class="section_body">
+					
 						<div class="inner">
+						<img id="brandsData-loading" class="d-n loading" src="../img/loading.gif">
 						      <ul id="brands-list" class="indented">
 					        	<li ng-repeat="subBrand in brands">
 					        		<a href="#" class="d-n" ng-bind="subBrand.name"></a>
