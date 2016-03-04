@@ -47,6 +47,7 @@
 </head>
 
 <body ng-app="app">  
+
 	<div class="d-n">
 		<img src="/img/favicon.png" />
 	</div> 
