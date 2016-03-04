@@ -14,7 +14,9 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
 	$scope.brandmenu = {};    
     
     $scope.fetchTypeMenu = function() {
+    	$('#typeData-loading').removeClass('d-n');
     	$http.get('/menu/type').success(function(menu){
+    		$('#typeData-loading').addClass('d-n');
     		$scope.typemenu = menu;
 			var count = 0;
 			angular.forEach(menu, function (m) {
@@ -26,7 +28,9 @@ app.controller("IndexController", function($scope, $http, $location, $window, us
   	}  
     
     $scope.fetchBrandMenu = function() {
+    	 $('#brandsData-loading').removeClass('d-n');
     	 $http.get('/menu/brand').success(function(menu){
+    		 $('#brandsData-loading').addClass('d-n');
     		 $scope.brandmenu = menu;
     		 var count = 0;
     		 angular.forEach(menu, function (m) {

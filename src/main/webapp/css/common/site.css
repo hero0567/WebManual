@@ -1574,3 +1574,6 @@ table.brand tr td{
 #declare{
 	min-height:580px;
 }
+.loading{
+	margin-left:50%;
+}
