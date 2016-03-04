@@ -18,6 +18,7 @@ public class ManualDomain {
 	private Long id;
 	private String name;
 	private String brand;
+	private String ebrand;
 	private String type;
 	private String subType;
 	private String tags;
@@ -171,5 +172,11 @@ public class ManualDomain {
 	}
 	public void setLan(String lan) {
 		this.lan = lan;
+	}
+	public String getEbrand() {
+		return ebrand;
+	}
+	public void setEbrand(String ebrand) {
+		this.ebrand = ebrand;
 	}
 }

@@ -139,13 +139,13 @@
 								<div class="row h-lh-40">
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xs-12">
 										<div>
-											<i class="fa fa-phone"></i> 客服电话： <a href="tel:02885303320" ng-repeat="s in services " ng-bind="s.tel"> </a>
+											<i class="fa fa-phone"></i> 客服电话： <a href="tel:02885303320" ng-bind="brandInfo.tel"> </a>
 										</div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						                <div>
 						                    <i class="fa fa-envelope"></i> 官方支持： 
-						                    <a href="" ng-repeat="s in services " ng-bind="s.email"> </a>
+						                    <span  ng-bind="brandInfo.email"> </span>
 						                </div>
 									</div>
 								</div>
@@ -153,13 +153,13 @@
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						                <div>
 						                    <i class="fa fa-globe"></i> 官方网站： 
-						                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
+						                    <a ng-href="{{brandInfo.supportLink}}"><span  ng-bind="brandInfo.supportLink"> </span></a>
 						                </div>
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						                <div>
 						                    <i class="fa fa-cog"></i> 更多联系方式： 
-						                    <span ng-repeat="s in services" ng-bind="s.site"> </span>
+						                    <a ng-href="{{brandInfo.contactLink}}"><span  ng-bind="brandInfo.contactLink"> </span></a>
 						                </div>
 									</div>
 								</div>

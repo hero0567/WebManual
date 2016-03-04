@@ -29,7 +29,7 @@ public interface ManualCountRepository extends PagingAndSortingRepository<Manual
 	@Query("select count(hb) from ManualDomain hb where hb.brand = ?1")
 	public int countByBrand(String brand);
 	
-	@Query(value = "select count(*) from wmanual hb where hb.brand like %?1% or hb.subtype like %?1% or hb.name like %?1%", nativeQuery = true)
+	@Query(value = "select count(*) from wmanual hb where hb.ebrand like %?1% or hb.brand like %?1% or hb.subtype like %?1% or hb.name like %?1%", nativeQuery = true)
 	public BigInteger countBySearchKey(String key);
 	
 }

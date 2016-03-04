@@ -34,12 +34,12 @@ $(document).ready(function(){
 						</div>
 						<div class="nav-content"></div>
 					</li>
-					<li class="account-signin" ng-show="!user.id"><a rel="nofollow"
+					<li class="account-signin" ng-show="!user.id">请<a rel="nofollow"
 						href="/signin"
-						title="请登录" data-trace="cn_alibar_login" target="_self">请<span class="c-ff7300">登录</span></a></li>
-					<li class="account-signup" ng-show="!user.id"><a rel="nofollow"
+						title="请登录" data-trace="cn_alibar_login" target="_self"><span class="c-ff7300">登录</span></a></li>
+					<li class="account-signup" ng-show="!user.id">免费<a rel="nofollow"
 						href="/signup"
-						title="免费注册" data-trace="cn_alibar_reg" target="_blank">免费<span class="c-ff7300">注册</span></a></li>
+						title="免费注册" data-trace="cn_alibar_reg" target="_blank"><span class="c-ff7300">注册</span></a></li>
 				</ul>
 			</div>
 			<div class="topnav">

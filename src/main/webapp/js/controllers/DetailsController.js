@@ -9,7 +9,7 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 	$scope.menu = {};
 	$scope.handbook = {};
 	$scope.params = {};
-	$scope.services = {};
+	$scope.brandInfo = {};
 	$scope.id = "";
 	$scope.imageUrl = "";
 	$scope.error = {captcha :false};
@@ -31,15 +31,14 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
     $scope.fetchHandbook = function(id) {
     	 $http.get('/hb/x/x/' + id).success(function(handbook){
              $scope.handbook = handbook;
-             console.log(handbook);
              $scope.fetchHandbookService(handbook.brand);
              $scope.fetchFavorite();
        });
  	}  
     
     $scope.fetchHandbookService = function(brand) {
-   	 $http.get('/hbs/' + brand).success(function(services){
-            $scope.services = services;
+   	 $http.get('/b/' + brand).success(function(brandInfo){
+            $scope.brandInfo = brandInfo;
       });
 	}
     

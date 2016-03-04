@@ -8,5 +8,7 @@ import com.wmanual.jpa.domain.ManualDomain;
 
 @Service
 public interface ManualBrandRepository extends PagingAndSortingRepository<ManualBrandDomain, Long> {
+	
+	public ManualBrandDomain findByName(String name);
 			
 }

@@ -21,6 +21,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,17 +38,21 @@ import com.wmanual.jpa.service.ManualRepository;
 public class ManualBrandController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
-		
+
 	@Autowired
 	private ManualBrandRepository mbRepository;
-	
-	
+
 	// group by brand
 	@RequestMapping("")
 	public Iterable<ManualBrandDomain> findAll() throws Exception {
-		
+
 		return mbRepository.findAll();
 	}
-	
+
+	// group by brand
+	@RequestMapping("/{name}")
+	public ManualBrandDomain findByName(@PathVariable("name") String name) throws Exception {
+		return mbRepository.findByName(name);
+	}
 
 }

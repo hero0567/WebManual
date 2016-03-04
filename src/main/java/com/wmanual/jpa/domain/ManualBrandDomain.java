@@ -22,8 +22,9 @@ public class ManualBrandDomain {
 	private String tel;
 	private String supportLink;
 	private String contactLink;
+	private String email;
 	private String origin;
-	private char fletter;
+	private String ename;
 	private int seq;
 	private int count;
 	public Long getId() {
@@ -68,12 +69,6 @@ public class ManualBrandDomain {
 	public void setContactLink(String contactLink) {
 		this.contactLink = contactLink;
 	}
-	public char getFletter() {
-		return fletter;
-	}
-	public void setFletter(char fletter) {
-		this.fletter = fletter;
-	}
 	public int getSeq() {
 		return seq;
 	}
@@ -91,5 +86,17 @@ public class ManualBrandDomain {
 	}
 	public void setCount(int count) {
 		this.count = count;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
 }

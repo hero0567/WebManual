@@ -207,6 +207,7 @@ public class ManualSearchController {
 		if (brand.length() == 0) {
 			if (orCoditon) keySql.append(" or ");
 			keySql.append(" brand like '%").append(key.trim()).append("%'");
+			keySql.append(" or ").append(" ebrand like '%").append(key.trim()).append("%'");
 			orCoditon = true;
 		}
 		if (orCoditon) keySql.append(" or ");
