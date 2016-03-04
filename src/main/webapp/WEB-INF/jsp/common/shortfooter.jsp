@@ -19,7 +19,6 @@
                 <div class="widget">
                     <h4 class="title">发现</h4>
                     <div class="content find-links">
-                    	<a target="_blank" href="/friends">合作伙伴</a> 
 		  				<a target="_blank" href="http://www.sitecomer.com/">自助建站</a> 
                     </div>
                 </div>

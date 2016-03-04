@@ -28,13 +28,13 @@
 			<ul>
 				<li class="topnav-myali extra">
 					<div class="nav-title">
-						<a rel="nofollow" class="nav-arrow" href=""
-							title="我的乐道" data-trace="cn_alibar_myali" target="_blank">我的乐道</a>
+						<a rel="nofollow" class="" href=""
+							title="我的乐道"  target="_blank">我的乐道</a>
 					</div>
 					<div class="nav-content">
 						<dl>
 							<dd>
-								<a rel="nofollow" class="favorite-offer" href="" title="个人信息">个人信息</a>
+								<a rel="nofollow" class="favorite-offer" href="/selfinfo" title="个人信息">个人信息</a>
 							</dd>
 						</dl>
 					</div>

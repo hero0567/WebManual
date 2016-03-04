@@ -68,6 +68,12 @@ public class ManualHomeController {
 		return "types/" + name;
 	}
 	
+	@RequestMapping("/selfinfo")
+	public String selfinfo(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "selfinfo");
+		return "webmanual/selfinfo";
+	}
+	
 	@RequestMapping("/brands/{name}")
 	public String brands(HttpServletRequest request, @PathVariable("name") String name) throws Exception {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "index");

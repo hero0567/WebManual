@@ -52,7 +52,7 @@ $(document).ready(function(){
 						<div class="topnav-myaledao-content d-n">
 							<dl>
 								<dd>
-									<a rel="nofollow" class="favorite-offer" href="" title="个人信息">个人信息</a>
+									<a rel="nofollow" class="favorite-offer" href="/selfinfo" title="个人信息">个人信息</a>
 								</dd>
 							</dl>
 							<dl>
