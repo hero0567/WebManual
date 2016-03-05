@@ -75,7 +75,7 @@
 								<div class="row">
 									<div class="control-group text-center clearfix">
 										<input name="userPassword" type="password"
-											ng-model="user.password" ng-minlength="6" ng-maxlength="16" required 
+											ng-model="user.newpwd" ng-minlength="6" ng-maxlength="16" required 
 											placeholder="请输入新密码" class="pull-left"><span
 											class="add-on margin-left-40"><i class="icon-lock"></i></span>
 										<div
@@ -91,7 +91,7 @@
 											class="pull-left"><span class="add-on margin-left-40"><i
 											class="icon-lock"></i></span>
 										<div
-											ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.password"
+											ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.newpwd"
 											class="span12 alert alert-error text-left" ng-bind="'密码确认不对，请再次输入！'"></div>
 									</div>
 								</div>							
@@ -99,7 +99,7 @@
 								 
 								<br>
 								<div class="row">
-									<button class="wmanualbtn" type="submit" ng-disabled="myForm.$invalid || error.captcha || error.userexisted || user.confirmUserPassword != user.password">更新</button>
+									<button class="wmanualbtn" type="submit" ng-disabled="myForm.$invalid || error.userexisted || user.confirmUserPassword != user.password">更新</button>
 	
 								</div>
 							</form>
