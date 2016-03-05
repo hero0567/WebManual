@@ -18,26 +18,39 @@ package com.wmanual.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.mail.EmailException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.wmanual.configure.ConditionConfigure;
+import com.wmanual.configure.EmailConfigure;
+import com.wmanual.jpa.domain.Authority;
+import com.wmanual.jpa.domain.User;
+import com.wmanual.jpa.service.AuthorityRepository;
+import com.wmanual.jpa.service.UserRepository;
 
 @Controller
-public class ManualBrandsController {
+@RequestMapping(value = "/my")
+public class ManualMyController {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass()); 
-		
-	@Autowired
-	private ConditionConfigure condition;
 	
-	@RequestMapping("/haier")
-	public String brands(HttpServletRequest request) throws Exception {
-		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "brands");
-		return "brands/haier";
+	
+	@RequestMapping("/selfinfo")
+	public String selfinfo(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "selfinfo");
+		return "my/selfinfo";
 	}
-		
+	
+	@RequestMapping("/favorites")
+	public String favorites(HttpServletRequest request) throws Exception {
+		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "favorites");
+		return "my/favorites";
+	}
 }

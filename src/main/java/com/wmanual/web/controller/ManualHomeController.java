@@ -66,13 +66,7 @@ public class ManualHomeController {
 	public String types(HttpServletRequest request, @PathVariable("name") String name) throws Exception {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "index");
 		return "types/" + name;
-	}
-	
-	@RequestMapping("/selfinfo")
-	public String selfinfo(HttpServletRequest request) throws Exception {
-		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "selfinfo");
-		return "webmanual/selfinfo";
-	}
+	}	
 	
 	@RequestMapping("/brands/{name}")
 	public String brands(HttpServletRequest request, @PathVariable("name") String name) throws Exception {
@@ -127,13 +121,7 @@ public class ManualHomeController {
 	public String pdfonline(HttpServletRequest request) throws Exception {
 		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "pdfonline");
 		return "webmanual/pdfonline";
-	}
-	
-	@RequestMapping("/favorites")
-	public String favorites(HttpServletRequest request) throws Exception {
-		logger.info("[{}] visit wmanual for {} page", request.getRemoteAddr(), "favorites");
-		return "webmanual/favorites";
-	}
+	}	
 		
 	@RequestMapping("/details")
 	public String details() throws Exception {

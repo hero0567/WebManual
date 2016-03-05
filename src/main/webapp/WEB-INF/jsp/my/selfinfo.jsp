@@ -19,6 +19,9 @@
 	<link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
 	<link rel="stylesheet" type="text/css" href="/css/common/site.css" />
 	
+	<script src="/js/lib/angular/angular.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/controllers/SelfInfoController.js"></script>
 	<script src="/js/lib/others/modernizr.js"></script>
 	<script>
 	  window.site_url = 'https://92shuomingshu.com/';
@@ -39,7 +42,7 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body> 
+<body ng-app="app" ng-controller="SelfInfoController"> 
 	<div class="d-n">
 	  <img src="/img/favicon.png" />
 	</div> 
@@ -59,22 +62,21 @@
 						<div class="section_body loginbox-thin">
 							 <form id="form-update" name="myForm" ng-submit="updateSelfInfo()">
 								<div class="row">
-									<div class="control-group text-center">
-										<input name="personalEmail" type="text" ng-model="user.username" ng-blur="checkNameExist()" required
-											placeholder="请输入新用户名 " class="pull-left personalEmail" required> <span
-											class="add-on margin-left-40"><i class="icon-envelope"></i></span> 
-										<div ng-show="error.userexisted"
-											class="span12 alert alert-error text-left" ng-bind="'用户名已经存在，请输入另外一个用户名！'"></div>
-										<div ng-show="!error.register"
-											class="span12 alert alert-error text-left" ng-bind="'更新失败，请重新更新！'"></div>
-	
+									<div class="control-group text-center clearfix">
+										<input name="userPassword" type="password"
+											ng-model="user.password" ng-minlength="6" ng-maxlength="16" required 
+											placeholder="请输入旧密码" class="pull-left"><span
+											class="add-on margin-left-40"><i class="icon-lock"></i></span>
+										<div
+											ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
+											class="span12 alert alert-error text-left" ng-bind="'必填字段，请输入长度在6-16位的密码！'"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="control-group text-center clearfix">
 										<input name="userPassword" type="password"
 											ng-model="user.password" ng-minlength="6" ng-maxlength="16" required 
-											placeholder="请输入密码" class="pull-left"><span
+											placeholder="请输入新密码" class="pull-left"><span
 											class="add-on margin-left-40"><i class="icon-lock"></i></span>
 										<div
 											ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
@@ -85,24 +87,14 @@
 								<div class="row">
 									<div class="control-group text-center clearfix">
 										<input name="confirmUserPassword" type="password" required 
-											ng-model="user.confirmUserPassword" ng-minlength="6" ng-maxlength="16" placeholder="请再次输入密码"
+											ng-model="user.confirmUserPassword" ng-minlength="6" ng-maxlength="16" placeholder="请再次输入新密码"
 											class="pull-left"><span class="add-on margin-left-40"><i
 											class="icon-lock"></i></span>
 										<div
 											ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.password"
 											class="span12 alert alert-error text-left" ng-bind="'密码确认不对，请再次输入！'"></div>
 									</div>
-								</div>
-								
-								<div class="row">
-					                <div class="control-group text-center clearfix">
-					                	<input type="text" name="securityCode" id="input-securityCode" ng-blur="checkSecCode()"
-					                        ng-model="user.captcha" placeholder="请输入右侧验证码" ng-minlength="4" ng-maxlength="4" required />
-					                    <img ng-src="{{imageUrl}}" ng-click="changeCaptcha()" class="captcha" />
-					                    <div ng-show="error.captcha"
-											class="span12 alert alert-error text-left" ng-bind="'验证码错误，请重新输入！'"></div>
-					                </div>
-				                </div>
+								</div>							
 	
 								 
 								<br>

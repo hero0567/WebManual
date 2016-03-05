@@ -21,8 +21,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,6 +45,15 @@ public class UserController {
 		UserDetails principal = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		User user = userRepository.findByUsername(principal.getUsername());
 		return user;
+	}
+	
+	@RequestMapping(value="/passwd", method = RequestMethod.PUT)
+	public void changePasswd(@RequestParam(value = "newPwd", required = false, defaultValue = "") String newPwd) {
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		UserDetails principal = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		User user = userRepository.findByUsername(principal.getUsername());
+		user.setPassword(encoder.encode(newPwd));
+		userRepository.save(user);
 	}
 	
 }

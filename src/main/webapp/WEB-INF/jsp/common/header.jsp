@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
+<script src="/js/service/UserService.js"></script>
 <script src="/js/controllers/HeaderController.js"></script>
 <script src="/js/lib/angular/angular-cookies.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/common/fontawesome.css" />
@@ -34,10 +35,10 @@ $(document).ready(function(){
 						</div>
 						<div class="nav-content"></div>
 					</li>
-					<li class="account-signin" ng-show="!user.id">请<a rel="nofollow"
+					<li class="account-signin" ng-hide="user.id">请<a rel="nofollow"
 						href="/signin"
 						title="请登录" data-trace="cn_alibar_login" target="_self"><span class="c-ff7300">登录</span></a></li>
-					<li class="account-signup" ng-show="!user.id">免费<a rel="nofollow"
+					<li class="account-signup" ng-hide="user.id">免费<a rel="nofollow"
 						href="/signup"
 						title="免费注册" data-trace="cn_alibar_reg" target="_blank"><span class="c-ff7300">注册</span></a></li>
 				</ul>
@@ -45,14 +46,14 @@ $(document).ready(function(){
 			<div class="topnav">
 				<ul>
 					<li class="topnav-myaledao extra">
-						<div class="nav-title">
+						<div class="nav-title ng-hide" ng-show="user.id">
 							<a rel="nofollow" class="nav-arrow" href=""
 								title="我的乐道" data-trace="cn_alibar_myali" target="_blank">我的乐道</a>
 						</div>
 						<div class="topnav-myaledao-content d-n">
 							<dl>
 								<dd>
-									<a rel="nofollow" class="favorite-offer" href="/selfinfo" title="个人信息">个人信息</a>
+									<a rel="nofollow" class="favorite-offer" href="/my/selfinfo" title="个人信息">个人信息</a>
 								</dd>
 							</dl>
 							<dl>
@@ -65,7 +66,7 @@ $(document).ready(function(){
 					<li class="topnav-favorite extra">
 						<div class="nav-title">
 							<a class=""
-								href="/favorites"
+								href="/my/favorites"
 								title="我的收藏夹" data-trace="cn_alibar_myali_fav" target="_blank">
 								<i class="fa fa-heart"></i> <span>我的收藏夹</span>
 							</a>
