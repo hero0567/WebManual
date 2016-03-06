@@ -176,24 +176,9 @@
 						</div> 
 						<div class="custom-section-body">
 							<ul class="list-link-lite top ">
-					           <li>
-						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
-						       </li>
-					           <li>
-						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
-						       </li>
-						       <li>
-						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
-						       </li>
-						       <li>
-						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
-						       </li>       
-						       <li>
-						          <a href="" target="_blank">海尔液晶电视说明书 <span class="flr">6250</span></a>
-						       </li>
-						       <li>
-						          <a href="" target="_blank">TCL液晶电视说明书 <span class="flr">5771</span></a>
-						       </li>       
+					           <li ng-repeat="mt in maintenances">
+						          <a href="" target="_blank" ng-bind="mt.name">海尔液晶电视说明书 <span class="flr" ng-bind="mt.count"></span></a>
+						       </li>      
 							</ul>
 						</div>
 					</section>

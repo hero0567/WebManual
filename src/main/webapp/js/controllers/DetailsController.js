@@ -8,6 +8,7 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 	
 	$scope.menu = {};
 	$scope.handbook = {};
+	$scope.maintenances = {};
 	$scope.params = {};
 	$scope.brandInfo = {};
 	$scope.id = "";
@@ -33,13 +34,15 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
              $scope.handbook = handbook;
              $scope.fetchHandbookService(handbook.brand);
              $scope.fetchFavorite();
+             $scope.fetchMaintenance(handbook);
        });
  	}  
     
     $scope.fetchHandbookService = function(brand) {
-   	 $http.get('/b/name?name=' + brand).success(function(brandInfo){
-            $scope.brandInfo = brandInfo;
-      });
+	   	 $http.get('/b/name?name=' + brand).success(function(brandInfo){
+	            $scope.brandInfo = brandInfo;
+	            
+	      });
 	}
     
     $scope.addFavorite = function(uid, sub){
@@ -56,6 +59,12 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
                 });
     		});
     	}
+ 	}
+    
+    $scope.fetchMaintenance = function(hb) {
+		$http.get('/mt/top', {params: {"type": hb.type, "subtype": hb.subType, "brand" : hb.brand}}).success(function(maintenances){
+			$scope.maintenances = maintenances;
+		});
  	}
     
     $scope.readonline = function(handbook){
@@ -90,7 +99,6 @@ app.controller("DetailsController", function($scope, $http, $location, $window, 
 		$scope.imageUrl = "/sec/img?rnd=" + Math.random();	 
 	}
     
-//    $scope.fetchMenu();
     $scope.parseParams();
     $scope.fetchHandbook($scope.id);
 });
