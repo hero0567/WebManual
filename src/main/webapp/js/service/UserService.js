@@ -48,7 +48,6 @@ app.factory('userService', ['$http','$cookies', '$window', function($http, $cook
 	
 	function initUser(){
 		var u = $cookies.getObject("user");
-		console.log(u);
 		if (angular.isDefined(u)){
 			user.id = u.id;
 			user.username = u.username;

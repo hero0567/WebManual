@@ -19,16 +19,20 @@ package com.wmanual.web.controller.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.wmanual.beans.UserPasswd;
 import com.wmanual.jpa.domain.User;
 import com.wmanual.jpa.service.UserRepository;
 
@@ -47,13 +51,17 @@ public class UserController {
 		return user;
 	}
 	
-	@RequestMapping(value="/passwd", method = RequestMethod.PUT)
-	public void changePasswd(@RequestParam(value = "newPwd", required = false, defaultValue = "") String newPwd) {
+	@RequestMapping(value="/passwd", method = RequestMethod.POST)
+	public ResponseEntity<String> changePasswd(@RequestBody UserPasswd u) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		UserDetails principal = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		User user = userRepository.findByUsername(principal.getUsername());
-		user.setPassword(encoder.encode(newPwd));
-		userRepository.save(user);
+		if (encoder.matches(u.getOldPwd(), user.getPassword())){
+			user.setPassword(encoder.encode(u.getNewPwd()));
+			userRepository.save(user);
+		}else{
+			return new ResponseEntity<String>("", HttpStatus.BAD_REQUEST);
+		}
+		return new ResponseEntity<String>("", HttpStatus.OK);
 	}
-	
 }

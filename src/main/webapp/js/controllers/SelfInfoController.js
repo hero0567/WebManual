@@ -7,22 +7,26 @@
 
 app.controller("SelfInfoController", function($scope, $http, $location, $window, userService) {
 		
-	
-	$scope.typenu = 0;
-    
+	$scope.user = {};
+	$scope.updateSuccess = false;
+	$scope.updateFailed = false;
     
     $scope.updateSelfInfo = function() {
-    	$http({
-	        method  : 'POST',
-	        url     : '/my/passwd',
-	        data    : $.param($scope.user),  // pass in data as strings
-	        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
-	    })
-        .success(function(data) {
-        	console.log(data);	
-        }).error(function() {
-        	$scope.error.loginfailed = true;
+    	
+    	$http.post('/user/passwd', $scope.user).success(function(result){
+    		$scope.reset();
+    		$scope.updateSuccess = true;
+    		$scope.updateFailed = false;
+		}).error(function() {
+			$scope.reset();
+			$scope.updateFailed = true;	
+			$scope.updateSuccess = false;
         });
-  	}  
+  	}; 
+  	
+  	$scope.reset = function() {
+  		$scope.user = {};
+  		$scope.myForm.$setPristine();
+  	}
     
 });

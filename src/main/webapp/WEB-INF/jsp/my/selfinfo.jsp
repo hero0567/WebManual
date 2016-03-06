@@ -59,27 +59,30 @@
 						<div class="section_head" >
 						    <h3 class="section-title f-l"><i class="fa fa-th-large"></i> <span>修改个人信息</span></h3>  
 						</div>
+						<div ng-show="updateSuccess">密码修改成功。</div>
+						<div ng-show="updateFailed">密码修改失败，请重新修改。</div>
 						<div class="section_body loginbox-thin">
-							 <form id="form-update" name="myForm" ng-submit="updateSelfInfo()">
+							 <form id="form-update" name="myForm" novalidate  ng-submit="updateSelfInfo()">
+							 	<div class="ng-hide"><input name="user.username" type="text"/></div>
 								<div class="row">
 									<div class="control-group text-center clearfix">
-										<input name="userPassword" type="password"
-											ng-model="user.password" ng-minlength="6" ng-maxlength="16" required 
+										<input name="oldPwd" type="password"
+											ng-model="user.oldPwd" ng-minlength="6" ng-maxlength="16" required 
 											placeholder="请输入旧密码" class="pull-left"><span
 											class="add-on margin-left-40"><i class="icon-lock"></i></span>
 										<div
-											ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
+											ng-show="myForm.oldPwd.$dirty && !myForm.oldPwd.$valid"
 											class="span12 alert alert-error text-left" ng-bind="'必填字段，请输入长度在6-16位的密码！'"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="control-group text-center clearfix">
-										<input name="userPassword" type="password"
-											ng-model="user.newpwd" ng-minlength="6" ng-maxlength="16" required 
+										<input name="newPwd" type="password"
+											ng-model="user.newPwd" ng-minlength="6" ng-maxlength="16" required 
 											placeholder="请输入新密码" class="pull-left"><span
 											class="add-on margin-left-40"><i class="icon-lock"></i></span>
 										<div
-											ng-show="myForm.userPassword.$dirty && !myForm.userPassword.$valid"
+											ng-show="myForm.newPwd.$dirty && !myForm.newPwd.$valid"
 											class="span12 alert alert-error text-left" ng-bind="'必填字段，请输入长度在6-16位的密码！'"></div>
 									</div>
 								</div>
@@ -91,7 +94,7 @@
 											class="pull-left"><span class="add-on margin-left-40"><i
 											class="icon-lock"></i></span>
 										<div
-											ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.newpwd"
+											ng-show="myForm.confirmUserPassword.$dirty && user.confirmUserPassword != user.newPwd"
 											class="span12 alert alert-error text-left" ng-bind="'密码确认不对，请再次输入！'"></div>
 									</div>
 								</div>							
@@ -99,7 +102,7 @@
 								 
 								<br>
 								<div class="row">
-									<button class="wmanualbtn" type="submit" ng-disabled="myForm.$invalid || error.userexisted || user.confirmUserPassword != user.password">更新</button>
+									<button class="wmanualbtn" type="submit">更新</button>
 	
 								</div>
 							</form>
