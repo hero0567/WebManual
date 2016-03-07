@@ -146,8 +146,7 @@ app.controller("TypesController", function($scope, $http, $location, $window, us
 	}
     
     $scope.readonline = function(handbook){
-    	console.log(handbook);
-//   	 	$window.location="/pdfonline?file="+handbook.url;
+   	 	$window.location="/pdfonline?file="+handbook.url;
     }
     
     $scope.fetchBrand();

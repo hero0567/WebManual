@@ -148,6 +148,11 @@ app.controller("BrandsController", function($scope, $http, $location, $window, u
     	userService.addFavorite(uid, sub);
 	}
     
+    $scope.readonline = function(handbook){
+    	console.log(handbook);
+   	 	$window.location="/pdfonline?file="+handbook.url;
+    }
+    
     $scope.fetchSubType();
     $scope.fetchBrandCount();
     $scope.fetchManual();
