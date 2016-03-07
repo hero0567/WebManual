@@ -133,20 +133,22 @@ app.controller("TypesController", function($scope, $http, $location, $window, us
 			}
     	});
     	
-    	   	
     	$http.get('/s/s', {params: {"subtype": $window.subtype, brand: brands, ct: time, version : $scope.version,
     									pn:$scope.page.pn, size:$scope.page.size}}).success(function(result){
-    										
 			$scope.manuals = result.item;	
 			$scope.page.total = result.total;
 			$scope.changePageNavi();	
         });
-    	
     }; 
     
     $scope.addFavorite = function(uid, sub){
     	userService.addFavorite(uid, sub);
 	}
+    
+    $scope.readonline = function(handbook){
+    	console.log(handbook);
+//   	 	$window.location="/pdfonline?file="+handbook.url;
+    }
     
     $scope.fetchBrand();
     $scope.fetchBrandCount();

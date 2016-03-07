@@ -171,6 +171,7 @@ public class ManualSearchController {
 			manual.setSubType(rs.getString("subtype"));
 			manual.setType(rs.getString("type"));
 			manual.setName(rs.getString("name"));
+			manual.setUrl(rs.getString("url"));
 			manuals.add(manual);
 		}
 		
