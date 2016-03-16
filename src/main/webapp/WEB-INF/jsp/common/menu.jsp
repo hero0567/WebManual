@@ -34,7 +34,7 @@ $(document).ready(function(){
 	            <!-- <li><a href="">常识分享</a></li> -->
 	        </ul>
 	        
-	        <div id="ledao_nav" class="d-n" style="display:inline-block !important;">
+	        <div id="ledao_nav" class="d-n">
 	    	<!--左侧栏目开始-->
 	    	<div class="ledao_cat_nav fl">
 	            <ul class="cate_nav">

@@ -361,6 +361,7 @@ a {
 	margin-top:-15px;
 	border-bottom: 1px solid #e2e2e2;
 	height: 280px;
+	overflow:hidden;
 	background-color: #f8f8f8;
     -webkit-box-shadow: 4px 6px 6px -6px #e2e2e2!important;
     box-shadow: 4px 6px 6px -6px #e2e2e2!important;
