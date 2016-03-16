@@ -39,7 +39,7 @@
 
 </head>
 
-<body ng-app="app" ng-controller="FavoritesController">
+<body id="AAZ	qwe" ng-app="app" ng-controller="FavoritesController">
 	<div class="d-n">
 		<img src="/img/favicon.png" />
 	</div>
@@ -48,8 +48,7 @@
     <![endif]-->
 
 	<!-- Header -->
-	<%@ include file="../common/header.jsp"%>
-
+	<%@ include file="../common/header.jsp"%> 
 	<main class="margin-top20"> <!-- Modal --> <!-- Button trigger modal -->
 	<div id="custom-layer" class="constom-layer hide"></div>
 	<div id="custom-modal" class="custom-modal-dialog hide">
@@ -57,68 +56,7 @@
 			<h4 class="modal-title">取消收藏</h4>
 		</div>
 		<div class="custom-modal-body">
-			<p>请确实是否取消该收藏？</p>
-		</div>
-		<div class="custom-modal-footer">
-			<button type="button" class="btn btn-default"
-				ng-click="deleteFavoriteItem()">是</button>
-			<button type="button" class="btn btn-primary cutom-btn-primary"
-				ng-click="cancelDeleteItem()">否</button>
-		</div>
-	</div>
-
-	<div class="ledao-container">
-		<div id="deleteSuccess" class="alert alert-success hide" role="alert">删除成功！</div>
-		<div id="deleteFail" class="alert alert-danger hide" role="alert">删除失败，请重试！</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-12 margin-bottom-20">
-				<section class="sidebar white-block">
-					<ul class="list-lite">
-						<li ng-repeat="m in favorList"
-							ng-click="changeSubType(m.subType, m.count)"><a
-							ng-class="{on: m.subType == currentSubType}" href=""
-							ng-bind="m.subType +'('+ m.count+')'"></a></li>
-					</ul>
-				</section>
-			</div>
-
-			<div class="col-lg-9 col-md-9 col-sm-12">
-				<section class="white-block p-l-r margin-bottom-20 ">
-					<div class="custom-section-head">
-						<span class="f-r"> 我收藏的“ <b>说明书</b> ”，共有 <span
-							ng-bind="count"></span> 本
-						</span>
-					</div>
-				</section>
-
-				<section class="custom-manuals white-block p-l-r">
-					<table class="table custom-appliance-table">
-						<tr>
-							<th class="cell maincell">名称</th>
-							<th class="cell brand">品牌</th>
-							<th class="cell version">型号</th>
-							<th class="cell read">在线阅读</th>
-							<th class="cell action">关注</th>
-						</tr>
-						<tr class="border-gray-lower-dashed" ng-repeat="sub in results">
-							<td class="cell maincell"><a
-								ng-href="/details?id={{sub.handBook.id}}"
-								ng-bind="sub.handBook.name"></a></td>
-
-							<td class="cell brand"><a
-								ng-href="/result?key={{sub.handBook.brand}}"
-								ng-bind="sub.handBook.brand"></a></td>
-							<td class="cell version"><span class="tag gray"
-								ng-bind="sub.handBook.version"></span></td>
-							<td class="cell read"> 
-								<a href=""><i class="fa fa-eye"></i> </a>
-							</td>
-							<td class="cell action"><a href=""
-								ng-click="addFavorite(user.id, sub.handBook)"
-								class="fa fa-heart"></a></td>
-						</tr>
-					</table>
-
+			<p>请确实是否取消该收藏？</p>`q12345rewsaX
 					<!-- block 分页区 -->
 					<div>
 						<div class="custom-pagination">
@@ -139,7 +77,7 @@
 		</div>
 	</div>
 	</main>
-
+dGZXdzC Xrtetgfddddd nx
 	<!-- Footer -->
 	<%@ include file="../common/footer.jsp"%>
 </body>

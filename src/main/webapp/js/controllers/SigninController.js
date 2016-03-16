@@ -7,7 +7,7 @@
 app.controller("SigninController", function($scope, $http, $location, $cookies) {
 	
 	$scope.imageUrl = "/sec/img";
-	$scope.user = {username : "1111@163.com", password : "111111" };
+	$scope.user = {username : "", password : "" };
 	$scope.error = {captcha :false, loginfailed : false};
 //	$scope.expired = 7;
 		

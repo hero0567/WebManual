@@ -1577,3 +1577,7 @@ table.brand tr td{
 .loading{
 	margin-left:50%;
 }
+
+#myFavorites .custom-section-head{
+	border-bottom:0px !important;
+}
