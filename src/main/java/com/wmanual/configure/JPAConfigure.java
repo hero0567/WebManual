@@ -19,10 +19,10 @@ public class JPAConfigure {
 	
 	@Value("${spring.datasource.url}")
 	private String dbUrl;
-	@Value("${spring.datasource.username}")
-	private String dbUname;
-	@Value("${spring.datasource.password}")
-	private String dbPwd;
+//	@Value("${spring.datasource.username}")
+//	private String dbUname;
+//	@Value("${spring.datasource.password}")
+//	private String dbPwd;
 	@Value("${spring.datasource.driverClassName}")
 	private String dbDriverClassName;
 	
@@ -71,8 +71,8 @@ public class JPAConfigure {
         return DataSourceBuilder.create()
                 .url(dbUrl)
                 .driverClassName(dbDriverClassName)
-                .username(dbUname)
-                .password(dbPwd)
+//                .username(dbUname)
+//                .password(dbPwd)
                 .build();
     } 
 }
